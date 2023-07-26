@@ -1,0 +1,55 @@
+Sample	Tool	FN	TP	FP_samePOS	FP_diffPOS
+SRR10971381.fasta.0.SNP1.fasta	bowtie2	100	0	0	0
+SRR10971381.fasta.0.SNP1.fasta	bwa	100	0	0	0
+SRR10971381.fasta.0.SNP1.fasta	minimap2	100	0	0	0
+SRR10971381.fasta.0.SNP1.fasta	bowtie (mapper samtovcf)	100	0	0	0
+SRR10971381.fasta.0.SNP1.fasta	minimap (mapper samtovcf)	100	0	0	0
+SRR10971381.fasta.0.SNP1.fasta	bwa (mapper samtovcf)	100	0	0	0
+SRR10971381.fasta.50.SNP1.fasta	bowtie2	98	2	0	0
+SRR10971381.fasta.50.SNP1.fasta	bwa	100	0	0	0
+SRR10971381.fasta.50.SNP1.fasta	minimap2	98	2	0	0
+SRR10971381.fasta.50.SNP1.fasta	bowtie (mapper samtovcf)	90	10	0	0
+SRR10971381.fasta.50.SNP1.fasta	minimap (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.50.SNP1.fasta	bwa (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.100.SNP1.fasta	bowtie2	100	0	0	0
+SRR10971381.fasta.100.SNP1.fasta	bwa	97	3	1	0
+SRR10971381.fasta.100.SNP1.fasta	minimap2	97	3	1	0
+SRR10971381.fasta.100.SNP1.fasta	bowtie (mapper samtovcf)	89	11	0	0
+SRR10971381.fasta.100.SNP1.fasta	minimap (mapper samtovcf)	90	10	1	0
+SRR10971381.fasta.100.SNP1.fasta	bwa (mapper samtovcf)	90	10	1	0
+SRR10971381.fasta.250.SNP1.fasta	bowtie2	99	1	0	0
+SRR10971381.fasta.250.SNP1.fasta	bwa	98	2	0	0
+SRR10971381.fasta.250.SNP1.fasta	minimap2	98	2	0	0
+SRR10971381.fasta.250.SNP1.fasta	bowtie (mapper samtovcf)	97	3	1	1
+SRR10971381.fasta.250.SNP1.fasta	minimap (mapper samtovcf)	92	8	0	0
+SRR10971381.fasta.250.SNP1.fasta	bwa (mapper samtovcf)	93	7	0	0
+SRR10971381.fasta.5.SNP1.fasta	bowtie2	96	5	0	0
+SRR10971381.fasta.5.SNP1.fasta	bwa	97	3	0	0
+SRR10971381.fasta.5.SNP1.fasta	minimap2	97	4	0	0
+SRR10971381.fasta.5.SNP1.fasta	bowtie (mapper samtovcf)	87	13	0	0
+SRR10971381.fasta.5.SNP1.fasta	minimap (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.5.SNP1.fasta	bwa (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.10.SNP1.fasta	bowtie2	98	3	0	0
+SRR10971381.fasta.10.SNP1.fasta	bwa	98	2	0	0
+SRR10971381.fasta.10.SNP1.fasta	minimap2	98	2	0	0
+SRR10971381.fasta.10.SNP1.fasta	bowtie (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.10.SNP1.fasta	minimap (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.10.SNP1.fasta	bwa (mapper samtovcf)	85	15	0	0
+SRR10971381.fasta.150.SNP1.fasta	bowtie2	97	3	0	0
+SRR10971381.fasta.150.SNP1.fasta	bwa	97	4	0	0
+SRR10971381.fasta.150.SNP1.fasta	minimap2	97	4	0	0
+SRR10971381.fasta.150.SNP1.fasta	bowtie (mapper samtovcf)	89	11	0	1
+SRR10971381.fasta.150.SNP1.fasta	minimap (mapper samtovcf)	82	18	0	0
+SRR10971381.fasta.150.SNP1.fasta	bwa (mapper samtovcf)	84	16	0	0
+SRR10971381.fasta.300.SNP1.fasta	bowtie2	96	4	0	0
+SRR10971381.fasta.300.SNP1.fasta	bwa	95	5	0	0
+SRR10971381.fasta.300.SNP1.fasta	minimap2	95	6	0	0
+SRR10971381.fasta.300.SNP1.fasta	bowtie (mapper samtovcf)	90	10	0	3
+SRR10971381.fasta.300.SNP1.fasta	minimap (mapper samtovcf)	84	16	1	0
+SRR10971381.fasta.300.SNP1.fasta	bwa (mapper samtovcf)	84	16	1	0
+SRR10971381.fasta.200.SNP1.fasta	bowtie2	99	1	1	0
+SRR10971381.fasta.200.SNP1.fasta	bwa	96	4	0	0
+SRR10971381.fasta.200.SNP1.fasta	minimap2	97	3	0	0
+SRR10971381.fasta.200.SNP1.fasta	bowtie (mapper samtovcf)	91	9	0	1
+SRR10971381.fasta.200.SNP1.fasta	minimap (mapper samtovcf)	86	14	0	0
+SRR10971381.fasta.200.SNP1.fasta	bwa (mapper samtovcf)	86	14	0	0

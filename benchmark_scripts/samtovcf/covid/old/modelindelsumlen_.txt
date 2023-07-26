@@ -1,0 +1,1 @@
+Indellen	Sample	Tool	TP	FN	FP_samePOS	FP_diffPOS
