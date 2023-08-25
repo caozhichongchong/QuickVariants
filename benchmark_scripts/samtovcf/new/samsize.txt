@@ -1,0 +1,513 @@
+2858243869	am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+2687823179	am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+2911717376	am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+2830507093	am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+2669225185	am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+2898294419	am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+2827353619	am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+2667348487	am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+2895640803	am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+2827056205	am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+2667145459	am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+2895319251	am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+2827039285	am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+2667175107	am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+2895321081	am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+2879365963	am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+2707934718	am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+2912875160	am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+2827057452	am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+2667163317	am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+2895365098	am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+2827070182	am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+2667201934	am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+2895312862	am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+2889437535	am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+2727356532	am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+2908287582	am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+2827071996	am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+2667167964	am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+2895380665	am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+2827009534	am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+2667111746	am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+2895285018	am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+2886285334	am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+2745606801	am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+2900721083	am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+2827148792	am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+2667187604	am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+2895420771	am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+2827028066	am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+2667134910	am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+2895359664	am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+2864897440	am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+2762510332	am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+2889218651	am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+2843831213	am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+2677527444	am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+2906636392	am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+2828803520	am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+2668174344	am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+2896880345	am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+2827171356	am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+2667220816	am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+2895457056	am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+2827060077	am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+2667183468	am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+2895323983	am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+4671176548	am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+4410331056	am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+4755926994	am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+4623640302	am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+4379356034	am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+4731119471	am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+4618244992	am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+4376220494	am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+4726252532	am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+4617746502	am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+4375958494	am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+4725743772	am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+4617725666	am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+4375959537	am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+4725716302	am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+4709507143	am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+4443805041	am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+4760529744	am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+4617821746	am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+4375954410	am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+4725808501	am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+4617727798	am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+4375944775	am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+4725718315	am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+4731817591	am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+4476593530	am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+4757726459	am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+4617899370	am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+4376053291	am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+4725870214	am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+4617697949	am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+4375919686	am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+4725707597	am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+4734049291	am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+4507828185	am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+4750894660	am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+4617937373	am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+4376019570	am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+4725945259	am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+4617727696	am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+4375949796	am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+4725704465	am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+4712411972	am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+4536929822	am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+4741141339	am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+4646308394	am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+4393221064	am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+4746529968	am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+4620727375	am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+4377740364	am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+4728544010	am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+4618009055	am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+4376125654	am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+4725987727	am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+4617702485	am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+4375911652	am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+4725709434	am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+2050317002	am_BA_g0003.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+1940340264	am_BA_g0003.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+2084444998	am_BA_g0003.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+2038981509	am_BA_g0003.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+1928654325	am_BA_g0003.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+2081970516	am_BA_g0003.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+2037506106	am_BA_g0003.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+1927544832	am_BA_g0003.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+2081114704	am_BA_g0003.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+2037253313	am_BA_g0003.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+1927395369	am_BA_g0003.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+2081033800	am_BA_g0003.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+2037320141	am_BA_g0003.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+1927427937	am_BA_g0003.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+2081013476	am_BA_g0003.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+2054469150	am_BA_g0003.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+1952174445	am_BA_g0003.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+2079954627	am_BA_g0003.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+2037329325	am_BA_g0003.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+1927431231	am_BA_g0003.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+2081029867	am_BA_g0003.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+2037301529	am_BA_g0003.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+1927430723	am_BA_g0003.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+2081015712	am_BA_g0003.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+2049510653	am_BA_g0003.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+1963293771	am_BA_g0003.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+2071491264	am_BA_g0003.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+2037371814	am_BA_g0003.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+1927437242	am_BA_g0003.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+2081023498	am_BA_g0003.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+2037319629	am_BA_g0003.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+1927441354	am_BA_g0003.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+2081018142	am_BA_g0003.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+2033653886	am_BA_g0003.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+1973324244	am_BA_g0003.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+2059078679	am_BA_g0003.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+2037364639	am_BA_g0003.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+1927458673	am_BA_g0003.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+2081054968	am_BA_g0003.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+2037320369	am_BA_g0003.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+1927419757	am_BA_g0003.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+2081012689	am_BA_g0003.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+2008212162	am_BA_g0003.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+1981780866	am_BA_g0003.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+2043352660	am_BA_g0003.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+2044784722	am_BA_g0003.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+1934086206	am_BA_g0003.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+2084169607	am_BA_g0003.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+2038106288	am_BA_g0003.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+1928041576	am_BA_g0003.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+2081487736	am_BA_g0003.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+2037380313	am_BA_g0003.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+1927517059	am_BA_g0003.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+2081064775	am_BA_g0003.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+2037334764	am_BA_g0003.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+1927423330	am_BA_g0003.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+2081026271	am_BA_g0003.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+2215871755	am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+2093536805	am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+2255283475	am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+2193951299	am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+2079164217	am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+2244332311	am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+2191487143	am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+2077685925	am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+2242175439	am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+2191247034	am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+2077531833	am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+2241914472	am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+2191236210	am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+2077496585	am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+2241902520	am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+2233651887	am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+2109192669	am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+2257645568	am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+2191297916	am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+2077554775	am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+2241951376	am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+2191252817	am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+2077524311	am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+2241911739	am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+2243332524	am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+2124417510	am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+2256478673	am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+2191305605	am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+2077542667	am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+2241976473	am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+2191237842	am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+2077510126	am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+2241913703	am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+2243368062	am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+2138916101	am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+2253742662	am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+2191337959	am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+2077582077	am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+2242011719	am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+2191246723	am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+2077539852	am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+2241913588	am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+2230707186	am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+2152897826	am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+2249617480	am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+2204351411	am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+2085603441	am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+2251080412	am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+2192586456	am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+2078317923	am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+2243152610	am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+2191354928	am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+2077596372	am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+2242018312	am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+2191239268	am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+2077510099	am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+2241915526	am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+1311227537	am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+1270322021	am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+1328125133	am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+1302202753	am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+1264404290	am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+1323509603	am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+1301199940	am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+1263809275	am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+1322611191	am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+1301110658	am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+1263754236	am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+1322525537	am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+1301102951	am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+1263747236	am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+1322515368	am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+1318600461	am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+1276744749	am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+1328994482	am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+1301101240	am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+1263738715	am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+1322529435	am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+1301089005	am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+1263752565	am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+1322512820	am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+1322943743	am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+1282976371	am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+1328677125	am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+1301112483	am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+1263760525	am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+1322554584	am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+1301096735	am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+1263754694	am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+1322519437	am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+1323636715	am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+1289041680	am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+1327781952	am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+1301124307	am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+1263767126	am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+1322556091	am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+1301102211	am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+1263745499	am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+1322521849	am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+1319516040	am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+1294709342	am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+1326398178	am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+1306451055	am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+1267038724	am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+1326325213	am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+1301636677	am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+1264066217	am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+1323013690	am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+1301137799	am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+1263769787	am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+1322551408	am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+1301096142	am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+1263743245	am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+1322520025	am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+2130345426	am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+2011476280	am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+2172662781	am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+2109524537	am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+1997812781	am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+2162541268	am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+2107258845	am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+1996501671	am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+2160564285	am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+2106991897	am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+1996360864	am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+2160352004	am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+2106973971	am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+1996316008	am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+2160315251	am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+2146771743	am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+2026340084	am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+2174002811	am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+2107000677	am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+1996332397	am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+2160365023	am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+2107005111	am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+1996341903	am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+2160330671	am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+2155432430	am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+2040722304	am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+2171652877	am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+2107018333	am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+1996307919	am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+2160377693	am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+2106956295	am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+1996298729	am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+2160315031	am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+2154726999	am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+2054461398	am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+2167255346	am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+2107047631	am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+1996354485	am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+2160395047	am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+2107008313	am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+1996340505	am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+2160332425	am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+2142007734	am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+2067337607	am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+2161034148	am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+2119369654	am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+2003902661	am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+2168775104	am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+2108236454	am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+1997045146	am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+2161469438	am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+2107097728	am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+1996380501	am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+2160429549	am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+2106989107	am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+1996309221	am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+2160337990	am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+2664374489	bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+2490489399	bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+2719593645	bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+2641765784	bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+2474653687	bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+2709574908	bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+2639096743	bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+2473059514	bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+2707407370	bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+2638863019	bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+2472937873	bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+2707225222	bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+2638850976	bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+2472913161	bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+2707220538	bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+2678333676	bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+2507422195	bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+2716009904	bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+2638865783	bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+2472947671	bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+2707243827	bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+2638889656	bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+2472917905	bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+2707226762	bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+2678275171	bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+2523152547	bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+2704256109	bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+2638912330	bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+2472940662	bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+2707257130	bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+2638925469	bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+2472928544	bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+2707233858	bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+2664273986	bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+2536996448	bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+2684415037	bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+2638956867	bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+2472949615	bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+2707292166	bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+2638889940	bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+2472924961	bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+2707229960	bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+2631392727	bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+2548096509	bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+2656613959	bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+2652939984	bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+2481662839	bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+2716490448	bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+2640317709	bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+2473766620	bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+2708419510	bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+2638998310	bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+2472982563	bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+2707330890	bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+2638864623	bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+2472892769	bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+2707228693	bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+  895003292	bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+  847221686	bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+  912899481	bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+  886460353	bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+  841361200	bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+  908616329	bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+  885524764	bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+  840698493	bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+  907827299	bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+  885425727	bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+  840606093	bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+  907752720	bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+  885420889	bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+  840639178	bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+  907739699	bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+  902146094	bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+  853461902	bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+  913645414	bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+  885473451	bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+  840645518	bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+  907785500	bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+  885453768	bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+  840649690	bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+  907767287	bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+  906424588	bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+  859911167	bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+  913274970	bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+  885489248	bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+  840678983	bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+  907791498	bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+  885450280	bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+  840638145	bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+  907761941	bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+  906007824	bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+  865964734	bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+  911989231	bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+  885493246	bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+  840683285	bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+  907835491	bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+  885456939	bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+  840642342	bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+  907781455	bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+  901584462	bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+  871423896	bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+  910023620	bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+  890661019	bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+  843888294	bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+  911375538	bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+  885938025	bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+  840944943	bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+  908186258	bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+  885472224	bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+  840668155	bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+  907790984	bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+  885450675	bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+  840653451	bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+  907769599	bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta.minimap.sam
+1593940631	cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta.bowtie.sam
+1525128515	cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta.bwa.sam
+1621327291	cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta.minimap.sam
+1580518212	cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta.bowtie.sam
+1514239387	cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta.bwa.sam
+1614912567	cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta.minimap.sam
+1579229430	cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta.bowtie.sam
+1513710459	cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta.bwa.sam
+1613773171	cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta.minimap.sam
+1578990291	cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta.bowtie.sam
+1513311147	cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta.bwa.sam
+1613625699	cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta.minimap.sam
+1578954053	cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta.bowtie.sam
+1513454388	cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta.bwa.sam
+1613598131	cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta.minimap.sam
+1604127401	cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta.bowtie.sam
+1534945784	cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta.bwa.sam
+1621208062	cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta.minimap.sam
+1578965944	cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta.bowtie.sam
+1513415171	cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta.bwa.sam
+1613634374	cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta.minimap.sam
+1578997943	cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta.bowtie.sam
+1513500335	cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta.bwa.sam
+1613612449	cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta.minimap.sam
+1608945223	cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta.bowtie.sam
+1545677641	cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta.bwa.sam
+1618496012	cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta.minimap.sam
+1579015871	cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta.bowtie.sam
+1513530095	cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta.bwa.sam
+1613645358	cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta.minimap.sam
+1578994479	cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta.bowtie.sam
+1513485361	cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta.bwa.sam
+1613623043	cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta.minimap.sam
+1605445143	cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta.bowtie.sam
+1556487316	cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta.bwa.sam
+1612052772	cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta.minimap.sam
+1579052758	cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta.bowtie.sam
+1513537736	cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta.bwa.sam
+1613683948	cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta.minimap.sam
+1579027861	cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta.bowtie.sam
+1513540802	cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta.bwa.sam
+1613661923	cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta.minimap.sam
+1595324902	cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta.bowtie.sam
+1567271128	cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta.bwa.sam
+1604414629	cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta.minimap.sam
+1586766480	cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta.bowtie.sam
+1518414415	cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta.bwa.sam
+1618782928	cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta.minimap.sam
+1579713615	cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta.bowtie.sam
+1513718959	cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta.bwa.sam
+1614224092	cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta.minimap.sam
+1579033612	cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta.bowtie.sam
+1513521646	cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta.bwa.sam
+1613666997	cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta.minimap.sam
+1579041503	cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta.bowtie.sam
+1513570682	cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta.bwa.sam
+1613674283	cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta.minimap.sam
