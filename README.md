@@ -6,8 +6,6 @@ QuickVariants is a fast and accurate variant identification tool, designed to su
 
 ### Usage:
 
-Execute the following command:
-
 ```
 java -Xms10g -Xmx10g -jar quick-variants.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input.sam> --num-threads num_threads [options]
 ```
@@ -19,23 +17,58 @@ This command converts a SAM file to other formats, most notably .vcf.
 
 #### OUTPUT FORMATS:
 Summary by reference position, mutation, genome, and raw output are possible.
-
-**Summary by reference position**:
 - Options for output files, mutation counts, exclusion of non-mutations, and more.
 
-**Summary by mutation**:
-- Includes options for listing mutations, detecting indels, and setting thresholds for various features.
+**Summary by reference position**:
 
-**Summary by genome**:
-- `--out-refs-map-count <file>`: Output file to summarize the number of reads mapped to each combination of references.
+- `--out-vcf <file>` output file to generate containing a description of mutation counts by position
+- `--vcf-exclude-non-mutations` if set, the output vcf file will exclude positions where no mutations were detected
+- `--distinguish-query-ends <fraction>` (default 0.1) In the output vcf file, we separately display which queries aligned at each position with <fraction> of the end of the query and which didn't.
 
-**Raw output**:
-- Includes options for SAM format and unaligned reads, as well as verbosity settings for debugging.
+**Summary by mutation**
 
-Multiple output formats may be specified during a single run.
+- `--out-mutations <file>` output file to generate listing the mutations of the queries compared to the reference genome
+
+- `--distinguish-query-ends <fraction>` (default 0.1) When detecting indels, only consider the middle <fraction> of each query
+
+- `--snp-threshold <min total depth> <min supporting depth fraction>` (default 5, 0.9)
+    The minimum total depth and minimum supporting depth fraction required at a position to report it as a point mutation
+
+- `--indel-start-threshold <min total depth> <min supporting depth fraction>` (default 1, 0.8)
+    The minimum total (middle) depth and minimum supporting depth fraction required at a position to report it as the start of an insertion or deletion
+
+- `--indel-continue-threshold <min total depth> <min supporting depth fraction>` (default 1, 0.7)
+    The minimum total (middle) depth and minimum supporting depth fraction required at a position to report it as a continuation of an insertion or deletion
+- `--indel-threshold <min total depth> <min supporting depth fraction>`
+    Alias for --indel-start-threshold <min total depth> <min supporting depth frequency> and --indel-continue-threshold <min total depth> <min supporting depth frequency>
+
+**Summary by genome**
+
+- `--out-refs-map-count <file>` the output file to summarize the number of reads mapped to each combination of references
+
+**Raw output**
+
+- `--out-sam <file>` the output file in SAM format
+
+- `--out-unaligned <file>` output file containing unaligned reads. Must have a .fasta or .fastq extension
+
+- `--no-output` if no output is requested, skip writing output rather than throwing an error
+
+#### Debugging
+
+- `-v, --verbose` output diagnostic information
+
+- `-vv` more diagnostic information
+
+- `--verbosity-auto` set verbosity flags dynamically and automatically based on the data and alignment
+
+Multiple output formats may be specified during a single run; for example:
+
+- `--out-sam` out.sam --out-unaligned out.fastq
 
 #### OTHER:
-- `--num-threads <count>`: Number of threads to use for processing.
+
+- `--num-threads <count>` number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.
 
 ### Additional Scripts and Models
 The `benchmark_scripts` folder contains code used to construct the benchmark dataset, filter SNPs and indels in VCF files, and analyze VCF files.
