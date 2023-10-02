@@ -1,0 +1,282 @@
+package mapper;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
+
+public class AlignerWorker extends Thread {
+  static Logger silentLogger = Logger.NoOpLogger;
+
+  public AlignerWorker(SequenceDatabase reference, int workerId, List<AlignmentListener> resultsListeners, AlignmentCache resultsCache, Queue completionListener) {
+    this.sequenceDatabase = reference;
+    this.workerId = "" + workerId;
+    while (this.workerId.length() < 5) {
+      this.workerId = " " + this.workerId;
+    }
+    this.resultsListeners = resultsListeners;
+    this.completionListener = completionListener;
+  }
+
+  public void requestProcess(List<QueryBuilder> queries, long startMillis, Logger alignmentLogger, Logger referenceLogger) {
+    this.resetStatistics();
+
+    this.startMillis = startMillis;
+    this.logger = alignmentLogger;
+    this.referenceLogger = referenceLogger;
+    this.detailedAlignmentLogger = alignmentLogger.incrementScope();
+    if (this.logger.getEnabled()) {
+      log("\nOutput from worker " + this.workerId + ":");
+    }
+    this.queries = queries;
+
+    try {
+      this.workQueue.put(true);
+    } catch (InterruptedException e) {
+      throw new IllegalArgumentException("Worker "  + this.workerId + " has no capacity for more work");
+    }
+  }
+
+  private void resetStatistics() {
+    numCacheHits = 0;
+    numCacheMisses = 0;
+
+    slowestQuery = null;
+    slowestAlignment = null;
+    slowestAlignmentMillis = -1;
+    millisSpentOnUnalignedQueries = 0;
+    numCasesImmediatelyAcceptingFirstAlignment = 0;
+  }
+
+  public void noMoreQueries() {
+    try {
+      this.workQueue.put(false);
+    } catch (InterruptedException e) {
+      throw new IllegalArgumentException("Worker " + this.workerId + " is still working");
+    }
+  }
+
+  @Override
+  public void run() {
+    while (true) {
+      boolean succeeded = false;
+      Boolean moreWork = false;
+      try {
+        moreWork = this.workQueue.take();
+      } catch (InterruptedException e) {
+        System.out.println("Interrupted");
+        break;
+      }
+      if (!moreWork)
+        break;
+      //System.out.println("Worker.run got " + queries.size() + " queries");
+      try {
+        this.process();
+        succeeded = true;
+      } finally {
+        // record error if any
+        if (!succeeded)
+          this.failed = true;
+        this.completionListener.add(this);
+      }
+    }
+  }
+
+  private void process() {
+    // make sure we've hashed the reference before we start running queries, so that running the queries probably won't require hashing the reference and our timing measurements can be approximately accurate
+    // now that we've hashed the reference, we can run queries
+    // List that for each query says where it aligns
+    List<List<QueryAlignment>> alignments = new ArrayList<List<QueryAlignment>>(queries.size());
+    List<Query> unalignedQueries = new ArrayList<Query>();
+    for (QueryBuilder queryBuilder : queries) {
+      long start = System.currentTimeMillis();
+      Query query = queryBuilder.build();
+      List<QueryAlignment> alignmentsHere;
+      try {
+        alignmentsHere = this.align(query);
+      } catch (Exception e) {
+        throw new RuntimeException("Failed to align " + query.format(), e);
+      }
+      // update some timing information
+      long end = System.currentTimeMillis();
+      long elapsed = end - start;
+      if (elapsed > this.slowestAlignmentMillis) {
+        this.slowestAlignmentMillis = (int)elapsed;
+        this.slowestQuery = query;
+        this.slowestAlignment = alignmentsHere;
+      }
+      // collect results
+      if (alignmentsHere.size() > 0) {
+        alignments.add(alignmentsHere);
+        if (this.logger.getEnabled()) {
+          this.printAlignment(query, alignmentsHere);
+        }
+      } else {
+        unalignedQueries.add(query);
+        this.millisSpentOnUnalignedQueries += elapsed;
+        if (this.logger.getEnabled()) {
+          log("Unaligned    : " + query.format());
+        }
+      }
+      if (this.logger.getEnabled()) {
+        log(" ");
+      }
+    }
+    this.sendResults(alignments, unalignedQueries);
+  }
+
+  public boolean tryComplete() throws InterruptedException {
+    this.referenceLogger.flush();
+    this.logger.flush();
+    return !this.failed;
+  }
+
+  private void log(String message) {
+    this.logger.log(message);
+  }
+
+  // aligns to the unmodified reference we've been given
+  public List<QueryAlignment> align(Query query) {
+    List<QueryAlignment> converted = tryConvertSamAlignment(query);
+    if (converted != null)
+      return converted;
+    throw new IllegalArgumentException("Not a sam query: " + query);
+  }
+
+  private List<QueryAlignment> tryConvertSamAlignment(Query query) {
+    List<SequenceAlignment> sequenceAlignments = new ArrayList<SequenceAlignment>(query.getNumSequences());
+    for (Sequence sequence: query.getSequences()) {
+      if (sequence instanceof SamAlignment) {
+        SamAlignment samAlignment = (SamAlignment)sequence;
+        SequenceAlignment sequenceAlignment = samAlignment.toSequenceAlignment(this.sequenceDatabase);
+        if (sequenceAlignment == null)
+          return new ArrayList<QueryAlignment>();
+        sequenceAlignments.add(sequenceAlignment);
+      } else {
+        return null;
+      }
+    }
+    List<QueryAlignment> results = new ArrayList<QueryAlignment>(1);
+    results.add(new QueryAlignment(sequenceAlignments, 0, 0, 0));
+    return results;
+  }
+
+  void printAlignment(Query query, List<QueryAlignment> alignments) {
+    for (QueryAlignment alignment: alignments) {
+      for (SequenceAlignment component : alignment.getComponents()) {
+        this.printAlignment(component);
+      }
+    }
+  }
+
+  void printAlignment(SequenceAlignment alignment) {
+    Sequence query = alignment.getSequenceA();
+
+    int alignmentLength = alignment.getALength();
+
+    String alignedQuery = alignment.getAlignedTextA();
+
+    String alignedAncestralRef = alignment.getAlignedTextBHistory();
+    String alignedUnmutatedRef = alignment.getAlignedTextB();
+
+    String queryText = query.getText();
+    String expectedAlignedText = queryText;
+    if (alignment.isReferenceReversed()) {
+      String originalQueryText = query.reverseComplement().getText();
+      log("        Query: " + originalQueryText);
+      log("     RC Query: " + queryText);
+    } else {
+      log("        Query: " + queryText);
+    }
+
+    if (!queryText.equals(alignedQuery)) {
+      // If printing the aligned query is different from printing the query, then also print
+      // the alignment of the query
+      log("Aligned query: " + alignedQuery);
+    }
+    if (!alignedQuery.equals(alignedAncestralRef)) {
+      StringBuilder differenceBuilder = new StringBuilder();
+      differenceBuilder.append("Difference   : ");
+      int max = Math.min(alignedQuery.length(), alignedAncestralRef.length());
+      for (int i = 0; i < max; i++) {
+        char c1 = alignedQuery.charAt(i);
+        char c2 = alignedAncestralRef.charAt(i);
+        if (c1 == c2) {
+          differenceBuilder.append(" ");
+        } else {
+          if (Basepairs.canMatch(Basepairs.encode(c1), Basepairs.encode(c2))) {
+            differenceBuilder.append("~");
+          } else {
+            differenceBuilder.append("!");
+          }
+        }
+      }
+      log(differenceBuilder.toString());
+    }
+    if (!alignedAncestralRef.equals(alignedUnmutatedRef)) {
+      // If the ancestor analysis had an effect here, explain that too
+      log("Ancestral ref: " + alignedAncestralRef + "(" + alignment.getSequenceBHistory().getName() + ", offset " + alignment.getStartOffset() + ")");
+      log("Original ref : " + alignedUnmutatedRef + "(" + alignment.getSequenceB().getName() + ", offset " + alignment.getStartOffset() + ")");
+    } else {
+      log("Aligned ref  : " + alignedUnmutatedRef + "(" + alignment.getSequenceB().getName() + ", offset " + alignment.getStartOffset() + ")");
+    }
+  }
+
+  private void sendResults(List<List<QueryAlignment>> results, List<Query> unalignedQueries) {
+    for (AlignmentListener listener : this.resultsListeners) {
+      listener.addAlignments(results);
+      listener.addUnaligned(unalignedQueries);
+    }
+  }
+
+  public Query getSlowestQuery() {
+    return this.slowestQuery;
+  }
+  public List<QueryAlignment> getSlowestAlignment() {
+    return this.slowestAlignment;
+  }
+  public int getSlowestAlignmentMillis() {
+    return this.slowestAlignmentMillis;
+  }
+  public long getMillisSpentOnUnalignedQueries() {
+    return this.millisSpentOnUnalignedQueries;
+  }
+  public int getNumCacheHits() {
+    return this.numCacheHits;
+  }
+  public int getNumCasesImmediatelyAcceptingFirstAlignment() {
+    return this.numCasesImmediatelyAcceptingFirstAlignment;
+  }
+
+  SequenceDatabase sequenceDatabase;
+  List<AlignmentListener> resultsListeners;
+  Logger logger;
+  Logger detailedAlignmentLogger;
+  Logger referenceLogger;
+  String workerId;
+  long startMillis;
+  boolean failed = false;
+  List<SequenceMatch> emptyMatchList = new ArrayList<SequenceMatch>(0);
+  int numCacheHits;
+  int numCacheMisses;
+
+  Query slowestQuery;
+  List<QueryAlignment> slowestAlignment;
+  int slowestAlignmentMillis = -1;
+  long millisSpentOnUnalignedQueries;
+  int numCasesImmediatelyAcceptingFirstAlignment;
+  Queue<AlignerWorker> completionListener;
+  List<QueryBuilder> queries;
+
+  BlockingQueue<Boolean> workQueue = new ArrayBlockingQueue<Boolean>(1);
+}
