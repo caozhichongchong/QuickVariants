@@ -6,7 +6,9 @@ import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.List;
+import java.util.Queue;
 
 // A SamWriter writes .sam files
 // See https://samtools.github.io/hts-specs/SAMv1.pdf for more information
@@ -159,15 +161,49 @@ public class SamWriter implements AlignmentListener {
   }
 
   private void write(String text) {
-    synchronized(this.bufferedStream) {
-      try {
-        this.bufferedStream.write(text.getBytes());
-      } catch (IOException e) {
-        throw new RuntimeException(e);
+    byte[] bytes = text.getBytes();
+    synchronized(this.pendingWrites) {
+      this.pendingWrites.add(bytes);
+      if (this.activelyWriting)
+        return;
+      this.activelyWriting = true;
+    }
+    this.flush();
+  }
+
+  private void flush() {
+    while (true) {
+      byte[] block;
+      synchronized(this.pendingWrites) {
+        if (this.pendingWrites.size() < 1) {
+          this.activelyWriting = false;
+          return;
+        }
+        if (this.pendingWrites.size() > 32) {
+          // If we get too many pending jobs, we block new jobs until existing jobs are done) {
+          for (byte[] currentBlock : this.pendingWrites) {
+            this.process(currentBlock);
+          }
+          this.pendingWrites.clear();
+          this.activelyWriting = false;
+          return;
+        }
+        block = this.pendingWrites.remove();
       }
+      this.process(block);
+    }
+  }
+
+  private void process(byte[] block) {
+    try {
+      this.bufferedStream.write(block);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
     }
   }
 
   FileOutputStream fileStream;
   BufferedOutputStream bufferedStream;
+  Queue<byte[]> pendingWrites = new ArrayDeque<byte[]>();
+  boolean activelyWriting = false;
 }
