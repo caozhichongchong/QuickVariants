@@ -16,13 +16,18 @@ public class MatchDatabase implements AlignmentListener {
   public void addAlignments(List<QueryAlignments> alignments) {
     Map<Sequence, List<WeightedAlignment>> alignmentsByReference = this.groupByReference(alignments);
 
-    for (Map.Entry<Sequence, List<WeightedAlignment>> job : alignmentsByReference.entrySet()) {
+    List<Alignments> recipients = new ArrayList<Alignments>();
+    for (Map.Entry<Sequence, List<WeightedAlignment>> job: alignmentsByReference.entrySet()) {
       Sequence reference = job.getKey();
       Alignments alignmentsHere;
       synchronized (this.alignmentsBySequence) {
         alignmentsHere = this.getOrCreateAlignments(reference);
       }
+      recipients.add(alignmentsHere);
       alignmentsHere.add(job.getValue());
+    }
+    for (Alignments recipient: recipients) {
+      recipient.offerProcess();
     }
   }
 

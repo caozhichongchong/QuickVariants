@@ -15,11 +15,16 @@ public class Alignments {
     this.sections = new AlignmentsSection[sequence.getLength() / positionsPerSection + 1];
   }
 
-  // Adds the given alignment to this
-  // If this function is called from multiple threads, the alignments might not be fully added until every call has returned
+  // Adds a pending job to add this alignment to this
   public void add(List<WeightedAlignment> alignments) {
     synchronized(this.pendingAdds) {
       this.pendingAdds.add(alignments);
+    }
+  }
+
+  // Processes the pending jobs if no other thread is currently processing them
+  public void offerProcess() {
+    synchronized(this.pendingAdds) {
       if (this.activelyAdding) {
         // there's already another thread processing jobs
         return;
