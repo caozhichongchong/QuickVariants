@@ -173,6 +173,9 @@ public class SequenceAlignment {
   }
 
   public void putSequenceB(Sequence sequence) {
+    if (sequence == null) {
+      throw new IllegalArgumentException("putSequenceB(null) for SequenceAlignment:\n" + this.format());
+    }
     for (AlignedBlock block: this.sections) {
       block.putSequenceB(sequence);
     }

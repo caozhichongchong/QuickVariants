@@ -54,76 +54,84 @@ public class SamWriter implements AlignmentListener {
     StringBuilder builder = new StringBuilder();
     for (List<QueryAlignment> queryAlignments: alignments) {
       for (QueryAlignment queryAlignment: queryAlignments) {
-         for (SequenceAlignment alignment: queryAlignment.getComponents()) {
-           Sequence query = alignment.getSequenceA();
-           Sequence ref = alignment.getSequenceB();
-           // QNAME
-           builder.append(query.getSourceName());
-           builder.append('\t');
-           // FLAG
-           builder.append("" + getSamFlags(alignment));
-           builder.append('\t');
-           // RNAME
-           builder.append(ref.getName());
-           builder.append('\t');
-           // POS
-           builder.append(getSamReferencePosition(alignment));
-           builder.append('\t');
-           // MAPQ
-           builder.append("255\t");
-           // CIGAR flags
-           int queryLengthConsumed = 0;
-           for (AlignedBlock block : alignment.getSections()) {
-             if (block.getStartIndexA() != queryLengthConsumed) {
-               // left side of the query fell off the reference
-               builder.append("" + block.getStartIndexA() + "S");
-               queryLengthConsumed = block.getStartIndexA();
-             }
-             if (block.getLengthA() == block.getLengthB()) {
-               builder.append("" + block.getLengthA() + "M");
-             } else {
-               if (block.getLengthA() > block.getLengthB()) {
-                 builder.append("" + block.getLengthA() + "I");
-               } else {
-                 builder.append("" + block.getLengthB() + "D");
-               }
-             }
-             queryLengthConsumed += block.getLengthA();
-           }
-           if (queryLengthConsumed < query.getLength()) {
-             // right side of the query fell off the reference
-             builder.append("" + (query.getLength() - queryLengthConsumed) + "S");
-           }
-           builder.append('\t');
-           SequenceAlignment pairedSequenceAlignment = getPaired(queryAlignment, alignment);
-           if (pairedSequenceAlignment != null) {
-             // RNEXT:
-             builder.append(pairedSequenceAlignment.getSequenceB().getName());
-             builder.append('\t');
-             // PNEXT:
-             builder.append(getSamReferencePosition(pairedSequenceAlignment));
-             builder.append('\t');
-           } else {
-             // RNEXT:
-             builder.append("*\t");
-             // PNEXT:
-             builder.append("0\t");
-           }
-           // TLEN
-           builder.append("" + query.getLength());
-           builder.append('\t');
-           // SEQ
-           builder.append(query.getText());
-           builder.append('\t');
-           // QUAL
-           builder.append("*\t");
-           // alignment score
-           builder.append(formatPenalty(alignment));
-           builder.append("\n");
+        try {
+          formatQueryAlignment(queryAlignment, builder);
+        } catch (Exception e) {
+          throw new RuntimeException("Failed to write alignment for " + queryAlignment.formatQuery(), e);
         }
       }
     }
     return builder.toString();
+  }
+
+  private void formatQueryAlignment(QueryAlignment queryAlignment, StringBuilder builder) {
+     for (SequenceAlignment alignment: queryAlignment.getComponents()) {
+       Sequence query = alignment.getSequenceA();
+       Sequence ref = alignment.getSequenceB();
+       // QNAME
+       builder.append(query.getSourceName());
+       builder.append('\t');
+       // FLAG
+       builder.append("" + getSamFlags(alignment));
+       builder.append('\t');
+       // RNAME
+       builder.append(ref.getName());
+       builder.append('\t');
+       // POS
+       builder.append(getSamReferencePosition(alignment));
+       builder.append('\t');
+       // MAPQ
+       builder.append("255\t");
+       // CIGAR flags
+       int queryLengthConsumed = 0;
+       for (AlignedBlock block : alignment.getSections()) {
+         if (block.getStartIndexA() != queryLengthConsumed) {
+           // left side of the query fell off the reference
+           builder.append("" + block.getStartIndexA() + "S");
+           queryLengthConsumed = block.getStartIndexA();
+         }
+         if (block.getLengthA() == block.getLengthB()) {
+           builder.append("" + block.getLengthA() + "M");
+         } else {
+           if (block.getLengthA() > block.getLengthB()) {
+             builder.append("" + block.getLengthA() + "I");
+           } else {
+             builder.append("" + block.getLengthB() + "D");
+           }
+         }
+         queryLengthConsumed += block.getLengthA();
+       }
+       if (queryLengthConsumed < query.getLength()) {
+         // right side of the query fell off the reference
+         builder.append("" + (query.getLength() - queryLengthConsumed) + "S");
+       }
+       builder.append('\t');
+       SequenceAlignment pairedSequenceAlignment = getPaired(queryAlignment, alignment);
+       if (pairedSequenceAlignment != null) {
+         // RNEXT:
+         builder.append(pairedSequenceAlignment.getSequenceB().getName());
+         builder.append('\t');
+         // PNEXT:
+         builder.append(getSamReferencePosition(pairedSequenceAlignment));
+         builder.append('\t');
+       } else {
+         // RNEXT:
+         builder.append("*\t");
+         // PNEXT:
+         builder.append("0\t");
+       }
+       // TLEN
+       builder.append("" + query.getLength());
+       builder.append('\t');
+       // SEQ
+       builder.append(query.getText());
+       builder.append('\t');
+       // QUAL
+       builder.append("*\t");
+       // alignment score
+       builder.append(formatPenalty(alignment));
+       builder.append("\n");
+    }
   }
 
   private String formatPenalty(SequenceAlignment alignment) {

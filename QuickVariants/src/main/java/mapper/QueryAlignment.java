@@ -89,6 +89,28 @@ public class QueryAlignment {
     return true;
   }
 
+  public String formatQuery() {
+    String result = "";
+    for (SequenceAlignment alignment: this.alignments) {
+      if (result.length() > 0) {
+        result += " / ";
+      }
+      result += alignment.getSequenceA().getText();
+    }
+    return result;
+  }
+
+  public String formatQuery() {
+    String result = "";
+    for (SequenceAlignment alignment: this.alignments) {
+      if (result.length() > 0) {
+        result += " / ";
+      }
+      result += alignment.getSequenceA().getText();
+    }
+    return result;
+  }
+
   private void computeOverlap() {
     for (SequenceAlignment alignment: this.alignments) {
       int min = alignment.getStartIndexB();
