@@ -8,4 +8,5 @@ public interface GroupedAlignment_Provider {
   List<SamAlignment_Builder> getNextGroup();
   boolean get_allReadsContainQualityInformation();
   int getNumErrors();
+  boolean get_containsPairedEndReads();
 }

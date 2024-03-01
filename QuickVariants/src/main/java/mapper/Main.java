@@ -415,7 +415,7 @@ public class Main {
     }
     SamWriter samWriter = null;
     if (outSamPath != null) {
-      samWriter = new SamWriter(sequenceDatabase, outSamPath);
+      samWriter = new SamWriter(sequenceDatabase, outSamPath, queries.get_containsPairedEndReads());
       listeners.add(samWriter);
     }
     UnalignedQuery_Writer unalignedWriter = null;

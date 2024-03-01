@@ -13,18 +13,26 @@ import java.util.Queue;
 // A SamWriter writes .sam files
 // See https://samtools.github.io/hts-specs/SAMv1.pdf for more information
 public class SamWriter implements AlignmentListener {
-  public SamWriter(SequenceDatabase sequenceDatabase, String path) throws FileNotFoundException {
+  public SamWriter(SequenceDatabase sequenceDatabase, String path, boolean explainPairedEndReads) throws FileNotFoundException {
     File file = new File(path);
     this.fileStream = new FileOutputStream(file);
     this.bufferedStream = new BufferedOutputStream(fileStream);
     // write header
+    this.writeComment("SAM Alignment Map");
+    this.writeComment("Format version, sort order");
     this.write("@HD\tVN:1.6\tGO:query\n");
+    this.writeComment("");
     // write reference sequence names
     this.writeReferenceSequenceNames(sequenceDatabase);
+    // explain the alignment format
+    this.writeComment("");
+    this.explainAlignmentFormat(explainPairedEndReads);
+    this.flush();
   }
 
   private void writeReferenceSequenceNames(SequenceDatabase sequenceDatabase) {
     int count = sequenceDatabase.getNumSequences();
+    this.writeComment("Each contig in the reference genome (one per line):");
     for (int i = 0; i < count; i++) {
       Sequence contig = sequenceDatabase.getSequence(i);
       if (contig.getComplementedFrom() == null)
@@ -32,8 +40,35 @@ public class SamWriter implements AlignmentListener {
     }
   }
 
+  private void explainAlignmentFormat(boolean explainPairedEndReads) {
+    this.writeComment("Format of a query alignment (one line per sequence):");
+    StringBuilder formatCommentBuilder = new StringBuilder();
+    formatCommentBuilder.append(" Query name, flags (direction), reference contig, position, mapping quality (unused), CIGAR (indels), ");
+    if (explainPairedEndReads) {
+      formatCommentBuilder.append("mate reference name, mate reference position, ");
+    } else {
+      formatCommentBuilder.append("mate reference name (unused), mate reference position (unused), ");
+    }
+    formatCommentBuilder.append("query length, query sequence, quality (unused), ");
+    if (explainPairedEndReads) {
+      formatCommentBuilder.append("more (combined alignment score, aligment score)");
+    } else {
+      formatCommentBuilder.append("more (aligment score)");
+    }
+    this.writeComment(formatCommentBuilder.toString());
+    this.writeComment("");
+    this.writeComment("Alignment score format:");
+    if (explainPairedEndReads) {
+      this.writeComment(" CAS:f:<float>   combined alignment score of this query and its mate = <float>");
+      this.writeComment("  Combined alignment score (CAS) = (mate1.score + mate2.score - overlap.score) * (mate1.length + mate2.length) / (unique length) + spacing.score . See --verbose output for more details.");
+      this.writeComment("");
+    }
+    this.writeComment(" AS:f:<float>    score of alignment = <float>");
+    this.writeComment("");
+  }
+
   public void addAlignments(List<List<QueryAlignment>> alignments) {
-    this.write(this.format(alignments));
+    this.writeAndFlush(this.format(alignments));
   }
 
   public void addUnaligned(List<SamAlignment> unalignedQueries) {
@@ -66,7 +101,7 @@ public class SamWriter implements AlignmentListener {
 
   private void formatQueryAlignment(QueryAlignment queryAlignment, StringBuilder builder) {
      String queryPenaltyFormatted = null;
-     if (queryAlignment.getNumSequences() > 0) {
+     if (queryAlignment.getNumSequences() > 1) {
        queryPenaltyFormatted = formatQueryPenalty(queryAlignment);
      }
      for (SequenceAlignment alignment: queryAlignment.getComponents()) {
@@ -133,11 +168,11 @@ public class SamWriter implements AlignmentListener {
        // QUAL
        builder.append("*\t");
        // alignment score
-       builder.append(formatSequencePenalty(alignment));
        if (queryPenaltyFormatted != null) {
-         builder.append("\t");
          builder.append(queryPenaltyFormatted);
+         builder.append("\t");
        }
+       builder.append(formatSequencePenalty(alignment));
        builder.append("\n");
     }
   }
@@ -153,14 +188,9 @@ public class SamWriter implements AlignmentListener {
   }
 
   private String formatNumber(double number) {
-    float roundedNumber = Math.round(number);
-    if (Math.abs(number - roundedNumber) < Math.abs(number) * 0.000001) {
-      // number is essentially an integer
-      return "i:" + (int)roundedNumber;
-    } else {
-      // number is a float
-      return "f:" + number;
-    }
+    float scale = 10000;
+    float roundedNumber = Math.round(number * scale) / scale;
+    return "f:" + roundedNumber;
   }
 
   private int getSamFlags(SequenceAlignment alignment) {
@@ -189,11 +219,22 @@ public class SamWriter implements AlignmentListener {
     byte[] bytes = text.getBytes();
     synchronized(this.pendingWrites) {
       this.pendingWrites.add(bytes);
+    }
+  }
+
+  private void writeAndFlush(String text) {
+    byte[] bytes = text.getBytes();
+    synchronized(this.pendingWrites) {
+      this.pendingWrites.add(bytes);
       if (this.activelyWriting)
         return;
       this.activelyWriting = true;
     }
     this.flush();
+  }
+
+  private void writeComment(String comment) {
+    this.write("@CO " + comment + "\n");
   }
 
   private void flush() {
@@ -207,7 +248,7 @@ public class SamWriter implements AlignmentListener {
         if (this.pendingWrites.size() > 32) {
           // If we get too many pending jobs, we block new jobs until existing jobs are done) {
           for (byte[] currentBlock : this.pendingWrites) {
-            this.process(currentBlock);
+            this.sendToStream(currentBlock);
           }
           this.pendingWrites.clear();
           this.activelyWriting = false;
@@ -215,11 +256,11 @@ public class SamWriter implements AlignmentListener {
         }
         block = this.pendingWrites.remove();
       }
-      this.process(block);
+      this.sendToStream(block);
     }
   }
 
-  private void process(byte[] block) {
+  private void sendToStream(byte[] block) {
     try {
       this.bufferedStream.write(block);
     } catch (IOException e) {

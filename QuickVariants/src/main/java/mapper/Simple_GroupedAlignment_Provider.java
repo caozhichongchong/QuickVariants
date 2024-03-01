@@ -46,6 +46,13 @@ public class Simple_GroupedAlignment_Provider implements GroupedAlignment_Provid
     return this.queryProvider.getNumErrors();
   }
 
+  public boolean get_containsPairedEndReads() {
+    SamAlignment_Builder nextQuery = this.peekNextQuery();
+    if (nextQuery == null)
+      return false;
+    return nextQuery.getComponents().size() > 1;
+  }
+
   private SamAlignment_Builder peekNextQuery() {
     if (this.pendingQuery == null)
       this.pendingQuery = this.queryProvider.getNextSamAlignment_Builder();

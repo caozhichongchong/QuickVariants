@@ -42,6 +42,15 @@ public class Composite_GroupedAlignment_Provider implements GroupedAlignment_Pro
     return total;
   }
 
+  public boolean get_containsPairedEndReads() {
+    for (GroupedAlignment_Provider provider : this.providers) {
+      if (provider.get_containsPairedEndReads()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   int nextIndex;
   List<GroupedAlignment_Provider> providers;
 }
