@@ -84,7 +84,7 @@ The `benchmark_scripts` folder contains code used to construct the benchmark dat
 - `VCFAnalysis.ipynb`: Code to analyze point mutations and indels detected from benchmark datasets.
 - `COVID_MG.ipynb`: Code to analyze point mutations and indels detected from SARS-COV-2 sewage MG real data.
 
-**Analyzing Benchmark Datasets used in this study**
+**Analyzing Benchmark Datasets used in this study**\
 Please download benchmark datasets [here](https://doi.org/10.6084/m9.figshare.25437217)\
 Requirements: [bowtie2](https://anaconda.org/bioconda/bowtie2), [bwa](https://anaconda.org/bioconda/bwa), [minimap2](https://anaconda.org/bioconda/minimap2), 
 [samtools](https://www.htslib.org/download/), [bcftools](https://samtools.github.io/bcftools/howtos/install.html), [python3](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html), [jupyter notebook](https://jupyter.org/install)\
