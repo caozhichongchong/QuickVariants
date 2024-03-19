@@ -1,0 +1,73 @@
+Sample	Tool	FN	TP	FP_samePOS	FP_diffPOS
+NS50_0.1:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+NS50_0.1:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+NS50:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+NS50_10:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+HS25_10:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+HS25:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+HS25_0.1:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
