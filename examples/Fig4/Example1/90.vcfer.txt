@@ -1,0 +1,14 @@
+# Version 1
+CHR	POS	REF	ALT	DEPTH	TOTAL_DEPTH
+scaffold10|size88529	66594	A	G	1	1
+scaffold10|size88529	66637	A	C	1	1
+scaffold10|size88529	66656	C	G	1	1
+scaffold10|size88529	66673	G	T	1	1
+scaffold10|size88529	66700	A	G	1	1
+scaffold10|size88529	66710	T	G	1	1
+scaffold10|size88529	66721	C	A	1	1
+scaffold10|size88529	66725	T	C	1	1
+scaffold10|size88529	66741	G	C	1	1
+scaffold10|size88529	66769	A	T	1	1
+scaffold10|size88529	66770	A	G	1	1
+scaffold10|size88529	66803	---------------	ATAGCCAATATGCGG	1	1

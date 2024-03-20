@@ -1,0 +1,37 @@
+Sample	Tool	FN	TP	FP_samePOS	FP_diffPOS
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	9
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	9
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	9
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+Main_2022_Jan1:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bwa	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	minimap2	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	5
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	5
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	5
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	0
+Main_2023_Mar1:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	0
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bowtie2	200	0	0	0
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bwa	200	0	0	1
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	minimap2	200	0	0	1
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	8
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bwa VARIANTS	200	0	0	8
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	minimap2 VARIANTS	200	0	0	8
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	1
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bwa bcfdefault	200	0	0	1
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	minimap2 bcfdefault	200	0	0	1
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bowtie2 indel	200	0	0	0
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	bwa indel	200	0	0	1
+Main_2022_Jan2:ref.fasta.0.SNP.fasta	minimap2 indel	200	0	0	1

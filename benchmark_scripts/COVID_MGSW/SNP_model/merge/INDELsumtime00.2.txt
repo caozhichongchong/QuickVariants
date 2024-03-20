@@ -1,0 +1,17 @@
+OM	Count	tool	VCFer	Count total	Odds	pvalue
+Non Omicron	1	bowtie	bcfdefault.flt	1		
+New Omicron	1	bowtie	QuickVariants.vcf.snp	1	0.0013397642015005359	6.643251065543316e-06
+Non Omicron	8	bowtie	QuickVariants.vcf.snp	10	0.0013397642015005359	6.643251065543316e-06
+Old Omicron	1	bowtie	QuickVariants.vcf.snp	2	0.0013397642015005359	6.643251065543316e-06
+Non Omicron	1	minimap	indel.flt	1		
+Non Omicron	1	minimap	flt	1		
+Non Omicron	1	minimap	bcfdefault.flt	1		
+New Omicron	1	minimap	QuickVariants.vcf.snp	1	0.0013397642015005359	6.643251065543316e-06
+Non Omicron	8	minimap	QuickVariants.vcf.snp	10	0.0013397642015005359	6.643251065543316e-06
+Old Omicron	1	minimap	QuickVariants.vcf.snp	2	0.0013397642015005359	6.643251065543316e-06
+Non Omicron	1	bwa	indel.flt	1		
+Non Omicron	1	bwa	flt	1		
+Non Omicron	1	bwa	bcfdefault.flt	1		
+New Omicron	1	bwa	QuickVariants.vcf.snp	1	0.0013397642015005359	6.643251065543316e-06
+Non Omicron	8	bwa	QuickVariants.vcf.snp	10	0.0013397642015005359	6.643251065543316e-06
+Old Omicron	1	bwa	QuickVariants.vcf.snp	2	0.0013397642015005359	6.643251065543316e-06

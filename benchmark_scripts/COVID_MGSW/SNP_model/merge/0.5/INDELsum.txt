@@ -1,0 +1,7 @@
+OM	Count	tool	VCFer	Odds	pvalue
+False	2	bowtie	mappersamtovcf.vcf.snp	0.0006027458421698851	2.2976122115262228e-06
+True	2	bowtie	mappersamtovcf.vcf.snp	0.0006027458421698851	2.2976122115262228e-06
+False	2	minimap	mappersamtovcf.vcf.snp	0.0006027458421698851	2.2976122115262228e-06
+True	2	minimap	mappersamtovcf.vcf.snp	0.0006027458421698851	2.2976122115262228e-06
+False	2	bwa	mappersamtovcf.vcf.snp	0.0006027458421698851	2.2976122115262228e-06
+True	2	bwa	mappersamtovcf.vcf.snp	0.0006027458421698851	2.2976122115262228e-06

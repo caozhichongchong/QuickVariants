@@ -11,7 +11,7 @@ Please download the latest QuickVariants [here](https://github.com/caozhichongch
 ### Usage
 
 ```
-java -Xms10g -Xmx10g -jar quick-variants.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input.sam> --num-threads num_threads [options]
+java -Xms10g -Xmx10g -jar quick-variants-VERSION.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input.sam> --num-threads num_threads [options]
 ```
 
 This command converts a SAM file to other formats, most notably .vcf.
@@ -74,7 +74,22 @@ Multiple output formats may be specified during a single run; for example:
 
 - `--num-threads <count>` number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.
 
-### Additional Scripts and Models
+
+### Test
+```
+java -jar quick-variants-1.0.14.jar --out-vcf Fig4Example1.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig4/Example1/90.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig4Example2.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig4/Example2/86.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example1.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig5/Example1/99.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example2.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig5/Example2/102.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example3.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig5/Example3/9.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example4.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig5/Example4/47.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example1.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig6/Example1/88.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example2.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig6/Example2/90.sam
+java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example3.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig6/Example3/9.sam
+```
+- You can compare your results to pre-generated VCF files located in example/test_results/.
+
+### Additional scripts and models
 The `benchmark_scripts` folder contains code used to construct the benchmark dataset, filter SNPs and indels in VCF files, and analyze VCF files.
 
 - `SNP_model.py`: Insert in silico mutations and indels randomly into reference genomes, and generate alignment code.
@@ -84,45 +99,57 @@ The `benchmark_scripts` folder contains code used to construct the benchmark dat
 - `VCFAnalysis.ipynb`: Code to analyze point mutations and indels detected from benchmark datasets.
 - `COVID_MG.ipynb`: Code to analyze point mutations and indels detected from SARS-COV-2 sewage MG real data.
 
-**Analyzing Benchmark Datasets used in this study**\
+**Analyzing benchmark datasets used in this study**\
 Please download benchmark datasets [here](https://doi.org/10.6084/m9.figshare.25437217)\
 Requirements: [bowtie2](https://anaconda.org/bioconda/bowtie2), [bwa](https://anaconda.org/bioconda/bwa), [minimap2](https://anaconda.org/bioconda/minimap2), 
 [samtools](https://www.htslib.org/download/), [bcftools](https://samtools.github.io/bcftools/howtos/install.html), [python3](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html), [jupyter notebook](https://jupyter.org/install)\
--Gut microbiome WGS data with in silico mutations\
-`python SNP_model_covid.py -i Gut_microbiome_benchmark/original_data -o Gut_microbiome_benchmark/`\
-`python SNPfilter.py -i Gut_microbiome_benchmark/`\
-`python Indelfilter.py -i Gut_microbiome_benchmark/`\
-`python SNP_model_compare.py -i Gut_microbiome_benchmark/`
+-Gut microbiome WGS data with in silico mutations
+```
+python SNP_model_covid.py -i Gut_microbiome_benchmark/original_data -o Gut_microbiome_benchmark/
+python SNPfilter.py -i Gut_microbiome_benchmark/
+python Indelfilter.py -i Gut_microbiome_benchmark/
+python SNP_model_compare.py -i Gut_microbiome_benchmark/
+```
 
 Point mutations detected: Gut_microbiome_benchmark/SNP_model/merge/*final.txt and Gut_microbiome_benchmark/SNP_model/merge/model.sum.txt\
 Indels detected: Gut_microbiome_benchmark/SNP_model/merge/*indel.vcf.filtered and Gut_microbiome_benchmark/SNP_model/merge/modelindelsum.txt
 
--SARS-COV-2 WGS data with in silico mutations\
-`python SNP_model_covid.py -i COVID_benchmark/original_data -fa .fasta -fq _1.fastq -o COVID_benchmark/`\
-`python SNPfilter.py -i COVID_benchmark/`\
-`python Indelfilter.py -i COVID_benchmark/`\
-`python SNP_model_compare.py -i COVID_benchmark/`
+-SARS-COV-2 WGS data with in silico mutations
+```
+python SNP_model_covid.py -i COVID_benchmark/original_data -fa .fasta -fq _1.fastq -o COVID_benchmark/
+python SNPfilter.py -i COVID_benchmark/
+python Indelfilter.py -i COVID_benchmark/
+python SNP_model_compare.py -i COVID_benchmark/
+```
 
--WGS data simulated with sequencing errors\
-`python SNP_model_covid.py -i WGS_simulation_sequencingerror/original_data -fa .fasta -fq _1.fq -o WGS_simulation_sequencingerror/`\
-`python SNPfilter.py -i WGS_simulation_sequencingerror/`\
-`python Indelfilter.py -i WGS_simulation_sequencingerror/`\
-`python SNP_model_compare.py -i WGS_simulation_sequencingerror/`
+-WGS data simulated with sequencing errors
+```
+python SNP_model_covid.py -i WGS_simulation_sequencingerror/original_data -fa .fasta -fq _1.fq -o WGS_simulation_sequencingerror/
+python SNPfilter.py -i WGS_simulation_sequencingerror/
+python Indelfilter.py -i WGS_simulation_sequencingerror/
+python SNP_model_compare.py -i WGS_simulation_sequencingerror/
+```
 
--MG data simulated with sequencing errors (20X)\
-`python SNP_model_covid.py -i MG_simulation_sequencingerror/original_data -fa .fasta -fq _1.fq -o MG_simulation_sequencingerror/`\
-`python SNPfilter.py -i MG_simulation_sequencingerror/`\
-`python Indelfilter.py -i MG_simulation_sequencingerror/`\
-`python SNP_model_compare.py -i MG_simulation_sequencingerror/`
+-MG data simulated with sequencing errors (20X)
+```
+python SNP_model_covid.py -i MG_simulation_sequencingerror/original_data -fa .fasta -fq _1.fq -o MG_simulation_sequencingerror/
+python SNPfilter.py -i MG_simulation_sequencingerror/
+python Indelfilter.py -i MG_simulation_sequencingerror/
+python SNP_model_compare.py -i MG_simulation_sequencingerror/
+```
 
--MG data simulated with sequencing errors (100X)\
-`python SNP_model_covid.py -i MGBIG_simulation_sequencingerror/original_data -fa .fasta -fq _1.fq -o MGBIG_simulation_sequencingerror/`\
-`python SNPfilter.py -i MGBIG_simulation_sequencingerror/`\
-`python Indelfilter.py -i MGBIG_simulation_sequencingerror/`\
-`python SNP_model_compare.py -i MGBIG_simulation_sequencingerror/`
+-MG data simulated with sequencing errors (100X)
+```
+python SNP_model_covid.py -i MGBIG_simulation_sequencingerror/original_data -fa .fasta -fq _1.fq -o MGBIG_simulation_sequencingerror/
+python SNPfilter.py -i MGBIG_simulation_sequencingerror/
+python Indelfilter.py -i MGBIG_simulation_sequencingerror/
+python SNP_model_compare.py -i MGBIG_simulation_sequencingerror/
+```
 
--SARS-COV-2 sewage MG real data\
-`python SNP_model_covid.py -i COVID_MGSW/original_data -fa .fasta -fq _1.fq -o COVID_MGSW/`\
-`python SNPfilter.py -i COVID_MGSW/`\
-`python Indelfilter.py -i COVID_MGSW/`\
-`python SNP_model_compare.py -i COVID_MGSW/`
+-SARS-COV-2 sewage MG real data
+```
+python SNP_model_covid.py -i COVID_MGSW/original_data -fa .fasta -fq _1.fq -o COVID_MGSW/
+python SNPfilter.py -i COVID_MGSW/
+python Indelfilter.py -i COVID_MGSW/
+python SNP_model_compare.py -i COVID_MGSW/
+```
