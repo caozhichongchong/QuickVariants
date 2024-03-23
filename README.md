@@ -88,6 +88,19 @@ java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example2.vcf --reference examp
 java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example3.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example3/9.sam
 ```
 - You can compare your results to pre-generated VCF files located in example/test_results/.
+### filtering point mutations and indels
+```
+python QuickVariants_Pointmutationfilter.py -i Your_QuickVariants_Output_Folder
+python QuickVariants_Indelfilter.py -i Your_QuickVariants_Output_Folder
+```
+- `af`, `allele-frequency` minimum allele frequency
+- `rd`, `read-depth` minimum read depth
+- Testing
+```
+unzip test_vcf.zip
+python QuickVariants_Pointmutationfilter.py
+python QuickVariants_Indelfilter.py
+```
 
 ### Additional scripts and models
 The `benchmark_scripts` folder contains code used to construct the benchmark dataset, filter SNPs and indels in VCF files, and analyze VCF files.

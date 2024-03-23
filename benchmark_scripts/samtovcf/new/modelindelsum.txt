@@ -1,0 +1,2161 @@
+Sample	Tool	FN	TP	FP_samePOS	FP_diffPOS
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	39
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	22
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	1
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	37
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	59
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+bf_BaFa_g0001.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	7
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bwa	200	0	0	1
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	1
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	11
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	1
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	1
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	9
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	1
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	27
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	2
+am_PaDi_g0001.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	2
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	11
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	2
+am_BA_g0003.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	6
+am_BA_g0003.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	1
+am_BA_g0003.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	24
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	14
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	7
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	55
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+bj_EsCo_g0001.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	1
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	15
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	31
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	1
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	12
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	65
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+am_BaOv_g0001.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	21
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	15
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	6
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	42
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+cx_BaXy_g0001.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	1
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	17
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	2
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	1
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	30
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+am_AkMu_g0002.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	3
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	19
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	1
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	6
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+am_BaFr_g0050.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bowtie2	200	0	0	12
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bwa	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	minimap2	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bowtie2 VARIANTS	200	0	0	18
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bwa VARIANTS	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	minimap2 VARIANTS	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bowtie2 bcfdefault	200	0	0	6
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bwa bcfdefault	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	minimap2 bcfdefault	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bowtie2 indel	200	0	0	44
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	bwa indel	200	0	0	0
+am_BaVu_g0002.fasta.corrected.0.SNP.fasta	minimap2 indel	200	0	0	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bowtie2	38	162	2	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bwa	72	128	0	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	minimap2	63	137	1	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	11	189	1	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	35	165	2	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	72	128	0	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	60	140	1	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	55	145	1	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	bwa indel	5	195	0	0
+am_BA_g0003.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2	21	179	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bwa	38	162	0	1
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2	34	166	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	10	190	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	39	161	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	33	167	0	0
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	43	157	0	1
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	bwa indel	2	198	0	1
+cx_BaXy_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	3	197	0	1
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2	17	183	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bwa	46	154	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	8	192	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	6	194	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	16	184	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	46	154	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	38	162	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	bwa indel	2	198	0	0
+cx_BaXy_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bowtie2	27	173	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bwa	46	154	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	minimap2	43	157	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	25	175	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	46	154	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	33	167	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	bwa indel	5	195	0	0
+am_BaFr_g0050.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	4	196	0	0
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2	115	85	4	3
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bwa	112	88	11	8
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2	107	93	10	0
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	38	162	13	3
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	19	181	18	36
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	19	181	18	0
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	128	72	4	0
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	112	88	11	7
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	106	94	10	0
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	95	106	7	14
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	bwa indel	19	181	15	42
+am_BaOv_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	19	181	15	29
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2	35	165	1	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa	49	151	1	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2	44	156	1	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	2	198	2	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	0	200	2	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	0	200	2	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	29	171	1	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	50	150	1	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	45	155	1	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	40	160	2	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa indel	1	199	2	0
+am_AkMu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	1	199	2	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2	37	163	0	1
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa	66	134	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2	56	144	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	35	165	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	66	134	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	55	145	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	37	163	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa indel	2	198	0	0
+am_AkMu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2	57	143	4	8
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bwa	78	122	3	2
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2	70	130	3	5
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	13	189	5	1
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	10	191	5	1
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	10	191	5	1
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	62	138	4	4
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	78	122	3	2
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	71	129	3	5
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	52	149	5	3
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	bwa indel	15	186	6	4
+bj_EsCo_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	11	190	6	6
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2	29	171	0	7
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bwa	52	148	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2	45	155	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	27	173	0	3
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	53	147	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	48	152	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	bwa indel	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2	27	173	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bwa	55	145	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2	50	150	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	16	184	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	27	173	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	55	145	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	50	150	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	56	144	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	bwa indel	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	0	200	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2	27	173	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa	65	135	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2	57	143	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	28	172	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	65	135	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	57	143	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	20	180	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa indel	3	197	0	0
+am_BaVu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	1	199	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bowtie2	33	167	0	1
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bwa	65	135	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	minimap2	58	142	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	8	192	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	26	174	0	1
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	64	136	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	55	145	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	50	150	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BA_g0003.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2	45	155	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa	49	151	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2	38	162	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	4	196	2	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	41	159	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	39	161	0	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	42	158	1	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	bwa indel	1	199	1	0
+am_AkMu_g0002.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	1	199	1	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bowtie2	40	160	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bwa	46	154	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	minimap2	44	156	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	36	164	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	47	153	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	43	157	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	40	161	0	1
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	bwa indel	5	195	0	0
+am_BaFr_g0050.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2	21	180	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bwa	42	158	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2	37	163	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	11	189	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	21	179	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	42	158	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	37	163	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	30	170	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	bwa indel	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2	32	169	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bwa	66	134	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2	57	143	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	16	184	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	27	174	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	65	135	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	60	140	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	43	157	1	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	bwa indel	6	194	0	0
+cx_BaXy_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	6	194	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2	21	179	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa	51	149	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2	45	155	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	23	177	0	1
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	bwa indel	5	195	0	0
+am_BaVu_g0002.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	5	195	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bowtie2	26	174	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bwa	51	149	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	minimap2	46	154	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	3	197	1	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	2	198	2	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	2	198	2	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	27	173	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	51	149	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	26	174	2	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	bwa indel	3	198	3	0
+am_BaFr_g0050.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	3	197	2	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2	26	174	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bwa	48	152	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2	42	158	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	22	178	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	48	152	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	32	168	0	1
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2	34	166	6	3
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bwa	56	144	6	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2	46	154	6	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	11	189	6	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	8	192	5	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	7	193	5	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	37	163	6	1
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	56	144	6	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	46	154	6	0
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	42	159	7	7
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	bwa indel	10	190	7	1
+am_PaDi_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	9	191	7	1
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2	21	179	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bwa	43	157	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2	38	162	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	3	197	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	43	157	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	38	162	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	24	176	0	1
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	bwa indel	4	196	0	0
+am_PaDi_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	3	197	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2	16	184	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa	56	144	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2	48	152	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	17	183	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	56	144	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	49	151	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	34	166	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa indel	3	197	0	0
+am_BaVu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	4	196	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2	24	176	0	3
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bwa	52	148	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2	43	157	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	1	199	1	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	1	199	1	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	20	180	2	1
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	52	148	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	30	170	4	3
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	4	196	0	0
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2	24	176	1	2
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bwa	48	152	1	1
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2	42	158	1	1
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	6	194	1	1
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	2	198	2	0
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	2	198	2	0
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	24	176	1	1
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	48	152	1	1
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	42	158	1	1
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	30	170	1	3
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	bwa indel	1	199	1	0
+am_PaDi_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	1	199	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2	16	185	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bwa	46	154	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2	43	157	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	16	185	2	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	46	154	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	43	157	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	28	172	1	3
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	bwa indel	6	194	1	0
+bj_EsCo_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	6	194	1	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2	37	163	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa	44	156	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2	38	162	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	30	170	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	43	157	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	38	162	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	47	153	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa indel	1	199	0	0
+am_AkMu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2	30	170	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bwa	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2	44	156	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	15	185	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	7	193	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	27	173	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	45	155	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	35	165	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	bwa indel	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	6	194	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2	33	167	0	2
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa	49	151	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2	43	157	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	30	170	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	49	151	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	41	159	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	42	158	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa indel	2	198	0	0
+am_AkMu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	2	198	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2	25	175	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bwa	48	152	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	12	188	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	27	173	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	48	152	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	47	153	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	bwa indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	0	200	0	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2	20	181	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bwa	57	143	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2	51	149	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	8	192	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	6	194	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	6	194	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	19	182	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	56	144	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	50	150	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	26	174	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	bwa indel	5	195	1	0
+bj_EsCo_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	6	194	1	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2	20	180	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bwa	54	146	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2	48	152	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	20	180	0	1
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	54	146	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	48	152	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	28	173	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	bwa indel	5	195	0	0
+am_PaDi_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	4	196	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2	47	153	0	1
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa	47	153	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2	45	155	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	7	193	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	42	158	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	47	153	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	52	148	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa indel	1	199	0	0
+am_AkMu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2	32	168	3	3
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa	62	138	3	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2	55	145	3	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	14	186	5	2
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	5	195	5	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	4	196	4	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	33	167	3	1
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	62	138	3	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	53	147	3	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	33	167	4	5
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa indel	6	194	4	0
+am_BaVu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	6	194	3	0
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2	92	108	9	5
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bwa	81	119	9	1
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2	74	126	9	1
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	24	176	7	2
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	8	192	7	6
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	7	193	7	0
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	110	90	9	2
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	81	119	9	1
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	73	127	9	1
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	80	120	7	4
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	bwa indel	13	187	11	7
+am_PaDi_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	12	188	11	8
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2	20	180	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa	53	147	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2	47	153	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	6	194	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	1	199	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	1	199	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	20	180	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	53	147	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	47	153	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	27	173	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	bwa indel	2	198	1	0
+am_BaVu_g0002.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	2	198	1	0
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2	86	114	5	8
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa	90	110	7	8
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2	87	113	8	0
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	25	176	10	0
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	14	186	14	8
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	14	186	14	1
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	90	110	6	5
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	90	110	7	8
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	87	113	8	0
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	68	132	9	9
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa indel	16	184	12	10
+am_BaVu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	16	184	12	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bowtie2	31	169	0	1
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bwa	57	143	0	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	minimap2	47	153	0	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	3	197	2	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	2	198	2	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	2	198	2	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	33	167	0	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	57	143	0	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	47	153	0	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	34	166	0	5
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	bwa indel	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2	31	169	0	2
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bwa	52	148	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2	46	154	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	19	181	0	1
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	51	149	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	42	158	0	1
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	bwa indel	2	198	0	0
+bf_BaFa_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2	21	179	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa	53	147	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2	50	150	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	54	146	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	50	150	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	19	181	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2	21	179	1	2
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa	57	143	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2	52	148	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	7	193	1	1
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	1	199	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	1	199	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	18	182	1	2
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	56	144	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	52	148	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	27	173	1	4
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa indel	3	197	1	0
+am_BaVu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	2	198	1	0
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2	59	141	9	3
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bwa	80	120	7	4
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2	74	126	7	1
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	26	174	9	1
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	10	190	9	4
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	9	191	9	0
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	65	135	8	5
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	80	120	7	4
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	74	126	7	0
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	57	144	10	9
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	bwa indel	13	187	10	7
+am_PaDi_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	12	188	10	2
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bowtie2	36	164	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bwa	46	154	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	minimap2	39	161	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	30	170	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	47	153	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	40	160	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	35	165	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	bwa indel	0	200	0	0
+am_BaFr_g0050.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2	26	175	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bwa	54	146	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2	50	150	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	16	184	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	9	191	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	8	192	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	28	173	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	55	145	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	51	149	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	35	165	0	3
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	bwa indel	8	192	0	0
+bj_EsCo_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	8	192	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bowtie2	29	171	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bwa	63	137	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	minimap2	51	149	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	12	188	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	26	174	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	62	138	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	49	151	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	48	152	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	bwa indel	4	196	0	0
+am_BA_g0003.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	2	198	0	0
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2	123	77	2	4
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bwa	81	119	6	6
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2	76	124	6	1
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	41	159	6	3
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	23	177	9	17
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	21	179	9	1
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	121	79	2	1
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	81	119	6	6
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	76	124	6	1
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	110	90	2	6
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	bwa indel	18	182	10	17
+cx_BaXy_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	17	183	10	13
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2	17	184	1	4
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bwa	51	149	1	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2	46	154	1	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	6	194	2	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	2	198	2	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	2	198	2	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	16	185	1	1
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	51	149	1	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	44	156	1	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	21	180	1	5
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	bwa indel	1	199	1	0
+am_BaOv_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	1	199	1	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2	23	177	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bwa	59	141	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	21	180	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	56	144	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	33	167	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	bwa indel	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	5	195	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2	12	188	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bwa	42	158	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2	36	164	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	12	188	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	42	158	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	36	164	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	27	173	0	3
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	2	198	0	0
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bowtie2	42	158	11	3
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bwa	66	134	9	5
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	minimap2	61	139	9	0
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	10	190	7	0
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	7	193	7	6
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	7	193	7	0
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	39	161	11	0
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	65	135	9	5
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	61	139	9	0
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	44	156	9	4
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	bwa indel	14	186	11	6
+am_BaFr_g0050.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	14	186	11	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2	19	181	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bwa	47	153	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2	42	158	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	19	181	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	48	152	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	43	157	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	26	174	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	2	198	0	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2	60	140	6	15
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bwa	70	130	9	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2	61	139	10	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	21	179	7	1
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	7	193	7	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	7	193	7	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	64	136	7	8
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	70	130	9	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	59	141	10	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	65	136	9	5
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	bwa indel	13	187	10	0
+bf_BaFa_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	13	187	10	1
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2	13	187	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bwa	47	153	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2	39	161	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	13	187	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	47	153	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	38	162	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	18	182	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	bwa indel	0	200	0	0
+am_BaOv_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	0	200	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2	27	174	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bwa	55	146	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2	44	157	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	3	197	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	3	197	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	23	178	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	55	146	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	43	158	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	31	169	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	bwa indel	7	193	0	0
+bj_EsCo_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	7	193	0	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2	26	174	3	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bwa	45	155	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2	38	162	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	15	185	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	0	200	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	0	200	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	24	176	4	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	46	154	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	39	161	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	43	157	2	1
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	bwa indel	0	200	2	0
+bf_BaFa_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	2	198	2	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2	17	183	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bwa	55	145	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2	49	151	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	16	184	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	55	145	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	50	150	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	23	177	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	bwa indel	1	199	0	0
+am_PaDi_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2	134	66	8	2
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa	116	84	9	3
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2	107	93	9	1
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	52	149	14	1
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	15	187	14	31
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	15	187	14	1
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	146	54	8	1
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	115	85	9	2
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	109	91	9	0
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	108	93	11	4
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa indel	14	187	16	27
+am_BaVu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	14	187	16	20
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bowtie2	94	106	6	0
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bwa	99	101	6	1
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	minimap2	89	111	9	0
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	30	170	14	0
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	12	188	11	6
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	12	188	12	0
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	105	95	6	0
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	97	103	7	1
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	85	115	9	0
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	87	113	11	1
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	bwa indel	29	171	10	6
+am_BA_g0003.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	25	175	10	2
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2	12	188	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bwa	54	146	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2	45	155	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	11	189	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	54	146	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	45	155	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	25	175	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	bwa indel	1	199	0	0
+am_PaDi_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	2	198	0	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2	48	152	4	2
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa	69	131	5	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2	64	136	4	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	8	192	5	1
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	5	195	5	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	5	195	5	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	41	159	4	1
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	69	131	5	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	64	136	5	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	46	156	3	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa indel	9	191	5	0
+am_AkMu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	8	192	4	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bowtie2	33	167	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bwa	64	136	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	minimap2	56	144	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	29	171	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	63	137	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	57	143	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	42	158	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	bwa indel	3	197	0	0
+am_BA_g0003.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2	29	171	0	1
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa	46	154	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2	44	156	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	28	172	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	46	154	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	45	155	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	31	169	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa indel	1	199	0	0
+am_AkMu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	1	199	0	1
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2	117	83	6	1
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa	120	80	6	5
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2	117	83	5	0
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	30	171	12	2
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	13	187	13	4
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	13	187	13	0
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	131	69	6	2
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	119	81	6	4
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	117	83	4	0
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	99	101	10	5
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	bwa indel	17	183	13	9
+am_AkMu_g0002.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	16	184	12	13
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2	26	175	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bwa	50	150	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2	39	161	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	12	188	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	24	177	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	50	150	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	41	159	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	41	159	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	bwa indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bowtie2	28	172	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bwa	60	140	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	minimap2	58	142	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	8	192	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	26	174	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	61	139	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	54	146	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	51	149	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	bwa indel	3	197	0	0
+am_BA_g0003.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2	22	178	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bwa	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2	41	159	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	16	184	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	22	178	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	41	159	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	48	152	0	1
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	bwa indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	4	196	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2	21	179	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa	50	150	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2	42	158	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	26	174	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	bwa indel	0	200	0	0
+am_BaVu_g0002.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	0	200	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2	22	178	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bwa	52	148	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2	42	158	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	22	178	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	52	148	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	24	177	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2	22	178	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bwa	57	143	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2	50	150	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	21	179	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	57	143	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	51	149	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	27	173	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	bwa indel	0	200	0	0
+am_BaOv_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	0	200	0	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2	33	167	3	4
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa	70	130	3	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2	67	133	3	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	9	191	4	1
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	7	193	4	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	6	194	4	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	32	168	3	1
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	70	130	3	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	67	133	3	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	30	170	1	5
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	bwa indel	6	194	3	0
+am_BaVu_g0002.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	6	194	3	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2	21	179	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bwa	44	156	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2	39	161	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	14	186	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	18	182	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	44	156	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	39	161	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	36	165	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	bwa indel	6	194	0	0
+cx_BaXy_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	4	196	0	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2	21	180	2	3
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bwa	50	150	1	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2	44	156	1	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	20	180	3	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	5	195	2	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	3	197	2	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	16	185	2	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	50	150	1	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	44	156	1	0
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	35	166	2	7
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	bwa indel	5	195	1	1
+cx_BaXy_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	4	196	1	2
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2	19	182	0	1
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bwa	56	144	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2	50	150	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	3	197	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	16	185	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	56	144	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	27	173	0	1
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	bwa indel	5	195	0	0
+bj_EsCo_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2	40	160	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa	55	145	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2	48	152	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	37	163	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	55	145	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	40	160	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa indel	4	196	0	0
+am_AkMu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	4	196	0	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2	30	170	2	10
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bwa	40	160	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2	38	162	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	12	188	2	2
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	3	197	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	3	197	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	29	171	2	6
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	40	160	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	37	163	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	38	162	2	8
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	bwa indel	4	196	2	0
+bf_BaFa_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	4	196	2	0
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bowtie2	112	88	4	6
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bwa	122	78	6	9
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	minimap2	120	80	6	1
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	39	162	18	4
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	17	183	16	18
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	17	183	16	1
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	129	71	4	4
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	123	77	6	8
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	121	79	6	1
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	90	111	11	10
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	bwa indel	18	182	14	24
+am_BaFr_g0050.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	18	182	14	22
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2	21	179	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa	53	147	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2	46	154	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	17	184	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	53	147	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	45	155	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	22	178	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa indel	3	197	0	0
+am_BaVu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	4	196	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2	22	178	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bwa	50	150	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2	44	156	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	18	182	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	2	198	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2	33	167	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bwa	48	152	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2	39	161	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	14	186	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	48	152	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	39	161	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	52	148	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	bwa indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	0	200	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2	20	180	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bwa	47	153	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2	41	159	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	10	190	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	2	198	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	19	181	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	47	153	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	40	160	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	36	164	0	1
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	bwa indel	1	199	0	0
+cx_BaXy_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bowtie2	33	167	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bwa	51	149	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	minimap2	45	155	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	51	149	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	38	162	0	1
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	bwa indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	1	199	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2	14	186	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bwa	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2	35	165	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	10	191	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	36	164	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	47	153	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	bwa indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2	24	176	2	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bwa	55	145	1	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2	40	160	1	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	7	193	2	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	2	198	2	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	0	200	2	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	24	176	2	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	55	145	1	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	41	159	1	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	12	188	2	1
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	bwa indel	2	198	2	0
+am_BaOv_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	0	200	2	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2	50	150	3	1
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa	62	138	3	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2	54	146	3	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	10	190	6	2
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	5	195	5	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	5	195	5	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	50	150	3	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	62	138	3	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	58	142	3	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	45	155	5	3
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	bwa indel	9	191	5	0
+am_AkMu_g0002.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	10	190	5	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2	24	176	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bwa	43	157	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2	38	162	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	21	179	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	42	158	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	37	163	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	20	180	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2	11	189	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bwa	47	153	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2	37	163	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	9	191	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	47	153	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	36	164	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	22	178	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaOv_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2	17	183	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa	69	131	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2	57	143	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	69	131	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	55	145	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	23	177	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2	18	182	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bwa	41	159	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2	35	165	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	17	183	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	41	159	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	35	165	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	21	179	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaOv_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2	11	189	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bwa	38	162	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2	33	167	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	2	198	1	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	9	191	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	39	161	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	31	169	1	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	25	175	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	2	198	1	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bowtie2	26	174	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bwa	41	159	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	minimap2	36	164	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	23	177	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	41	159	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	36	164	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	34	167	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	bwa indel	4	196	0	0
+am_BaFr_g0050.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	5	195	0	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2	26	175	4	5
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bwa	61	139	3	1
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2	52	148	3	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	13	189	4	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	11	190	4	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	11	190	4	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	21	180	4	3
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	61	139	3	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	52	148	3	0
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	26	176	3	4
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	bwa indel	9	192	4	2
+bj_EsCo_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	9	192	4	0
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2	79	122	6	1
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa	77	123	7	2
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2	73	127	7	0
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	14	186	9	1
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	6	194	6	4
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	6	194	6	0
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	83	118	5	1
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	76	124	7	2
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	73	127	7	0
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	64	137	8	4
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	bwa indel	10	190	8	4
+am_AkMu_g0002.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	10	190	8	1
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2	17	183	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bwa	63	137	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2	52	148	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	15	185	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	62	138	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	50	150	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	28	172	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bowtie2	31	169	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bwa	65	135	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	minimap2	54	146	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	12	188	1	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	0	200	2	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	28	172	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	65	135	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	51	149	0	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	53	147	2	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	bwa indel	1	199	2	0
+am_BA_g0003.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	1	199	0	0
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2	81	119	6	5
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bwa	78	122	8	3
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2	70	130	8	0
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	28	172	10	1
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	15	185	9	3
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	14	186	9	0
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	83	117	7	4
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	78	122	8	3
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	71	129	9	0
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	90	110	9	7
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	bwa indel	16	184	11	6
+cx_BaXy_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	15	185	11	3
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2	22	178	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bwa	58	142	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2	45	155	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	8	192	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	5	195	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	3	197	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	24	176	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	57	143	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	43	157	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	35	166	0	1
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	bwa indel	5	195	0	0
+am_PaDi_g0001.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	4	196	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2	26	174	0	1
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bwa	56	144	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2	48	152	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	15	185	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	25	175	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	56	144	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	48	152	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	41	159	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	bwa indel	8	192	0	0
+cx_BaXy_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	8	192	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2	23	177	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa	56	144	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2	47	153	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	7	193	0	1
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	18	182	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	55	145	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	47	153	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	25	175	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	bwa indel	0	200	0	0
+am_BaVu_g0002.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2	38	162	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa	45	155	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2	38	162	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	30	170	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	45	155	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	39	161	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	40	160	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	bwa indel	2	198	0	0
+am_AkMu_g0002.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bowtie2	24	176	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bwa	50	150	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	minimap2	47	153	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	27	173	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	25	175	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	bwa indel	5	195	0	0
+am_BaFr_g0050.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	3	197	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bowtie2	38	162	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bwa	54	146	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	minimap2	46	154	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	11	189	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	31	169	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	53	147	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	45	155	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	bwa indel	6	194	0	0
+am_BA_g0003.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	5	195	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2	24	176	0	1
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bwa	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2	35	165	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	13	187	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	2	198	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	23	177	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	36	164	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	49	151	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	bwa indel	3	197	0	0
+bf_BaFa_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bowtie2	39	161	1	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bwa	78	122	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	minimap2	73	127	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	31	169	1	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	78	122	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	73	127	0	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	51	149	1	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	bwa indel	2	198	1	0
+am_BA_g0003.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	2	198	1	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2	20	180	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bwa	48	152	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2	41	159	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	19	181	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	48	152	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	41	159	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	17	183	1	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	2	198	0	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bowtie2	41	160	6	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bwa	70	130	5	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	minimap2	59	141	6	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	18	182	5	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	6	194	5	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	6	194	5	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	33	168	6	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	70	130	5	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	56	144	6	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	56	145	6	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	bwa indel	10	190	6	0
+am_BA_g0003.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	9	191	6	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bowtie2	54	146	7	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bwa	79	121	6	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	minimap2	68	132	7	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	18	183	10	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	10	190	10	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	10	190	10	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	55	145	7	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	78	122	6	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	67	133	7	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	54	149	8	3
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	bwa indel	10	191	9	0
+am_BaFr_g0050.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	10	191	9	0
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2	71	129	5	5
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bwa	83	117	5	9
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2	79	121	5	0
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	25	176	9	1
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	10	190	9	12
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	10	190	9	0
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	86	114	5	3
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	83	117	5	9
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	78	122	5	0
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	68	132	6	11
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	bwa indel	8	192	6	16
+am_BaOv_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	8	192	6	8
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2	32	168	7	7
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bwa	52	148	6	2
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2	46	154	6	2
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	15	186	7	1
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	8	192	7	2
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	8	192	7	1
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	30	170	7	3
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	52	148	6	2
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	45	155	6	2
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	41	160	8	3
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	bwa indel	9	191	7	2
+bj_EsCo_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	10	190	7	2
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2	119	81	6	11
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bwa	88	112	9	8
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2	81	119	8	0
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	33	167	15	2
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	15	185	14	12
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	16	184	14	1
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	140	60	6	4
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	88	112	9	8
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	81	119	8	0
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	128	73	9	14
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	bwa indel	17	184	14	16
+bf_BaFa_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	18	183	14	24
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bowtie2	78	122	8	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bwa	99	101	9	3
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	minimap2	84	116	9	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	26	174	10	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	10	190	10	4
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	10	190	10	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	78	122	6	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	99	101	9	2
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	84	116	9	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	74	126	8	0
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	bwa indel	12	188	9	4
+am_BA_g0003.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	12	188	9	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bowtie2	35	165	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bwa	51	149	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	minimap2	47	153	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	36	164	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	51	149	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	47	153	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	40	160	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bowtie2	34	166	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bwa	60	140	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	minimap2	54	146	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	12	188	0	1
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	1	199	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	0	200	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	29	171	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	60	140	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	53	147	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	47	153	1	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	bwa indel	4	196	2	0
+am_BA_g0003.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	3	197	2	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bowtie2	33	167	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bwa	45	155	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	minimap2	44	156	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bwa bcfdefault	45	155	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	minimap2 bcfdefault	43	157	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bowtie2 indel	36	164	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	bwa indel	2	198	0	0
+am_BaFr_g0050.fasta.corrected.2e-06.SNP.fasta	minimap2 indel	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2	21	179	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bwa	58	142	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	19	181	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	58	142	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	47	153	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	27	174	0	3
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	bwa indel	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bowtie2	22	178	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bwa	62	138	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	minimap2	55	145	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	16	184	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	61	139	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	56	144	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	42	158	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	bwa indel	3	197	0	0
+am_BA_g0003.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2	24	176	0	2
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bwa	42	158	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2	33	167	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	3	198	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	25	175	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	40	160	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	33	167	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	34	166	1	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	1	199	0	0
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2	45	155	2	11
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bwa	63	137	3	6
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2	55	145	2	1
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	22	178	6	1
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	12	188	8	2
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	12	188	8	0
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	46	154	2	6
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	64	136	2	6
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	55	145	2	1
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	56	144	2	12
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	bwa indel	9	192	4	6
+cx_BaXy_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	8	193	4	1
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bowtie2	43	157	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bwa	81	119	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	minimap2	72	128	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	14	186	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	38	162	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	81	119	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	69	131	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	60	140	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	bwa indel	6	194	0	0
+am_BA_g0003.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	5	195	0	0
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2	95	105	4	14
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bwa	71	129	4	2
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2	60	140	4	1
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	31	169	7	3
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	7	193	6	4
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	6	194	6	0
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	104	96	2	4
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	70	130	4	2
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	60	140	4	1
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	103	97	3	9
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	bwa indel	7	193	4	4
+bf_BaFa_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	7	193	4	14
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2	142	58	4	3
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bwa	111	89	7	3
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2	109	91	7	3
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	53	149	10	2
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	24	176	13	34
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	21	179	13	3
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	156	44	4	1
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	111	89	7	3
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	110	90	7	3
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	135	65	5	7
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	bwa indel	24	176	13	34
+cx_BaXy_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	23	177	13	40
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2	19	181	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bwa	57	143	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2	53	147	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	10	190	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	4	196	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	4	196	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	19	181	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	57	143	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	50	150	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	48	152	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	bwa indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2	76	124	5	1
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa	86	114	3	2
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2	77	123	4	0
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	19	182	6	1
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	5	195	5	2
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	5	195	5	0
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	79	121	5	3
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	86	114	3	2
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	76	124	4	0
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	57	144	8	3
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa indel	10	190	6	2
+am_AkMu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	10	190	6	3
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2	33	167	5	7
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bwa	63	137	5	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2	52	148	5	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	9	191	6	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	5	195	5	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	5	195	5	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	34	166	5	3
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	63	137	5	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	53	147	5	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	35	165	3	6
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	bwa indel	6	194	6	0
+am_BaOv_g0001.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	6	194	6	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bowtie2	40	160	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bwa	66	134	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	minimap2	57	143	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	27	173	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	66	134	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	55	145	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	53	147	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	bwa indel	4	196	0	0
+am_BA_g0003.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	2	198	0	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2	19	181	0	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bwa	58	142	1	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2	51	149	1	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 VARIANTS	7	193	0	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bwa VARIANTS	5	195	0	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 VARIANTS	4	196	0	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 bcfdefault	17	183	0	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bwa bcfdefault	57	143	1	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 bcfdefault	50	150	1	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bowtie2 indel	26	175	1	3
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	bwa indel	6	194	1	0
+bj_EsCo_g0001.fasta.corrected.5e-04.SNP.fasta	minimap2 indel	5	195	1	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2	23	177	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bwa	45	155	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2	37	163	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	21	179	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	45	155	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	37	163	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	37	163	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	bwa indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2	17	183	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bwa	45	155	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2	39	161	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	15	185	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	44	156	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	38	162	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	25	175	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	bwa indel	3	197	0	0
+am_PaDi_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2	21	180	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bwa	74	126	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2	67	133	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	23	178	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	74	126	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	67	133	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	30	170	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	bwa indel	3	197	0	0
+bj_EsCo_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	3	197	0	0
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2	133	67	4	0
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bwa	127	73	6	7
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2	123	77	6	1
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	52	148	12	1
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	19	181	12	26
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	17	183	12	6
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	141	59	4	1
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	127	73	6	5
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	122	78	6	1
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	115	85	7	10
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	bwa indel	19	181	15	31
+bj_EsCo_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	19	181	15	32
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2	27	173	1	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bwa	50	150	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	14	186	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	30	170	1	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	50	150	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	45	155	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	bwa indel	3	197	0	0
+bf_BaFa_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2	29	172	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bwa	64	136	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2	57	143	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	17	183	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	8	192	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	25	176	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	64	136	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	59	141	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	51	149	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	bwa indel	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	5	195	0	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2	23	177	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bwa	58	142	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2	52	148	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	7	193	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	4	196	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	4	196	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	23	177	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	58	142	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	52	148	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	27	174	1	2
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	bwa indel	6	194	1	0
+bj_EsCo_g0001.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	6	194	1	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2	16	184	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bwa	50	150	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2	43	157	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	12	188	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	43	157	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	17	183	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	bwa indel	0	200	0	0
+am_BaOv_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2	24	176	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bwa	45	155	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2	41	159	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	25	175	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	45	155	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	19	182	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2	124	76	10	2
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bwa	111	89	8	13
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2	109	91	9	2
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	40	160	11	0
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	15	185	13	24
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	13	187	13	0
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	140	60	8	3
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	112	88	8	13
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	108	92	9	2
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	117	83	9	8
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	bwa indel	20	180	16	32
+am_PaDi_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	19	181	16	26
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2	30	170	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bwa	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2	39	161	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	10	190	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	29	171	0	1
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	44	156	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	39	161	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	40	160	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	bwa indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bowtie2	38	162	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bwa	68	132	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	minimap2	58	142	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	30	170	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	68	132	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	54	146	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	57	143	0	1
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	bwa indel	7	193	0	0
+am_BA_g0003.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	5	195	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2	39	161	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa	43	157	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2	35	165	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	34	166	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	42	158	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	36	164	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	41	159	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	bwa indel	4	196	0	0
+am_AkMu_g0002.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	4	196	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2	23	177	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bwa	52	148	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2	45	155	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	23	177	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	53	147	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	44	156	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	21	180	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	bwa indel	0	200	0	0
+am_BaOv_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	0	200	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2	18	183	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bwa	44	156	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2	36	164	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 bcfdefault	13	188	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bwa bcfdefault	43	157	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 bcfdefault	35	165	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bowtie2 indel	27	173	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	bwa indel	2	198	0	0
+am_PaDi_g0001.fasta.corrected.3e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2	22	178	0	1
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa	60	140	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2	52	148	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	22	178	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	60	140	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	52	148	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	21	180	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bowtie2	28	172	1	1
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bwa	47	153	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	minimap2	43	157	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	6	194	2	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	2	198	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	2	198	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	25	175	1	1
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	48	152	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	44	156	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	34	166	3	1
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	bwa indel	6	194	1	0
+am_BaFr_g0050.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	6	194	1	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2	21	179	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa	54	146	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2	47	153	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	54	146	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	47	153	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	14	186	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	bwa indel	3	197	0	0
+am_BaVu_g0002.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	3	197	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2	34	166	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa	60	140	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2	55	145	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa bcfdefault	60	140	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2 bcfdefault	55	145	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bowtie2 indel	39	161	0	2
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	bwa indel	2	198	0	0
+am_AkMu_g0002.fasta.corrected.1e-03.SNP.fasta	minimap2 indel	3	197	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2	36	164	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa	58	142	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2	54	146	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	4	196	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	58	142	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	54	146	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	30	170	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa indel	3	197	0	0
+am_AkMu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	3	197	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bowtie2	40	160	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bwa	61	139	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	minimap2	57	143	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bowtie2 bcfdefault	36	164	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bwa bcfdefault	61	139	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	minimap2 bcfdefault	56	144	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bowtie2 indel	41	159	0	1
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	bwa indel	3	197	0	0
+am_BaFr_g0050.fasta.corrected.5e-06.SNP.fasta	minimap2 indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2	24	176	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bwa	50	150	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2	47	153	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	17	183	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	9	191	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	7	193	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	23	177	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	50	150	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	35	165	0	1
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	bwa indel	6	194	0	0
+cx_BaXy_g0001.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	6	194	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2	23	178	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bwa	38	162	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2	30	170	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	10	190	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	20	181	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	38	162	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	30	170	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	33	167	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	bwa indel	1	199	0	0
+bf_BaFa_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2	14	186	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa	55	145	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2	46	154	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	4	196	0	1
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	14	186	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	55	145	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	46	154	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	21	179	0	1
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	bwa indel	4	196	0	0
+am_BaVu_g0002.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2	49	151	5	4
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa	66	134	6	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2	59	141	6	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	15	187	7	1
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	9	191	9	2
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	9	191	9	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	58	142	6	1
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	66	134	6	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	59	141	6	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	44	159	7	3
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	bwa indel	11	189	11	0
+am_BaVu_g0002.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	11	189	11	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2	22	178	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bwa	54	146	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	8	192	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	6	194	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	21	179	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	56	144	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	43	157	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	bwa indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	3	197	0	1
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2	161	39	2	9
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bwa	118	82	6	9
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2	111	89	8	1
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	66	136	10	2
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	20	180	16	29
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	20	180	16	0
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	174	26	1	3
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	119	81	6	9
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	110	90	8	1
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	150	50	4	12
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	bwa indel	19	182	11	38
+bf_BaFa_g0001.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	18	183	11	55
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2	26	174	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bwa	41	159	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2	34	166	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	6	194	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	26	174	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	41	159	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	34	166	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	41	159	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	bwa indel	0	200	0	0
+bf_BaFa_g0001.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	0	200	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2	21	179	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bwa	56	144	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 VARIANTS	5	195	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bwa VARIANTS	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bwa bcfdefault	56	144	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 bcfdefault	49	151	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bowtie2 indel	31	170	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	bwa indel	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.3e-06.SNP.fasta	minimap2 indel	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bowtie2	26	174	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bwa	51	149	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	minimap2	39	161	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bowtie2 bcfdefault	22	178	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bwa bcfdefault	50	150	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	minimap2 bcfdefault	37	163	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bowtie2 indel	33	167	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	bwa indel	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-05.SNP.fasta	minimap2 indel	0	200	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2	26	174	0	1
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa	65	135	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2	54	146	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2 bcfdefault	20	180	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa bcfdefault	65	135	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2 bcfdefault	53	147	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bowtie2 indel	23	177	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaVu_g0002.fasta.corrected.4e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2	17	183	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bwa	42	158	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2	33	167	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	3	197	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	17	183	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	42	158	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	32	168	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	22	178	0	1
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	bwa indel	3	197	0	0
+am_PaDi_g0001.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bowtie2	31	169	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bwa	55	145	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	minimap2	53	147	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	29	171	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	55	145	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	52	148	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	39	161	0	1
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	bwa indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	1	199	0	0
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2	21	179	0	4
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bwa	55	145	0	0
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2	50	150	0	0
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	10	190	1	0
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	8	192	1	0
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	8	192	1	1
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	25	175	0	2
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	57	143	0	1
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	50	150	0	1
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	30	170	1	5
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	bwa indel	8	192	1	0
+bj_EsCo_g0001.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	9	191	1	0
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bowtie2	83	117	5	4
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bwa	94	106	5	6
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	minimap2	87	113	5	0
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	19	182	9	1
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	8	192	8	10
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	8	192	8	0
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	94	106	5	2
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	94	106	5	6
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	86	114	5	0
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	66	134	10	6
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	bwa indel	10	190	7	13
+am_BaFr_g0050.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	10	191	7	2
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2	31	169	2	12
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bwa	45	155	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2	38	162	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	12	188	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	2	198	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	2	198	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	33	167	2	5
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	46	154	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	38	162	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	46	154	2	3
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	bwa indel	3	197	2	0
+bf_BaFa_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	2	198	2	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2	32	168	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa	60	140	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2	52	148	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2 bcfdefault	30	170	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa bcfdefault	60	140	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2 bcfdefault	51	149	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bowtie2 indel	34	166	0	0
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	bwa indel	5	195	0	1
+am_AkMu_g0002.fasta.corrected.1e-04.SNP.fasta	minimap2 indel	4	196	0	1
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2	36	165	5	4
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bwa	54	146	4	0
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2	50	150	4	1
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 VARIANTS	15	185	4	0
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bwa VARIANTS	11	189	4	0
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 VARIANTS	10	190	4	0
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 bcfdefault	34	167	5	3
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bwa bcfdefault	53	147	4	0
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 bcfdefault	51	149	4	0
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bowtie2 indel	51	150	5	10
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	bwa indel	9	191	5	1
+cx_BaXy_g0001.fasta.corrected.1e-02.SNP.fasta	minimap2 indel	8	192	5	2
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bowtie2	46	155	6	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bwa	76	124	8	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	minimap2	62	138	8	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bowtie2 VARIANTS	15	186	4	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bwa VARIANTS	6	194	4	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	minimap2 VARIANTS	6	194	4	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bowtie2 bcfdefault	40	161	6	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bwa bcfdefault	74	126	8	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	minimap2 bcfdefault	59	141	8	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bowtie2 indel	52	150	8	2
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	bwa indel	12	189	8	0
+am_BA_g0003.fasta.corrected.2e-02.SNP.fasta	minimap2 indel	9	192	8	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bowtie2	31	169	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bwa	51	149	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	minimap2	42	158	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bowtie2 VARIANTS	1	199	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bwa bcfdefault	51	149	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	minimap2 bcfdefault	42	158	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bowtie2 indel	25	175	0	1
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	bwa indel	1	199	0	0
+am_BaFr_g0050.fasta.corrected.5e-05.SNP.fasta	minimap2 indel	1	199	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2	16	184	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bwa	48	152	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2	37	163	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 VARIANTS	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bwa VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 VARIANTS	0	200	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 bcfdefault	15	185	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bwa bcfdefault	48	152	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 bcfdefault	37	163	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bowtie2 indel	22	178	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	bwa indel	2	198	0	0
+am_BaOv_g0001.fasta.corrected.1e-06.SNP.fasta	minimap2 indel	3	197	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2	29	171	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bwa	59	141	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2	54	146	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 VARIANTS	15	185	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bwa VARIANTS	7	193	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 VARIANTS	6	194	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 bcfdefault	23	177	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bwa bcfdefault	58	142	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 bcfdefault	52	148	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bowtie2 indel	41	159	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	bwa indel	5	195	0	0
+cx_BaXy_g0001.fasta.corrected.4e-06.SNP.fasta	minimap2 indel	4	196	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bowtie2	35	165	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bwa	55	145	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	minimap2	46	154	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bowtie2 VARIANTS	9	191	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bwa VARIANTS	2	198	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	minimap2 VARIANTS	2	198	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bowtie2 bcfdefault	32	168	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bwa bcfdefault	56	144	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	minimap2 bcfdefault	45	155	0	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bowtie2 indel	58	142	1	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	bwa indel	7	193	1	0
+am_BA_g0003.fasta.corrected.2e-05.SNP.fasta	minimap2 indel	6	194	1	0
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bowtie2	149	51	4	2
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bwa	134	66	5	4
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	minimap2	126	74	6	0
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bowtie2 VARIANTS	50	151	15	2
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bwa VARIANTS	18	182	18	14
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	minimap2 VARIANTS	18	182	18	2
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bowtie2 bcfdefault	156	44	3	3
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bwa bcfdefault	134	66	5	4
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	minimap2 bcfdefault	125	75	7	0
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bowtie2 indel	132	68	10	4
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	bwa indel	25	176	13	12
+am_BA_g0003.fasta.corrected.5e-02.SNP.fasta	minimap2 indel	22	179	14	15
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2	49	151	5	8
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bwa	70	130	4	2
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2	63	137	4	0
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 VARIANTS	21	179	9	1
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bwa VARIANTS	8	192	8	7
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 VARIANTS	8	192	8	1
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 bcfdefault	53	147	5	5
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bwa bcfdefault	70	130	4	2
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 bcfdefault	63	137	4	0
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bowtie2 indel	43	159	6	6
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	bwa indel	7	194	6	6
+am_BaOv_g0001.fasta.corrected.3e-02.SNP.fasta	minimap2 indel	7	194	6	3
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2	106	94	6	8
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bwa	99	101	6	1
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2	93	107	6	3
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 VARIANTS	40	162	9	1
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bwa VARIANTS	19	181	10	2
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 VARIANTS	18	182	10	1
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 bcfdefault	110	90	6	2
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bwa bcfdefault	99	101	6	1
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 bcfdefault	93	107	6	4
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bowtie2 indel	88	113	6	7
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	bwa indel	17	183	8	4
+bj_EsCo_g0001.fasta.corrected.4e-02.SNP.fasta	minimap2 indel	15	185	8	4
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2	41	159	0	1
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa	70	130	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2	68	132	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2 VARIANTS	5	195	0	1
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa VARIANTS	1	199	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2 VARIANTS	1	199	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2 bcfdefault	40	160	0	1
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa bcfdefault	70	130	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2 bcfdefault	68	132	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bowtie2 indel	40	160	0	3
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	bwa indel	1	199	0	0
+am_AkMu_g0002.fasta.corrected.5e-03.SNP.fasta	minimap2 indel	1	199	0	0
