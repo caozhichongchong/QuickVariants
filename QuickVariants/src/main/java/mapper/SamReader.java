@@ -19,7 +19,12 @@ public class SamReader implements SamProvider {
         this.done();
         return null;
       }
-      SequenceBuilder sequenceBuilder = this.parseLine(line);
+      SequenceBuilder sequenceBuilder;
+      try {
+        sequenceBuilder = this.parseLine(line);
+      } catch (Exception e) {
+        throw new IllegalArgumentException("Failed to parse sam line '" + line + "'");
+      }
       if (sequenceBuilder != null)
         return sequenceBuilder;
     }
