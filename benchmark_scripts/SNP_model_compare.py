@@ -14,7 +14,7 @@ required = parser.add_argument_group('required arguments')
 optional = parser.add_argument_group('optional arguments')
 required.add_argument("-i",
                       help="path to all vcf files",
-                      type=str, default='.',
+                      type=str, default='Gut_microbiome_benchmark/',
                       metavar='.')
 # optional input genome
 optional.add_argument("-cluster",

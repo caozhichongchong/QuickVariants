@@ -9,13 +9,13 @@ required = parser.add_argument_group('required arguments')
 optional = parser.add_argument_group('optional arguments')
 required.add_argument("-i",
                       help="path to all vcf files",
-                      type=str, default='.',
-                      metavar='.')
+                      type=str, default='Gut_microbiome_benchmark/',
+                      metavar='input/')
 # optional input genome
 optional.add_argument("-cluster",
-                      help="a reference genome to run, default is all genomes",
+                      help="a cluster to run, default is all clusters",
                       type=str, default='',
-                      metavar='genome1')
+                      metavar='cluster1')
 ################################################## Definition ########################################################
 args = parser.parse_args()
 ################################################### Set up ########################################################
@@ -28,6 +28,12 @@ if 'covid' in args.i:
 min_cov = 3 # at least 3 reads mapped to POS
 if 'human' in args.i:
     min_cov = 10
+if 'MG' in args.i:
+    min_maf_for_call = 0.2
+    min_cov = 4
+if 'MGSW' in args.i or 'MGBIG' in args.i:
+    min_maf_for_call = 0.2
+    min_cov = 20
 bowtievcfsuffix = 'flt.snp.vcf'#'.flt.snp.vcf'
 mappervcfsuffix = 'mapper1.*vcf'
 bowtiemappersamtovcfsuffix = '.mappersamtovcf.vcf'
@@ -78,7 +84,7 @@ def load_bowtie(bowtievcf):
                     CHR, POS, USELESS, REF, ALT, QUAL = lines_set[:6]
                     if float(QUAL) >= min_qual_for_call:
                         POS = int(POS)
-                        DPset = [float(x) for x in lines_set[9].split(':')[-1].replace('\n', '').split(',')]
+                        DPset = [float(x) for x in lines_set[9].split('__')[-1].replace('\n', '').split(',')]
                         # excluding DP of REF itself when considering indel depth
                         DPset[0] = 0
                         DP = sum(DPset)
@@ -98,7 +104,7 @@ def load_bowtie(bowtievcf):
             if REF != 'N' and float(QUAL) >= min_qual_for_call:
                 if baseline_chrpos== set() or '%s\t%s'%(CHR,POS) not in baseline_chrpos:
                     withsnp = False
-                    DPset = [float(x) for x in lines_set[9].split(':')[-1].replace('\n', '').split(',')]
+                    DPset = [float(x) for x in lines_set[9].split('__')[-1].replace('\n', '').split(',')]
                     DP = sum(DPset) + indel_depth.get('%s\t%s'%(CHR,POS),0)
                     try:
                         contig_length = int(CHR.split('size')[1])
@@ -213,10 +219,9 @@ if Depth_check:
     alloutput = ['SNP\tDPsnp\tDP\n']
     fall = open('%s/SNP_model/alldepth.txt'%(args.i),'w')
 for bowtievcf in allvcf_bowtie:
-    if '.indel' not in bowtievcf:
-        print('%s start processing %s' % (datetime.now(), bowtievcf))
-        load_bowtie(bowtievcf)
-        print('%s finished processing %s' % (datetime.now(), bowtievcf))
+    print('%s start processing %s' % (datetime.now(), bowtievcf))
+    load_bowtie(bowtievcf)
+    print('%s finished processing %s' % (datetime.now(), bowtievcf))
 # process mapper vcfs
 for mappervcf in allvcf_mapper:
     if '.indel' not in mappervcf and 'final' not in mappervcf:
