@@ -39,6 +39,9 @@ public class FastaParser implements SequenceProvider {
     String nameLine = reader.readLine();
     if (nameLine == null)
       return null;
+    int spaceIndex = nameLine.indexOf(' ');
+    if (spaceIndex > 0)
+      nameLine = nameLine.substring(0, spaceIndex);
     SequenceBuilder builder = new SequenceBuilder();
     builder.setName(nameLine);
     builder.setPath(path);
