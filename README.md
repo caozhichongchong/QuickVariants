@@ -6,15 +6,16 @@ QuickVariants is a fast and accurate variant identification tool, designed to su
 
 ### Install
 Requirement: [Java](https://www.java.com/en/download/help/download_options.html) \
-You may install java by `conda install conda-forge::openjdk`\
 Please download the latest QuickVariants [here](https://github.com/caozhichongchong/QuickVariants/releases)
 
+You may install java by `conda install conda-forge::openjdk`\
+You may install java and QuickVariants by `conda install caozhichongchong::quick-variants`\
+QuickVariants can be found at `$Conda_env_location/bin/quick-variants-VERSION.jar`
 ### Usage
 
 ```
 java -Xms10g -Xmx10g -jar quick-variants-VERSION.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input.sam> --num-threads num_threads [options]
 ```
-
 This command converts a SAM file to other formats, most notably .vcf.
 
 **Input**
