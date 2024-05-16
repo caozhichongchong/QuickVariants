@@ -1,1540 +1,2053 @@
 fasta	SNP	tool	VCF caller	Total time
-cx_BaXy_g0001	5e-03	bowtie2	bcftools (total)	279.83
-cx_BaXy_g0001	5e-03	minimap2	bcftools (total)	270.63
-cx_BaXy_g0001	5e-03	bwa	bcftools (total)	269.97
-cx_BaXy_g0001	5e-03	bowtie2	bcftools (only)	254.83
-cx_BaXy_g0001	5e-03	minimap2	bcftools (only)	244.62
-cx_BaXy_g0001	5e-03	bwa	bcftools (only)	244.58
-bj_EsCo_g0001	5e-05	bowtie2	bcftools (total)	195.43
-bj_EsCo_g0001	5e-05	minimap2	bcftools (total)	171.79
-bj_EsCo_g0001	5e-05	bwa	bcftools (total)	170.84
-bj_EsCo_g0001	5e-05	bowtie2	bcftools (only)	183.40
-bj_EsCo_g0001	5e-05	minimap2	bcftools (only)	159.36
-bj_EsCo_g0001	5e-05	bwa	bcftools (only)	158.95
-am_AkMu_g0002	5e-06	bowtie2	bcftools (total)	486.06
-am_AkMu_g0002	5e-06	minimap2	bcftools (total)	465.75
-am_AkMu_g0002	5e-06	bwa	bcftools (total)	459.16
-am_AkMu_g0002	5e-06	bowtie2	bcftools (only)	444.60
-am_AkMu_g0002	5e-06	minimap2	bcftools (only)	422.39
-am_AkMu_g0002	5e-06	bwa	bcftools (only)	417.57
-am_BaFr_g0050	5e-05	bowtie2	bcftools (total)	935.72
-am_BaFr_g0050	5e-05	minimap2	bcftools (total)	845.70
-am_BaFr_g0050	5e-05	bwa	bcftools (total)	838.29
-am_BaFr_g0050	5e-05	bowtie2	bcftools (only)	864.89
-am_BaFr_g0050	5e-05	minimap2	bcftools (only)	772.01
-am_BaFr_g0050	5e-05	bwa	bcftools (only)	767.64
-am_PaDi_g0001	5e-04	bowtie2	bcftools (total)	509.54
-am_PaDi_g0001	5e-04	minimap2	bcftools (total)	417.01
-am_PaDi_g0001	5e-04	bwa	bcftools (total)	412.76
-am_PaDi_g0001	5e-04	bowtie2	bcftools (only)	473.89
-am_PaDi_g0001	5e-04	minimap2	bcftools (only)	379.86
-am_PaDi_g0001	5e-04	bwa	bcftools (only)	376.75
-am_BaVu_g0002	1e-05	bowtie2	bcftools (total)	232.68
-am_BaVu_g0002	1e-05	minimap2	bcftools (total)	188.01
-am_BaVu_g0002	1e-05	bwa	bcftools (total)	187.99
-am_BaVu_g0002	1e-05	bowtie2	bcftools (only)	210.96
-am_BaVu_g0002	1e-05	minimap2	bcftools (only)	165.85
-am_BaVu_g0002	1e-05	bwa	bcftools (only)	166.33
-bj_EsCo_g0001	3e-05	bowtie2	bcftools (total)	194.93
-bj_EsCo_g0001	3e-05	minimap2	bcftools (total)	171.48
-bj_EsCo_g0001	3e-05	bwa	bcftools (total)	170.81
-bj_EsCo_g0001	3e-05	bowtie2	bcftools (only)	182.86
-bj_EsCo_g0001	3e-05	minimap2	bcftools (only)	159.06
-bj_EsCo_g0001	3e-05	bwa	bcftools (only)	158.86
-bf_BaFa_g0001	3e-05	bowtie2	bcftools (total)	499.49
-bf_BaFa_g0001	3e-05	minimap2	bcftools (total)	449.46
-bf_BaFa_g0001	3e-05	bwa	bcftools (total)	446.30
-bf_BaFa_g0001	3e-05	bowtie2	bcftools (only)	461.21
-bf_BaFa_g0001	3e-05	minimap2	bcftools (only)	408.74
-bf_BaFa_g0001	3e-05	bwa	bcftools (only)	407.55
-bj_EsCo_g0001	3e-06	bowtie2	bcftools (total)	194.97
-bj_EsCo_g0001	3e-06	minimap2	bcftools (total)	171.33
-bj_EsCo_g0001	3e-06	bwa	bcftools (total)	170.66
-bj_EsCo_g0001	3e-06	bowtie2	bcftools (only)	182.94
-bj_EsCo_g0001	3e-06	minimap2	bcftools (only)	158.86
-bj_EsCo_g0001	3e-06	bwa	bcftools (only)	158.87
-bj_EsCo_g0001	5e-06	bowtie2	bcftools (total)	195.92
-bj_EsCo_g0001	5e-06	minimap2	bcftools (total)	171.77
-bj_EsCo_g0001	5e-06	bwa	bcftools (total)	170.62
-bj_EsCo_g0001	5e-06	bowtie2	bcftools (only)	183.91
-bj_EsCo_g0001	5e-06	minimap2	bcftools (only)	159.30
-bj_EsCo_g0001	5e-06	bwa	bcftools (only)	158.71
-am_BA_g0003	2e-06	bowtie2	bcftools (total)	524.97
-am_BA_g0003	2e-06	minimap2	bcftools (total)	397.58
-am_BA_g0003	2e-06	bwa	bcftools (total)	395.10
-am_BA_g0003	2e-06	bowtie2	bcftools (only)	487.92
-am_BA_g0003	2e-06	minimap2	bcftools (only)	359.27
-am_BA_g0003	2e-06	bwa	bcftools (only)	357.72
-cx_BaXy_g0001	5e-02	bowtie2	bcftools (total)	252.78
-cx_BaXy_g0001	5e-02	minimap2	bcftools (total)	266.30
-cx_BaXy_g0001	5e-02	bwa	bcftools (total)	272.36
-cx_BaXy_g0001	5e-02	bowtie2	bcftools (only)	227.18
-cx_BaXy_g0001	5e-02	minimap2	bcftools (only)	240.18
-cx_BaXy_g0001	5e-02	bwa	bcftools (only)	246.00
-am_BaFr_g0050	2e-05	bowtie2	bcftools (total)	933.31
-am_BaFr_g0050	2e-05	minimap2	bcftools (total)	841.67
-am_BaFr_g0050	2e-05	bwa	bcftools (total)	838.27
-am_BaFr_g0050	2e-05	bowtie2	bcftools (only)	862.77
-am_BaFr_g0050	2e-05	minimap2	bcftools (only)	768.12
-am_BaFr_g0050	2e-05	bwa	bcftools (only)	767.55
-am_BaOv_g0001	5e-02	bowtie2	bcftools (total)	428.17
-am_BaOv_g0001	5e-02	minimap2	bcftools (total)	443.37
-am_BaOv_g0001	5e-02	bwa	bcftools (total)	443.41
-am_BaOv_g0001	5e-02	bowtie2	bcftools (only)	391.16
-am_BaOv_g0001	5e-02	minimap2	bcftools (only)	406.31
-am_BaOv_g0001	5e-02	bwa	bcftools (only)	406.13
-bj_EsCo_g0001	1e-05	bowtie2	bcftools (total)	196.35
-bj_EsCo_g0001	1e-05	minimap2	bcftools (total)	172.22
-bj_EsCo_g0001	1e-05	bwa	bcftools (total)	170.83
-bj_EsCo_g0001	1e-05	bowtie2	bcftools (only)	184.37
-bj_EsCo_g0001	1e-05	minimap2	bcftools (only)	159.76
-bj_EsCo_g0001	1e-05	bwa	bcftools (only)	158.93
-bf_BaFa_g0001	1e-05	bowtie2	bcftools (total)	525.87
-bf_BaFa_g0001	1e-05	minimap2	bcftools (total)	472.44
-bf_BaFa_g0001	1e-05	bwa	bcftools (total)	467.76
-bf_BaFa_g0001	1e-05	bowtie2	bcftools (only)	485.67
-bf_BaFa_g0001	1e-05	minimap2	bcftools (only)	429.55
-bf_BaFa_g0001	1e-05	bwa	bcftools (only)	427.07
-am_AkMu_g0002	5e-05	bowtie2	bcftools (total)	511.55
-am_AkMu_g0002	5e-05	minimap2	bcftools (total)	487.46
-am_AkMu_g0002	5e-05	bwa	bcftools (total)	483.44
-am_AkMu_g0002	5e-05	bowtie2	bcftools (only)	467.98
-am_AkMu_g0002	5e-05	minimap2	bcftools (only)	442.00
-am_AkMu_g0002	5e-05	bwa	bcftools (only)	439.72
-cx_BaXy_g0001	1e-04	bowtie2	bcftools (total)	279.48
-cx_BaXy_g0001	1e-04	minimap2	bcftools (total)	271.37
-cx_BaXy_g0001	1e-04	bwa	bcftools (total)	268.81
-cx_BaXy_g0001	1e-04	bowtie2	bcftools (only)	254.75
-cx_BaXy_g0001	1e-04	minimap2	bcftools (only)	245.39
-cx_BaXy_g0001	1e-04	bwa	bcftools (only)	244.66
-am_BaOv_g0001	3e-05	bowtie2	bcftools (total)	486.64
-am_BaOv_g0001	3e-05	minimap2	bcftools (total)	436.33
-am_BaOv_g0001	3e-05	bwa	bcftools (total)	433.78
-am_BaOv_g0001	3e-05	bowtie2	bcftools (only)	451.61
-am_BaOv_g0001	3e-05	minimap2	bcftools (only)	400.01
-am_BaOv_g0001	3e-05	bwa	bcftools (only)	398.66
-bf_BaFa_g0001	2e-02	bowtie2	bcftools (total)	512.52
-bf_BaFa_g0001	2e-02	minimap2	bcftools (total)	473.79
-bf_BaFa_g0001	2e-02	bwa	bcftools (total)	473.21
-bf_BaFa_g0001	2e-02	bowtie2	bcftools (only)	470.96
-bf_BaFa_g0001	2e-02	minimap2	bcftools (only)	430.45
-bf_BaFa_g0001	2e-02	bwa	bcftools (only)	431.37
-bf_BaFa_g0001	3e-02	bowtie2	bcftools (total)	496.16
-bf_BaFa_g0001	3e-02	minimap2	bcftools (total)	469.12
-bf_BaFa_g0001	3e-02	bwa	bcftools (total)	473.70
-bf_BaFa_g0001	3e-02	bowtie2	bcftools (only)	454.73
-bf_BaFa_g0001	3e-02	minimap2	bcftools (only)	425.92
-bf_BaFa_g0001	3e-02	bwa	bcftools (only)	431.59
-am_BaFr_g0050	5e-04	bowtie2	bcftools (total)	916.80
-am_BaFr_g0050	5e-04	minimap2	bcftools (total)	825.63
-am_BaFr_g0050	5e-04	bwa	bcftools (total)	811.74
-am_BaFr_g0050	5e-04	bowtie2	bcftools (only)	845.86
-am_BaFr_g0050	5e-04	minimap2	bcftools (only)	752.84
-am_BaFr_g0050	5e-04	bwa	bcftools (only)	742.52
-am_BaVu_g0002	2e-05	bowtie2	bcftools (total)	234.35
-am_BaVu_g0002	2e-05	minimap2	bcftools (total)	187.57
-am_BaVu_g0002	2e-05	bwa	bcftools (total)	187.29
-am_BaVu_g0002	2e-05	bowtie2	bcftools (only)	212.62
-am_BaVu_g0002	2e-05	minimap2	bcftools (only)	165.38
-am_BaVu_g0002	2e-05	bwa	bcftools (only)	165.52
-am_PaDi_g0001	1e-05	bowtie2	bcftools (total)	509.82
-am_PaDi_g0001	1e-05	minimap2	bcftools (total)	415.72
-am_PaDi_g0001	1e-05	bwa	bcftools (total)	412.37
-am_PaDi_g0001	1e-05	bowtie2	bcftools (only)	474.14
-am_PaDi_g0001	1e-05	minimap2	bcftools (only)	378.35
-am_PaDi_g0001	1e-05	bwa	bcftools (only)	376.43
-cx_BaXy_g0001	3e-06	bowtie2	bcftools (total)	279.53
-cx_BaXy_g0001	3e-06	minimap2	bcftools (total)	270.95
-cx_BaXy_g0001	3e-06	bwa	bcftools (total)	269.50
-cx_BaXy_g0001	3e-06	bowtie2	bcftools (only)	254.78
-cx_BaXy_g0001	3e-06	minimap2	bcftools (only)	245.12
-cx_BaXy_g0001	3e-06	bwa	bcftools (only)	244.41
-am_PaDi_g0001	4e-05	bowtie2	bcftools (total)	511.50
-am_PaDi_g0001	4e-05	minimap2	bcftools (total)	416.40
-am_PaDi_g0001	4e-05	bwa	bcftools (total)	413.12
-am_PaDi_g0001	4e-05	bowtie2	bcftools (only)	476.01
-am_PaDi_g0001	4e-05	minimap2	bcftools (only)	379.30
-am_PaDi_g0001	4e-05	bwa	bcftools (only)	377.36
-am_BaVu_g0002	3e-05	bowtie2	bcftools (total)	232.34
-am_BaVu_g0002	3e-05	minimap2	bcftools (total)	188.07
-am_BaVu_g0002	3e-05	bwa	bcftools (total)	187.37
-am_BaVu_g0002	3e-05	bowtie2	bcftools (only)	211.02
-am_BaVu_g0002	3e-05	minimap2	bcftools (only)	165.96
-am_BaVu_g0002	3e-05	bwa	bcftools (only)	165.67
-am_PaDi_g0001	5e-02	bowtie2	bcftools (total)	420.53
-am_PaDi_g0001	5e-02	minimap2	bcftools (total)	419.50
-am_PaDi_g0001	5e-02	bwa	bcftools (total)	421.19
-am_PaDi_g0001	5e-02	bowtie2	bcftools (only)	383.11
-am_PaDi_g0001	5e-02	minimap2	bcftools (only)	381.92
-am_PaDi_g0001	5e-02	bwa	bcftools (only)	383.52
-am_AkMu_g0002	2e-06	bowtie2	bcftools (total)	484.95
-am_AkMu_g0002	2e-06	minimap2	bcftools (total)	462.17
-am_AkMu_g0002	2e-06	bwa	bcftools (total)	459.34
-am_AkMu_g0002	2e-06	bowtie2	bcftools (only)	443.56
-am_AkMu_g0002	2e-06	minimap2	bcftools (only)	418.75
-am_AkMu_g0002	2e-06	bwa	bcftools (only)	417.78
-am_AkMu_g0002	1e-03	bowtie2	bcftools (total)	510.49
-am_AkMu_g0002	1e-03	minimap2	bcftools (total)	487.71
-am_AkMu_g0002	1e-03	bwa	bcftools (total)	484.39
-am_AkMu_g0002	1e-03	bowtie2	bcftools (only)	466.58
-am_AkMu_g0002	1e-03	minimap2	bcftools (only)	441.96
-am_AkMu_g0002	1e-03	bwa	bcftools (only)	440.48
-am_BaVu_g0002	4e-06	bowtie2	bcftools (total)	229.20
-am_BaVu_g0002	4e-06	minimap2	bcftools (total)	186.21
-am_BaVu_g0002	4e-06	bwa	bcftools (total)	185.57
-am_BaVu_g0002	4e-06	bowtie2	bcftools (only)	208.41
-am_BaVu_g0002	4e-06	minimap2	bcftools (only)	164.53
-am_BaVu_g0002	4e-06	bwa	bcftools (only)	164.79
-bf_BaFa_g0001	5e-03	bowtie2	bcftools (total)	524.76
-bf_BaFa_g0001	5e-03	minimap2	bcftools (total)	472.67
-bf_BaFa_g0001	5e-03	bwa	bcftools (total)	469.46
-bf_BaFa_g0001	5e-03	bowtie2	bcftools (only)	484.32
-bf_BaFa_g0001	5e-03	minimap2	bcftools (only)	429.42
-bf_BaFa_g0001	5e-03	bwa	bcftools (only)	428.24
-bj_EsCo_g0001	4e-02	bowtie2	bcftools (total)	178.83
-bj_EsCo_g0001	4e-02	minimap2	bcftools (total)	172.96
-bj_EsCo_g0001	4e-02	bwa	bcftools (total)	173.27
-bj_EsCo_g0001	4e-02	bowtie2	bcftools (only)	166.21
-bj_EsCo_g0001	4e-02	minimap2	bcftools (only)	160.32
-bj_EsCo_g0001	4e-02	bwa	bcftools (only)	160.72
-am_AkMu_g0002	5e-04	bowtie2	bcftools (total)	510.74
-am_AkMu_g0002	5e-04	minimap2	bcftools (total)	487.23
-am_AkMu_g0002	5e-04	bwa	bcftools (total)	483.42
-am_AkMu_g0002	5e-04	bowtie2	bcftools (only)	466.99
-am_AkMu_g0002	5e-04	minimap2	bcftools (only)	441.68
-am_AkMu_g0002	5e-04	bwa	bcftools (only)	439.58
-am_BaOv_g0001	1e-03	bowtie2	bcftools (total)	486.40
-am_BaOv_g0001	1e-03	minimap2	bcftools (total)	437.12
-am_BaOv_g0001	1e-03	bwa	bcftools (total)	435.12
-am_BaOv_g0001	1e-03	bowtie2	bcftools (only)	451.17
-am_BaOv_g0001	1e-03	minimap2	bcftools (only)	400.79
-am_BaOv_g0001	1e-03	bwa	bcftools (only)	399.88
-am_BaOv_g0001	4e-05	bowtie2	bcftools (total)	486.78
-am_BaOv_g0001	4e-05	minimap2	bcftools (total)	436.42
-am_BaOv_g0001	4e-05	bwa	bcftools (total)	434.61
-am_BaOv_g0001	4e-05	bowtie2	bcftools (only)	451.71
-am_BaOv_g0001	4e-05	minimap2	bcftools (only)	400.10
-am_BaOv_g0001	4e-05	bwa	bcftools (only)	399.50
-am_BaOv_g0001	2e-06	bowtie2	bcftools (total)	488.14
-am_BaOv_g0001	2e-06	minimap2	bcftools (total)	436.22
-am_BaOv_g0001	2e-06	bwa	bcftools (total)	434.22
-am_BaOv_g0001	2e-06	bowtie2	bcftools (only)	453.03
-am_BaOv_g0001	2e-06	minimap2	bcftools (only)	399.83
-am_BaOv_g0001	2e-06	bwa	bcftools (only)	399.07
-bj_EsCo_g0001	5e-02	bowtie2	bcftools (total)	169.21
-bj_EsCo_g0001	5e-02	minimap2	bcftools (total)	172.64
-bj_EsCo_g0001	5e-02	bwa	bcftools (total)	173.84
-bj_EsCo_g0001	5e-02	bowtie2	bcftools (only)	156.57
-bj_EsCo_g0001	5e-02	minimap2	bcftools (only)	160.06
-bj_EsCo_g0001	5e-02	bwa	bcftools (only)	161.13
-bf_BaFa_g0001	5e-02	bowtie2	bcftools (total)	440.65
-bf_BaFa_g0001	5e-02	minimap2	bcftools (total)	452.25
-bf_BaFa_g0001	5e-02	bwa	bcftools (total)	472.24
-bf_BaFa_g0001	5e-02	bowtie2	bcftools (only)	399.19
-bf_BaFa_g0001	5e-02	minimap2	bcftools (only)	409.50
-bf_BaFa_g0001	5e-02	bwa	bcftools (only)	429.94
-am_BaOv_g0001	1e-06	bowtie2	bcftools (total)	486.59
-am_BaOv_g0001	1e-06	minimap2	bcftools (total)	435.74
-am_BaOv_g0001	1e-06	bwa	bcftools (total)	434.90
-am_BaOv_g0001	1e-06	bowtie2	bcftools (only)	451.53
-am_BaOv_g0001	1e-06	minimap2	bcftools (only)	399.59
-am_BaOv_g0001	1e-06	bwa	bcftools (only)	399.77
-cx_BaXy_g0001	1e-05	bowtie2	bcftools (total)	279.05
-cx_BaXy_g0001	1e-05	minimap2	bcftools (total)	270.62
-cx_BaXy_g0001	1e-05	bwa	bcftools (total)	269.49
-cx_BaXy_g0001	1e-05	bowtie2	bcftools (only)	254.39
-cx_BaXy_g0001	1e-05	minimap2	bcftools (only)	244.83
-cx_BaXy_g0001	1e-05	bwa	bcftools (only)	244.36
-cx_BaXy_g0001	5e-05	bowtie2	bcftools (total)	278.79
-cx_BaXy_g0001	5e-05	minimap2	bcftools (total)	271.18
-cx_BaXy_g0001	5e-05	bwa	bcftools (total)	268.98
-cx_BaXy_g0001	5e-05	bowtie2	bcftools (only)	254.01
-cx_BaXy_g0001	5e-05	minimap2	bcftools (only)	245.28
-cx_BaXy_g0001	5e-05	bwa	bcftools (only)	243.94
-bf_BaFa_g0001	1e-03	bowtie2	bcftools (total)	525.65
-bf_BaFa_g0001	1e-03	minimap2	bcftools (total)	472.69
-bf_BaFa_g0001	1e-03	bwa	bcftools (total)	468.47
-bf_BaFa_g0001	1e-03	bowtie2	bcftools (only)	485.42
-bf_BaFa_g0001	1e-03	minimap2	bcftools (only)	429.69
-bf_BaFa_g0001	1e-03	bwa	bcftools (only)	427.72
-bj_EsCo_g0001	1e-03	bowtie2	bcftools (total)	195.20
-bj_EsCo_g0001	1e-03	minimap2	bcftools (total)	171.71
-bj_EsCo_g0001	1e-03	bwa	bcftools (total)	170.95
-bj_EsCo_g0001	1e-03	bowtie2	bcftools (only)	183.12
-bj_EsCo_g0001	1e-03	minimap2	bcftools (only)	159.27
-bj_EsCo_g0001	1e-03	bwa	bcftools (only)	159.00
-am_BaVu_g0002	5e-02	bowtie2	bcftools (total)	192.01
-am_BaVu_g0002	5e-02	minimap2	bcftools (total)	189.29
-am_BaVu_g0002	5e-02	bwa	bcftools (total)	189.85
-am_BaVu_g0002	5e-02	bowtie2	bcftools (only)	169.54
-am_BaVu_g0002	5e-02	minimap2	bcftools (only)	166.84
-am_BaVu_g0002	5e-02	bwa	bcftools (only)	167.27
-am_BaVu_g0002	5e-04	bowtie2	bcftools (total)	232.69
-am_BaVu_g0002	5e-04	minimap2	bcftools (total)	187.57
-am_BaVu_g0002	5e-04	bwa	bcftools (total)	187.81
-am_BaVu_g0002	5e-04	bowtie2	bcftools (only)	210.99
-am_BaVu_g0002	5e-04	minimap2	bcftools (only)	165.40
-am_BaVu_g0002	5e-04	bwa	bcftools (only)	166.05
-am_PaDi_g0001	2e-06	bowtie2	bcftools (total)	509.55
-am_PaDi_g0001	2e-06	minimap2	bcftools (total)	415.81
-am_PaDi_g0001	2e-06	bwa	bcftools (total)	412.83
-am_PaDi_g0001	2e-06	bowtie2	bcftools (only)	473.84
-am_PaDi_g0001	2e-06	minimap2	bcftools (only)	378.59
-am_PaDi_g0001	2e-06	bwa	bcftools (only)	376.99
-bf_BaFa_g0001	3e-06	bowtie2	bcftools (total)	526.86
-bf_BaFa_g0001	3e-06	minimap2	bcftools (total)	474.40
-bf_BaFa_g0001	3e-06	bwa	bcftools (total)	468.82
-bf_BaFa_g0001	3e-06	bowtie2	bcftools (only)	486.75
-bf_BaFa_g0001	3e-06	minimap2	bcftools (only)	431.59
-bf_BaFa_g0001	3e-06	bwa	bcftools (only)	427.77
-am_BaOv_g0001	3e-06	bowtie2	bcftools (total)	487.28
-am_BaOv_g0001	3e-06	minimap2	bcftools (total)	436.20
-am_BaOv_g0001	3e-06	bwa	bcftools (total)	435.05
-am_BaOv_g0001	3e-06	bowtie2	bcftools (only)	452.35
-am_BaOv_g0001	3e-06	minimap2	bcftools (only)	399.92
-am_BaOv_g0001	3e-06	bwa	bcftools (only)	399.91
-am_PaDi_g0001	1e-02	bowtie2	bcftools (total)	499.37
-am_PaDi_g0001	1e-02	minimap2	bcftools (total)	415.58
-am_PaDi_g0001	1e-02	bwa	bcftools (total)	413.86
-am_PaDi_g0001	1e-02	bowtie2	bcftools (only)	462.73
-am_PaDi_g0001	1e-02	minimap2	bcftools (only)	378.12
-am_PaDi_g0001	1e-02	bwa	bcftools (only)	377.18
-am_AkMu_g0002	2e-02	bowtie2	bcftools (total)	485.23
-am_AkMu_g0002	2e-02	minimap2	bcftools (total)	465.54
-am_AkMu_g0002	2e-02	bwa	bcftools (total)	461.59
-am_AkMu_g0002	2e-02	bowtie2	bcftools (only)	442.19
-am_AkMu_g0002	2e-02	minimap2	bcftools (only)	421.57
-am_AkMu_g0002	2e-02	bwa	bcftools (only)	418.81
-am_AkMu_g0002	3e-06	bowtie2	bcftools (total)	511.23
-am_AkMu_g0002	3e-06	minimap2	bcftools (total)	486.71
-am_AkMu_g0002	3e-06	bwa	bcftools (total)	483.87
-am_AkMu_g0002	3e-06	bowtie2	bcftools (only)	467.60
-am_AkMu_g0002	3e-06	minimap2	bcftools (only)	441.12
-am_AkMu_g0002	3e-06	bwa	bcftools (only)	440.18
-bj_EsCo_g0001	4e-05	bowtie2	bcftools (total)	195.47
-bj_EsCo_g0001	4e-05	minimap2	bcftools (total)	171.74
-bj_EsCo_g0001	4e-05	bwa	bcftools (total)	171.17
-bj_EsCo_g0001	4e-05	bowtie2	bcftools (only)	183.43
-bj_EsCo_g0001	4e-05	minimap2	bcftools (only)	159.30
-bj_EsCo_g0001	4e-05	bwa	bcftools (only)	159.25
-am_AkMu_g0002	1e-02	bowtie2	bcftools (total)	512.24
-am_AkMu_g0002	1e-02	minimap2	bcftools (total)	488.92
-am_AkMu_g0002	1e-02	bwa	bcftools (total)	485.41
-am_AkMu_g0002	1e-02	bowtie2	bcftools (only)	467.40
-am_AkMu_g0002	1e-02	minimap2	bcftools (only)	442.90
-am_AkMu_g0002	1e-02	bwa	bcftools (only)	440.82
-am_BA_g0003	1e-02	bowtie2	bcftools (total)	513.60
-am_BA_g0003	1e-02	minimap2	bcftools (total)	402.59
-am_BA_g0003	1e-02	bwa	bcftools (total)	397.36
-am_BA_g0003	1e-02	bowtie2	bcftools (only)	476.17
-am_BA_g0003	1e-02	minimap2	bcftools (only)	364.07
-am_BA_g0003	1e-02	bwa	bcftools (only)	359.53
-am_AkMu_g0002	1e-05	bowtie2	bcftools (total)	509.72
-am_AkMu_g0002	1e-05	minimap2	bcftools (total)	486.68
-am_AkMu_g0002	1e-05	bwa	bcftools (total)	484.27
-am_AkMu_g0002	1e-05	bowtie2	bcftools (only)	466.11
-am_AkMu_g0002	1e-05	minimap2	bcftools (only)	441.09
-am_AkMu_g0002	1e-05	bwa	bcftools (only)	440.45
-am_BA_g0003	4e-02	bowtie2	bcftools (total)	471.66
-am_BA_g0003	4e-02	minimap2	bcftools (total)	413.59
-am_BA_g0003	4e-02	bwa	bcftools (total)	406.34
-am_BA_g0003	4e-02	bowtie2	bcftools (only)	434.20
-am_BA_g0003	4e-02	minimap2	bcftools (only)	375.47
-am_BA_g0003	4e-02	bwa	bcftools (only)	367.92
-am_BA_g0003	2e-02	bowtie2	bcftools (total)	503.17
-am_BA_g0003	2e-02	minimap2	bcftools (total)	405.75
-am_BA_g0003	2e-02	bwa	bcftools (total)	399.46
-am_BA_g0003	2e-02	bowtie2	bcftools (only)	465.49
-am_BA_g0003	2e-02	minimap2	bcftools (only)	367.23
-am_BA_g0003	2e-02	bwa	bcftools (only)	361.31
-am_BA_g0003	1e-05	bowtie2	bcftools (total)	524.23
-am_BA_g0003	1e-05	minimap2	bcftools (total)	398.21
-am_BA_g0003	1e-05	bwa	bcftools (total)	394.23
-am_BA_g0003	1e-05	bowtie2	bcftools (only)	487.22
-am_BA_g0003	1e-05	minimap2	bcftools (only)	359.79
-am_BA_g0003	1e-05	bwa	bcftools (only)	356.77
-am_BA_g0003	3e-06	bowtie2	bcftools (total)	524.81
-am_BA_g0003	3e-06	minimap2	bcftools (total)	398.37
-am_BA_g0003	3e-06	bwa	bcftools (total)	394.57
-am_BA_g0003	3e-06	bowtie2	bcftools (only)	487.86
-am_BA_g0003	3e-06	minimap2	bcftools (only)	359.99
-am_BA_g0003	3e-06	bwa	bcftools (only)	357.12
-cx_BaXy_g0001	1e-03	bowtie2	bcftools (total)	265.01
-cx_BaXy_g0001	1e-03	minimap2	bcftools (total)	257.56
-cx_BaXy_g0001	1e-03	bwa	bcftools (total)	256.27
-cx_BaXy_g0001	1e-03	bowtie2	bcftools (only)	241.48
-cx_BaXy_g0001	1e-03	minimap2	bcftools (only)	232.91
-cx_BaXy_g0001	1e-03	bwa	bcftools (only)	232.29
-cx_BaXy_g0001	5e-04	bowtie2	bcftools (total)	279.55
-cx_BaXy_g0001	5e-04	minimap2	bcftools (total)	270.72
-cx_BaXy_g0001	5e-04	bwa	bcftools (total)	269.16
-cx_BaXy_g0001	5e-04	bowtie2	bcftools (only)	254.51
-cx_BaXy_g0001	5e-04	minimap2	bcftools (only)	244.75
-cx_BaXy_g0001	5e-04	bwa	bcftools (only)	243.95
-am_BA_g0003	5e-02	bowtie2	bcftools (total)	438.55
-am_BA_g0003	5e-02	minimap2	bcftools (total)	415.25
-am_BA_g0003	5e-02	bwa	bcftools (total)	408.68
-am_BA_g0003	5e-02	bowtie2	bcftools (only)	401.34
-am_BA_g0003	5e-02	minimap2	bcftools (only)	377.13
-am_BA_g0003	5e-02	bwa	bcftools (only)	370.09
-bj_EsCo_g0001	3e-02	bowtie2	bcftools (total)	186.05
-bj_EsCo_g0001	3e-02	minimap2	bcftools (total)	172.89
-bj_EsCo_g0001	3e-02	bwa	bcftools (total)	172.65
-bj_EsCo_g0001	3e-02	bowtie2	bcftools (only)	173.44
-bj_EsCo_g0001	3e-02	minimap2	bcftools (only)	160.26
-bj_EsCo_g0001	3e-02	bwa	bcftools (only)	160.14
-am_BaOv_g0001	5e-06	bowtie2	bcftools (total)	487.18
-am_BaOv_g0001	5e-06	minimap2	bcftools (total)	436.64
-am_BaOv_g0001	5e-06	bwa	bcftools (total)	434.85
-am_BaOv_g0001	5e-06	bowtie2	bcftools (only)	452.22
-am_BaOv_g0001	5e-06	minimap2	bcftools (only)	400.31
-am_BaOv_g0001	5e-06	bwa	bcftools (only)	399.69
-am_AkMu_g0002	1e-06	bowtie2	bcftools (total)	509.70
-am_AkMu_g0002	1e-06	minimap2	bcftools (total)	486.14
-am_AkMu_g0002	1e-06	bwa	bcftools (total)	483.20
-am_AkMu_g0002	1e-06	bowtie2	bcftools (only)	465.81
-am_AkMu_g0002	1e-06	minimap2	bcftools (only)	440.56
-am_AkMu_g0002	1e-06	bwa	bcftools (only)	439.56
-am_PaDi_g0001	1e-03	bowtie2	bcftools (total)	510.55
-am_PaDi_g0001	1e-03	minimap2	bcftools (total)	415.93
-am_PaDi_g0001	1e-03	bwa	bcftools (total)	413.61
-am_PaDi_g0001	1e-03	bowtie2	bcftools (only)	474.77
-am_PaDi_g0001	1e-03	minimap2	bcftools (only)	378.78
-am_PaDi_g0001	1e-03	bwa	bcftools (only)	377.60
-bj_EsCo_g0001	1e-02	bowtie2	bcftools (total)	194.51
-bj_EsCo_g0001	1e-02	minimap2	bcftools (total)	172.47
-bj_EsCo_g0001	1e-02	bwa	bcftools (total)	172.12
-bj_EsCo_g0001	1e-02	bowtie2	bcftools (only)	182.12
-bj_EsCo_g0001	1e-02	minimap2	bcftools (only)	159.95
-bj_EsCo_g0001	1e-02	bwa	bcftools (only)	159.88
-am_BaVu_g0002	5e-03	bowtie2	bcftools (total)	229.69
-am_BaVu_g0002	5e-03	minimap2	bcftools (total)	188.31
-am_BaVu_g0002	5e-03	bwa	bcftools (total)	187.65
-am_BaVu_g0002	5e-03	bowtie2	bcftools (only)	207.59
-am_BaVu_g0002	5e-03	minimap2	bcftools (only)	165.90
-am_BaVu_g0002	5e-03	bwa	bcftools (only)	165.69
-am_PaDi_g0001	1e-06	bowtie2	bcftools (total)	510.12
-am_PaDi_g0001	1e-06	minimap2	bcftools (total)	416.45
-am_PaDi_g0001	1e-06	bwa	bcftools (total)	412.69
-am_PaDi_g0001	1e-06	bowtie2	bcftools (only)	474.59
-am_PaDi_g0001	1e-06	minimap2	bcftools (only)	379.30
-am_PaDi_g0001	1e-06	bwa	bcftools (only)	376.89
-am_BaOv_g0001	1e-05	bowtie2	bcftools (total)	486.85
-am_BaOv_g0001	1e-05	minimap2	bcftools (total)	436.43
-am_BaOv_g0001	1e-05	bwa	bcftools (total)	434.23
-am_BaOv_g0001	1e-05	bowtie2	bcftools (only)	451.80
-am_BaOv_g0001	1e-05	minimap2	bcftools (only)	400.11
-am_BaOv_g0001	1e-05	bwa	bcftools (only)	399.03
-am_BaVu_g0002	2e-02	bowtie2	bcftools (total)	222.45
-am_BaVu_g0002	2e-02	minimap2	bcftools (total)	188.48
-am_BaVu_g0002	2e-02	bwa	bcftools (total)	189.22
-am_BaVu_g0002	2e-02	bowtie2	bcftools (only)	200.07
-am_BaVu_g0002	2e-02	minimap2	bcftools (only)	166.00
-am_BaVu_g0002	2e-02	bwa	bcftools (only)	166.94
-bj_EsCo_g0001	2e-05	bowtie2	bcftools (total)	195.46
-bj_EsCo_g0001	2e-05	minimap2	bcftools (total)	171.56
-bj_EsCo_g0001	2e-05	bwa	bcftools (total)	171.00
-bj_EsCo_g0001	2e-05	bowtie2	bcftools (only)	183.45
-bj_EsCo_g0001	2e-05	minimap2	bcftools (only)	159.12
-bj_EsCo_g0001	2e-05	bwa	bcftools (only)	159.04
-am_BA_g0003	1e-04	bowtie2	bcftools (total)	524.28
-am_BA_g0003	1e-04	minimap2	bcftools (total)	399.21
-am_BA_g0003	1e-04	bwa	bcftools (total)	395.09
-am_BA_g0003	1e-04	bowtie2	bcftools (only)	487.34
-am_BA_g0003	1e-04	minimap2	bcftools (only)	360.81
-am_BA_g0003	1e-04	bwa	bcftools (only)	357.74
-am_BaOv_g0001	1e-04	bowtie2	bcftools (total)	485.14
-am_BaOv_g0001	1e-04	minimap2	bcftools (total)	436.53
-am_BaOv_g0001	1e-04	bwa	bcftools (total)	435.41
-am_BaOv_g0001	1e-04	bowtie2	bcftools (only)	450.01
-am_BaOv_g0001	1e-04	minimap2	bcftools (only)	400.11
-am_BaOv_g0001	1e-04	bwa	bcftools (only)	400.35
-bf_BaFa_g0001	1e-04	bowtie2	bcftools (total)	526.93
-bf_BaFa_g0001	1e-04	minimap2	bcftools (total)	472.44
-bf_BaFa_g0001	1e-04	bwa	bcftools (total)	468.85
-bf_BaFa_g0001	1e-04	bowtie2	bcftools (only)	486.76
-bf_BaFa_g0001	1e-04	minimap2	bcftools (only)	429.67
-bf_BaFa_g0001	1e-04	bwa	bcftools (only)	428.02
-am_AkMu_g0002	3e-05	bowtie2	bcftools (total)	512.50
-am_AkMu_g0002	3e-05	minimap2	bcftools (total)	487.42
-am_AkMu_g0002	3e-05	bwa	bcftools (total)	483.46
-am_AkMu_g0002	3e-05	bowtie2	bcftools (only)	468.78
-am_AkMu_g0002	3e-05	minimap2	bcftools (only)	441.73
-am_AkMu_g0002	3e-05	bwa	bcftools (only)	439.74
-am_BaFr_g0050	3e-06	bowtie2	bcftools (total)	933.23
-am_BaFr_g0050	3e-06	minimap2	bcftools (total)	844.45
-am_BaFr_g0050	3e-06	bwa	bcftools (total)	837.76
-am_BaFr_g0050	3e-06	bowtie2	bcftools (only)	862.58
-am_BaFr_g0050	3e-06	minimap2	bcftools (only)	771.00
-am_BaFr_g0050	3e-06	bwa	bcftools (only)	767.02
-cx_BaXy_g0001	3e-05	bowtie2	bcftools (total)	280.50
-cx_BaXy_g0001	3e-05	minimap2	bcftools (total)	270.71
-cx_BaXy_g0001	3e-05	bwa	bcftools (total)	269.65
-cx_BaXy_g0001	3e-05	bowtie2	bcftools (only)	255.82
-cx_BaXy_g0001	3e-05	minimap2	bcftools (only)	244.83
-cx_BaXy_g0001	3e-05	bwa	bcftools (only)	244.57
-cx_BaXy_g0001	1e-06	bowtie2	bcftools (total)	278.61
-cx_BaXy_g0001	1e-06	minimap2	bcftools (total)	270.31
-cx_BaXy_g0001	1e-06	bwa	bcftools (total)	269.39
-cx_BaXy_g0001	1e-06	bowtie2	bcftools (only)	253.83
-cx_BaXy_g0001	1e-06	minimap2	bcftools (only)	244.47
-cx_BaXy_g0001	1e-06	bwa	bcftools (only)	244.22
-am_BaVu_g0002	2e-06	bowtie2	bcftools (total)	233.19
-am_BaVu_g0002	2e-06	minimap2	bcftools (total)	187.98
-am_BaVu_g0002	2e-06	bwa	bcftools (total)	187.37
-am_BaVu_g0002	2e-06	bowtie2	bcftools (only)	211.46
-am_BaVu_g0002	2e-06	minimap2	bcftools (only)	165.72
-am_BaVu_g0002	2e-06	bwa	bcftools (only)	165.62
-am_PaDi_g0001	4e-06	bowtie2	bcftools (total)	509.97
-am_PaDi_g0001	4e-06	minimap2	bcftools (total)	415.78
-am_PaDi_g0001	4e-06	bwa	bcftools (total)	412.58
-am_PaDi_g0001	4e-06	bowtie2	bcftools (only)	474.28
-am_PaDi_g0001	4e-06	minimap2	bcftools (only)	378.69
-am_PaDi_g0001	4e-06	bwa	bcftools (only)	376.80
-am_BaFr_g0050	3e-05	bowtie2	bcftools (total)	933.91
-am_BaFr_g0050	3e-05	minimap2	bcftools (total)	840.41
-am_BaFr_g0050	3e-05	bwa	bcftools (total)	837.76
-am_BaFr_g0050	3e-05	bowtie2	bcftools (only)	863.38
-am_BaFr_g0050	3e-05	minimap2	bcftools (only)	767.02
-am_BaFr_g0050	3e-05	bwa	bcftools (only)	767.20
-am_BA_g0003	5e-06	bowtie2	bcftools (total)	523.65
-am_BA_g0003	5e-06	minimap2	bcftools (total)	398.63
-am_BA_g0003	5e-06	bwa	bcftools (total)	394.73
-am_BA_g0003	5e-06	bowtie2	bcftools (only)	486.58
-am_BA_g0003	5e-06	minimap2	bcftools (only)	360.34
-am_BA_g0003	5e-06	bwa	bcftools (only)	357.41
-cx_BaXy_g0001	2e-06	bowtie2	bcftools (total)	279.40
-cx_BaXy_g0001	2e-06	minimap2	bcftools (total)	270.71
-cx_BaXy_g0001	2e-06	bwa	bcftools (total)	269.26
-cx_BaXy_g0001	2e-06	bowtie2	bcftools (only)	254.56
-cx_BaXy_g0001	2e-06	minimap2	bcftools (only)	244.84
-cx_BaXy_g0001	2e-06	bwa	bcftools (only)	244.20
-bf_BaFa_g0001	5e-04	bowtie2	bcftools (total)	526.94
-bf_BaFa_g0001	5e-04	minimap2	bcftools (total)	472.72
-bf_BaFa_g0001	5e-04	bwa	bcftools (total)	468.46
-bf_BaFa_g0001	5e-04	bowtie2	bcftools (only)	486.77
-bf_BaFa_g0001	5e-04	minimap2	bcftools (only)	429.82
-bf_BaFa_g0001	5e-04	bwa	bcftools (only)	427.72
-bf_BaFa_g0001	1e-02	bowtie2	bcftools (total)	520.67
-bf_BaFa_g0001	1e-02	minimap2	bcftools (total)	472.78
-bf_BaFa_g0001	1e-02	bwa	bcftools (total)	470.58
-bf_BaFa_g0001	1e-02	bowtie2	bcftools (only)	479.74
-bf_BaFa_g0001	1e-02	minimap2	bcftools (only)	429.48
-bf_BaFa_g0001	1e-02	bwa	bcftools (only)	429.23
-am_PaDi_g0001	5e-03	bowtie2	bcftools (total)	505.76
-am_PaDi_g0001	5e-03	minimap2	bcftools (total)	416.04
-am_PaDi_g0001	5e-03	bwa	bcftools (total)	413.55
-am_PaDi_g0001	5e-03	bowtie2	bcftools (only)	469.54
-am_PaDi_g0001	5e-03	minimap2	bcftools (only)	378.67
-am_PaDi_g0001	5e-03	bwa	bcftools (only)	377.20
-am_PaDi_g0001	3e-02	bowtie2	bcftools (total)	472.30
-am_PaDi_g0001	3e-02	minimap2	bcftools (total)	419.00
-am_PaDi_g0001	3e-02	bwa	bcftools (total)	418.18
-am_PaDi_g0001	3e-02	bowtie2	bcftools (only)	435.01
-am_PaDi_g0001	3e-02	minimap2	bcftools (only)	381.40
-am_PaDi_g0001	3e-02	bwa	bcftools (only)	381.02
-bf_BaFa_g0001	5e-05	bowtie2	bcftools (total)	525.14
-bf_BaFa_g0001	5e-05	minimap2	bcftools (total)	470.24
-bf_BaFa_g0001	5e-05	bwa	bcftools (total)	467.48
-bf_BaFa_g0001	5e-05	bowtie2	bcftools (only)	485.31
-bf_BaFa_g0001	5e-05	minimap2	bcftools (only)	427.50
-bf_BaFa_g0001	5e-05	bwa	bcftools (only)	426.76
-am_BaOv_g0001	2e-05	bowtie2	bcftools (total)	484.46
-am_BaOv_g0001	2e-05	minimap2	bcftools (total)	436.65
-am_BaOv_g0001	2e-05	bwa	bcftools (total)	434.22
-am_BaOv_g0001	2e-05	bowtie2	bcftools (only)	449.40
-am_BaOv_g0001	2e-05	minimap2	bcftools (only)	400.38
-am_BaOv_g0001	2e-05	bwa	bcftools (only)	399.16
-am_BaFr_g0050	3e-02	bowtie2	bcftools (total)	864.58
-am_BaFr_g0050	3e-02	minimap2	bcftools (total)	807.47
-am_BaFr_g0050	3e-02	bwa	bcftools (total)	804.72
-am_BaFr_g0050	3e-02	bowtie2	bcftools (only)	793.67
-am_BaFr_g0050	3e-02	minimap2	bcftools (only)	736.14
-am_BaFr_g0050	3e-02	bwa	bcftools (only)	734.40
-am_AkMu_g0002	1e-04	bowtie2	bcftools (total)	510.65
-am_AkMu_g0002	1e-04	minimap2	bcftools (total)	486.77
-am_AkMu_g0002	1e-04	bwa	bcftools (total)	483.95
-am_AkMu_g0002	1e-04	bowtie2	bcftools (only)	466.99
-am_AkMu_g0002	1e-04	minimap2	bcftools (only)	441.12
-am_AkMu_g0002	1e-04	bwa	bcftools (only)	440.25
-am_BaVu_g0002	1e-06	bowtie2	bcftools (total)	233.10
-am_BaVu_g0002	1e-06	minimap2	bcftools (total)	187.72
-am_BaVu_g0002	1e-06	bwa	bcftools (total)	187.32
-am_BaVu_g0002	1e-06	bowtie2	bcftools (only)	211.41
-am_BaVu_g0002	1e-06	minimap2	bcftools (only)	165.50
-am_BaVu_g0002	1e-06	bwa	bcftools (only)	165.59
-am_BaVu_g0002	5e-06	bowtie2	bcftools (total)	232.81
-am_BaVu_g0002	5e-06	minimap2	bcftools (total)	188.19
-am_BaVu_g0002	5e-06	bwa	bcftools (total)	187.57
-am_BaVu_g0002	5e-06	bowtie2	bcftools (only)	211.12
-am_BaVu_g0002	5e-06	minimap2	bcftools (only)	165.97
-am_BaVu_g0002	5e-06	bwa	bcftools (only)	165.73
-cx_BaXy_g0001	1e-02	bowtie2	bcftools (total)	279.30
-cx_BaXy_g0001	1e-02	minimap2	bcftools (total)	270.26
-cx_BaXy_g0001	1e-02	bwa	bcftools (total)	271.08
-cx_BaXy_g0001	1e-02	bowtie2	bcftools (only)	254.01
-cx_BaXy_g0001	1e-02	minimap2	bcftools (only)	244.75
-cx_BaXy_g0001	1e-02	bwa	bcftools (only)	245.54
-cx_BaXy_g0001	4e-05	bowtie2	bcftools (total)	279.41
-cx_BaXy_g0001	4e-05	minimap2	bcftools (total)	270.33
-cx_BaXy_g0001	4e-05	bwa	bcftools (total)	270.04
-cx_BaXy_g0001	4e-05	bowtie2	bcftools (only)	254.69
-cx_BaXy_g0001	4e-05	minimap2	bcftools (only)	244.51
-cx_BaXy_g0001	4e-05	bwa	bcftools (only)	244.91
-cx_BaXy_g0001	4e-02	bowtie2	bcftools (total)	252.44
-cx_BaXy_g0001	4e-02	minimap2	bcftools (total)	257.03
-cx_BaXy_g0001	4e-02	bwa	bcftools (total)	259.03
-cx_BaXy_g0001	4e-02	bowtie2	bcftools (only)	227.92
-cx_BaXy_g0001	4e-02	minimap2	bcftools (only)	232.12
-cx_BaXy_g0001	4e-02	bwa	bcftools (only)	234.08
-cx_BaXy_g0001	2e-05	bowtie2	bcftools (total)	279.01
-cx_BaXy_g0001	2e-05	minimap2	bcftools (total)	270.93
-cx_BaXy_g0001	2e-05	bwa	bcftools (total)	269.08
-cx_BaXy_g0001	2e-05	bowtie2	bcftools (only)	254.31
-cx_BaXy_g0001	2e-05	minimap2	bcftools (only)	245.00
-cx_BaXy_g0001	2e-05	bwa	bcftools (only)	243.92
-am_BaVu_g0002	5e-05	bowtie2	bcftools (total)	232.94
-am_BaVu_g0002	5e-05	minimap2	bcftools (total)	187.28
-am_BaVu_g0002	5e-05	bwa	bcftools (total)	187.32
-am_BaVu_g0002	5e-05	bowtie2	bcftools (only)	211.30
-am_BaVu_g0002	5e-05	minimap2	bcftools (only)	165.10
-am_BaVu_g0002	5e-05	bwa	bcftools (only)	165.63
-am_BA_g0003	3e-02	bowtie2	bcftools (total)	488.72
-am_BA_g0003	3e-02	minimap2	bcftools (total)	410.43
-am_BA_g0003	3e-02	bwa	bcftools (total)	401.80
-am_BA_g0003	3e-02	bowtie2	bcftools (only)	451.19
-am_BA_g0003	3e-02	minimap2	bcftools (only)	372.00
-am_BA_g0003	3e-02	bwa	bcftools (only)	363.53
-am_BA_g0003	5e-04	bowtie2	bcftools (total)	523.12
-am_BA_g0003	5e-04	minimap2	bcftools (total)	398.75
-am_BA_g0003	5e-04	bwa	bcftools (total)	395.54
-am_BA_g0003	5e-04	bowtie2	bcftools (only)	486.07
-am_BA_g0003	5e-04	minimap2	bcftools (only)	360.33
-am_BA_g0003	5e-04	bwa	bcftools (only)	358.19
-bf_BaFa_g0001	2e-06	bowtie2	bcftools (total)	526.03
-bf_BaFa_g0001	2e-06	minimap2	bcftools (total)	472.83
-bf_BaFa_g0001	2e-06	bwa	bcftools (total)	468.51
-bf_BaFa_g0001	2e-06	bowtie2	bcftools (only)	485.84
-bf_BaFa_g0001	2e-06	minimap2	bcftools (only)	430.05
-bf_BaFa_g0001	2e-06	bwa	bcftools (only)	427.82
-am_PaDi_g0001	2e-02	bowtie2	bcftools (total)	490.74
-am_PaDi_g0001	2e-02	minimap2	bcftools (total)	419.05
-am_PaDi_g0001	2e-02	bwa	bcftools (total)	416.64
-am_PaDi_g0001	2e-02	bowtie2	bcftools (only)	454.77
-am_PaDi_g0001	2e-02	minimap2	bcftools (only)	381.55
-am_PaDi_g0001	2e-02	bwa	bcftools (only)	379.63
-am_BaFr_g0050	1e-04	bowtie2	bcftools (total)	935.32
-am_BaFr_g0050	1e-04	minimap2	bcftools (total)	841.46
-am_BaFr_g0050	1e-04	bwa	bcftools (total)	837.43
-am_BaFr_g0050	1e-04	bowtie2	bcftools (only)	864.32
-am_BaFr_g0050	1e-04	minimap2	bcftools (only)	767.78
-am_BaFr_g0050	1e-04	bwa	bcftools (only)	766.89
-bj_EsCo_g0001	1e-04	bowtie2	bcftools (total)	195.30
-bj_EsCo_g0001	1e-04	minimap2	bcftools (total)	171.56
-bj_EsCo_g0001	1e-04	bwa	bcftools (total)	170.87
-bj_EsCo_g0001	1e-04	bowtie2	bcftools (only)	183.29
-bj_EsCo_g0001	1e-04	minimap2	bcftools (only)	159.15
-bj_EsCo_g0001	1e-04	bwa	bcftools (only)	158.97
-am_BA_g0003	1e-06	bowtie2	bcftools (total)	526.06
-am_BA_g0003	1e-06	minimap2	bcftools (total)	399.11
-am_BA_g0003	1e-06	bwa	bcftools (total)	394.80
-am_BA_g0003	1e-06	bowtie2	bcftools (only)	489.09
-am_BA_g0003	1e-06	minimap2	bcftools (only)	360.70
-am_BA_g0003	1e-06	bwa	bcftools (only)	357.45
-am_BaVu_g0002	4e-02	bowtie2	bcftools (total)	205.68
-am_BaVu_g0002	4e-02	minimap2	bcftools (total)	188.79
-am_BaVu_g0002	4e-02	bwa	bcftools (total)	189.51
-am_BaVu_g0002	4e-02	bowtie2	bcftools (only)	183.09
-am_BaVu_g0002	4e-02	minimap2	bcftools (only)	166.32
-am_BaVu_g0002	4e-02	bwa	bcftools (only)	167.02
-am_AkMu_g0002	5e-02	bowtie2	bcftools (total)	512.05
-am_AkMu_g0002	5e-02	minimap2	bcftools (total)	499.37
-am_AkMu_g0002	5e-02	bwa	bcftools (total)	494.82
-am_AkMu_g0002	5e-02	bowtie2	bcftools (only)	463.41
-am_AkMu_g0002	5e-02	minimap2	bcftools (only)	453.32
-am_AkMu_g0002	5e-02	bwa	bcftools (only)	448.79
-cx_BaXy_g0001	3e-02	bowtie2	bcftools (total)	273.12
-cx_BaXy_g0001	3e-02	minimap2	bcftools (total)	269.86
-cx_BaXy_g0001	3e-02	bwa	bcftools (total)	271.13
-cx_BaXy_g0001	3e-02	bowtie2	bcftools (only)	247.55
-cx_BaXy_g0001	3e-02	minimap2	bcftools (only)	243.69
-cx_BaXy_g0001	3e-02	bwa	bcftools (only)	245.19
-am_AkMu_g0002	2e-05	bowtie2	bcftools (total)	508.99
-am_AkMu_g0002	2e-05	minimap2	bcftools (total)	487.52
-am_AkMu_g0002	2e-05	bwa	bcftools (total)	483.72
-am_AkMu_g0002	2e-05	bowtie2	bcftools (only)	465.45
-am_AkMu_g0002	2e-05	minimap2	bcftools (only)	442.05
-am_AkMu_g0002	2e-05	bwa	bcftools (only)	440.06
-bj_EsCo_g0001	5e-04	bowtie2	bcftools (total)	195.15
-bj_EsCo_g0001	5e-04	minimap2	bcftools (total)	171.73
-bj_EsCo_g0001	5e-04	bwa	bcftools (total)	170.72
-bj_EsCo_g0001	5e-04	bowtie2	bcftools (only)	183.06
-bj_EsCo_g0001	5e-04	minimap2	bcftools (only)	159.27
-bj_EsCo_g0001	5e-04	bwa	bcftools (only)	158.81
-am_PaDi_g0001	3e-05	bowtie2	bcftools (total)	508.19
-am_PaDi_g0001	3e-05	minimap2	bcftools (total)	415.96
-am_PaDi_g0001	3e-05	bwa	bcftools (total)	412.65
-am_PaDi_g0001	3e-05	bowtie2	bcftools (only)	472.66
-am_PaDi_g0001	3e-05	minimap2	bcftools (only)	378.91
-am_PaDi_g0001	3e-05	bwa	bcftools (only)	376.94
-bf_BaFa_g0001	4e-02	bowtie2	bcftools (total)	473.28
-bf_BaFa_g0001	4e-02	minimap2	bcftools (total)	462.27
-bf_BaFa_g0001	4e-02	bwa	bcftools (total)	472.91
-bf_BaFa_g0001	4e-02	bowtie2	bcftools (only)	431.66
-bf_BaFa_g0001	4e-02	minimap2	bcftools (only)	419.25
-bf_BaFa_g0001	4e-02	bwa	bcftools (only)	430.76
-am_BA_g0003	4e-06	bowtie2	bcftools (total)	525.57
-am_BA_g0003	4e-06	minimap2	bcftools (total)	399.36
-am_BA_g0003	4e-06	bwa	bcftools (total)	395.47
-am_BA_g0003	4e-06	bowtie2	bcftools (only)	488.39
-am_BA_g0003	4e-06	minimap2	bcftools (only)	361.00
-am_BA_g0003	4e-06	bwa	bcftools (only)	358.03
-am_BaFr_g0050	2e-02	bowtie2	bcftools (total)	917.76
-am_BaFr_g0050	2e-02	minimap2	bcftools (total)	847.44
-am_BaFr_g0050	2e-02	bwa	bcftools (total)	843.92
-am_BaFr_g0050	2e-02	bowtie2	bcftools (only)	843.80
-am_BaFr_g0050	2e-02	minimap2	bcftools (only)	772.97
-am_BaFr_g0050	2e-02	bwa	bcftools (only)	770.98
-bf_BaFa_g0001	5e-06	bowtie2	bcftools (total)	525.84
-bf_BaFa_g0001	5e-06	minimap2	bcftools (total)	471.47
-bf_BaFa_g0001	5e-06	bwa	bcftools (total)	468.85
-bf_BaFa_g0001	5e-06	bowtie2	bcftools (only)	485.77
-bf_BaFa_g0001	5e-06	minimap2	bcftools (only)	428.75
-bf_BaFa_g0001	5e-06	bwa	bcftools (only)	427.96
-am_BaOv_g0001	4e-02	bowtie2	bcftools (total)	455.27
-am_BaOv_g0001	4e-02	minimap2	bcftools (total)	442.42
-am_BaOv_g0001	4e-02	bwa	bcftools (total)	441.75
-am_BaOv_g0001	4e-02	bowtie2	bcftools (only)	418.34
-am_BaOv_g0001	4e-02	minimap2	bcftools (only)	405.40
-am_BaOv_g0001	4e-02	bwa	bcftools (only)	404.82
-am_BaFr_g0050	5e-02	bowtie2	bcftools (total)	875.01
-am_BaFr_g0050	5e-02	minimap2	bcftools (total)	857.17
-am_BaFr_g0050	5e-02	bwa	bcftools (total)	856.20
-am_BaFr_g0050	5e-02	bowtie2	bcftools (only)	799.80
-am_BaFr_g0050	5e-02	minimap2	bcftools (only)	782.46
-am_BaFr_g0050	5e-02	bwa	bcftools (only)	781.44
-bf_BaFa_g0001	1e-06	bowtie2	bcftools (total)	525.80
-bf_BaFa_g0001	1e-06	minimap2	bcftools (total)	473.89
-bf_BaFa_g0001	1e-06	bwa	bcftools (total)	467.62
-bf_BaFa_g0001	1e-06	bowtie2	bcftools (only)	485.67
-bf_BaFa_g0001	1e-06	minimap2	bcftools (only)	431.12
-bf_BaFa_g0001	1e-06	bwa	bcftools (only)	426.87
-am_BaFr_g0050	1e-05	bowtie2	bcftools (total)	934.43
-am_BaFr_g0050	1e-05	minimap2	bcftools (total)	842.22
-am_BaFr_g0050	1e-05	bwa	bcftools (total)	837.81
-am_BaFr_g0050	1e-05	bowtie2	bcftools (only)	863.92
-am_BaFr_g0050	1e-05	minimap2	bcftools (only)	768.85
-am_BaFr_g0050	1e-05	bwa	bcftools (only)	767.29
-am_BaFr_g0050	1e-06	bowtie2	bcftools (total)	938.02
-am_BaFr_g0050	1e-06	minimap2	bcftools (total)	842.88
-am_BaFr_g0050	1e-06	bwa	bcftools (total)	837.64
-am_BaFr_g0050	1e-06	bowtie2	bcftools (only)	867.59
-am_BaFr_g0050	1e-06	minimap2	bcftools (only)	769.46
-am_BaFr_g0050	1e-06	bwa	bcftools (only)	767.16
-am_AkMu_g0002	5e-03	bowtie2	bcftools (total)	510.77
-am_AkMu_g0002	5e-03	minimap2	bcftools (total)	488.02
-am_AkMu_g0002	5e-03	bwa	bcftools (total)	484.27
-am_AkMu_g0002	5e-03	bowtie2	bcftools (only)	466.48
-am_AkMu_g0002	5e-03	minimap2	bcftools (only)	441.94
-am_AkMu_g0002	5e-03	bwa	bcftools (only)	440.00
-am_BaFr_g0050	4e-02	bowtie2	bcftools (total)	900.12
-am_BaFr_g0050	4e-02	minimap2	bcftools (total)	854.03
-am_BaFr_g0050	4e-02	bwa	bcftools (total)	850.26
-am_BaFr_g0050	4e-02	bowtie2	bcftools (only)	825.29
-am_BaFr_g0050	4e-02	minimap2	bcftools (only)	779.01
-am_BaFr_g0050	4e-02	bwa	bcftools (only)	776.09
-am_PaDi_g0001	4e-02	bowtie2	bcftools (total)	427.97
-am_PaDi_g0001	4e-02	minimap2	bcftools (total)	399.20
-am_PaDi_g0001	4e-02	bwa	bcftools (total)	399.18
-am_PaDi_g0001	4e-02	bowtie2	bcftools (only)	392.37
-am_PaDi_g0001	4e-02	minimap2	bcftools (only)	363.22
-am_PaDi_g0001	4e-02	bwa	bcftools (only)	363.56
-am_BaFr_g0050	5e-06	bowtie2	bcftools (total)	934.72
-am_BaFr_g0050	5e-06	minimap2	bcftools (total)	840.96
-am_BaFr_g0050	5e-06	bwa	bcftools (total)	837.37
-am_BaFr_g0050	5e-06	bowtie2	bcftools (only)	864.19
-am_BaFr_g0050	5e-06	minimap2	bcftools (only)	767.46
-am_BaFr_g0050	5e-06	bwa	bcftools (only)	766.68
-am_BaFr_g0050	2e-06	bowtie2	bcftools (total)	935.14
-am_BaFr_g0050	2e-06	minimap2	bcftools (total)	841.29
-am_BaFr_g0050	2e-06	bwa	bcftools (total)	836.67
-am_BaFr_g0050	2e-06	bowtie2	bcftools (only)	864.32
-am_BaFr_g0050	2e-06	minimap2	bcftools (only)	767.89
-am_BaFr_g0050	2e-06	bwa	bcftools (only)	766.12
-am_BaVu_g0002	1e-03	bowtie2	bcftools (total)	232.16
-am_BaVu_g0002	1e-03	minimap2	bcftools (total)	188.33
-am_BaVu_g0002	1e-03	bwa	bcftools (total)	187.49
-am_BaVu_g0002	1e-03	bowtie2	bcftools (only)	210.38
-am_BaVu_g0002	1e-03	minimap2	bcftools (only)	166.18
-am_BaVu_g0002	1e-03	bwa	bcftools (only)	165.82
-am_BA_g0003	4e-05	bowtie2	bcftools (total)	522.04
-am_BA_g0003	4e-05	minimap2	bcftools (total)	398.95
-am_BA_g0003	4e-05	bwa	bcftools (total)	395.11
-am_BA_g0003	4e-05	bowtie2	bcftools (only)	485.01
-am_BA_g0003	4e-05	minimap2	bcftools (only)	360.65
-am_BA_g0003	4e-05	bwa	bcftools (only)	357.77
-bj_EsCo_g0001	2e-06	bowtie2	bcftools (total)	196.26
-bj_EsCo_g0001	2e-06	minimap2	bcftools (total)	172.45
-bj_EsCo_g0001	2e-06	bwa	bcftools (total)	171.88
-bj_EsCo_g0001	2e-06	bowtie2	bcftools (only)	184.29
-bj_EsCo_g0001	2e-06	minimap2	bcftools (only)	160.02
-bj_EsCo_g0001	2e-06	bwa	bcftools (only)	160.00
-bj_EsCo_g0001	1e-06	bowtie2	bcftools (total)	195.23
-bj_EsCo_g0001	1e-06	minimap2	bcftools (total)	171.65
-bj_EsCo_g0001	1e-06	bwa	bcftools (total)	170.71
-bj_EsCo_g0001	1e-06	bowtie2	bcftools (only)	183.17
-bj_EsCo_g0001	1e-06	minimap2	bcftools (only)	159.18
-bj_EsCo_g0001	1e-06	bwa	bcftools (only)	158.82
-am_PaDi_g0001	5e-06	bowtie2	bcftools (total)	510.31
-am_PaDi_g0001	5e-06	minimap2	bcftools (total)	416.28
-am_PaDi_g0001	5e-06	bwa	bcftools (total)	412.54
-am_PaDi_g0001	5e-06	bowtie2	bcftools (only)	474.75
-am_PaDi_g0001	5e-06	minimap2	bcftools (only)	379.03
-am_PaDi_g0001	5e-06	bwa	bcftools (only)	376.80
-am_BA_g0003	5e-05	bowtie2	bcftools (total)	526.32
-am_BA_g0003	5e-05	minimap2	bcftools (total)	400.09
-am_BA_g0003	5e-05	bwa	bcftools (total)	396.03
-am_BA_g0003	5e-05	bowtie2	bcftools (only)	489.31
-am_BA_g0003	5e-05	minimap2	bcftools (only)	361.67
-am_BA_g0003	5e-05	bwa	bcftools (only)	358.72
-am_AkMu_g0002	3e-02	bowtie2	bcftools (total)	512.69
-am_AkMu_g0002	3e-02	minimap2	bcftools (total)	492.12
-am_AkMu_g0002	3e-02	bwa	bcftools (total)	489.53
-am_AkMu_g0002	3e-02	bowtie2	bcftools (only)	467.05
-am_AkMu_g0002	3e-02	minimap2	bcftools (only)	445.97
-am_AkMu_g0002	3e-02	bwa	bcftools (only)	444.05
-am_BaVu_g0002	4e-05	bowtie2	bcftools (total)	233.47
-am_BaVu_g0002	4e-05	minimap2	bcftools (total)	187.94
-am_BaVu_g0002	4e-05	bwa	bcftools (total)	187.20
-am_BaVu_g0002	4e-05	bowtie2	bcftools (only)	211.74
-am_BaVu_g0002	4e-05	minimap2	bcftools (only)	165.83
-am_BaVu_g0002	4e-05	bwa	bcftools (only)	165.46
-am_BaVu_g0002	1e-02	bowtie2	bcftools (total)	216.25
-am_BaVu_g0002	1e-02	minimap2	bcftools (total)	179.30
-am_BaVu_g0002	1e-02	bwa	bcftools (total)	178.97
-am_BaVu_g0002	1e-02	bowtie2	bcftools (only)	195.16
-am_BaVu_g0002	1e-02	minimap2	bcftools (only)	157.98
-am_BaVu_g0002	1e-02	bwa	bcftools (only)	157.94
-cx_BaXy_g0001	5e-06	bowtie2	bcftools (total)	279.16
-cx_BaXy_g0001	5e-06	minimap2	bcftools (total)	270.90
-cx_BaXy_g0001	5e-06	bwa	bcftools (total)	269.31
-cx_BaXy_g0001	5e-06	bowtie2	bcftools (only)	254.42
-cx_BaXy_g0001	5e-06	minimap2	bcftools (only)	245.00
-cx_BaXy_g0001	5e-06	bwa	bcftools (only)	244.21
-am_PaDi_g0001	3e-06	bowtie2	bcftools (total)	509.65
-am_PaDi_g0001	3e-06	minimap2	bcftools (total)	415.82
-am_PaDi_g0001	3e-06	bwa	bcftools (total)	413.32
-am_PaDi_g0001	3e-06	bowtie2	bcftools (only)	474.09
-am_PaDi_g0001	3e-06	minimap2	bcftools (only)	378.84
-am_PaDi_g0001	3e-06	bwa	bcftools (only)	377.41
-am_PaDi_g0001	2e-05	bowtie2	bcftools (total)	510.01
-am_PaDi_g0001	2e-05	minimap2	bcftools (total)	415.26
-am_PaDi_g0001	2e-05	bwa	bcftools (total)	413.13
-am_PaDi_g0001	2e-05	bowtie2	bcftools (only)	474.36
-am_PaDi_g0001	2e-05	minimap2	bcftools (only)	378.11
-am_PaDi_g0001	2e-05	bwa	bcftools (only)	377.26
-bj_EsCo_g0001	5e-03	bowtie2	bcftools (total)	194.24
-bj_EsCo_g0001	5e-03	minimap2	bcftools (total)	172.07
-bj_EsCo_g0001	5e-03	bwa	bcftools (total)	170.99
-bj_EsCo_g0001	5e-03	bowtie2	bcftools (only)	181.95
-bj_EsCo_g0001	5e-03	minimap2	bcftools (only)	159.52
-bj_EsCo_g0001	5e-03	bwa	bcftools (only)	158.92
-am_AkMu_g0002	4e-06	bowtie2	bcftools (total)	484.58
-am_AkMu_g0002	4e-06	minimap2	bcftools (total)	461.99
-am_AkMu_g0002	4e-06	bwa	bcftools (total)	458.20
-am_AkMu_g0002	4e-06	bowtie2	bcftools (only)	442.99
-am_AkMu_g0002	4e-06	minimap2	bcftools (only)	418.46
-am_AkMu_g0002	4e-06	bwa	bcftools (only)	416.60
-am_AkMu_g0002	4e-02	bowtie2	bcftools (total)	514.44
-am_AkMu_g0002	4e-02	minimap2	bcftools (total)	493.91
-am_AkMu_g0002	4e-02	bwa	bcftools (total)	490.87
-am_AkMu_g0002	4e-02	bowtie2	bcftools (only)	465.89
-am_AkMu_g0002	4e-02	minimap2	bcftools (only)	447.78
-am_AkMu_g0002	4e-02	bwa	bcftools (only)	445.32
-am_PaDi_g0001	5e-05	bowtie2	bcftools (total)	510.24
-am_PaDi_g0001	5e-05	minimap2	bcftools (total)	415.80
-am_PaDi_g0001	5e-05	bwa	bcftools (total)	412.66
-am_PaDi_g0001	5e-05	bowtie2	bcftools (only)	474.66
-am_PaDi_g0001	5e-05	minimap2	bcftools (only)	378.72
-am_PaDi_g0001	5e-05	bwa	bcftools (only)	376.75
-am_BA_g0003	5e-03	bowtie2	bcftools (total)	491.41
-am_BA_g0003	5e-03	minimap2	bcftools (total)	380.25
-am_BA_g0003	5e-03	bwa	bcftools (total)	375.10
-am_BA_g0003	5e-03	bowtie2	bcftools (only)	455.86
-am_BA_g0003	5e-03	minimap2	bcftools (only)	343.62
-am_BA_g0003	5e-03	bwa	bcftools (only)	339.25
-am_PaDi_g0001	1e-04	bowtie2	bcftools (total)	509.28
-am_PaDi_g0001	1e-04	minimap2	bcftools (total)	415.87
-am_PaDi_g0001	1e-04	bwa	bcftools (total)	413.08
-am_PaDi_g0001	1e-04	bowtie2	bcftools (only)	473.66
-am_PaDi_g0001	1e-04	minimap2	bcftools (only)	378.65
-am_PaDi_g0001	1e-04	bwa	bcftools (only)	377.22
-am_BA_g0003	1e-03	bowtie2	bcftools (total)	525.57
-am_BA_g0003	1e-03	minimap2	bcftools (total)	399.79
-am_BA_g0003	1e-03	bwa	bcftools (total)	395.98
-am_BA_g0003	1e-03	bowtie2	bcftools (only)	488.56
-am_BA_g0003	1e-03	minimap2	bcftools (only)	361.33
-am_BA_g0003	1e-03	bwa	bcftools (only)	358.25
-cx_BaXy_g0001	2e-02	bowtie2	bcftools (total)	263.78
-cx_BaXy_g0001	2e-02	minimap2	bcftools (total)	235.67
-cx_BaXy_g0001	2e-02	bwa	bcftools (total)	257.80
-cx_BaXy_g0001	2e-02	bowtie2	bcftools (only)	239.53
-cx_BaXy_g0001	2e-02	minimap2	bcftools (only)	232.43
-cx_BaXy_g0001	2e-02	bwa	bcftools (only)	233.21
-am_BaOv_g0001	5e-04	bowtie2	bcftools (total)	487.39
-am_BaOv_g0001	5e-04	minimap2	bcftools (total)	436.35
-am_BaOv_g0001	5e-04	bwa	bcftools (total)	434.69
-am_BaOv_g0001	5e-04	bowtie2	bcftools (only)	452.21
-am_BaOv_g0001	5e-04	minimap2	bcftools (only)	399.92
-am_BaOv_g0001	5e-04	bwa	bcftools (only)	399.62
-cx_BaXy_g0001	4e-06	bowtie2	bcftools (total)	279.82
-cx_BaXy_g0001	4e-06	minimap2	bcftools (total)	270.46
-cx_BaXy_g0001	4e-06	bwa	bcftools (total)	269.79
-cx_BaXy_g0001	4e-06	bowtie2	bcftools (only)	255.13
-cx_BaXy_g0001	4e-06	minimap2	bcftools (only)	244.62
-cx_BaXy_g0001	4e-06	bwa	bcftools (only)	244.77
-am_BaOv_g0001	3e-02	bowtie2	bcftools (total)	467.64
-am_BaOv_g0001	3e-02	minimap2	bcftools (total)	440.94
-am_BaOv_g0001	3e-02	bwa	bcftools (total)	440.06
-am_BaOv_g0001	3e-02	bowtie2	bcftools (only)	430.70
-am_BaOv_g0001	3e-02	minimap2	bcftools (only)	403.94
-am_BaOv_g0001	3e-02	bwa	bcftools (only)	403.34
-am_BaFr_g0050	4e-05	bowtie2	bcftools (total)	933.11
-am_BaFr_g0050	4e-05	minimap2	bcftools (total)	842.23
-am_BaFr_g0050	4e-05	bwa	bcftools (total)	838.58
-am_BaFr_g0050	4e-05	bowtie2	bcftools (only)	862.59
-am_BaFr_g0050	4e-05	minimap2	bcftools (only)	768.68
-am_BaFr_g0050	4e-05	bwa	bcftools (only)	768.01
-am_BaVu_g0002	3e-06	bowtie2	bcftools (total)	233.21
-am_BaVu_g0002	3e-06	minimap2	bcftools (total)	187.65
-am_BaVu_g0002	3e-06	bwa	bcftools (total)	187.62
-am_BaVu_g0002	3e-06	bowtie2	bcftools (only)	211.54
-am_BaVu_g0002	3e-06	minimap2	bcftools (only)	165.49
-am_BaVu_g0002	3e-06	bwa	bcftools (only)	165.89
-am_BaOv_g0001	1e-02	bowtie2	bcftools (total)	484.43
-am_BaOv_g0001	1e-02	minimap2	bcftools (total)	437.77
-am_BaOv_g0001	1e-02	bwa	bcftools (total)	436.78
-am_BaOv_g0001	1e-02	bowtie2	bcftools (only)	448.25
-am_BaOv_g0001	1e-02	minimap2	bcftools (only)	400.91
-am_BaOv_g0001	1e-02	bwa	bcftools (only)	400.71
-am_BaOv_g0001	2e-02	bowtie2	bcftools (total)	468.97
-am_BaOv_g0001	2e-02	minimap2	bcftools (total)	429.64
-am_BaOv_g0001	2e-02	bwa	bcftools (total)	428.30
-am_BaOv_g0001	2e-02	bowtie2	bcftools (only)	432.79
-am_BaOv_g0001	2e-02	minimap2	bcftools (only)	394.27
-am_BaOv_g0001	2e-02	bwa	bcftools (only)	393.53
-am_BaOv_g0001	5e-05	bowtie2	bcftools (total)	488.58
-am_BaOv_g0001	5e-05	minimap2	bcftools (total)	438.92
-am_BaOv_g0001	5e-05	bwa	bcftools (total)	435.29
-am_BaOv_g0001	5e-05	bowtie2	bcftools (only)	453.60
-am_BaOv_g0001	5e-05	minimap2	bcftools (only)	402.69
-am_BaOv_g0001	5e-05	bwa	bcftools (only)	400.25
-am_BaFr_g0050	1e-03	bowtie2	bcftools (total)	933.65
-am_BaFr_g0050	1e-03	minimap2	bcftools (total)	842.09
-am_BaFr_g0050	1e-03	bwa	bcftools (total)	838.89
-am_BaFr_g0050	1e-03	bowtie2	bcftools (only)	862.61
-am_BaFr_g0050	1e-03	minimap2	bcftools (only)	768.30
-am_BaFr_g0050	1e-03	bwa	bcftools (only)	768.04
-am_BaOv_g0001	4e-06	bowtie2	bcftools (total)	486.51
-am_BaOv_g0001	4e-06	minimap2	bcftools (total)	437.45
-am_BaOv_g0001	4e-06	bwa	bcftools (total)	435.29
-am_BaOv_g0001	4e-06	bowtie2	bcftools (only)	451.56
-am_BaOv_g0001	4e-06	minimap2	bcftools (only)	401.27
-am_BaOv_g0001	4e-06	bwa	bcftools (only)	400.18
-am_BaOv_g0001	5e-03	bowtie2	bcftools (total)	484.83
-am_BaOv_g0001	5e-03	minimap2	bcftools (total)	436.96
-am_BaOv_g0001	5e-03	bwa	bcftools (total)	437.13
-am_BaOv_g0001	5e-03	bowtie2	bcftools (only)	449.01
-am_BaOv_g0001	5e-03	minimap2	bcftools (only)	400.18
-am_BaOv_g0001	5e-03	bwa	bcftools (only)	401.43
-bf_BaFa_g0001	2e-05	bowtie2	bcftools (total)	526.63
-bf_BaFa_g0001	2e-05	minimap2	bcftools (total)	472.37
-bf_BaFa_g0001	2e-05	bwa	bcftools (total)	467.66
-bf_BaFa_g0001	2e-05	bowtie2	bcftools (only)	486.58
-bf_BaFa_g0001	2e-05	minimap2	bcftools (only)	429.56
-bf_BaFa_g0001	2e-05	bwa	bcftools (only)	427.02
-am_BaFr_g0050	4e-06	bowtie2	bcftools (total)	935.47
-am_BaFr_g0050	4e-06	minimap2	bcftools (total)	842.95
-am_BaFr_g0050	4e-06	bwa	bcftools (total)	838.03
-am_BaFr_g0050	4e-06	bowtie2	bcftools (only)	864.83
-am_BaFr_g0050	4e-06	minimap2	bcftools (only)	769.33
-am_BaFr_g0050	4e-06	bwa	bcftools (only)	767.38
-am_BaFr_g0050	5e-03	bowtie2	bcftools (total)	929.55
-am_BaFr_g0050	5e-03	minimap2	bcftools (total)	841.99
-am_BaFr_g0050	5e-03	bwa	bcftools (total)	837.13
-am_BaFr_g0050	5e-03	bowtie2	bcftools (only)	857.21
-am_BaFr_g0050	5e-03	minimap2	bcftools (only)	767.56
-am_BaFr_g0050	5e-03	bwa	bcftools (only)	765.75
-bj_EsCo_g0001	4e-06	bowtie2	bcftools (total)	198.23
-bj_EsCo_g0001	4e-06	minimap2	bcftools (total)	172.15
-bj_EsCo_g0001	4e-06	bwa	bcftools (total)	170.98
-bj_EsCo_g0001	4e-06	bowtie2	bcftools (only)	186.15
-bj_EsCo_g0001	4e-06	minimap2	bcftools (only)	159.72
-bj_EsCo_g0001	4e-06	bwa	bcftools (only)	159.06
-am_BaVu_g0002	3e-02	bowtie2	bcftools (total)	215.39
-am_BaVu_g0002	3e-02	minimap2	bcftools (total)	188.99
-am_BaVu_g0002	3e-02	bwa	bcftools (total)	189.52
-am_BaVu_g0002	3e-02	bowtie2	bcftools (only)	192.96
-am_BaVu_g0002	3e-02	minimap2	bcftools (only)	166.61
-am_BaVu_g0002	3e-02	bwa	bcftools (only)	167.04
-am_BaVu_g0002	1e-04	bowtie2	bcftools (total)	220.99
-am_BaVu_g0002	1e-04	minimap2	bcftools (total)	178.31
-am_BaVu_g0002	1e-04	bwa	bcftools (total)	178.41
-am_BaVu_g0002	1e-04	bowtie2	bcftools (only)	200.28
-am_BaVu_g0002	1e-04	minimap2	bcftools (only)	157.20
-am_BaVu_g0002	1e-04	bwa	bcftools (only)	157.74
-bj_EsCo_g0001	2e-02	bowtie2	bcftools (total)	190.65
-bj_EsCo_g0001	2e-02	minimap2	bcftools (total)	172.76
-bj_EsCo_g0001	2e-02	bwa	bcftools (total)	172.88
-bj_EsCo_g0001	2e-02	bowtie2	bcftools (only)	178.07
-bj_EsCo_g0001	2e-02	minimap2	bcftools (only)	160.14
-bj_EsCo_g0001	2e-02	bwa	bcftools (only)	160.50
-am_BA_g0003	2e-05	bowtie2	bcftools (total)	525.26
-am_BA_g0003	2e-05	minimap2	bcftools (total)	399.36
-am_BA_g0003	2e-05	bwa	bcftools (total)	394.96
-am_BA_g0003	2e-05	bowtie2	bcftools (only)	488.20
-am_BA_g0003	2e-05	minimap2	bcftools (only)	360.92
-am_BA_g0003	2e-05	bwa	bcftools (only)	357.58
-am_BaFr_g0050	1e-02	bowtie2	bcftools (total)	927.18
-am_BaFr_g0050	1e-02	minimap2	bcftools (total)	845.96
-am_BaFr_g0050	1e-02	bwa	bcftools (total)	842.09
-am_BaFr_g0050	1e-02	bowtie2	bcftools (only)	854.21
-am_BaFr_g0050	1e-02	minimap2	bcftools (only)	771.48
-am_BaFr_g0050	1e-02	bwa	bcftools (only)	769.63
-am_AkMu_g0002	4e-05	bowtie2	bcftools (total)	510.77
-am_AkMu_g0002	4e-05	minimap2	bcftools (total)	487.05
-am_AkMu_g0002	4e-05	bwa	bcftools (total)	484.24
-am_AkMu_g0002	4e-05	bowtie2	bcftools (only)	467.12
-am_AkMu_g0002	4e-05	minimap2	bcftools (only)	441.48
-am_AkMu_g0002	4e-05	bwa	bcftools (only)	440.52
-am_BA_g0003	3e-05	bowtie2	bcftools (total)	525.47
-am_BA_g0003	3e-05	minimap2	bcftools (total)	399.03
-am_BA_g0003	3e-05	bwa	bcftools (total)	395.19
-am_BA_g0003	3e-05	bowtie2	bcftools (only)	488.35
-am_BA_g0003	3e-05	minimap2	bcftools (only)	360.74
-am_BA_g0003	3e-05	bwa	bcftools (only)	357.92
-bf_BaFa_g0001	4e-05	bowtie2	bcftools (total)	526.91
-bf_BaFa_g0001	4e-05	minimap2	bcftools (total)	471.40
-bf_BaFa_g0001	4e-05	bwa	bcftools (total)	467.58
-bf_BaFa_g0001	4e-05	bowtie2	bcftools (only)	486.86
-bf_BaFa_g0001	4e-05	minimap2	bcftools (only)	428.63
-bf_BaFa_g0001	4e-05	bwa	bcftools (only)	426.97
-bf_BaFa_g0001	4e-06	bowtie2	bcftools (total)	526.21
-bf_BaFa_g0001	4e-06	minimap2	bcftools (total)	472.16
-bf_BaFa_g0001	4e-06	bwa	bcftools (total)	468.14
-bf_BaFa_g0001	4e-06	bowtie2	bcftools (only)	486.11
-bf_BaFa_g0001	4e-06	minimap2	bcftools (only)	429.39
-bf_BaFa_g0001	4e-06	bwa	bcftools (only)	427.53
-am_BaOv_g0001	3e-02	bowtie2	Variant identifier	42.91
-am_BaOv_g0001	3e-02	minimap2	Variant identifier	40.73
-am_BaOv_g0001	3e-02	bwa	Variant identifier	41.16
-cx_BaXy_g0001	2e-02	bowtie2	Variant identifier	27.77
-cx_BaXy_g0001	2e-02	minimap2	Variant identifier	27.37
-cx_BaXy_g0001	2e-02	bwa	Variant identifier	27.01
-am_BA_g0003	4e-05	bowtie2	Variant identifier	38.83
-am_BA_g0003	4e-05	minimap2	Variant identifier	33.15
-am_BA_g0003	4e-05	bwa	Variant identifier	34.77
-am_BaVu_g0002	2e-05	bowtie2	Variant identifier	16.30
-am_BaVu_g0002	2e-05	minimap2	Variant identifier	15.85
-am_BaVu_g0002	2e-05	bwa	Variant identifier	15.48
-am_BaFr_g0050	5e-06	bowtie2	Variant identifier	65.75
-am_BaFr_g0050	5e-06	minimap2	Variant identifier	63.18
-am_BaFr_g0050	5e-06	bwa	Variant identifier	63.66
-am_BA_g0003	3e-02	bowtie2	Variant identifier	40.25
-am_BA_g0003	3e-02	minimap2	Variant identifier	42.11
-am_BA_g0003	3e-02	bwa	Variant identifier	41.32
-am_BA_g0003	5e-04	bowtie2	Variant identifier	35.16
-am_BA_g0003	5e-04	minimap2	Variant identifier	32.67
-am_BA_g0003	5e-04	bwa	Variant identifier	33.87
-am_PaDi_g0001	4e-06	bowtie2	Variant identifier	34.41
-am_PaDi_g0001	4e-06	minimap2	Variant identifier	30.10
-am_PaDi_g0001	4e-06	bwa	Variant identifier	31.52
-am_BaVu_g0002	5e-06	bowtie2	Variant identifier	17.73
-am_BaVu_g0002	5e-06	minimap2	Variant identifier	16.00
-am_BaVu_g0002	5e-06	bwa	Variant identifier	15.28
-am_BaFr_g0050	4e-06	bowtie2	Variant identifier	66.64
-am_BaFr_g0050	4e-06	minimap2	Variant identifier	61.69
-am_BaFr_g0050	4e-06	bwa	Variant identifier	67.55
-cx_BaXy_g0001	4e-05	bowtie2	Variant identifier	29.43
-cx_BaXy_g0001	4e-05	minimap2	Variant identifier	24.31
-cx_BaXy_g0001	4e-05	bwa	Variant identifier	25.21
-am_BA_g0003	5e-03	bowtie2	Variant identifier	36.70
-am_BA_g0003	5e-03	minimap2	Variant identifier	34.63
-am_BA_g0003	5e-03	bwa	Variant identifier	36.04
-am_BaVu_g0002	5e-05	bowtie2	Variant identifier	18.54
-am_BaVu_g0002	5e-05	minimap2	Variant identifier	15.44
-am_BaVu_g0002	5e-05	bwa	Variant identifier	17.08
-am_BaFr_g0050	3e-05	bowtie2	Variant identifier	67.15
-am_BaFr_g0050	3e-05	minimap2	Variant identifier	66.31
-am_BaFr_g0050	3e-05	bwa	Variant identifier	65.82
-am_BaVu_g0002	1e-03	bowtie2	Variant identifier	17.76
-am_BaVu_g0002	1e-03	minimap2	Variant identifier	17.47
-am_BaVu_g0002	1e-03	bwa	Variant identifier	15.82
-am_AkMu_g0002	3e-06	bowtie2	Variant identifier	43.94
-am_AkMu_g0002	3e-06	minimap2	Variant identifier	39.71
-am_AkMu_g0002	3e-06	bwa	Variant identifier	39.46
-am_BA_g0003	1e-06	bowtie2	Variant identifier	34.60
-am_BA_g0003	1e-06	minimap2	Variant identifier	33.59
-am_BA_g0003	1e-06	bwa	Variant identifier	37.45
-am_PaDi_g0001	5e-02	bowtie2	Variant identifier	42.12
-am_PaDi_g0001	5e-02	minimap2	Variant identifier	42.07
-am_PaDi_g0001	5e-02	bwa	Variant identifier	45.05
-am_BaOv_g0001	4e-05	bowtie2	Variant identifier	35.43
-am_BaOv_g0001	4e-05	minimap2	Variant identifier	31.69
-am_BaOv_g0001	4e-05	bwa	Variant identifier	32.73
-am_PaDi_g0001	5e-05	bowtie2	Variant identifier	33.78
-am_PaDi_g0001	5e-05	minimap2	Variant identifier	31.09
-am_PaDi_g0001	5e-05	bwa	Variant identifier	30.97
-cx_BaXy_g0001	1e-03	bowtie2	Variant identifier	24.00
-cx_BaXy_g0001	1e-03	minimap2	Variant identifier	23.95
-cx_BaXy_g0001	1e-03	bwa	Variant identifier	22.41
-bf_BaFa_g0001	3e-06	bowtie2	Variant identifier	40.38
-bf_BaFa_g0001	3e-06	minimap2	Variant identifier	38.87
-bf_BaFa_g0001	3e-06	bwa	Variant identifier	40.82
-am_BaOv_g0001	2e-05	bowtie2	Variant identifier	36.20
-am_BaOv_g0001	2e-05	minimap2	Variant identifier	33.51
-am_BaOv_g0001	2e-05	bwa	Variant identifier	32.63
-am_AkMu_g0002	5e-03	bowtie2	Variant identifier	42.16
-am_AkMu_g0002	5e-03	minimap2	Variant identifier	41.29
-am_AkMu_g0002	5e-03	bwa	Variant identifier	40.18
-am_BA_g0003	3e-05	bowtie2	Variant identifier	38.16
-am_BA_g0003	3e-05	minimap2	Variant identifier	35.35
-am_BA_g0003	3e-05	bwa	Variant identifier	35.44
-am_BaVu_g0002	2e-02	bowtie2	Variant identifier	28.81
-am_BaVu_g0002	2e-02	minimap2	Variant identifier	18.48
-am_BaVu_g0002	2e-02	bwa	Variant identifier	18.62
-am_BaFr_g0050	3e-02	bowtie2	Variant identifier	80.92
-am_BaFr_g0050	3e-02	minimap2	Variant identifier	82.94
-am_BaFr_g0050	3e-02	bwa	Variant identifier	84.32
-am_BaOv_g0001	1e-03	bowtie2	Variant identifier	34.55
-am_BaOv_g0001	1e-03	minimap2	Variant identifier	34.38
-am_BaOv_g0001	1e-03	bwa	Variant identifier	36.72
-am_PaDi_g0001	5e-03	bowtie2	Variant identifier	36.12
-am_PaDi_g0001	5e-03	minimap2	Variant identifier	32.71
-am_PaDi_g0001	5e-03	bwa	Variant identifier	32.06
-am_AkMu_g0002	1e-02	bowtie2	Variant identifier	43.81
-am_AkMu_g0002	1e-02	minimap2	Variant identifier	41.29
-am_AkMu_g0002	1e-02	bwa	Variant identifier	43.97
-am_BaFr_g0050	3e-06	bowtie2	Variant identifier	64.73
-am_BaFr_g0050	3e-06	minimap2	Variant identifier	63.52
-am_BaFr_g0050	3e-06	bwa	Variant identifier	65.05
-am_BaVu_g0002	1e-04	bowtie2	Variant identifier	17.81
-am_BaVu_g0002	1e-04	minimap2	Variant identifier	17.55
-am_BaVu_g0002	1e-04	bwa	Variant identifier	17.05
-am_PaDi_g0001	2e-02	bowtie2	Variant identifier	37.99
-am_PaDi_g0001	2e-02	minimap2	Variant identifier	35.99
-am_PaDi_g0001	2e-02	bwa	Variant identifier	35.85
-am_PaDi_g0001	3e-06	bowtie2	Variant identifier	34.26
-am_PaDi_g0001	3e-06	minimap2	Variant identifier	33.45
-am_PaDi_g0001	3e-06	bwa	Variant identifier	30.71
-bj_EsCo_g0001	1e-02	bowtie2	Variant identifier	16.45
-bj_EsCo_g0001	1e-02	minimap2	Variant identifier	15.52
-bj_EsCo_g0001	1e-02	bwa	Variant identifier	14.97
-am_BaOv_g0001	5e-03	bowtie2	Variant identifier	41.95
-am_BaOv_g0001	5e-03	minimap2	Variant identifier	34.40
-am_BaOv_g0001	5e-03	bwa	Variant identifier	34.05
-am_BaOv_g0001	5e-04	bowtie2	Variant identifier	37.70
-am_BaOv_g0001	5e-04	minimap2	Variant identifier	33.31
-am_BaOv_g0001	5e-04	bwa	Variant identifier	33.14
-am_BaOv_g0001	1e-05	bowtie2	Variant identifier	32.09
-am_BaOv_g0001	1e-05	minimap2	Variant identifier	34.98
-am_BaOv_g0001	1e-05	bwa	Variant identifier	35.82
-am_BaFr_g0050	2e-02	bowtie2	Variant identifier	76.59
-am_BaFr_g0050	2e-02	minimap2	Variant identifier	74.79
-am_BaFr_g0050	2e-02	bwa	Variant identifier	76.27
-cx_BaXy_g0001	3e-05	bowtie2	Variant identifier	25.04
-cx_BaXy_g0001	3e-05	minimap2	Variant identifier	23.76
-cx_BaXy_g0001	3e-05	bwa	Variant identifier	24.82
-cx_BaXy_g0001	1e-02	bowtie2	Variant identifier	27.71
-cx_BaXy_g0001	1e-02	minimap2	Variant identifier	26.42
-cx_BaXy_g0001	1e-02	bwa	Variant identifier	25.25
-bj_EsCo_g0001	5e-05	bowtie2	Variant identifier	15.47
-bj_EsCo_g0001	5e-05	minimap2	Variant identifier	15.35
-bj_EsCo_g0001	5e-05	bwa	Variant identifier	14.60
-am_BaOv_g0001	1e-06	bowtie2	Variant identifier	34.13
-am_BaOv_g0001	1e-06	minimap2	Variant identifier	33.25
-am_BaOv_g0001	1e-06	bwa	Variant identifier	32.48
-am_BaFr_g0050	1e-05	bowtie2	Variant identifier	65.66
-am_BaFr_g0050	1e-05	minimap2	Variant identifier	64.46
-am_BaFr_g0050	1e-05	bwa	Variant identifier	62.55
-am_BaFr_g0050	5e-02	bowtie2	Variant identifier	86.30
-am_BaFr_g0050	5e-02	minimap2	Variant identifier	83.34
-am_BaFr_g0050	5e-02	bwa	Variant identifier	86.31
-am_AkMu_g0002	5e-05	bowtie2	Variant identifier	43.27
-am_AkMu_g0002	5e-05	minimap2	Variant identifier	38.62
-am_AkMu_g0002	5e-05	bwa	Variant identifier	38.49
-cx_BaXy_g0001	3e-02	bowtie2	Variant identifier	30.40
-cx_BaXy_g0001	3e-02	minimap2	Variant identifier	29.32
-cx_BaXy_g0001	3e-02	bwa	Variant identifier	28.76
-am_BaOv_g0001	2e-06	bowtie2	Variant identifier	35.41
-am_BaOv_g0001	2e-06	minimap2	Variant identifier	34.24
-am_BaOv_g0001	2e-06	bwa	Variant identifier	34.14
-am_BA_g0003	2e-02	bowtie2	Variant identifier	37.94
-am_BA_g0003	2e-02	minimap2	Variant identifier	36.77
-am_BA_g0003	2e-02	bwa	Variant identifier	37.40
-bf_BaFa_g0001	5e-06	bowtie2	Variant identifier	38.04
-bf_BaFa_g0001	5e-06	minimap2	Variant identifier	38.04
-bf_BaFa_g0001	5e-06	bwa	Variant identifier	36.41
-am_BaFr_g0050	2e-06	bowtie2	Variant identifier	63.91
-am_BaFr_g0050	2e-06	minimap2	Variant identifier	61.70
-am_BaFr_g0050	2e-06	bwa	Variant identifier	63.71
-am_PaDi_g0001	1e-04	bowtie2	Variant identifier	36.60
-am_PaDi_g0001	1e-04	minimap2	Variant identifier	31.14
-am_PaDi_g0001	1e-04	bwa	Variant identifier	30.55
-bf_BaFa_g0001	3e-02	bowtie2	Variant identifier	58.36
-bf_BaFa_g0001	3e-02	minimap2	Variant identifier	45.63
-bf_BaFa_g0001	3e-02	bwa	Variant identifier	47.21
-am_AkMu_g0002	5e-06	bowtie2	Variant identifier	41.54
-am_AkMu_g0002	5e-06	minimap2	Variant identifier	39.35
-am_AkMu_g0002	5e-06	bwa	Variant identifier	39.87
-am_AkMu_g0002	1e-04	bowtie2	Variant identifier	40.64
-am_AkMu_g0002	1e-04	minimap2	Variant identifier	38.71
-am_AkMu_g0002	1e-04	bwa	Variant identifier	38.48
-am_PaDi_g0001	2e-06	bowtie2	Variant identifier	38.89
-am_PaDi_g0001	2e-06	minimap2	Variant identifier	30.58
-am_PaDi_g0001	2e-06	bwa	Variant identifier	34.43
-am_BA_g0003	1e-05	bowtie2	Variant identifier	35.67
-am_BA_g0003	1e-05	minimap2	Variant identifier	33.48
-am_BA_g0003	1e-05	bwa	Variant identifier	35.37
-am_PaDi_g0001	3e-05	bowtie2	Variant identifier	34.23
-am_PaDi_g0001	3e-05	minimap2	Variant identifier	32.97
-am_PaDi_g0001	3e-05	bwa	Variant identifier	32.03
-bj_EsCo_g0001	1e-03	bowtie2	Variant identifier	16.46
-bj_EsCo_g0001	1e-03	minimap2	Variant identifier	15.73
-bj_EsCo_g0001	1e-03	bwa	Variant identifier	15.00
-cx_BaXy_g0001	2e-05	bowtie2	Variant identifier	28.19
-cx_BaXy_g0001	2e-05	minimap2	Variant identifier	23.95
-cx_BaXy_g0001	2e-05	bwa	Variant identifier	26.78
-am_AkMu_g0002	1e-06	bowtie2	Variant identifier	41.63
-am_AkMu_g0002	1e-06	minimap2	Variant identifier	40.74
-am_AkMu_g0002	1e-06	bwa	Variant identifier	39.18
-am_BaFr_g0050	1e-02	bowtie2	Variant identifier	67.05
-am_BaFr_g0050	1e-02	minimap2	Variant identifier	64.72
-am_BaFr_g0050	1e-02	bwa	Variant identifier	67.99
-am_AkMu_g0002	5e-02	bowtie2	Variant identifier	48.66
-am_AkMu_g0002	5e-02	minimap2	Variant identifier	52.36
-am_AkMu_g0002	5e-02	bwa	Variant identifier	52.63
-am_BaVu_g0002	4e-06	bowtie2	Variant identifier	17.68
-am_BaVu_g0002	4e-06	minimap2	Variant identifier	15.92
-am_BaVu_g0002	4e-06	bwa	Variant identifier	15.88
-am_BaFr_g0050	5e-04	bowtie2	Variant identifier	67.71
-am_BaFr_g0050	5e-04	minimap2	Variant identifier	61.84
-am_BaFr_g0050	5e-04	bwa	Variant identifier	64.97
-bf_BaFa_g0001	4e-02	bowtie2	Variant identifier	49.39
-bf_BaFa_g0001	4e-02	minimap2	Variant identifier	44.94
-bf_BaFa_g0001	4e-02	bwa	Variant identifier	47.21
-am_AkMu_g0002	4e-05	bowtie2	Variant identifier	39.50
-am_AkMu_g0002	4e-05	minimap2	Variant identifier	37.86
-am_AkMu_g0002	4e-05	bwa	Variant identifier	38.63
-am_PaDi_g0001	4e-05	bowtie2	Variant identifier	32.84
-am_PaDi_g0001	4e-05	minimap2	Variant identifier	35.24
-am_PaDi_g0001	4e-05	bwa	Variant identifier	31.22
-bf_BaFa_g0001	1e-02	bowtie2	Variant identifier	40.36
-bf_BaFa_g0001	1e-02	minimap2	Variant identifier	40.42
-bf_BaFa_g0001	1e-02	bwa	Variant identifier	41.23
-cx_BaXy_g0001	1e-04	bowtie2	Variant identifier	25.61
-cx_BaXy_g0001	1e-04	minimap2	Variant identifier	24.32
-cx_BaXy_g0001	1e-04	bwa	Variant identifier	23.68
-cx_BaXy_g0001	5e-06	bowtie2	Variant identifier	28.17
-cx_BaXy_g0001	5e-06	minimap2	Variant identifier	23.50
-cx_BaXy_g0001	5e-06	bwa	Variant identifier	24.45
-bf_BaFa_g0001	2e-02	bowtie2	Variant identifier	47.84
-bf_BaFa_g0001	2e-02	minimap2	Variant identifier	43.93
-bf_BaFa_g0001	2e-02	bwa	Variant identifier	42.36
-am_BaOv_g0001	5e-05	bowtie2	Variant identifier	33.66
-am_BaOv_g0001	5e-05	minimap2	Variant identifier	32.03
-am_BaOv_g0001	5e-05	bwa	Variant identifier	34.06
-am_BA_g0003	1e-02	bowtie2	Variant identifier	37.82
-am_BA_g0003	1e-02	minimap2	Variant identifier	36.66
-am_BA_g0003	1e-02	bwa	Variant identifier	37.10
-am_BaVu_g0002	1e-02	bowtie2	Variant identifier	17.77
-am_BaVu_g0002	1e-02	minimap2	Variant identifier	17.25
-am_BaVu_g0002	1e-02	bwa	Variant identifier	16.65
-bj_EsCo_g0001	5e-06	bowtie2	Variant identifier	17.83
-bj_EsCo_g0001	5e-06	minimap2	Variant identifier	14.02
-bj_EsCo_g0001	5e-06	bwa	Variant identifier	15.30
-cx_BaXy_g0001	5e-02	bowtie2	Variant identifier	41.24
-cx_BaXy_g0001	5e-02	minimap2	Variant identifier	34.18
-cx_BaXy_g0001	5e-02	bwa	Variant identifier	33.59
-cx_BaXy_g0001	3e-06	bowtie2	Variant identifier	25.84
-cx_BaXy_g0001	3e-06	minimap2	Variant identifier	23.79
-cx_BaXy_g0001	3e-06	bwa	Variant identifier	25.47
-am_BA_g0003	4e-06	bowtie2	Variant identifier	35.14
-am_BA_g0003	4e-06	minimap2	Variant identifier	33.83
-am_BA_g0003	4e-06	bwa	Variant identifier	36.31
-bj_EsCo_g0001	1e-05	bowtie2	Variant identifier	16.08
-bj_EsCo_g0001	1e-05	minimap2	Variant identifier	14.33
-bj_EsCo_g0001	1e-05	bwa	Variant identifier	14.22
-cx_BaXy_g0001	5e-04	bowtie2	Variant identifier	34.37
-cx_BaXy_g0001	5e-04	minimap2	Variant identifier	23.15
-cx_BaXy_g0001	5e-04	bwa	Variant identifier	22.91
-am_BaVu_g0002	3e-06	bowtie2	Variant identifier	16.99
-am_BaVu_g0002	3e-06	minimap2	Variant identifier	16.30
-am_BaVu_g0002	3e-06	bwa	Variant identifier	16.35
-am_BA_g0003	5e-06	bowtie2	Variant identifier	36.35
-am_BA_g0003	5e-06	minimap2	Variant identifier	35.63
-am_BA_g0003	5e-06	bwa	Variant identifier	33.80
-am_BaVu_g0002	5e-04	bowtie2	Variant identifier	17.51
-am_BaVu_g0002	5e-04	minimap2	Variant identifier	16.86
-am_BaVu_g0002	5e-04	bwa	Variant identifier	16.07
-am_AkMu_g0002	2e-05	bowtie2	Variant identifier	40.83
-am_AkMu_g0002	2e-05	minimap2	Variant identifier	38.46
-am_AkMu_g0002	2e-05	bwa	Variant identifier	39.05
-cx_BaXy_g0001	1e-06	bowtie2	Variant identifier	26.14
-cx_BaXy_g0001	1e-06	minimap2	Variant identifier	24.89
-cx_BaXy_g0001	1e-06	bwa	Variant identifier	23.51
-bf_BaFa_g0001	1e-06	bowtie2	Variant identifier	42.11
-bf_BaFa_g0001	1e-06	minimap2	Variant identifier	37.54
-bf_BaFa_g0001	1e-06	bwa	Variant identifier	36.75
-am_PaDi_g0001	4e-02	bowtie2	Variant identifier	41.60
-am_PaDi_g0001	4e-02	minimap2	Variant identifier	42.72
-am_PaDi_g0001	4e-02	bwa	Variant identifier	41.21
-am_BA_g0003	5e-05	bowtie2	Variant identifier	36.70
-am_BA_g0003	5e-05	minimap2	Variant identifier	34.64
-am_BA_g0003	5e-05	bwa	Variant identifier	34.57
-cx_BaXy_g0001	2e-06	bowtie2	Variant identifier	29.27
-cx_BaXy_g0001	2e-06	minimap2	Variant identifier	24.81
-cx_BaXy_g0001	2e-06	bwa	Variant identifier	24.63
-am_BaOv_g0001	1e-02	bowtie2	Variant identifier	38.34
-am_BaOv_g0001	1e-02	minimap2	Variant identifier	35.77
-am_BaOv_g0001	1e-02	bwa	Variant identifier	37.91
-bj_EsCo_g0001	1e-06	bowtie2	Variant identifier	16.13
-bj_EsCo_g0001	1e-06	minimap2	Variant identifier	14.69
-bj_EsCo_g0001	1e-06	bwa	Variant identifier	14.27
-am_PaDi_g0001	2e-05	bowtie2	Variant identifier	35.28
-am_PaDi_g0001	2e-05	minimap2	Variant identifier	31.49
-am_PaDi_g0001	2e-05	bwa	Variant identifier	31.80
-am_BaVu_g0002	1e-05	bowtie2	Variant identifier	16.21
-am_BaVu_g0002	1e-05	minimap2	Variant identifier	15.59
-am_BaVu_g0002	1e-05	bwa	Variant identifier	15.74
-am_BA_g0003	3e-06	bowtie2	Variant identifier	46.76
-am_BA_g0003	3e-06	minimap2	Variant identifier	36.29
-am_BA_g0003	3e-06	bwa	Variant identifier	34.19
-bj_EsCo_g0001	3e-02	bowtie2	Variant identifier	18.51
-bj_EsCo_g0001	3e-02	minimap2	Variant identifier	18.17
-bj_EsCo_g0001	3e-02	bwa	Variant identifier	17.15
-bj_EsCo_g0001	5e-03	bowtie2	Variant identifier	17.13
-bj_EsCo_g0001	5e-03	minimap2	Variant identifier	14.64
-bj_EsCo_g0001	5e-03	bwa	Variant identifier	14.39
-am_BaFr_g0050	1e-03	bowtie2	Variant identifier	64.78
-am_BaFr_g0050	1e-03	minimap2	Variant identifier	65.31
-am_BaFr_g0050	1e-03	bwa	Variant identifier	63.67
-bf_BaFa_g0001	1e-04	bowtie2	Variant identifier	37.55
-bf_BaFa_g0001	1e-04	minimap2	Variant identifier	37.45
-bf_BaFa_g0001	1e-04	bwa	Variant identifier	36.72
-bf_BaFa_g0001	5e-04	bowtie2	Variant identifier	52.12
-bf_BaFa_g0001	5e-04	minimap2	Variant identifier	36.71
-bf_BaFa_g0001	5e-04	bwa	Variant identifier	36.32
-am_BaFr_g0050	4e-05	bowtie2	Variant identifier	64.97
-am_BaFr_g0050	4e-05	minimap2	Variant identifier	63.26
-am_BaFr_g0050	4e-05	bwa	Variant identifier	63.48
-am_BaVu_g0002	5e-02	bowtie2	Variant identifier	24.29
-am_BaVu_g0002	5e-02	minimap2	Variant identifier	20.35
-am_BaVu_g0002	5e-02	bwa	Variant identifier	21.57
-bj_EsCo_g0001	4e-05	bowtie2	Variant identifier	15.32
-bj_EsCo_g0001	4e-05	minimap2	Variant identifier	14.83
-bj_EsCo_g0001	4e-05	bwa	Variant identifier	15.57
-am_AkMu_g0002	4e-06	bowtie2	Variant identifier	42.94
-am_AkMu_g0002	4e-06	minimap2	Variant identifier	37.81
-am_AkMu_g0002	4e-06	bwa	Variant identifier	39.26
-am_BaVu_g0002	1e-06	bowtie2	Variant identifier	16.54
-am_BaVu_g0002	1e-06	minimap2	Variant identifier	15.53
-am_BaVu_g0002	1e-06	bwa	Variant identifier	15.77
-cx_BaXy_g0001	5e-03	bowtie2	Variant identifier	24.82
-cx_BaXy_g0001	5e-03	minimap2	Variant identifier	24.98
-cx_BaXy_g0001	5e-03	bwa	Variant identifier	24.60
-am_BaVu_g0002	3e-02	bowtie2	Variant identifier	20.68
-am_BaVu_g0002	3e-02	minimap2	Variant identifier	19.25
-am_BaVu_g0002	3e-02	bwa	Variant identifier	18.81
-am_AkMu_g0002	1e-05	bowtie2	Variant identifier	40.82
-am_AkMu_g0002	1e-05	minimap2	Variant identifier	40.39
-am_AkMu_g0002	1e-05	bwa	Variant identifier	37.41
-am_BaFr_g0050	1e-06	bowtie2	Variant identifier	74.01
-am_BaFr_g0050	1e-06	minimap2	Variant identifier	62.78
-am_BaFr_g0050	1e-06	bwa	Variant identifier	64.71
-am_PaDi_g0001	3e-02	bowtie2	Variant identifier	39.56
-am_PaDi_g0001	3e-02	minimap2	Variant identifier	38.04
-am_PaDi_g0001	3e-02	bwa	Variant identifier	40.11
-am_BA_g0003	2e-05	bowtie2	Variant identifier	35.90
-am_BA_g0003	2e-05	minimap2	Variant identifier	33.11
-am_BA_g0003	2e-05	bwa	Variant identifier	35.06
-am_BaOv_g0001	4e-02	bowtie2	Variant identifier	42.25
-am_BaOv_g0001	4e-02	minimap2	Variant identifier	42.07
-am_BaOv_g0001	4e-02	bwa	Variant identifier	42.11
-am_BaOv_g0001	5e-06	bowtie2	Variant identifier	35.74
-am_BaOv_g0001	5e-06	minimap2	Variant identifier	35.28
-am_BaOv_g0001	5e-06	bwa	Variant identifier	32.78
-am_BaOv_g0001	2e-02	bowtie2	Variant identifier	41.21
-am_BaOv_g0001	2e-02	minimap2	Variant identifier	37.75
-am_BaOv_g0001	2e-02	bwa	Variant identifier	37.62
-bj_EsCo_g0001	4e-02	bowtie2	Variant identifier	20.02
-bj_EsCo_g0001	4e-02	minimap2	Variant identifier	19.17
-bj_EsCo_g0001	4e-02	bwa	Variant identifier	20.98
-bf_BaFa_g0001	3e-05	bowtie2	Variant identifier	35.38
-bf_BaFa_g0001	3e-05	minimap2	Variant identifier	35.93
-bf_BaFa_g0001	3e-05	bwa	Variant identifier	36.75
-am_AkMu_g0002	1e-03	bowtie2	Variant identifier	42.19
-am_AkMu_g0002	1e-03	minimap2	Variant identifier	38.82
-am_AkMu_g0002	1e-03	bwa	Variant identifier	40.46
-am_BaFr_g0050	5e-03	bowtie2	Variant identifier	67.89
-am_BaFr_g0050	5e-03	minimap2	Variant identifier	65.14
-am_BaFr_g0050	5e-03	bwa	Variant identifier	66.81
-am_PaDi_g0001	5e-06	bowtie2	Variant identifier	34.44
-am_PaDi_g0001	5e-06	minimap2	Variant identifier	32.40
-am_PaDi_g0001	5e-06	bwa	Variant identifier	31.79
-am_BaOv_g0001	5e-02	bowtie2	Variant identifier	43.36
-am_BaOv_g0001	5e-02	minimap2	Variant identifier	45.89
-am_BaOv_g0001	5e-02	bwa	Variant identifier	46.67
-bj_EsCo_g0001	1e-04	bowtie2	Variant identifier	18.15
-bj_EsCo_g0001	1e-04	minimap2	Variant identifier	14.98
-bj_EsCo_g0001	1e-04	bwa	Variant identifier	14.80
-am_BaFr_g0050	5e-05	bowtie2	Variant identifier	66.45
-am_BaFr_g0050	5e-05	minimap2	Variant identifier	66.57
-am_BaFr_g0050	5e-05	bwa	Variant identifier	65.40
-am_AkMu_g0002	5e-04	bowtie2	Variant identifier	40.90
-am_AkMu_g0002	5e-04	minimap2	Variant identifier	40.67
-am_AkMu_g0002	5e-04	bwa	Variant identifier	40.27
-am_PaDi_g0001	1e-02	bowtie2	Variant identifier	36.38
-am_PaDi_g0001	1e-02	minimap2	Variant identifier	35.52
-am_PaDi_g0001	1e-02	bwa	Variant identifier	34.02
-bj_EsCo_g0001	5e-04	bowtie2	Variant identifier	16.88
-bj_EsCo_g0001	5e-04	minimap2	Variant identifier	15.28
-bj_EsCo_g0001	5e-04	bwa	Variant identifier	15.77
-cx_BaXy_g0001	4e-02	bowtie2	Variant identifier	32.36
-cx_BaXy_g0001	4e-02	minimap2	Variant identifier	32.04
-cx_BaXy_g0001	4e-02	bwa	Variant identifier	32.13
-am_AkMu_g0002	4e-02	bowtie2	Variant identifier	49.61
-am_AkMu_g0002	4e-02	minimap2	Variant identifier	49.29
-am_AkMu_g0002	4e-02	bwa	Variant identifier	51.26
-am_AkMu_g0002	3e-05	bowtie2	Variant identifier	43.74
-am_AkMu_g0002	3e-05	minimap2	Variant identifier	39.28
-am_AkMu_g0002	3e-05	bwa	Variant identifier	39.05
-am_PaDi_g0001	5e-04	bowtie2	Variant identifier	33.25
-am_PaDi_g0001	5e-04	minimap2	Variant identifier	31.49
-am_PaDi_g0001	5e-04	bwa	Variant identifier	30.97
-am_BaFr_g0050	1e-04	bowtie2	Variant identifier	63.89
-am_BaFr_g0050	1e-04	minimap2	Variant identifier	62.03
-am_BaFr_g0050	1e-04	bwa	Variant identifier	68.40
-cx_BaXy_g0001	4e-06	bowtie2	Variant identifier	24.87
-cx_BaXy_g0001	4e-06	minimap2	Variant identifier	22.51
-cx_BaXy_g0001	4e-06	bwa	Variant identifier	25.76
-bf_BaFa_g0001	2e-05	bowtie2	Variant identifier	37.94
-bf_BaFa_g0001	2e-05	minimap2	Variant identifier	38.06
-bf_BaFa_g0001	2e-05	bwa	Variant identifier	35.64
-bf_BaFa_g0001	1e-05	bowtie2	Variant identifier	40.98
-bf_BaFa_g0001	1e-05	minimap2	Variant identifier	39.78
-bf_BaFa_g0001	1e-05	bwa	Variant identifier	39.35
-bf_BaFa_g0001	5e-02	bowtie2	Variant identifier	49.44
-bf_BaFa_g0001	5e-02	minimap2	Variant identifier	47.68
-bf_BaFa_g0001	5e-02	bwa	Variant identifier	50.40
-am_BaVu_g0002	4e-05	bowtie2	Variant identifier	17.80
-am_BaVu_g0002	4e-05	minimap2	Variant identifier	15.43
-am_BaVu_g0002	4e-05	bwa	Variant identifier	15.63
-cx_BaXy_g0001	1e-05	bowtie2	Variant identifier	24.38
-cx_BaXy_g0001	1e-05	minimap2	Variant identifier	24.59
-cx_BaXy_g0001	1e-05	bwa	Variant identifier	27.45
-bf_BaFa_g0001	5e-05	bowtie2	Variant identifier	39.01
-bf_BaFa_g0001	5e-05	minimap2	Variant identifier	38.02
-bf_BaFa_g0001	5e-05	bwa	Variant identifier	36.46
-am_BaVu_g0002	2e-06	bowtie2	Variant identifier	16.59
-am_BaVu_g0002	2e-06	minimap2	Variant identifier	15.24
-am_BaVu_g0002	2e-06	bwa	Variant identifier	16.29
-am_BaOv_g0001	1e-04	bowtie2	Variant identifier	35.76
-am_BaOv_g0001	1e-04	minimap2	Variant identifier	33.14
-am_BaOv_g0001	1e-04	bwa	Variant identifier	32.76
-am_AkMu_g0002	2e-02	bowtie2	Variant identifier	49.33
-am_AkMu_g0002	2e-02	minimap2	Variant identifier	45.18
-am_AkMu_g0002	2e-02	bwa	Variant identifier	45.54
-bf_BaFa_g0001	5e-03	bowtie2	Variant identifier	45.57
-bf_BaFa_g0001	5e-03	minimap2	Variant identifier	41.13
-bf_BaFa_g0001	5e-03	bwa	Variant identifier	41.14
-bf_BaFa_g0001	2e-06	bowtie2	Variant identifier	35.66
-bf_BaFa_g0001	2e-06	minimap2	Variant identifier	37.21
-bf_BaFa_g0001	2e-06	bwa	Variant identifier	34.71
-am_BA_g0003	5e-02	bowtie2	Variant identifier	37.31
-am_BA_g0003	5e-02	minimap2	Variant identifier	40.48
-am_BA_g0003	5e-02	bwa	Variant identifier	41.51
-am_BA_g0003	1e-04	bowtie2	Variant identifier	38.98
-am_BA_g0003	1e-04	minimap2	Variant identifier	35.85
-am_BA_g0003	1e-04	bwa	Variant identifier	36.24
-bj_EsCo_g0001	3e-06	bowtie2	Variant identifier	18.29
-bj_EsCo_g0001	3e-06	minimap2	Variant identifier	13.99
-bj_EsCo_g0001	3e-06	bwa	Variant identifier	14.85
-bj_EsCo_g0001	2e-02	bowtie2	Variant identifier	18.04
-bj_EsCo_g0001	2e-02	minimap2	Variant identifier	18.07
-bj_EsCo_g0001	2e-02	bwa	Variant identifier	17.83
-bj_EsCo_g0001	2e-05	bowtie2	Variant identifier	18.72
-bj_EsCo_g0001	2e-05	minimap2	Variant identifier	14.81
-bj_EsCo_g0001	2e-05	bwa	Variant identifier	14.29
-am_BaOv_g0001	4e-06	bowtie2	Variant identifier	35.00
-am_BaOv_g0001	4e-06	minimap2	Variant identifier	34.66
-am_BaOv_g0001	4e-06	bwa	Variant identifier	31.86
-bf_BaFa_g0001	1e-03	bowtie2	Variant identifier	36.71
-bf_BaFa_g0001	1e-03	minimap2	Variant identifier	36.75
-bf_BaFa_g0001	1e-03	bwa	Variant identifier	35.74
-am_BaOv_g0001	3e-06	bowtie2	Variant identifier	33.93
-am_BaOv_g0001	3e-06	minimap2	Variant identifier	33.55
-am_BaOv_g0001	3e-06	bwa	Variant identifier	33.40
-am_BaFr_g0050	2e-05	bowtie2	Variant identifier	67.82
-am_BaFr_g0050	2e-05	minimap2	Variant identifier	60.83
-am_BaFr_g0050	2e-05	bwa	Variant identifier	64.32
-am_BaVu_g0002	3e-05	bowtie2	Variant identifier	18.19
-am_BaVu_g0002	3e-05	minimap2	Variant identifier	16.16
-am_BaVu_g0002	3e-05	bwa	Variant identifier	16.78
-cx_BaXy_g0001	5e-05	bowtie2	Variant identifier	25.07
-cx_BaXy_g0001	5e-05	minimap2	Variant identifier	24.48
-cx_BaXy_g0001	5e-05	bwa	Variant identifier	25.06
-bj_EsCo_g0001	5e-02	bowtie2	Variant identifier	22.09
-bj_EsCo_g0001	5e-02	minimap2	Variant identifier	20.22
-bj_EsCo_g0001	5e-02	bwa	Variant identifier	19.39
-am_BA_g0003	1e-03	bowtie2	Variant identifier	36.55
-am_BA_g0003	1e-03	minimap2	Variant identifier	34.94
-am_BA_g0003	1e-03	bwa	Variant identifier	36.05
-bj_EsCo_g0001	3e-05	bowtie2	Variant identifier	15.79
-bj_EsCo_g0001	3e-05	minimap2	Variant identifier	15.49
-bj_EsCo_g0001	3e-05	bwa	Variant identifier	14.76
-am_PaDi_g0001	1e-06	bowtie2	Variant identifier	35.95
-am_PaDi_g0001	1e-06	minimap2	Variant identifier	31.55
-am_PaDi_g0001	1e-06	bwa	Variant identifier	31.83
-am_BA_g0003	2e-06	bowtie2	Variant identifier	43.26
-am_BA_g0003	2e-06	minimap2	Variant identifier	35.16
-am_BA_g0003	2e-06	bwa	Variant identifier	36.44
-am_BaVu_g0002	5e-03	bowtie2	Variant identifier	17.47
-am_BaVu_g0002	5e-03	minimap2	Variant identifier	16.26
-am_BaVu_g0002	5e-03	bwa	Variant identifier	17.00
-am_AkMu_g0002	3e-02	bowtie2	Variant identifier	47.63
-am_AkMu_g0002	3e-02	minimap2	Variant identifier	49.61
-am_AkMu_g0002	3e-02	bwa	Variant identifier	48.75
-bj_EsCo_g0001	2e-06	bowtie2	Variant identifier	17.61
-bj_EsCo_g0001	2e-06	minimap2	Variant identifier	14.46
-bj_EsCo_g0001	2e-06	bwa	Variant identifier	14.82
-am_BaVu_g0002	4e-02	bowtie2	Variant identifier	19.75
-am_BaVu_g0002	4e-02	minimap2	Variant identifier	20.46
-am_BaVu_g0002	4e-02	bwa	Variant identifier	20.82
-am_BaOv_g0001	3e-05	bowtie2	Variant identifier	34.59
-am_BaOv_g0001	3e-05	minimap2	Variant identifier	32.81
-am_BaOv_g0001	3e-05	bwa	Variant identifier	31.85
-am_BA_g0003	4e-02	bowtie2	Variant identifier	40.88
-am_BA_g0003	4e-02	minimap2	Variant identifier	39.91
-am_BA_g0003	4e-02	bwa	Variant identifier	43.38
-am_AkMu_g0002	2e-06	bowtie2	Variant identifier	43.16
-am_AkMu_g0002	2e-06	minimap2	Variant identifier	37.54
-am_AkMu_g0002	2e-06	bwa	Variant identifier	39.26
-am_BaFr_g0050	4e-02	bowtie2	Variant identifier	83.25
-am_BaFr_g0050	4e-02	minimap2	Variant identifier	87.05
-am_BaFr_g0050	4e-02	bwa	Variant identifier	86.16
-am_PaDi_g0001	1e-03	bowtie2	Variant identifier	33.47
-am_PaDi_g0001	1e-03	minimap2	Variant identifier	31.38
-am_PaDi_g0001	1e-03	bwa	Variant identifier	31.21
-bj_EsCo_g0001	4e-06	bowtie2	Variant identifier	14.20
-bj_EsCo_g0001	4e-06	minimap2	Variant identifier	13.72
-bj_EsCo_g0001	4e-06	bwa	Variant identifier	13.71
-am_PaDi_g0001	1e-05	bowtie2	Variant identifier	33.02
-am_PaDi_g0001	1e-05	minimap2	Variant identifier	31.90
-am_PaDi_g0001	1e-05	bwa	Variant identifier	33.06
-bf_BaFa_g0001	4e-06	bowtie2	Variant identifier	38.77
-bf_BaFa_g0001	4e-06	minimap2	Variant identifier	37.04
-bf_BaFa_g0001	4e-06	bwa	Variant identifier	37.31
-bf_BaFa_g0001	4e-05	bowtie2	Variant identifier	42.34
-bf_BaFa_g0001	4e-05	minimap2	Variant identifier	36.26
-bf_BaFa_g0001	4e-05	bwa	Variant identifier	35.51
+cx_BaXy_g0001	5e-03	bowtie2	VARIANTS (total)	28.86
+cx_BaXy_g0001	5e-03	bowtie2	VARIANTS	18.00
+cx_BaXy_g0001	5e-03	minimap2	VARIANTS (total)	29.30
+cx_BaXy_g0001	5e-03	minimap2	VARIANTS	18.10
+cx_BaXy_g0001	5e-03	bwa	VARIANTS (total)	28.85
+cx_BaXy_g0001	5e-03	bwa	VARIANTS	18.09
+cx_BaXy_g0001	5e-03	bowtie2	bcftools (total)	34.18
+cx_BaXy_g0001	5e-03	bowtie2	bcftools	26.97
+cx_BaXy_g0001	5e-03	minimap2	bcftools (total)	33.91
+cx_BaXy_g0001	5e-03	minimap2	bcftools	25.90
+cx_BaXy_g0001	5e-03	bwa	bcftools (total)	33.31
+cx_BaXy_g0001	5e-03	bwa	bcftools	25.89
+bj_EsCo_g0001	5e-05	bowtie2	VARIANTS (total)	13.77
+bj_EsCo_g0001	5e-05	bowtie2	VARIANTS	11.52
+bj_EsCo_g0001	5e-05	minimap2	VARIANTS (total)	13.62
+bj_EsCo_g0001	5e-05	minimap2	VARIANTS	11.21
+bj_EsCo_g0001	5e-05	bwa	VARIANTS (total)	13.27
+bj_EsCo_g0001	5e-05	bwa	VARIANTS	11.49
+bj_EsCo_g0001	5e-05	bowtie2	bcftools (total)	24.44
+bj_EsCo_g0001	5e-05	bowtie2	bcftools	23.19
+bj_EsCo_g0001	5e-05	minimap2	bcftools (total)	20.75
+bj_EsCo_g0001	5e-05	minimap2	bcftools	19.27
+bj_EsCo_g0001	5e-05	bwa	bcftools (total)	20.46
+bj_EsCo_g0001	5e-05	bwa	bcftools	19.24
+am_AkMu_g0002	5e-06	bowtie2	VARIANTS (total)	52.12
+am_AkMu_g0002	5e-06	bowtie2	VARIANTS	24.81
+am_AkMu_g0002	5e-06	minimap2	VARIANTS (total)	52.60
+am_AkMu_g0002	5e-06	minimap2	VARIANTS	24.39
+am_AkMu_g0002	5e-06	bwa	VARIANTS (total)	44.10
+am_AkMu_g0002	5e-06	bwa	VARIANTS	23.79
+am_AkMu_g0002	5e-06	bowtie2	bcftools (total)	93.80
+am_AkMu_g0002	5e-06	bowtie2	bcftools	75.79
+am_AkMu_g0002	5e-06	minimap2	bcftools (total)	91.05
+am_AkMu_g0002	5e-06	minimap2	bcftools	71.56
+am_AkMu_g0002	5e-06	bwa	bcftools (total)	84.50
+am_AkMu_g0002	5e-06	bwa	bcftools	71.05
+am_BaFr_g0050	5e-05	bowtie2	VARIANTS (total)	77.41
+am_BaFr_g0050	5e-05	bowtie2	VARIANTS	40.47
+am_BaFr_g0050	5e-05	minimap2	VARIANTS (total)	86.07
+am_BaFr_g0050	5e-05	minimap2	VARIANTS	40.95
+am_BaFr_g0050	5e-05	bwa	VARIANTS (total)	76.95
+am_BaFr_g0050	5e-05	bwa	VARIANTS	39.35
+am_BaFr_g0050	5e-05	bowtie2	bcftools (total)	151.74
+am_BaFr_g0050	5e-05	bowtie2	bcftools	127.49
+am_BaFr_g0050	5e-05	minimap2	bcftools (total)	146.73
+am_BaFr_g0050	5e-05	minimap2	bcftools	115.94
+am_BaFr_g0050	5e-05	bwa	bcftools (total)	140.12
+am_BaFr_g0050	5e-05	bwa	bcftools	115.85
+am_PaDi_g0001	5e-04	bowtie2	VARIANTS (total)	40.70
+am_PaDi_g0001	5e-04	bowtie2	VARIANTS	22.12
+am_PaDi_g0001	5e-04	minimap2	VARIANTS (total)	41.04
+am_PaDi_g0001	5e-04	minimap2	VARIANTS	21.55
+am_PaDi_g0001	5e-04	bwa	VARIANTS (total)	39.79
+am_PaDi_g0001	5e-04	bwa	VARIANTS	21.13
+am_PaDi_g0001	5e-04	bowtie2	bcftools (total)	68.46
+am_PaDi_g0001	5e-04	bowtie2	bcftools	55.61
+am_PaDi_g0001	5e-04	minimap2	bcftools (total)	59.27
+am_PaDi_g0001	5e-04	minimap2	bcftools	45.37
+am_PaDi_g0001	5e-04	bwa	bcftools (total)	57.79
+am_PaDi_g0001	5e-04	bwa	bcftools	44.66
+am_BaVu_g0002	1e-05	bowtie2	VARIANTS (total)	23.08
+am_BaVu_g0002	1e-05	bowtie2	VARIANTS	12.31
+am_BaVu_g0002	1e-05	minimap2	VARIANTS (total)	22.68
+am_BaVu_g0002	1e-05	minimap2	VARIANTS	12.00
+am_BaVu_g0002	1e-05	bwa	VARIANTS (total)	22.50
+am_BaVu_g0002	1e-05	bwa	VARIANTS	11.96
+am_BaVu_g0002	1e-05	bowtie2	bcftools (total)	33.67
+am_BaVu_g0002	1e-05	bowtie2	bcftools	26.38
+am_BaVu_g0002	1e-05	minimap2	bcftools (total)	28.89
+am_BaVu_g0002	1e-05	minimap2	bcftools	21.31
+am_BaVu_g0002	1e-05	bwa	bcftools (total)	29.07
+am_BaVu_g0002	1e-05	bwa	bcftools	21.69
+bj_EsCo_g0001	3e-05	bowtie2	VARIANTS (total)	13.53
+bj_EsCo_g0001	3e-05	bowtie2	VARIANTS	11.43
+bj_EsCo_g0001	3e-05	minimap2	VARIANTS (total)	13.74
+bj_EsCo_g0001	3e-05	minimap2	VARIANTS	11.20
+bj_EsCo_g0001	3e-05	bwa	VARIANTS (total)	13.16
+bj_EsCo_g0001	3e-05	bwa	VARIANTS	11.26
+bj_EsCo_g0001	3e-05	bowtie2	bcftools (total)	24.37
+bj_EsCo_g0001	3e-05	bowtie2	bcftools	23.07
+bj_EsCo_g0001	3e-05	minimap2	bcftools (total)	20.73
+bj_EsCo_g0001	3e-05	minimap2	bcftools	19.26
+bj_EsCo_g0001	3e-05	bwa	bcftools (total)	19.58
+bj_EsCo_g0001	3e-05	bwa	bcftools	18.48
+bf_BaFa_g0001	3e-05	bowtie2	VARIANTS (total)	45.59
+bf_BaFa_g0001	3e-05	bowtie2	VARIANTS	26.20
+bf_BaFa_g0001	3e-05	minimap2	VARIANTS (total)	44.62
+bf_BaFa_g0001	3e-05	minimap2	VARIANTS	25.09
+bf_BaFa_g0001	3e-05	bwa	VARIANTS (total)	44.41
+bf_BaFa_g0001	3e-05	bwa	VARIANTS	25.28
+bf_BaFa_g0001	3e-05	bowtie2	bcftools (total)	68.60
+bf_BaFa_g0001	3e-05	bowtie2	bcftools	55.66
+bf_BaFa_g0001	3e-05	minimap2	bcftools (total)	64.38
+bf_BaFa_g0001	3e-05	minimap2	bcftools	49.84
+bf_BaFa_g0001	3e-05	bwa	bcftools (total)	61.37
+bf_BaFa_g0001	3e-05	bwa	bcftools	47.90
+bj_EsCo_g0001	3e-06	bowtie2	VARIANTS (total)	14.15
+bj_EsCo_g0001	3e-06	bowtie2	VARIANTS	11.58
+bj_EsCo_g0001	3e-06	minimap2	VARIANTS (total)	13.77
+bj_EsCo_g0001	3e-06	minimap2	VARIANTS	11.20
+bj_EsCo_g0001	3e-06	bwa	VARIANTS (total)	13.26
+bj_EsCo_g0001	3e-06	bwa	VARIANTS	11.39
+bj_EsCo_g0001	3e-06	bowtie2	bcftools (total)	24.35
+bj_EsCo_g0001	3e-06	bowtie2	bcftools	23.04
+bj_EsCo_g0001	3e-06	minimap2	bcftools (total)	20.64
+bj_EsCo_g0001	3e-06	minimap2	bcftools	19.17
+bj_EsCo_g0001	3e-06	bwa	bcftools (total)	20.20
+bj_EsCo_g0001	3e-06	bwa	bcftools	18.98
+bj_EsCo_g0001	5e-06	bowtie2	VARIANTS (total)	14.36
+bj_EsCo_g0001	5e-06	bowtie2	VARIANTS	11.79
+bj_EsCo_g0001	5e-06	minimap2	VARIANTS (total)	14.06
+bj_EsCo_g0001	5e-06	minimap2	VARIANTS	11.51
+bj_EsCo_g0001	5e-06	bwa	VARIANTS (total)	13.68
+bj_EsCo_g0001	5e-06	bwa	VARIANTS	11.72
+bj_EsCo_g0001	5e-06	bowtie2	bcftools (total)	24.31
+bj_EsCo_g0001	5e-06	bowtie2	bcftools	22.99
+bj_EsCo_g0001	5e-06	minimap2	bcftools (total)	22.15
+bj_EsCo_g0001	5e-06	minimap2	bcftools	20.67
+bj_EsCo_g0001	5e-06	bwa	bcftools (total)	20.15
+bj_EsCo_g0001	5e-06	bwa	bcftools	19.03
+am_BA_g0003	2e-06	bowtie2	VARIANTS (total)	40.78
+am_BA_g0003	2e-06	bowtie2	VARIANTS	21.51
+am_BA_g0003	2e-06	minimap2	VARIANTS (total)	41.80
+am_BA_g0003	2e-06	minimap2	VARIANTS	21.96
+am_BA_g0003	2e-06	bwa	VARIANTS (total)	40.86
+am_BA_g0003	2e-06	bwa	VARIANTS	21.70
+am_BA_g0003	2e-06	bowtie2	bcftools (total)	77.91
+am_BA_g0003	2e-06	bowtie2	bcftools	64.04
+am_BA_g0003	2e-06	minimap2	bcftools (total)	70.25
+am_BA_g0003	2e-06	minimap2	bcftools	55.30
+am_BA_g0003	2e-06	bwa	bcftools (total)	70.50
+am_BA_g0003	2e-06	bwa	bcftools	56.25
+cx_BaXy_g0001	5e-02	bowtie2	VARIANTS (total)	30.27
+cx_BaXy_g0001	5e-02	bowtie2	VARIANTS	19.17
+cx_BaXy_g0001	5e-02	minimap2	VARIANTS (total)	31.63
+cx_BaXy_g0001	5e-02	minimap2	VARIANTS	20.07
+cx_BaXy_g0001	5e-02	bwa	VARIANTS (total)	31.76
+cx_BaXy_g0001	5e-02	bwa	VARIANTS	21.29
+cx_BaXy_g0001	5e-02	bowtie2	bcftools (total)	32.35
+cx_BaXy_g0001	5e-02	bowtie2	bcftools	24.87
+cx_BaXy_g0001	5e-02	minimap2	bcftools (total)	35.39
+cx_BaXy_g0001	5e-02	minimap2	bcftools	27.33
+cx_BaXy_g0001	5e-02	bwa	bcftools (total)	34.68
+cx_BaXy_g0001	5e-02	bwa	bcftools	27.22
+am_BaFr_g0050	2e-05	bowtie2	VARIANTS (total)	78.76
+am_BaFr_g0050	2e-05	bowtie2	VARIANTS	41.09
+am_BaFr_g0050	2e-05	minimap2	VARIANTS (total)	84.10
+am_BaFr_g0050	2e-05	minimap2	VARIANTS	38.85
+am_BaFr_g0050	2e-05	bwa	VARIANTS (total)	76.60
+am_BaFr_g0050	2e-05	bwa	VARIANTS	39.85
+am_BaFr_g0050	2e-05	bowtie2	bcftools (total)	152.06
+am_BaFr_g0050	2e-05	bowtie2	bcftools	127.80
+am_BaFr_g0050	2e-05	minimap2	bcftools (total)	146.38
+am_BaFr_g0050	2e-05	minimap2	bcftools	115.28
+am_BaFr_g0050	2e-05	bwa	bcftools (total)	139.09
+am_BaFr_g0050	2e-05	bwa	bcftools	114.74
+am_BaOv_g0001	5e-02	bowtie2	VARIANTS (total)	45.88
+am_BaOv_g0001	5e-02	bowtie2	VARIANTS	26.45
+am_BaOv_g0001	5e-02	minimap2	VARIANTS (total)	48.52
+am_BaOv_g0001	5e-02	minimap2	VARIANTS	28.42
+am_BaOv_g0001	5e-02	bwa	VARIANTS (total)	47.32
+am_BaOv_g0001	5e-02	bwa	VARIANTS	27.49
+am_BaOv_g0001	5e-02	bowtie2	bcftools (total)	65.41
+am_BaOv_g0001	5e-02	bowtie2	bcftools	52.15
+am_BaOv_g0001	5e-02	minimap2	bcftools (total)	70.10
+am_BaOv_g0001	5e-02	minimap2	bcftools	56.00
+am_BaOv_g0001	5e-02	bwa	bcftools (total)	68.17
+am_BaOv_g0001	5e-02	bwa	bcftools	54.92
+bj_EsCo_g0001	1e-05	bowtie2	VARIANTS (total)	13.69
+bj_EsCo_g0001	1e-05	bowtie2	VARIANTS	11.34
+bj_EsCo_g0001	1e-05	minimap2	VARIANTS (total)	13.36
+bj_EsCo_g0001	1e-05	minimap2	VARIANTS	11.28
+bj_EsCo_g0001	1e-05	bwa	VARIANTS (total)	13.71
+bj_EsCo_g0001	1e-05	bwa	VARIANTS	11.48
+bj_EsCo_g0001	1e-05	bowtie2	bcftools (total)	24.35
+bj_EsCo_g0001	1e-05	bowtie2	bcftools	23.13
+bj_EsCo_g0001	1e-05	minimap2	bcftools (total)	21.17
+bj_EsCo_g0001	1e-05	minimap2	bcftools	19.69
+bj_EsCo_g0001	1e-05	bwa	bcftools (total)	19.89
+bj_EsCo_g0001	1e-05	bwa	bcftools	18.68
+bf_BaFa_g0001	1e-05	bowtie2	VARIANTS (total)	44.86
+bf_BaFa_g0001	1e-05	bowtie2	VARIANTS	25.97
+bf_BaFa_g0001	1e-05	minimap2	VARIANTS (total)	44.99
+bf_BaFa_g0001	1e-05	minimap2	VARIANTS	25.30
+bf_BaFa_g0001	1e-05	bwa	VARIANTS (total)	43.91
+bf_BaFa_g0001	1e-05	bwa	VARIANTS	25.18
+bf_BaFa_g0001	1e-05	bowtie2	bcftools (total)	68.51
+bf_BaFa_g0001	1e-05	bowtie2	bcftools	55.49
+bf_BaFa_g0001	1e-05	minimap2	bcftools (total)	63.75
+bf_BaFa_g0001	1e-05	minimap2	bcftools	49.25
+bf_BaFa_g0001	1e-05	bwa	bcftools (total)	61.17
+bf_BaFa_g0001	1e-05	bwa	bcftools	47.75
+am_AkMu_g0002	5e-05	bowtie2	VARIANTS (total)	52.96
+am_AkMu_g0002	5e-05	bowtie2	VARIANTS	25.63
+am_AkMu_g0002	5e-05	minimap2	VARIANTS (total)	53.38
+am_AkMu_g0002	5e-05	minimap2	VARIANTS	25.06
+am_AkMu_g0002	5e-05	bwa	VARIANTS (total)	44.16
+am_AkMu_g0002	5e-05	bwa	VARIANTS	24.50
+am_AkMu_g0002	5e-05	bowtie2	bcftools (total)	94.18
+am_AkMu_g0002	5e-05	bowtie2	bcftools	76.15
+am_AkMu_g0002	5e-05	minimap2	bcftools (total)	90.90
+am_AkMu_g0002	5e-05	minimap2	bcftools	71.45
+am_AkMu_g0002	5e-05	bwa	bcftools (total)	86.49
+am_AkMu_g0002	5e-05	bwa	bcftools	72.89
+cx_BaXy_g0001	1e-04	bowtie2	VARIANTS (total)	29.44
+cx_BaXy_g0001	1e-04	bowtie2	VARIANTS	18.28
+cx_BaXy_g0001	1e-04	minimap2	VARIANTS (total)	28.16
+cx_BaXy_g0001	1e-04	minimap2	VARIANTS	17.49
+cx_BaXy_g0001	1e-04	bwa	VARIANTS (total)	28.38
+cx_BaXy_g0001	1e-04	bwa	VARIANTS	17.90
+cx_BaXy_g0001	1e-04	bowtie2	bcftools (total)	34.82
+cx_BaXy_g0001	1e-04	bowtie2	bcftools	27.56
+cx_BaXy_g0001	1e-04	minimap2	bcftools (total)	33.71
+cx_BaXy_g0001	1e-04	minimap2	bcftools	25.89
+cx_BaXy_g0001	1e-04	bwa	bcftools (total)	32.90
+cx_BaXy_g0001	1e-04	bwa	bcftools	25.57
+am_BaOv_g0001	3e-05	bowtie2	VARIANTS (total)	42.22
+am_BaOv_g0001	3e-05	bowtie2	VARIANTS	23.36
+am_BaOv_g0001	3e-05	minimap2	VARIANTS (total)	42.40
+am_BaOv_g0001	3e-05	minimap2	VARIANTS	23.20
+am_BaOv_g0001	3e-05	bwa	VARIANTS (total)	41.24
+am_BaOv_g0001	3e-05	bwa	VARIANTS	22.68
+am_BaOv_g0001	3e-05	bowtie2	bcftools (total)	71.59
+am_BaOv_g0001	3e-05	bowtie2	bcftools	58.98
+am_BaOv_g0001	3e-05	minimap2	bcftools (total)	65.36
+am_BaOv_g0001	3e-05	minimap2	bcftools	51.80
+am_BaOv_g0001	3e-05	bwa	bcftools (total)	65.20
+am_BaOv_g0001	3e-05	bwa	bcftools	52.38
+bf_BaFa_g0001	2e-02	bowtie2	VARIANTS (total)	48.43
+bf_BaFa_g0001	2e-02	bowtie2	VARIANTS	29.37
+bf_BaFa_g0001	2e-02	minimap2	VARIANTS (total)	47.36
+bf_BaFa_g0001	2e-02	minimap2	VARIANTS	27.35
+bf_BaFa_g0001	2e-02	bwa	VARIANTS (total)	46.14
+bf_BaFa_g0001	2e-02	bwa	VARIANTS	27.89
+bf_BaFa_g0001	2e-02	bowtie2	bcftools (total)	67.98
+bf_BaFa_g0001	2e-02	bowtie2	bcftools	54.76
+bf_BaFa_g0001	2e-02	minimap2	bcftools (total)	64.64
+bf_BaFa_g0001	2e-02	minimap2	bcftools	49.81
+bf_BaFa_g0001	2e-02	bwa	bcftools (total)	62.90
+bf_BaFa_g0001	2e-02	bwa	bcftools	49.42
+bf_BaFa_g0001	3e-02	bowtie2	VARIANTS (total)	49.17
+bf_BaFa_g0001	3e-02	bowtie2	VARIANTS	29.07
+bf_BaFa_g0001	3e-02	minimap2	VARIANTS (total)	49.13
+bf_BaFa_g0001	3e-02	minimap2	VARIANTS	28.76
+bf_BaFa_g0001	3e-02	bwa	VARIANTS (total)	47.99
+bf_BaFa_g0001	3e-02	bwa	VARIANTS	28.88
+bf_BaFa_g0001	3e-02	bowtie2	bcftools (total)	66.45
+bf_BaFa_g0001	3e-02	bowtie2	bcftools	53.21
+bf_BaFa_g0001	3e-02	minimap2	bcftools (total)	65.38
+bf_BaFa_g0001	3e-02	minimap2	bcftools	50.48
+bf_BaFa_g0001	3e-02	bwa	bcftools (total)	64.25
+bf_BaFa_g0001	3e-02	bwa	bcftools	50.61
+am_BaFr_g0050	5e-04	bowtie2	VARIANTS (total)	80.19
+am_BaFr_g0050	5e-04	bowtie2	VARIANTS	42.51
+am_BaFr_g0050	5e-04	minimap2	VARIANTS (total)	85.32
+am_BaFr_g0050	5e-04	minimap2	VARIANTS	40.17
+am_BaFr_g0050	5e-04	bwa	VARIANTS (total)	78.56
+am_BaFr_g0050	5e-04	bwa	VARIANTS	40.79
+am_BaFr_g0050	5e-04	bowtie2	bcftools (total)	152.98
+am_BaFr_g0050	5e-04	bowtie2	bcftools	128.48
+am_BaFr_g0050	5e-04	minimap2	bcftools (total)	146.64
+am_BaFr_g0050	5e-04	minimap2	bcftools	115.60
+am_BaFr_g0050	5e-04	bwa	bcftools (total)	139.11
+am_BaFr_g0050	5e-04	bwa	bcftools	114.67
+am_BaVu_g0002	2e-05	bowtie2	VARIANTS (total)	23.16
+am_BaVu_g0002	2e-05	bowtie2	VARIANTS	12.27
+am_BaVu_g0002	2e-05	minimap2	VARIANTS (total)	23.09
+am_BaVu_g0002	2e-05	minimap2	VARIANTS	12.47
+am_BaVu_g0002	2e-05	bwa	VARIANTS (total)	21.77
+am_BaVu_g0002	2e-05	bwa	VARIANTS	11.48
+am_BaVu_g0002	2e-05	bowtie2	bcftools (total)	33.71
+am_BaVu_g0002	2e-05	bowtie2	bcftools	26.38
+am_BaVu_g0002	2e-05	minimap2	bcftools (total)	28.98
+am_BaVu_g0002	2e-05	minimap2	bcftools	21.40
+am_BaVu_g0002	2e-05	bwa	bcftools (total)	28.84
+am_BaVu_g0002	2e-05	bwa	bcftools	21.46
+am_PaDi_g0001	1e-05	bowtie2	VARIANTS (total)	40.13
+am_PaDi_g0001	1e-05	bowtie2	VARIANTS	21.24
+am_PaDi_g0001	1e-05	minimap2	VARIANTS (total)	41.02
+am_PaDi_g0001	1e-05	minimap2	VARIANTS	21.52
+am_PaDi_g0001	1e-05	bwa	VARIANTS (total)	40.50
+am_PaDi_g0001	1e-05	bwa	VARIANTS	21.06
+am_PaDi_g0001	1e-05	bowtie2	bcftools (total)	68.56
+am_PaDi_g0001	1e-05	bowtie2	bcftools	55.72
+am_PaDi_g0001	1e-05	minimap2	bcftools (total)	58.77
+am_PaDi_g0001	1e-05	minimap2	bcftools	44.92
+am_PaDi_g0001	1e-05	bwa	bcftools (total)	58.13
+am_PaDi_g0001	1e-05	bwa	bcftools	45.07
+cx_BaXy_g0001	3e-06	bowtie2	VARIANTS (total)	28.38
+cx_BaXy_g0001	3e-06	bowtie2	VARIANTS	17.60
+cx_BaXy_g0001	3e-06	minimap2	VARIANTS (total)	28.39
+cx_BaXy_g0001	3e-06	minimap2	VARIANTS	17.39
+cx_BaXy_g0001	3e-06	bwa	VARIANTS (total)	28.18
+cx_BaXy_g0001	3e-06	bwa	VARIANTS	17.73
+cx_BaXy_g0001	3e-06	bowtie2	bcftools (total)	34.79
+cx_BaXy_g0001	3e-06	bowtie2	bcftools	27.52
+cx_BaXy_g0001	3e-06	minimap2	bcftools (total)	33.85
+cx_BaXy_g0001	3e-06	minimap2	bcftools	25.82
+cx_BaXy_g0001	3e-06	bwa	bcftools (total)	32.92
+cx_BaXy_g0001	3e-06	bwa	bcftools	25.60
+am_PaDi_g0001	4e-05	bowtie2	VARIANTS (total)	41.49
+am_PaDi_g0001	4e-05	bowtie2	VARIANTS	22.28
+am_PaDi_g0001	4e-05	minimap2	VARIANTS (total)	40.28
+am_PaDi_g0001	4e-05	minimap2	VARIANTS	20.82
+am_PaDi_g0001	4e-05	bwa	VARIANTS (total)	40.33
+am_PaDi_g0001	4e-05	bwa	VARIANTS	21.47
+am_PaDi_g0001	4e-05	bowtie2	bcftools (total)	68.86
+am_PaDi_g0001	4e-05	bowtie2	bcftools	56.01
+am_PaDi_g0001	4e-05	minimap2	bcftools (total)	58.99
+am_PaDi_g0001	4e-05	minimap2	bcftools	45.14
+am_PaDi_g0001	4e-05	bwa	bcftools (total)	57.64
+am_PaDi_g0001	4e-05	bwa	bcftools	44.50
+am_BaVu_g0002	3e-05	bowtie2	VARIANTS (total)	22.38
+am_BaVu_g0002	3e-05	bowtie2	VARIANTS	12.02
+am_BaVu_g0002	3e-05	minimap2	VARIANTS (total)	22.11
+am_BaVu_g0002	3e-05	minimap2	VARIANTS	11.49
+am_BaVu_g0002	3e-05	bwa	VARIANTS (total)	22.02
+am_BaVu_g0002	3e-05	bwa	VARIANTS	11.74
+am_BaVu_g0002	3e-05	bowtie2	bcftools (total)	33.61
+am_BaVu_g0002	3e-05	bowtie2	bcftools	26.34
+am_BaVu_g0002	3e-05	minimap2	bcftools (total)	29.20
+am_BaVu_g0002	3e-05	minimap2	bcftools	21.64
+am_BaVu_g0002	3e-05	bwa	bcftools (total)	28.75
+am_BaVu_g0002	3e-05	bwa	bcftools	21.40
+am_PaDi_g0001	5e-02	bowtie2	VARIANTS (total)	43.70
+am_PaDi_g0001	5e-02	bowtie2	VARIANTS	24.18
+am_PaDi_g0001	5e-02	minimap2	VARIANTS (total)	45.39
+am_PaDi_g0001	5e-02	minimap2	VARIANTS	25.32
+am_PaDi_g0001	5e-02	bwa	VARIANTS (total)	46.05
+am_PaDi_g0001	5e-02	bwa	VARIANTS	26.03
+am_PaDi_g0001	5e-02	bowtie2	bcftools (total)	60.70
+am_PaDi_g0001	5e-02	bowtie2	bcftools	47.30
+am_PaDi_g0001	5e-02	minimap2	bcftools (total)	62.26
+am_PaDi_g0001	5e-02	minimap2	bcftools	47.94
+am_PaDi_g0001	5e-02	bwa	bcftools (total)	60.99
+am_PaDi_g0001	5e-02	bwa	bcftools	47.59
+am_AkMu_g0002	2e-06	bowtie2	VARIANTS (total)	51.59
+am_AkMu_g0002	2e-06	bowtie2	VARIANTS	24.36
+am_AkMu_g0002	2e-06	minimap2	VARIANTS (total)	52.40
+am_AkMu_g0002	2e-06	minimap2	VARIANTS	24.71
+am_AkMu_g0002	2e-06	bwa	VARIANTS (total)	44.32
+am_AkMu_g0002	2e-06	bwa	VARIANTS	23.92
+am_AkMu_g0002	2e-06	bowtie2	bcftools (total)	96.66
+am_AkMu_g0002	2e-06	bowtie2	bcftools	78.67
+am_AkMu_g0002	2e-06	minimap2	bcftools (total)	91.86
+am_AkMu_g0002	2e-06	minimap2	bcftools	72.32
+am_AkMu_g0002	2e-06	bwa	bcftools (total)	84.29
+am_AkMu_g0002	2e-06	bwa	bcftools	70.68
+am_AkMu_g0002	1e-03	bowtie2	VARIANTS (total)	51.89
+am_AkMu_g0002	1e-03	bowtie2	VARIANTS	24.99
+am_AkMu_g0002	1e-03	minimap2	VARIANTS (total)	52.29
+am_AkMu_g0002	1e-03	minimap2	VARIANTS	24.60
+am_AkMu_g0002	1e-03	bwa	VARIANTS (total)	45.86
+am_AkMu_g0002	1e-03	bwa	VARIANTS	25.10
+am_AkMu_g0002	1e-03	bowtie2	bcftools (total)	94.59
+am_AkMu_g0002	1e-03	bowtie2	bcftools	76.49
+am_AkMu_g0002	1e-03	minimap2	bcftools (total)	91.77
+am_AkMu_g0002	1e-03	minimap2	bcftools	72.12
+am_AkMu_g0002	1e-03	bwa	bcftools (total)	85.48
+am_AkMu_g0002	1e-03	bwa	bcftools	71.82
+am_BaVu_g0002	4e-06	bowtie2	VARIANTS (total)	22.99
+am_BaVu_g0002	4e-06	bowtie2	VARIANTS	12.60
+am_BaVu_g0002	4e-06	minimap2	VARIANTS (total)	22.17
+am_BaVu_g0002	4e-06	minimap2	VARIANTS	12.07
+am_BaVu_g0002	4e-06	bwa	VARIANTS (total)	22.17
+am_BaVu_g0002	4e-06	bwa	VARIANTS	12.04
+am_BaVu_g0002	4e-06	bowtie2	bcftools (total)	33.92
+am_BaVu_g0002	4e-06	bowtie2	bcftools	26.60
+am_BaVu_g0002	4e-06	minimap2	bcftools (total)	28.93
+am_BaVu_g0002	4e-06	minimap2	bcftools	21.28
+am_BaVu_g0002	4e-06	bwa	bcftools (total)	28.85
+am_BaVu_g0002	4e-06	bwa	bcftools	21.48
+bf_BaFa_g0001	5e-03	bowtie2	VARIANTS (total)	45.62
+bf_BaFa_g0001	5e-03	bowtie2	VARIANTS	26.60
+bf_BaFa_g0001	5e-03	minimap2	VARIANTS (total)	47.08
+bf_BaFa_g0001	5e-03	minimap2	VARIANTS	27.10
+bf_BaFa_g0001	5e-03	bwa	VARIANTS (total)	45.71
+bf_BaFa_g0001	5e-03	bwa	VARIANTS	26.66
+bf_BaFa_g0001	5e-03	bowtie2	bcftools (total)	68.78
+bf_BaFa_g0001	5e-03	bowtie2	bcftools	55.79
+bf_BaFa_g0001	5e-03	minimap2	bcftools (total)	63.90
+bf_BaFa_g0001	5e-03	minimap2	bcftools	49.17
+bf_BaFa_g0001	5e-03	bwa	bcftools (total)	61.36
+bf_BaFa_g0001	5e-03	bwa	bcftools	47.93
+bj_EsCo_g0001	4e-02	bowtie2	VARIANTS (total)	15.28
+bj_EsCo_g0001	4e-02	bowtie2	VARIANTS	12.67
+bj_EsCo_g0001	4e-02	minimap2	VARIANTS (total)	15.12
+bj_EsCo_g0001	4e-02	minimap2	VARIANTS	12.73
+bj_EsCo_g0001	4e-02	bwa	VARIANTS (total)	15.25
+bj_EsCo_g0001	4e-02	bwa	VARIANTS	12.95
+bj_EsCo_g0001	4e-02	bowtie2	bcftools (total)	22.78
+bj_EsCo_g0001	4e-02	bowtie2	bcftools	21.48
+bj_EsCo_g0001	4e-02	minimap2	bcftools (total)	21.69
+bj_EsCo_g0001	4e-02	minimap2	bcftools	20.16
+bj_EsCo_g0001	4e-02	bwa	bcftools (total)	20.98
+bj_EsCo_g0001	4e-02	bwa	bcftools	19.75
+am_AkMu_g0002	5e-04	bowtie2	VARIANTS (total)	52.26
+am_AkMu_g0002	5e-04	bowtie2	VARIANTS	24.83
+am_AkMu_g0002	5e-04	minimap2	VARIANTS (total)	53.50
+am_AkMu_g0002	5e-04	minimap2	VARIANTS	24.91
+am_AkMu_g0002	5e-04	bwa	VARIANTS (total)	44.37
+am_AkMu_g0002	5e-04	bwa	VARIANTS	24.04
+am_AkMu_g0002	5e-04	bowtie2	bcftools (total)	93.97
+am_AkMu_g0002	5e-04	bowtie2	bcftools	75.82
+am_AkMu_g0002	5e-04	minimap2	bcftools (total)	90.89
+am_AkMu_g0002	5e-04	minimap2	bcftools	71.40
+am_AkMu_g0002	5e-04	bwa	bcftools (total)	85.03
+am_AkMu_g0002	5e-04	bwa	bcftools	71.50
+am_BaOv_g0001	1e-03	bowtie2	VARIANTS (total)	43.10
+am_BaOv_g0001	1e-03	bowtie2	VARIANTS	23.56
+am_BaOv_g0001	1e-03	minimap2	VARIANTS (total)	42.25
+am_BaOv_g0001	1e-03	minimap2	VARIANTS	22.68
+am_BaOv_g0001	1e-03	bwa	VARIANTS (total)	42.06
+am_BaOv_g0001	1e-03	bwa	VARIANTS	22.89
+am_BaOv_g0001	1e-03	bowtie2	bcftools (total)	70.80
+am_BaOv_g0001	1e-03	bowtie2	bcftools	58.11
+am_BaOv_g0001	1e-03	minimap2	bcftools (total)	65.43
+am_BaOv_g0001	1e-03	minimap2	bcftools	51.86
+am_BaOv_g0001	1e-03	bwa	bcftools (total)	64.60
+am_BaOv_g0001	1e-03	bwa	bcftools	51.78
+am_BaOv_g0001	4e-05	bowtie2	VARIANTS (total)	43.27
+am_BaOv_g0001	4e-05	bowtie2	VARIANTS	24.18
+am_BaOv_g0001	4e-05	minimap2	VARIANTS (total)	41.46
+am_BaOv_g0001	4e-05	minimap2	VARIANTS	22.07
+am_BaOv_g0001	4e-05	bwa	VARIANTS (total)	41.57
+am_BaOv_g0001	4e-05	bwa	VARIANTS	22.21
+am_BaOv_g0001	4e-05	bowtie2	bcftools (total)	70.46
+am_BaOv_g0001	4e-05	bowtie2	bcftools	57.82
+am_BaOv_g0001	4e-05	minimap2	bcftools (total)	65.32
+am_BaOv_g0001	4e-05	minimap2	bcftools	51.65
+am_BaOv_g0001	4e-05	bwa	bcftools (total)	64.62
+am_BaOv_g0001	4e-05	bwa	bcftools	51.86
+am_BaOv_g0001	2e-06	bowtie2	VARIANTS (total)	42.51
+am_BaOv_g0001	2e-06	bowtie2	VARIANTS	23.58
+am_BaOv_g0001	2e-06	minimap2	VARIANTS (total)	42.21
+am_BaOv_g0001	2e-06	minimap2	VARIANTS	22.77
+am_BaOv_g0001	2e-06	bwa	VARIANTS (total)	41.25
+am_BaOv_g0001	2e-06	bwa	VARIANTS	21.88
+am_BaOv_g0001	2e-06	bowtie2	bcftools (total)	70.72
+am_BaOv_g0001	2e-06	bowtie2	bcftools	58.15
+am_BaOv_g0001	2e-06	minimap2	bcftools (total)	65.61
+am_BaOv_g0001	2e-06	minimap2	bcftools	52.07
+am_BaOv_g0001	2e-06	bwa	bcftools (total)	64.27
+am_BaOv_g0001	2e-06	bwa	bcftools	51.49
+bj_EsCo_g0001	5e-02	bowtie2	VARIANTS (total)	15.25
+bj_EsCo_g0001	5e-02	bowtie2	VARIANTS	12.85
+bj_EsCo_g0001	5e-02	minimap2	VARIANTS (total)	15.82
+bj_EsCo_g0001	5e-02	minimap2	VARIANTS	13.13
+bj_EsCo_g0001	5e-02	bwa	VARIANTS (total)	14.97
+bj_EsCo_g0001	5e-02	bwa	VARIANTS	13.11
+bj_EsCo_g0001	5e-02	bowtie2	bcftools (total)	21.52
+bj_EsCo_g0001	5e-02	bowtie2	bcftools	20.23
+bj_EsCo_g0001	5e-02	minimap2	bcftools (total)	21.97
+bj_EsCo_g0001	5e-02	minimap2	bcftools	20.41
+bj_EsCo_g0001	5e-02	bwa	bcftools (total)	21.41
+bj_EsCo_g0001	5e-02	bwa	bcftools	20.16
+bf_BaFa_g0001	5e-02	bowtie2	VARIANTS (total)	48.18
+bf_BaFa_g0001	5e-02	bowtie2	VARIANTS	28.76
+bf_BaFa_g0001	5e-02	minimap2	VARIANTS (total)	49.16
+bf_BaFa_g0001	5e-02	minimap2	VARIANTS	29.13
+bf_BaFa_g0001	5e-02	bwa	VARIANTS (total)	50.29
+bf_BaFa_g0001	5e-02	bwa	VARIANTS	31.10
+bf_BaFa_g0001	5e-02	bowtie2	bcftools (total)	60.59
+bf_BaFa_g0001	5e-02	bowtie2	bcftools	47.20
+bf_BaFa_g0001	5e-02	minimap2	bcftools (total)	65.16
+bf_BaFa_g0001	5e-02	minimap2	bcftools	50.29
+bf_BaFa_g0001	5e-02	bwa	bcftools (total)	64.67
+bf_BaFa_g0001	5e-02	bwa	bcftools	51.15
+am_BaOv_g0001	1e-06	bowtie2	VARIANTS (total)	41.69
+am_BaOv_g0001	1e-06	bowtie2	VARIANTS	22.69
+am_BaOv_g0001	1e-06	minimap2	VARIANTS (total)	42.24
+am_BaOv_g0001	1e-06	minimap2	VARIANTS	22.59
+am_BaOv_g0001	1e-06	bwa	VARIANTS (total)	42.45
+am_BaOv_g0001	1e-06	bwa	VARIANTS	23.78
+am_BaOv_g0001	1e-06	bowtie2	bcftools (total)	75.27
+am_BaOv_g0001	1e-06	bowtie2	bcftools	62.58
+am_BaOv_g0001	1e-06	minimap2	bcftools (total)	66.46
+am_BaOv_g0001	1e-06	minimap2	bcftools	52.90
+am_BaOv_g0001	1e-06	bwa	bcftools (total)	64.15
+am_BaOv_g0001	1e-06	bwa	bcftools	51.27
+cx_BaXy_g0001	1e-05	bowtie2	VARIANTS (total)	28.54
+cx_BaXy_g0001	1e-05	bowtie2	VARIANTS	18.33
+cx_BaXy_g0001	1e-05	minimap2	VARIANTS (total)	28.40
+cx_BaXy_g0001	1e-05	minimap2	VARIANTS	17.77
+cx_BaXy_g0001	1e-05	bwa	VARIANTS (total)	28.34
+cx_BaXy_g0001	1e-05	bwa	VARIANTS	18.02
+cx_BaXy_g0001	1e-05	bowtie2	bcftools (total)	34.78
+cx_BaXy_g0001	1e-05	bowtie2	bcftools	27.54
+cx_BaXy_g0001	1e-05	minimap2	bcftools (total)	33.72
+cx_BaXy_g0001	1e-05	minimap2	bcftools	25.89
+cx_BaXy_g0001	1e-05	bwa	bcftools (total)	32.83
+cx_BaXy_g0001	1e-05	bwa	bcftools	25.62
+cx_BaXy_g0001	5e-05	bowtie2	VARIANTS (total)	28.66
+cx_BaXy_g0001	5e-05	bowtie2	VARIANTS	17.76
+cx_BaXy_g0001	5e-05	minimap2	VARIANTS (total)	28.37
+cx_BaXy_g0001	5e-05	minimap2	VARIANTS	17.30
+cx_BaXy_g0001	5e-05	bwa	VARIANTS (total)	28.96
+cx_BaXy_g0001	5e-05	bwa	VARIANTS	18.11
+cx_BaXy_g0001	5e-05	bowtie2	bcftools (total)	34.99
+cx_BaXy_g0001	5e-05	bowtie2	bcftools	27.80
+cx_BaXy_g0001	5e-05	minimap2	bcftools (total)	33.96
+cx_BaXy_g0001	5e-05	minimap2	bcftools	26.06
+cx_BaXy_g0001	5e-05	bwa	bcftools (total)	33.23
+cx_BaXy_g0001	5e-05	bwa	bcftools	25.91
+bf_BaFa_g0001	1e-03	bowtie2	VARIANTS (total)	45.76
+bf_BaFa_g0001	1e-03	bowtie2	VARIANTS	26.62
+bf_BaFa_g0001	1e-03	minimap2	VARIANTS (total)	45.63
+bf_BaFa_g0001	1e-03	minimap2	VARIANTS	25.60
+bf_BaFa_g0001	1e-03	bwa	VARIANTS (total)	43.30
+bf_BaFa_g0001	1e-03	bwa	VARIANTS	25.05
+bf_BaFa_g0001	1e-03	bowtie2	bcftools (total)	69.18
+bf_BaFa_g0001	1e-03	bowtie2	bcftools	56.28
+bf_BaFa_g0001	1e-03	minimap2	bcftools (total)	63.58
+bf_BaFa_g0001	1e-03	minimap2	bcftools	49.07
+bf_BaFa_g0001	1e-03	bwa	bcftools (total)	61.40
+bf_BaFa_g0001	1e-03	bwa	bcftools	47.95
+bj_EsCo_g0001	1e-03	bowtie2	VARIANTS (total)	14.43
+bj_EsCo_g0001	1e-03	bowtie2	VARIANTS	11.88
+bj_EsCo_g0001	1e-03	minimap2	VARIANTS (total)	13.43
+bj_EsCo_g0001	1e-03	minimap2	VARIANTS	11.19
+bj_EsCo_g0001	1e-03	bwa	VARIANTS (total)	13.61
+bj_EsCo_g0001	1e-03	bwa	VARIANTS	11.56
+bj_EsCo_g0001	1e-03	bowtie2	bcftools (total)	24.24
+bj_EsCo_g0001	1e-03	bowtie2	bcftools	22.96
+bj_EsCo_g0001	1e-03	minimap2	bcftools (total)	20.71
+bj_EsCo_g0001	1e-03	minimap2	bcftools	19.22
+bj_EsCo_g0001	1e-03	bwa	bcftools (total)	20.39
+bj_EsCo_g0001	1e-03	bwa	bcftools	19.22
+am_BaVu_g0002	5e-02	bowtie2	VARIANTS (total)	23.91
+am_BaVu_g0002	5e-02	bowtie2	VARIANTS	13.11
+am_BaVu_g0002	5e-02	minimap2	VARIANTS (total)	24.27
+am_BaVu_g0002	5e-02	minimap2	VARIANTS	13.79
+am_BaVu_g0002	5e-02	bwa	VARIANTS (total)	24.43
+am_BaVu_g0002	5e-02	bwa	VARIANTS	14.06
+am_BaVu_g0002	5e-02	bowtie2	bcftools (total)	30.42
+am_BaVu_g0002	5e-02	bowtie2	bcftools	22.92
+am_BaVu_g0002	5e-02	minimap2	bcftools (total)	30.81
+am_BaVu_g0002	5e-02	minimap2	bcftools	22.91
+am_BaVu_g0002	5e-02	bwa	bcftools (total)	30.12
+am_BaVu_g0002	5e-02	bwa	bcftools	22.66
+am_BaVu_g0002	5e-04	bowtie2	VARIANTS (total)	23.70
+am_BaVu_g0002	5e-04	bowtie2	VARIANTS	12.97
+am_BaVu_g0002	5e-04	minimap2	VARIANTS (total)	21.83
+am_BaVu_g0002	5e-04	minimap2	VARIANTS	11.66
+am_BaVu_g0002	5e-04	bwa	VARIANTS (total)	22.44
+am_BaVu_g0002	5e-04	bwa	VARIANTS	12.05
+am_BaVu_g0002	5e-04	bowtie2	bcftools (total)	33.51
+am_BaVu_g0002	5e-04	bowtie2	bcftools	26.24
+am_BaVu_g0002	5e-04	minimap2	bcftools (total)	29.27
+am_BaVu_g0002	5e-04	minimap2	bcftools	21.69
+am_BaVu_g0002	5e-04	bwa	bcftools (total)	28.98
+am_BaVu_g0002	5e-04	bwa	bcftools	21.64
+am_PaDi_g0001	2e-06	bowtie2	VARIANTS (total)	40.45
+am_PaDi_g0001	2e-06	bowtie2	VARIANTS	21.42
+am_PaDi_g0001	2e-06	minimap2	VARIANTS (total)	40.34
+am_PaDi_g0001	2e-06	minimap2	VARIANTS	21.05
+am_PaDi_g0001	2e-06	bwa	VARIANTS (total)	41.24
+am_PaDi_g0001	2e-06	bwa	VARIANTS	22.19
+am_PaDi_g0001	2e-06	bowtie2	bcftools (total)	68.40
+am_PaDi_g0001	2e-06	bowtie2	bcftools	55.52
+am_PaDi_g0001	2e-06	minimap2	bcftools (total)	60.15
+am_PaDi_g0001	2e-06	minimap2	bcftools	46.12
+am_PaDi_g0001	2e-06	bwa	bcftools (total)	57.93
+am_PaDi_g0001	2e-06	bwa	bcftools	44.84
+bf_BaFa_g0001	3e-06	bowtie2	VARIANTS (total)	44.82
+bf_BaFa_g0001	3e-06	bowtie2	VARIANTS	25.57
+bf_BaFa_g0001	3e-06	minimap2	VARIANTS (total)	46.47
+bf_BaFa_g0001	3e-06	minimap2	VARIANTS	26.38
+bf_BaFa_g0001	3e-06	bwa	VARIANTS (total)	43.30
+bf_BaFa_g0001	3e-06	bwa	VARIANTS	24.92
+bf_BaFa_g0001	3e-06	bowtie2	bcftools (total)	68.88
+bf_BaFa_g0001	3e-06	bowtie2	bcftools	56.06
+bf_BaFa_g0001	3e-06	minimap2	bcftools (total)	64.15
+bf_BaFa_g0001	3e-06	minimap2	bcftools	49.66
+bf_BaFa_g0001	3e-06	bwa	bcftools (total)	62.36
+bf_BaFa_g0001	3e-06	bwa	bcftools	48.91
+am_BaOv_g0001	3e-06	bowtie2	VARIANTS (total)	41.22
+am_BaOv_g0001	3e-06	bowtie2	VARIANTS	22.24
+am_BaOv_g0001	3e-06	minimap2	VARIANTS (total)	42.28
+am_BaOv_g0001	3e-06	minimap2	VARIANTS	23.59
+am_BaOv_g0001	3e-06	bwa	VARIANTS (total)	41.27
+am_BaOv_g0001	3e-06	bwa	VARIANTS	22.33
+am_BaOv_g0001	3e-06	bowtie2	bcftools (total)	70.49
+am_BaOv_g0001	3e-06	bowtie2	bcftools	57.85
+am_BaOv_g0001	3e-06	minimap2	bcftools (total)	66.14
+am_BaOv_g0001	3e-06	minimap2	bcftools	52.61
+am_BaOv_g0001	3e-06	bwa	bcftools (total)	65.23
+am_BaOv_g0001	3e-06	bwa	bcftools	52.46
+am_PaDi_g0001	1e-02	bowtie2	VARIANTS (total)	41.61
+am_PaDi_g0001	1e-02	bowtie2	VARIANTS	22.03
+am_PaDi_g0001	1e-02	minimap2	VARIANTS (total)	42.79
+am_PaDi_g0001	1e-02	minimap2	VARIANTS	22.81
+am_PaDi_g0001	1e-02	bwa	VARIANTS (total)	42.11
+am_PaDi_g0001	1e-02	bwa	VARIANTS	22.27
+am_PaDi_g0001	1e-02	bowtie2	bcftools (total)	68.98
+am_PaDi_g0001	1e-02	bowtie2	bcftools	55.68
+am_PaDi_g0001	1e-02	minimap2	bcftools (total)	59.41
+am_PaDi_g0001	1e-02	minimap2	bcftools	45.24
+am_PaDi_g0001	1e-02	bwa	bcftools (total)	58.57
+am_PaDi_g0001	1e-02	bwa	bcftools	45.26
+am_AkMu_g0002	2e-02	bowtie2	VARIANTS (total)	56.26
+am_AkMu_g0002	2e-02	bowtie2	VARIANTS	27.80
+am_AkMu_g0002	2e-02	minimap2	VARIANTS (total)	55.45
+am_AkMu_g0002	2e-02	minimap2	VARIANTS	27.64
+am_AkMu_g0002	2e-02	bwa	VARIANTS (total)	49.09
+am_AkMu_g0002	2e-02	bwa	VARIANTS	28.46
+am_AkMu_g0002	2e-02	bowtie2	bcftools (total)	95.21
+am_AkMu_g0002	2e-02	bowtie2	bcftools	76.56
+am_AkMu_g0002	2e-02	minimap2	bcftools (total)	92.19
+am_AkMu_g0002	2e-02	minimap2	bcftools	72.12
+am_AkMu_g0002	2e-02	bwa	bcftools (total)	94.55
+am_AkMu_g0002	2e-02	bwa	bcftools	80.72
+am_AkMu_g0002	3e-06	bowtie2	VARIANTS (total)	52.17
+am_AkMu_g0002	3e-06	bowtie2	VARIANTS	24.85
+am_AkMu_g0002	3e-06	minimap2	VARIANTS (total)	52.65
+am_AkMu_g0002	3e-06	minimap2	VARIANTS	24.52
+am_AkMu_g0002	3e-06	bwa	VARIANTS (total)	43.31
+am_AkMu_g0002	3e-06	bwa	VARIANTS	23.49
+am_AkMu_g0002	3e-06	bowtie2	bcftools (total)	93.72
+am_AkMu_g0002	3e-06	bowtie2	bcftools	75.81
+am_AkMu_g0002	3e-06	minimap2	bcftools (total)	91.56
+am_AkMu_g0002	3e-06	minimap2	bcftools	72.02
+am_AkMu_g0002	3e-06	bwa	bcftools (total)	84.38
+am_AkMu_g0002	3e-06	bwa	bcftools	70.85
+bj_EsCo_g0001	4e-05	bowtie2	VARIANTS (total)	13.37
+bj_EsCo_g0001	4e-05	bowtie2	VARIANTS	11.25
+bj_EsCo_g0001	4e-05	minimap2	VARIANTS (total)	14.05
+bj_EsCo_g0001	4e-05	minimap2	VARIANTS	11.49
+bj_EsCo_g0001	4e-05	bwa	VARIANTS (total)	13.23
+bj_EsCo_g0001	4e-05	bwa	VARIANTS	11.40
+bj_EsCo_g0001	4e-05	bowtie2	bcftools (total)	24.42
+bj_EsCo_g0001	4e-05	bowtie2	bcftools	23.12
+bj_EsCo_g0001	4e-05	minimap2	bcftools (total)	20.60
+bj_EsCo_g0001	4e-05	minimap2	bcftools	19.12
+bj_EsCo_g0001	4e-05	bwa	bcftools (total)	20.15
+bj_EsCo_g0001	4e-05	bwa	bcftools	18.94
+am_AkMu_g0002	1e-02	bowtie2	VARIANTS (total)	54.56
+am_AkMu_g0002	1e-02	bowtie2	VARIANTS	26.35
+am_AkMu_g0002	1e-02	minimap2	VARIANTS (total)	55.76
+am_AkMu_g0002	1e-02	minimap2	VARIANTS	27.09
+am_AkMu_g0002	1e-02	bwa	VARIANTS (total)	47.15
+am_AkMu_g0002	1e-02	bwa	VARIANTS	26.09
+am_AkMu_g0002	1e-02	bowtie2	bcftools (total)	95.35
+am_AkMu_g0002	1e-02	bowtie2	bcftools	76.98
+am_AkMu_g0002	1e-02	minimap2	bcftools (total)	91.71
+am_AkMu_g0002	1e-02	minimap2	bcftools	71.81
+am_AkMu_g0002	1e-02	bwa	bcftools (total)	85.62
+am_AkMu_g0002	1e-02	bwa	bcftools	71.91
+am_BA_g0003	1e-02	bowtie2	VARIANTS (total)	42.89
+am_BA_g0003	1e-02	bowtie2	VARIANTS	23.12
+am_BA_g0003	1e-02	minimap2	VARIANTS (total)	43.23
+am_BA_g0003	1e-02	minimap2	VARIANTS	23.24
+am_BA_g0003	1e-02	bwa	VARIANTS (total)	42.19
+am_BA_g0003	1e-02	bwa	VARIANTS	23.11
+am_BA_g0003	1e-02	bowtie2	bcftools (total)	77.41
+am_BA_g0003	1e-02	bowtie2	bcftools	63.38
+am_BA_g0003	1e-02	minimap2	bcftools (total)	70.77
+am_BA_g0003	1e-02	minimap2	bcftools	55.72
+am_BA_g0003	1e-02	bwa	bcftools (total)	69.45
+am_BA_g0003	1e-02	bwa	bcftools	55.12
+am_AkMu_g0002	1e-05	bowtie2	VARIANTS (total)	51.62
+am_AkMu_g0002	1e-05	bowtie2	VARIANTS	24.20
+am_AkMu_g0002	1e-05	minimap2	VARIANTS (total)	52.70
+am_AkMu_g0002	1e-05	minimap2	VARIANTS	25.00
+am_AkMu_g0002	1e-05	bwa	VARIANTS (total)	44.81
+am_AkMu_g0002	1e-05	bwa	VARIANTS	24.69
+am_AkMu_g0002	1e-05	bowtie2	bcftools (total)	94.36
+am_AkMu_g0002	1e-05	bowtie2	bcftools	76.14
+am_AkMu_g0002	1e-05	minimap2	bcftools (total)	91.50
+am_AkMu_g0002	1e-05	minimap2	bcftools	71.98
+am_AkMu_g0002	1e-05	bwa	bcftools (total)	85.01
+am_AkMu_g0002	1e-05	bwa	bcftools	71.50
+am_BA_g0003	4e-02	bowtie2	VARIANTS (total)	43.07
+am_BA_g0003	4e-02	bowtie2	VARIANTS	23.30
+am_BA_g0003	4e-02	minimap2	VARIANTS (total)	43.88
+am_BA_g0003	4e-02	minimap2	VARIANTS	23.87
+am_BA_g0003	4e-02	bwa	VARIANTS (total)	45.62
+am_BA_g0003	4e-02	bwa	VARIANTS	25.99
+am_BA_g0003	4e-02	bowtie2	bcftools (total)	75.44
+am_BA_g0003	4e-02	bowtie2	bcftools	61.44
+am_BA_g0003	4e-02	minimap2	bcftools (total)	76.69
+am_BA_g0003	4e-02	minimap2	bcftools	61.62
+am_BA_g0003	4e-02	bwa	bcftools (total)	71.36
+am_BA_g0003	4e-02	bwa	bcftools	57.01
+am_BA_g0003	2e-02	bowtie2	VARIANTS (total)	43.80
+am_BA_g0003	2e-02	bowtie2	VARIANTS	23.56
+am_BA_g0003	2e-02	minimap2	VARIANTS (total)	43.26
+am_BA_g0003	2e-02	minimap2	VARIANTS	23.04
+am_BA_g0003	2e-02	bwa	VARIANTS (total)	43.38
+am_BA_g0003	2e-02	bwa	VARIANTS	23.64
+am_BA_g0003	2e-02	bowtie2	bcftools (total)	76.60
+am_BA_g0003	2e-02	bowtie2	bcftools	62.66
+am_BA_g0003	2e-02	minimap2	bcftools (total)	73.35
+am_BA_g0003	2e-02	minimap2	bcftools	58.18
+am_BA_g0003	2e-02	bwa	bcftools (total)	70.10
+am_BA_g0003	2e-02	bwa	bcftools	55.72
+am_BA_g0003	1e-05	bowtie2	VARIANTS (total)	41.87
+am_BA_g0003	1e-05	bowtie2	VARIANTS	22.47
+am_BA_g0003	1e-05	minimap2	VARIANTS (total)	41.90
+am_BA_g0003	1e-05	minimap2	VARIANTS	21.74
+am_BA_g0003	1e-05	bwa	VARIANTS (total)	40.78
+am_BA_g0003	1e-05	bwa	VARIANTS	21.92
+am_BA_g0003	1e-05	bowtie2	bcftools (total)	77.77
+am_BA_g0003	1e-05	bowtie2	bcftools	63.92
+am_BA_g0003	1e-05	minimap2	bcftools (total)	70.33
+am_BA_g0003	1e-05	minimap2	bcftools	55.32
+am_BA_g0003	1e-05	bwa	bcftools (total)	68.97
+am_BA_g0003	1e-05	bwa	bcftools	54.68
+am_BA_g0003	3e-06	bowtie2	VARIANTS (total)	41.39
+am_BA_g0003	3e-06	bowtie2	VARIANTS	22.17
+am_BA_g0003	3e-06	minimap2	VARIANTS (total)	41.25
+am_BA_g0003	3e-06	minimap2	VARIANTS	21.54
+am_BA_g0003	3e-06	bwa	VARIANTS (total)	41.83
+am_BA_g0003	3e-06	bwa	VARIANTS	22.47
+am_BA_g0003	3e-06	bowtie2	bcftools (total)	77.33
+am_BA_g0003	3e-06	bowtie2	bcftools	63.52
+am_BA_g0003	3e-06	minimap2	bcftools (total)	70.20
+am_BA_g0003	3e-06	minimap2	bcftools	55.26
+am_BA_g0003	3e-06	bwa	bcftools (total)	69.41
+am_BA_g0003	3e-06	bwa	bcftools	55.12
+cx_BaXy_g0001	1e-03	bowtie2	VARIANTS (total)	27.73
+cx_BaXy_g0001	1e-03	bowtie2	VARIANTS	17.52
+cx_BaXy_g0001	1e-03	minimap2	VARIANTS (total)	27.94
+cx_BaXy_g0001	1e-03	minimap2	VARIANTS	17.17
+cx_BaXy_g0001	1e-03	bwa	VARIANTS (total)	28.33
+cx_BaXy_g0001	1e-03	bwa	VARIANTS	17.96
+cx_BaXy_g0001	1e-03	bowtie2	bcftools (total)	34.63
+cx_BaXy_g0001	1e-03	bowtie2	bcftools	27.52
+cx_BaXy_g0001	1e-03	minimap2	bcftools (total)	33.82
+cx_BaXy_g0001	1e-03	minimap2	bcftools	26.01
+cx_BaXy_g0001	1e-03	bwa	bcftools (total)	35.01
+cx_BaXy_g0001	1e-03	bwa	bcftools	27.60
+cx_BaXy_g0001	5e-04	bowtie2	VARIANTS (total)	28.02
+cx_BaXy_g0001	5e-04	bowtie2	VARIANTS	17.79
+cx_BaXy_g0001	5e-04	minimap2	VARIANTS (total)	28.59
+cx_BaXy_g0001	5e-04	minimap2	VARIANTS	17.27
+cx_BaXy_g0001	5e-04	bwa	VARIANTS (total)	28.67
+cx_BaXy_g0001	5e-04	bwa	VARIANTS	17.83
+cx_BaXy_g0001	5e-04	bowtie2	bcftools (total)	34.93
+cx_BaXy_g0001	5e-04	bowtie2	bcftools	27.69
+cx_BaXy_g0001	5e-04	minimap2	bcftools (total)	33.69
+cx_BaXy_g0001	5e-04	minimap2	bcftools	25.76
+cx_BaXy_g0001	5e-04	bwa	bcftools (total)	33.20
+cx_BaXy_g0001	5e-04	bwa	bcftools	25.91
+am_BA_g0003	5e-02	bowtie2	VARIANTS (total)	42.12
+am_BA_g0003	5e-02	bowtie2	VARIANTS	21.99
+am_BA_g0003	5e-02	minimap2	VARIANTS (total)	43.69
+am_BA_g0003	5e-02	minimap2	VARIANTS	23.12
+am_BA_g0003	5e-02	bwa	VARIANTS (total)	46.36
+am_BA_g0003	5e-02	bwa	VARIANTS	26.78
+am_BA_g0003	5e-02	bowtie2	bcftools (total)	68.26
+am_BA_g0003	5e-02	bowtie2	bcftools	54.16
+am_BA_g0003	5e-02	minimap2	bcftools (total)	71.88
+am_BA_g0003	5e-02	minimap2	bcftools	56.81
+am_BA_g0003	5e-02	bwa	bcftools (total)	72.40
+am_BA_g0003	5e-02	bwa	bcftools	57.99
+bj_EsCo_g0001	3e-02	bowtie2	VARIANTS (total)	15.41
+bj_EsCo_g0001	3e-02	bowtie2	VARIANTS	13.14
+bj_EsCo_g0001	3e-02	minimap2	VARIANTS (total)	14.90
+bj_EsCo_g0001	3e-02	minimap2	VARIANTS	12.24
+bj_EsCo_g0001	3e-02	bwa	VARIANTS (total)	14.54
+bj_EsCo_g0001	3e-02	bwa	VARIANTS	12.71
+bj_EsCo_g0001	3e-02	bowtie2	bcftools (total)	23.65
+bj_EsCo_g0001	3e-02	bowtie2	bcftools	22.37
+bj_EsCo_g0001	3e-02	minimap2	bcftools (total)	21.41
+bj_EsCo_g0001	3e-02	minimap2	bcftools	19.85
+bj_EsCo_g0001	3e-02	bwa	bcftools (total)	21.01
+bj_EsCo_g0001	3e-02	bwa	bcftools	19.86
+am_BaOv_g0001	5e-06	bowtie2	VARIANTS (total)	42.78
+am_BaOv_g0001	5e-06	bowtie2	VARIANTS	23.66
+am_BaOv_g0001	5e-06	minimap2	VARIANTS (total)	42.00
+am_BaOv_g0001	5e-06	minimap2	VARIANTS	22.53
+am_BaOv_g0001	5e-06	bwa	VARIANTS (total)	41.44
+am_BaOv_g0001	5e-06	bwa	VARIANTS	22.57
+am_BaOv_g0001	5e-06	bowtie2	bcftools (total)	70.45
+am_BaOv_g0001	5e-06	bowtie2	bcftools	57.78
+am_BaOv_g0001	5e-06	minimap2	bcftools (total)	65.18
+am_BaOv_g0001	5e-06	minimap2	bcftools	51.60
+am_BaOv_g0001	5e-06	bwa	bcftools (total)	64.73
+am_BaOv_g0001	5e-06	bwa	bcftools	51.90
+am_AkMu_g0002	1e-06	bowtie2	VARIANTS (total)	51.93
+am_AkMu_g0002	1e-06	bowtie2	VARIANTS	24.56
+am_AkMu_g0002	1e-06	minimap2	VARIANTS (total)	51.98
+am_AkMu_g0002	1e-06	minimap2	VARIANTS	24.36
+am_AkMu_g0002	1e-06	bwa	VARIANTS (total)	44.68
+am_AkMu_g0002	1e-06	bwa	VARIANTS	24.11
+am_AkMu_g0002	1e-06	bowtie2	bcftools (total)	94.85
+am_AkMu_g0002	1e-06	bowtie2	bcftools	76.76
+am_AkMu_g0002	1e-06	minimap2	bcftools (total)	92.84
+am_AkMu_g0002	1e-06	minimap2	bcftools	73.42
+am_AkMu_g0002	1e-06	bwa	bcftools (total)	84.78
+am_AkMu_g0002	1e-06	bwa	bcftools	71.22
+am_PaDi_g0001	1e-03	bowtie2	VARIANTS (total)	40.93
+am_PaDi_g0001	1e-03	bowtie2	VARIANTS	21.85
+am_PaDi_g0001	1e-03	minimap2	VARIANTS (total)	40.54
+am_PaDi_g0001	1e-03	minimap2	VARIANTS	20.98
+am_PaDi_g0001	1e-03	bwa	VARIANTS (total)	40.96
+am_PaDi_g0001	1e-03	bwa	VARIANTS	21.52
+am_PaDi_g0001	1e-03	bowtie2	bcftools (total)	73.39
+am_PaDi_g0001	1e-03	bowtie2	bcftools	60.45
+am_PaDi_g0001	1e-03	minimap2	bcftools (total)	59.98
+am_PaDi_g0001	1e-03	minimap2	bcftools	46.10
+am_PaDi_g0001	1e-03	bwa	bcftools (total)	70.20
+am_PaDi_g0001	1e-03	bwa	bcftools	57.12
+bj_EsCo_g0001	1e-02	bowtie2	VARIANTS (total)	14.98
+bj_EsCo_g0001	1e-02	bowtie2	VARIANTS	12.37
+bj_EsCo_g0001	1e-02	minimap2	VARIANTS (total)	14.64
+bj_EsCo_g0001	1e-02	minimap2	VARIANTS	12.03
+bj_EsCo_g0001	1e-02	bwa	VARIANTS (total)	13.92
+bj_EsCo_g0001	1e-02	bwa	VARIANTS	11.90
+bj_EsCo_g0001	1e-02	bowtie2	bcftools (total)	24.18
+bj_EsCo_g0001	1e-02	bowtie2	bcftools	22.87
+bj_EsCo_g0001	1e-02	minimap2	bcftools (total)	20.88
+bj_EsCo_g0001	1e-02	minimap2	bcftools	19.35
+bj_EsCo_g0001	1e-02	bwa	bcftools (total)	20.53
+bj_EsCo_g0001	1e-02	bwa	bcftools	19.31
+am_BaVu_g0002	5e-03	bowtie2	VARIANTS (total)	23.90
+am_BaVu_g0002	5e-03	bowtie2	VARIANTS	12.86
+am_BaVu_g0002	5e-03	minimap2	VARIANTS (total)	22.95
+am_BaVu_g0002	5e-03	minimap2	VARIANTS	12.36
+am_BaVu_g0002	5e-03	bwa	VARIANTS (total)	22.13
+am_BaVu_g0002	5e-03	bwa	VARIANTS	11.67
+am_BaVu_g0002	5e-03	bowtie2	bcftools (total)	33.44
+am_BaVu_g0002	5e-03	bowtie2	bcftools	26.09
+am_BaVu_g0002	5e-03	minimap2	bcftools (total)	29.05
+am_BaVu_g0002	5e-03	minimap2	bcftools	21.35
+am_BaVu_g0002	5e-03	bwa	bcftools (total)	28.92
+am_BaVu_g0002	5e-03	bwa	bcftools	21.47
+am_PaDi_g0001	1e-06	bowtie2	VARIANTS (total)	41.04
+am_PaDi_g0001	1e-06	bowtie2	VARIANTS	22.18
+am_PaDi_g0001	1e-06	minimap2	VARIANTS (total)	41.27
+am_PaDi_g0001	1e-06	minimap2	VARIANTS	21.32
+am_PaDi_g0001	1e-06	bwa	VARIANTS (total)	39.87
+am_PaDi_g0001	1e-06	bwa	VARIANTS	21.28
+am_PaDi_g0001	1e-06	bowtie2	bcftools (total)	68.49
+am_PaDi_g0001	1e-06	bowtie2	bcftools	55.66
+am_PaDi_g0001	1e-06	minimap2	bcftools (total)	58.86
+am_PaDi_g0001	1e-06	minimap2	bcftools	44.95
+am_PaDi_g0001	1e-06	bwa	bcftools (total)	57.16
+am_PaDi_g0001	1e-06	bwa	bcftools	44.09
+am_BaOv_g0001	1e-05	bowtie2	VARIANTS (total)	42.58
+am_BaOv_g0001	1e-05	bowtie2	VARIANTS	23.75
+am_BaOv_g0001	1e-05	minimap2	VARIANTS (total)	41.84
+am_BaOv_g0001	1e-05	minimap2	VARIANTS	22.36
+am_BaOv_g0001	1e-05	bwa	VARIANTS (total)	41.10
+am_BaOv_g0001	1e-05	bwa	VARIANTS	22.44
+am_BaOv_g0001	1e-05	bowtie2	bcftools (total)	70.69
+am_BaOv_g0001	1e-05	bowtie2	bcftools	58.05
+am_BaOv_g0001	1e-05	minimap2	bcftools (total)	65.36
+am_BaOv_g0001	1e-05	minimap2	bcftools	51.88
+am_BaOv_g0001	1e-05	bwa	bcftools (total)	64.56
+am_BaOv_g0001	1e-05	bwa	bcftools	51.68
+am_BaVu_g0002	2e-02	bowtie2	VARIANTS (total)	24.07
+am_BaVu_g0002	2e-02	bowtie2	VARIANTS	13.13
+am_BaVu_g0002	2e-02	minimap2	VARIANTS (total)	24.04
+am_BaVu_g0002	2e-02	minimap2	VARIANTS	13.17
+am_BaVu_g0002	2e-02	bwa	VARIANTS (total)	23.39
+am_BaVu_g0002	2e-02	bwa	VARIANTS	12.98
+am_BaVu_g0002	2e-02	bowtie2	bcftools (total)	33.21
+am_BaVu_g0002	2e-02	bowtie2	bcftools	25.76
+am_BaVu_g0002	2e-02	minimap2	bcftools (total)	29.55
+am_BaVu_g0002	2e-02	minimap2	bcftools	21.78
+am_BaVu_g0002	2e-02	bwa	bcftools (total)	29.00
+am_BaVu_g0002	2e-02	bwa	bcftools	21.55
+bj_EsCo_g0001	2e-05	bowtie2	VARIANTS (total)	13.28
+bj_EsCo_g0001	2e-05	bowtie2	VARIANTS	11.05
+bj_EsCo_g0001	2e-05	minimap2	VARIANTS (total)	13.54
+bj_EsCo_g0001	2e-05	minimap2	VARIANTS	11.40
+bj_EsCo_g0001	2e-05	bwa	VARIANTS (total)	13.29
+bj_EsCo_g0001	2e-05	bwa	VARIANTS	11.05
+bj_EsCo_g0001	2e-05	bowtie2	bcftools (total)	24.54
+bj_EsCo_g0001	2e-05	bowtie2	bcftools	23.24
+bj_EsCo_g0001	2e-05	minimap2	bcftools (total)	20.51
+bj_EsCo_g0001	2e-05	minimap2	bcftools	19.10
+bj_EsCo_g0001	2e-05	bwa	bcftools (total)	20.06
+bj_EsCo_g0001	2e-05	bwa	bcftools	18.98
+am_BA_g0003	1e-04	bowtie2	VARIANTS (total)	41.62
+am_BA_g0003	1e-04	bowtie2	VARIANTS	22.03
+am_BA_g0003	1e-04	minimap2	VARIANTS (total)	41.15
+am_BA_g0003	1e-04	minimap2	VARIANTS	21.36
+am_BA_g0003	1e-04	bwa	VARIANTS (total)	41.11
+am_BA_g0003	1e-04	bwa	VARIANTS	21.75
+am_BA_g0003	1e-04	bowtie2	bcftools (total)	77.79
+am_BA_g0003	1e-04	bowtie2	bcftools	63.96
+am_BA_g0003	1e-04	minimap2	bcftools (total)	71.53
+am_BA_g0003	1e-04	minimap2	bcftools	56.58
+am_BA_g0003	1e-04	bwa	bcftools (total)	69.84
+am_BA_g0003	1e-04	bwa	bcftools	55.58
+am_BaOv_g0001	1e-04	bowtie2	VARIANTS (total)	42.33
+am_BaOv_g0001	1e-04	bowtie2	VARIANTS	23.39
+am_BaOv_g0001	1e-04	minimap2	VARIANTS (total)	40.93
+am_BaOv_g0001	1e-04	minimap2	VARIANTS	21.74
+am_BaOv_g0001	1e-04	bwa	VARIANTS (total)	41.22
+am_BaOv_g0001	1e-04	bwa	VARIANTS	21.81
+am_BaOv_g0001	1e-04	bowtie2	bcftools (total)	71.01
+am_BaOv_g0001	1e-04	bowtie2	bcftools	58.36
+am_BaOv_g0001	1e-04	minimap2	bcftools (total)	66.25
+am_BaOv_g0001	1e-04	minimap2	bcftools	52.71
+am_BaOv_g0001	1e-04	bwa	bcftools (total)	65.00
+am_BaOv_g0001	1e-04	bwa	bcftools	52.14
+bf_BaFa_g0001	1e-04	bowtie2	VARIANTS (total)	45.23
+bf_BaFa_g0001	1e-04	bowtie2	VARIANTS	26.09
+bf_BaFa_g0001	1e-04	minimap2	VARIANTS (total)	44.03
+bf_BaFa_g0001	1e-04	minimap2	VARIANTS	24.24
+bf_BaFa_g0001	1e-04	bwa	VARIANTS (total)	44.16
+bf_BaFa_g0001	1e-04	bwa	VARIANTS	25.54
+bf_BaFa_g0001	1e-04	bowtie2	bcftools (total)	68.36
+bf_BaFa_g0001	1e-04	bowtie2	bcftools	55.45
+bf_BaFa_g0001	1e-04	minimap2	bcftools (total)	63.60
+bf_BaFa_g0001	1e-04	minimap2	bcftools	49.19
+bf_BaFa_g0001	1e-04	bwa	bcftools (total)	61.04
+bf_BaFa_g0001	1e-04	bwa	bcftools	47.74
+am_AkMu_g0002	3e-05	bowtie2	VARIANTS (total)	51.84
+am_AkMu_g0002	3e-05	bowtie2	VARIANTS	24.23
+am_AkMu_g0002	3e-05	minimap2	VARIANTS (total)	52.99
+am_AkMu_g0002	3e-05	minimap2	VARIANTS	24.57
+am_AkMu_g0002	3e-05	bwa	VARIANTS (total)	43.81
+am_AkMu_g0002	3e-05	bwa	VARIANTS	24.01
+am_AkMu_g0002	3e-05	bowtie2	bcftools (total)	93.74
+am_AkMu_g0002	3e-05	bowtie2	bcftools	75.64
+am_AkMu_g0002	3e-05	minimap2	bcftools (total)	90.82
+am_AkMu_g0002	3e-05	minimap2	bcftools	71.39
+am_AkMu_g0002	3e-05	bwa	bcftools (total)	84.17
+am_AkMu_g0002	3e-05	bwa	bcftools	70.64
+am_BaFr_g0050	3e-06	bowtie2	VARIANTS (total)	76.67
+am_BaFr_g0050	3e-06	bowtie2	VARIANTS	40.31
+am_BaFr_g0050	3e-06	minimap2	VARIANTS (total)	84.50
+am_BaFr_g0050	3e-06	minimap2	VARIANTS	40.11
+am_BaFr_g0050	3e-06	bwa	VARIANTS (total)	74.96
+am_BaFr_g0050	3e-06	bwa	VARIANTS	39.06
+am_BaFr_g0050	3e-06	bowtie2	bcftools (total)	169.24
+am_BaFr_g0050	3e-06	bowtie2	bcftools	145.08
+am_BaFr_g0050	3e-06	minimap2	bcftools (total)	146.58
+am_BaFr_g0050	3e-06	minimap2	bcftools	115.76
+am_BaFr_g0050	3e-06	bwa	bcftools (total)	144.91
+am_BaFr_g0050	3e-06	bwa	bcftools	120.57
+cx_BaXy_g0001	3e-05	bowtie2	VARIANTS (total)	28.51
+cx_BaXy_g0001	3e-05	bowtie2	VARIANTS	17.88
+cx_BaXy_g0001	3e-05	minimap2	VARIANTS (total)	28.65
+cx_BaXy_g0001	3e-05	minimap2	VARIANTS	17.68
+cx_BaXy_g0001	3e-05	bwa	VARIANTS (total)	28.11
+cx_BaXy_g0001	3e-05	bwa	VARIANTS	17.57
+cx_BaXy_g0001	3e-05	bowtie2	bcftools (total)	34.79
+cx_BaXy_g0001	3e-05	bowtie2	bcftools	27.64
+cx_BaXy_g0001	3e-05	minimap2	bcftools (total)	33.66
+cx_BaXy_g0001	3e-05	minimap2	bcftools	25.78
+cx_BaXy_g0001	3e-05	bwa	bcftools (total)	33.02
+cx_BaXy_g0001	3e-05	bwa	bcftools	25.73
+cx_BaXy_g0001	1e-06	bowtie2	VARIANTS (total)	28.98
+cx_BaXy_g0001	1e-06	bowtie2	VARIANTS	18.40
+cx_BaXy_g0001	1e-06	minimap2	VARIANTS (total)	28.97
+cx_BaXy_g0001	1e-06	minimap2	VARIANTS	18.01
+cx_BaXy_g0001	1e-06	bwa	VARIANTS (total)	28.82
+cx_BaXy_g0001	1e-06	bwa	VARIANTS	18.24
+cx_BaXy_g0001	1e-06	bowtie2	bcftools (total)	34.91
+cx_BaXy_g0001	1e-06	bowtie2	bcftools	27.70
+cx_BaXy_g0001	1e-06	minimap2	bcftools (total)	34.25
+cx_BaXy_g0001	1e-06	minimap2	bcftools	26.36
+cx_BaXy_g0001	1e-06	bwa	bcftools (total)	32.75
+cx_BaXy_g0001	1e-06	bwa	bcftools	25.51
+am_BaVu_g0002	2e-06	bowtie2	VARIANTS (total)	22.97
+am_BaVu_g0002	2e-06	bowtie2	VARIANTS	12.27
+am_BaVu_g0002	2e-06	minimap2	VARIANTS (total)	22.14
+am_BaVu_g0002	2e-06	minimap2	VARIANTS	11.47
+am_BaVu_g0002	2e-06	bwa	VARIANTS (total)	21.60
+am_BaVu_g0002	2e-06	bwa	VARIANTS	11.65
+am_BaVu_g0002	2e-06	bowtie2	bcftools (total)	33.65
+am_BaVu_g0002	2e-06	bowtie2	bcftools	26.38
+am_BaVu_g0002	2e-06	minimap2	bcftools (total)	28.87
+am_BaVu_g0002	2e-06	minimap2	bcftools	21.32
+am_BaVu_g0002	2e-06	bwa	bcftools (total)	28.88
+am_BaVu_g0002	2e-06	bwa	bcftools	21.52
+am_PaDi_g0001	4e-06	bowtie2	VARIANTS (total)	40.53
+am_PaDi_g0001	4e-06	bowtie2	VARIANTS	21.82
+am_PaDi_g0001	4e-06	minimap2	VARIANTS (total)	40.45
+am_PaDi_g0001	4e-06	minimap2	VARIANTS	21.20
+am_PaDi_g0001	4e-06	bwa	VARIANTS (total)	40.09
+am_PaDi_g0001	4e-06	bwa	VARIANTS	20.75
+am_PaDi_g0001	4e-06	bowtie2	bcftools (total)	68.38
+am_PaDi_g0001	4e-06	bowtie2	bcftools	55.56
+am_PaDi_g0001	4e-06	minimap2	bcftools (total)	58.57
+am_PaDi_g0001	4e-06	minimap2	bcftools	44.75
+am_PaDi_g0001	4e-06	bwa	bcftools (total)	57.44
+am_PaDi_g0001	4e-06	bwa	bcftools	44.35
+am_BaFr_g0050	3e-05	bowtie2	VARIANTS (total)	78.58
+am_BaFr_g0050	3e-05	bowtie2	VARIANTS	41.75
+am_BaFr_g0050	3e-05	minimap2	VARIANTS (total)	85.91
+am_BaFr_g0050	3e-05	minimap2	VARIANTS	40.95
+am_BaFr_g0050	3e-05	bwa	VARIANTS (total)	77.95
+am_BaFr_g0050	3e-05	bwa	VARIANTS	40.15
+am_BaFr_g0050	3e-05	bowtie2	bcftools (total)	152.16
+am_BaFr_g0050	3e-05	bowtie2	bcftools	127.79
+am_BaFr_g0050	3e-05	minimap2	bcftools (total)	146.81
+am_BaFr_g0050	3e-05	minimap2	bcftools	115.88
+am_BaFr_g0050	3e-05	bwa	bcftools (total)	142.77
+am_BaFr_g0050	3e-05	bwa	bcftools	118.41
+am_BA_g0003	5e-06	bowtie2	VARIANTS (total)	41.38
+am_BA_g0003	5e-06	bowtie2	VARIANTS	21.83
+am_BA_g0003	5e-06	minimap2	VARIANTS (total)	41.23
+am_BA_g0003	5e-06	minimap2	VARIANTS	21.44
+am_BA_g0003	5e-06	bwa	VARIANTS (total)	40.75
+am_BA_g0003	5e-06	bwa	VARIANTS	21.75
+am_BA_g0003	5e-06	bowtie2	bcftools (total)	77.31
+am_BA_g0003	5e-06	bowtie2	bcftools	63.49
+am_BA_g0003	5e-06	minimap2	bcftools (total)	70.04
+am_BA_g0003	5e-06	minimap2	bcftools	55.09
+am_BA_g0003	5e-06	bwa	bcftools (total)	68.83
+am_BA_g0003	5e-06	bwa	bcftools	54.62
+cx_BaXy_g0001	2e-06	bowtie2	VARIANTS (total)	28.40
+cx_BaXy_g0001	2e-06	bowtie2	VARIANTS	17.71
+cx_BaXy_g0001	2e-06	minimap2	VARIANTS (total)	29.73
+cx_BaXy_g0001	2e-06	minimap2	VARIANTS	18.41
+cx_BaXy_g0001	2e-06	bwa	VARIANTS (total)	27.68
+cx_BaXy_g0001	2e-06	bwa	VARIANTS	17.69
+cx_BaXy_g0001	2e-06	bowtie2	bcftools (total)	34.79
+cx_BaXy_g0001	2e-06	bowtie2	bcftools	27.58
+cx_BaXy_g0001	2e-06	minimap2	bcftools (total)	33.66
+cx_BaXy_g0001	2e-06	minimap2	bcftools	25.78
+cx_BaXy_g0001	2e-06	bwa	bcftools (total)	32.85
+cx_BaXy_g0001	2e-06	bwa	bcftools	25.58
+bf_BaFa_g0001	5e-04	bowtie2	VARIANTS (total)	45.00
+bf_BaFa_g0001	5e-04	bowtie2	VARIANTS	25.80
+bf_BaFa_g0001	5e-04	minimap2	VARIANTS (total)	44.60
+bf_BaFa_g0001	5e-04	minimap2	VARIANTS	25.57
+bf_BaFa_g0001	5e-04	bwa	VARIANTS (total)	43.85
+bf_BaFa_g0001	5e-04	bwa	VARIANTS	24.82
+bf_BaFa_g0001	5e-04	bowtie2	bcftools (total)	68.43
+bf_BaFa_g0001	5e-04	bowtie2	bcftools	55.58
+bf_BaFa_g0001	5e-04	minimap2	bcftools (total)	63.78
+bf_BaFa_g0001	5e-04	minimap2	bcftools	49.41
+bf_BaFa_g0001	5e-04	bwa	bcftools (total)	61.10
+bf_BaFa_g0001	5e-04	bwa	bcftools	47.82
+bf_BaFa_g0001	1e-02	bowtie2	VARIANTS (total)	46.29
+bf_BaFa_g0001	1e-02	bowtie2	VARIANTS	27.40
+bf_BaFa_g0001	1e-02	minimap2	VARIANTS (total)	48.20
+bf_BaFa_g0001	1e-02	minimap2	VARIANTS	27.64
+bf_BaFa_g0001	1e-02	bwa	VARIANTS (total)	45.19
+bf_BaFa_g0001	1e-02	bwa	VARIANTS	26.28
+bf_BaFa_g0001	1e-02	bowtie2	bcftools (total)	68.76
+bf_BaFa_g0001	1e-02	bowtie2	bcftools	55.65
+bf_BaFa_g0001	1e-02	minimap2	bcftools (total)	64.22
+bf_BaFa_g0001	1e-02	minimap2	bcftools	49.27
+bf_BaFa_g0001	1e-02	bwa	bcftools (total)	63.06
+bf_BaFa_g0001	1e-02	bwa	bcftools	49.47
+am_PaDi_g0001	5e-03	bowtie2	VARIANTS (total)	41.31
+am_PaDi_g0001	5e-03	bowtie2	VARIANTS	21.90
+am_PaDi_g0001	5e-03	minimap2	VARIANTS (total)	41.16
+am_PaDi_g0001	5e-03	minimap2	VARIANTS	21.83
+am_PaDi_g0001	5e-03	bwa	VARIANTS (total)	40.75
+am_PaDi_g0001	5e-03	bwa	VARIANTS	21.68
+am_PaDi_g0001	5e-03	bowtie2	bcftools (total)	68.52
+am_PaDi_g0001	5e-03	bowtie2	bcftools	55.52
+am_PaDi_g0001	5e-03	minimap2	bcftools (total)	60.01
+am_PaDi_g0001	5e-03	minimap2	bcftools	46.02
+am_PaDi_g0001	5e-03	bwa	bcftools (total)	58.12
+am_PaDi_g0001	5e-03	bwa	bcftools	44.97
+am_PaDi_g0001	3e-02	bowtie2	VARIANTS (total)	43.51
+am_PaDi_g0001	3e-02	bowtie2	VARIANTS	24.12
+am_PaDi_g0001	3e-02	minimap2	VARIANTS (total)	44.94
+am_PaDi_g0001	3e-02	minimap2	VARIANTS	24.43
+am_PaDi_g0001	3e-02	bwa	VARIANTS (total)	44.16
+am_PaDi_g0001	3e-02	bwa	VARIANTS	24.14
+am_PaDi_g0001	3e-02	bowtie2	bcftools (total)	66.85
+am_PaDi_g0001	3e-02	bowtie2	bcftools	53.59
+am_PaDi_g0001	3e-02	minimap2	bcftools (total)	60.53
+am_PaDi_g0001	3e-02	minimap2	bcftools	46.27
+am_PaDi_g0001	3e-02	bwa	bcftools (total)	58.61
+am_PaDi_g0001	3e-02	bwa	bcftools	45.29
+bf_BaFa_g0001	5e-05	bowtie2	VARIANTS (total)	45.87
+bf_BaFa_g0001	5e-05	bowtie2	VARIANTS	26.88
+bf_BaFa_g0001	5e-05	minimap2	VARIANTS (total)	44.58
+bf_BaFa_g0001	5e-05	minimap2	VARIANTS	24.60
+bf_BaFa_g0001	5e-05	bwa	VARIANTS (total)	43.76
+bf_BaFa_g0001	5e-05	bwa	VARIANTS	24.86
+bf_BaFa_g0001	5e-05	bowtie2	bcftools (total)	68.72
+bf_BaFa_g0001	5e-05	bowtie2	bcftools	55.79
+bf_BaFa_g0001	5e-05	minimap2	bcftools (total)	63.57
+bf_BaFa_g0001	5e-05	minimap2	bcftools	49.07
+bf_BaFa_g0001	5e-05	bwa	bcftools (total)	61.18
+bf_BaFa_g0001	5e-05	bwa	bcftools	47.79
+am_BaOv_g0001	2e-05	bowtie2	VARIANTS (total)	41.45
+am_BaOv_g0001	2e-05	bowtie2	VARIANTS	22.53
+am_BaOv_g0001	2e-05	minimap2	VARIANTS (total)	42.07
+am_BaOv_g0001	2e-05	minimap2	VARIANTS	22.83
+am_BaOv_g0001	2e-05	bwa	VARIANTS (total)	42.91
+am_BaOv_g0001	2e-05	bwa	VARIANTS	23.46
+am_BaOv_g0001	2e-05	bowtie2	bcftools (total)	71.72
+am_BaOv_g0001	2e-05	bowtie2	bcftools	59.13
+am_BaOv_g0001	2e-05	minimap2	bcftools (total)	65.15
+am_BaOv_g0001	2e-05	minimap2	bcftools	51.57
+am_BaOv_g0001	2e-05	bwa	bcftools (total)	64.46
+am_BaOv_g0001	2e-05	bwa	bcftools	51.66
+am_BaFr_g0050	3e-02	bowtie2	VARIANTS (total)	94.98
+am_BaFr_g0050	3e-02	bowtie2	VARIANTS	49.12
+am_BaFr_g0050	3e-02	minimap2	VARIANTS (total)	86.74
+am_BaFr_g0050	3e-02	minimap2	VARIANTS	47.54
+am_BaFr_g0050	3e-02	bwa	VARIANTS (total)	85.69
+am_BaFr_g0050	3e-02	bwa	VARIANTS	47.08
+am_BaFr_g0050	3e-02	bowtie2	bcftools (total)	156.14
+am_BaFr_g0050	3e-02	bowtie2	bcftools	125.98
+am_BaFr_g0050	3e-02	minimap2	bcftools (total)	144.74
+am_BaFr_g0050	3e-02	minimap2	bcftools	117.48
+am_BaFr_g0050	3e-02	bwa	bcftools (total)	141.57
+am_BaFr_g0050	3e-02	bwa	bcftools	116.38
+am_AkMu_g0002	1e-04	bowtie2	VARIANTS (total)	53.10
+am_AkMu_g0002	1e-04	bowtie2	VARIANTS	25.58
+am_AkMu_g0002	1e-04	minimap2	VARIANTS (total)	53.10
+am_AkMu_g0002	1e-04	minimap2	VARIANTS	24.91
+am_AkMu_g0002	1e-04	bwa	VARIANTS (total)	45.32
+am_AkMu_g0002	1e-04	bwa	VARIANTS	24.82
+am_AkMu_g0002	1e-04	bowtie2	bcftools (total)	93.88
+am_AkMu_g0002	1e-04	bowtie2	bcftools	75.81
+am_AkMu_g0002	1e-04	minimap2	bcftools (total)	91.09
+am_AkMu_g0002	1e-04	minimap2	bcftools	71.50
+am_AkMu_g0002	1e-04	bwa	bcftools (total)	84.39
+am_AkMu_g0002	1e-04	bwa	bcftools	70.79
+am_BaVu_g0002	1e-06	bowtie2	VARIANTS (total)	22.56
+am_BaVu_g0002	1e-06	bowtie2	VARIANTS	12.22
+am_BaVu_g0002	1e-06	minimap2	VARIANTS (total)	23.08
+am_BaVu_g0002	1e-06	minimap2	VARIANTS	12.44
+am_BaVu_g0002	1e-06	bwa	VARIANTS (total)	22.60
+am_BaVu_g0002	1e-06	bwa	VARIANTS	12.03
+am_BaVu_g0002	1e-06	bowtie2	bcftools (total)	33.63
+am_BaVu_g0002	1e-06	bowtie2	bcftools	26.36
+am_BaVu_g0002	1e-06	minimap2	bcftools (total)	28.63
+am_BaVu_g0002	1e-06	minimap2	bcftools	21.03
+am_BaVu_g0002	1e-06	bwa	bcftools (total)	28.65
+am_BaVu_g0002	1e-06	bwa	bcftools	21.30
+am_BaVu_g0002	5e-06	bowtie2	VARIANTS (total)	22.64
+am_BaVu_g0002	5e-06	bowtie2	VARIANTS	12.04
+am_BaVu_g0002	5e-06	minimap2	VARIANTS (total)	22.47
+am_BaVu_g0002	5e-06	minimap2	VARIANTS	11.62
+am_BaVu_g0002	5e-06	bwa	VARIANTS (total)	22.72
+am_BaVu_g0002	5e-06	bwa	VARIANTS	12.30
+am_BaVu_g0002	5e-06	bowtie2	bcftools (total)	33.67
+am_BaVu_g0002	5e-06	bowtie2	bcftools	26.34
+am_BaVu_g0002	5e-06	minimap2	bcftools (total)	29.23
+am_BaVu_g0002	5e-06	minimap2	bcftools	21.59
+am_BaVu_g0002	5e-06	bwa	bcftools (total)	28.39
+am_BaVu_g0002	5e-06	bwa	bcftools	21.01
+cx_BaXy_g0001	1e-02	bowtie2	VARIANTS (total)	29.63
+cx_BaXy_g0001	1e-02	bowtie2	VARIANTS	19.13
+cx_BaXy_g0001	1e-02	minimap2	VARIANTS (total)	29.44
+cx_BaXy_g0001	1e-02	minimap2	VARIANTS	18.14
+cx_BaXy_g0001	1e-02	bwa	VARIANTS (total)	29.68
+cx_BaXy_g0001	1e-02	bwa	VARIANTS	18.87
+cx_BaXy_g0001	1e-02	bowtie2	bcftools (total)	34.85
+cx_BaXy_g0001	1e-02	bowtie2	bcftools	27.47
+cx_BaXy_g0001	1e-02	minimap2	bcftools (total)	34.02
+cx_BaXy_g0001	1e-02	minimap2	bcftools	25.89
+cx_BaXy_g0001	1e-02	bwa	bcftools (total)	32.96
+cx_BaXy_g0001	1e-02	bwa	bcftools	25.59
+cx_BaXy_g0001	4e-05	bowtie2	VARIANTS (total)	28.29
+cx_BaXy_g0001	4e-05	bowtie2	VARIANTS	17.87
+cx_BaXy_g0001	4e-05	minimap2	VARIANTS (total)	28.98
+cx_BaXy_g0001	4e-05	minimap2	VARIANTS	17.66
+cx_BaXy_g0001	4e-05	bwa	VARIANTS (total)	28.72
+cx_BaXy_g0001	4e-05	bwa	VARIANTS	18.07
+cx_BaXy_g0001	4e-05	bowtie2	bcftools (total)	35.02
+cx_BaXy_g0001	4e-05	bowtie2	bcftools	27.74
+cx_BaXy_g0001	4e-05	minimap2	bcftools (total)	33.82
+cx_BaXy_g0001	4e-05	minimap2	bcftools	25.98
+cx_BaXy_g0001	4e-05	bwa	bcftools (total)	33.17
+cx_BaXy_g0001	4e-05	bwa	bcftools	25.92
+cx_BaXy_g0001	4e-02	bowtie2	VARIANTS (total)	31.23
+cx_BaXy_g0001	4e-02	bowtie2	VARIANTS	19.98
+cx_BaXy_g0001	4e-02	minimap2	VARIANTS (total)	31.28
+cx_BaXy_g0001	4e-02	minimap2	VARIANTS	19.83
+cx_BaXy_g0001	4e-02	bwa	VARIANTS (total)	30.68
+cx_BaXy_g0001	4e-02	bwa	VARIANTS	19.88
+cx_BaXy_g0001	4e-02	bowtie2	bcftools (total)	33.59
+cx_BaXy_g0001	4e-02	bowtie2	bcftools	26.13
+cx_BaXy_g0001	4e-02	minimap2	bcftools (total)	34.54
+cx_BaXy_g0001	4e-02	minimap2	bcftools	26.48
+cx_BaXy_g0001	4e-02	bwa	bcftools (total)	33.93
+cx_BaXy_g0001	4e-02	bwa	bcftools	26.43
+cx_BaXy_g0001	2e-05	bowtie2	VARIANTS (total)	28.43
+cx_BaXy_g0001	2e-05	bowtie2	VARIANTS	18.14
+cx_BaXy_g0001	2e-05	minimap2	VARIANTS (total)	29.15
+cx_BaXy_g0001	2e-05	minimap2	VARIANTS	18.18
+cx_BaXy_g0001	2e-05	bwa	VARIANTS (total)	28.26
+cx_BaXy_g0001	2e-05	bwa	VARIANTS	17.82
+cx_BaXy_g0001	2e-05	bowtie2	bcftools (total)	35.04
+cx_BaXy_g0001	2e-05	bowtie2	bcftools	27.76
+cx_BaXy_g0001	2e-05	minimap2	bcftools (total)	33.76
+cx_BaXy_g0001	2e-05	minimap2	bcftools	25.82
+cx_BaXy_g0001	2e-05	bwa	bcftools (total)	33.65
+cx_BaXy_g0001	2e-05	bwa	bcftools	26.33
+am_BaVu_g0002	5e-05	bowtie2	VARIANTS (total)	23.15
+am_BaVu_g0002	5e-05	bowtie2	VARIANTS	12.47
+am_BaVu_g0002	5e-05	minimap2	VARIANTS (total)	22.86
+am_BaVu_g0002	5e-05	minimap2	VARIANTS	11.99
+am_BaVu_g0002	5e-05	bwa	VARIANTS (total)	22.13
+am_BaVu_g0002	5e-05	bwa	VARIANTS	11.66
+am_BaVu_g0002	5e-05	bowtie2	bcftools (total)	33.62
+am_BaVu_g0002	5e-05	bowtie2	bcftools	26.28
+am_BaVu_g0002	5e-05	minimap2	bcftools (total)	28.87
+am_BaVu_g0002	5e-05	minimap2	bcftools	21.28
+am_BaVu_g0002	5e-05	bwa	bcftools (total)	28.73
+am_BaVu_g0002	5e-05	bwa	bcftools	21.36
+am_BA_g0003	3e-02	bowtie2	VARIANTS (total)	43.95
+am_BA_g0003	3e-02	bowtie2	VARIANTS	23.80
+am_BA_g0003	3e-02	minimap2	VARIANTS (total)	43.50
+am_BA_g0003	3e-02	minimap2	VARIANTS	23.30
+am_BA_g0003	3e-02	bwa	VARIANTS (total)	44.93
+am_BA_g0003	3e-02	bwa	VARIANTS	25.86
+am_BA_g0003	3e-02	bowtie2	bcftools (total)	75.00
+am_BA_g0003	3e-02	bowtie2	bcftools	60.89
+am_BA_g0003	3e-02	minimap2	bcftools (total)	71.49
+am_BA_g0003	3e-02	minimap2	bcftools	56.38
+am_BA_g0003	3e-02	bwa	bcftools (total)	70.49
+am_BA_g0003	3e-02	bwa	bcftools	56.01
+am_BA_g0003	5e-04	bowtie2	VARIANTS (total)	42.16
+am_BA_g0003	5e-04	bowtie2	VARIANTS	22.41
+am_BA_g0003	5e-04	minimap2	VARIANTS (total)	40.54
+am_BA_g0003	5e-04	minimap2	VARIANTS	20.64
+am_BA_g0003	5e-04	bwa	VARIANTS (total)	40.93
+am_BA_g0003	5e-04	bwa	VARIANTS	21.65
+am_BA_g0003	5e-04	bowtie2	bcftools (total)	77.55
+am_BA_g0003	5e-04	bowtie2	bcftools	63.67
+am_BA_g0003	5e-04	minimap2	bcftools (total)	70.26
+am_BA_g0003	5e-04	minimap2	bcftools	55.20
+am_BA_g0003	5e-04	bwa	bcftools (total)	68.88
+am_BA_g0003	5e-04	bwa	bcftools	54.59
+bf_BaFa_g0001	2e-06	bowtie2	VARIANTS (total)	45.49
+bf_BaFa_g0001	2e-06	bowtie2	VARIANTS	26.82
+bf_BaFa_g0001	2e-06	minimap2	VARIANTS (total)	45.20
+bf_BaFa_g0001	2e-06	minimap2	VARIANTS	25.04
+bf_BaFa_g0001	2e-06	bwa	VARIANTS (total)	44.11
+bf_BaFa_g0001	2e-06	bwa	VARIANTS	25.29
+bf_BaFa_g0001	2e-06	bowtie2	bcftools (total)	69.34
+bf_BaFa_g0001	2e-06	bowtie2	bcftools	56.56
+bf_BaFa_g0001	2e-06	minimap2	bcftools (total)	63.24
+bf_BaFa_g0001	2e-06	minimap2	bcftools	48.91
+bf_BaFa_g0001	2e-06	bwa	bcftools (total)	61.08
+bf_BaFa_g0001	2e-06	bwa	bcftools	47.78
+am_PaDi_g0001	2e-02	bowtie2	VARIANTS (total)	42.50
+am_PaDi_g0001	2e-02	bowtie2	VARIANTS	22.80
+am_PaDi_g0001	2e-02	minimap2	VARIANTS (total)	43.94
+am_PaDi_g0001	2e-02	minimap2	VARIANTS	23.97
+am_PaDi_g0001	2e-02	bwa	VARIANTS (total)	42.46
+am_PaDi_g0001	2e-02	bwa	VARIANTS	23.05
+am_PaDi_g0001	2e-02	bowtie2	bcftools (total)	67.89
+am_PaDi_g0001	2e-02	bowtie2	bcftools	54.71
+am_PaDi_g0001	2e-02	minimap2	bcftools (total)	59.98
+am_PaDi_g0001	2e-02	minimap2	bcftools	45.77
+am_PaDi_g0001	2e-02	bwa	bcftools (total)	61.13
+am_PaDi_g0001	2e-02	bwa	bcftools	47.78
+am_BaFr_g0050	1e-04	bowtie2	VARIANTS (total)	77.85
+am_BaFr_g0050	1e-04	bowtie2	VARIANTS	40.79
+am_BaFr_g0050	1e-04	minimap2	VARIANTS (total)	87.19
+am_BaFr_g0050	1e-04	minimap2	VARIANTS	42.44
+am_BaFr_g0050	1e-04	bwa	VARIANTS (total)	78.98
+am_BaFr_g0050	1e-04	bwa	VARIANTS	42.48
+am_BaFr_g0050	1e-04	bowtie2	bcftools (total)	152.39
+am_BaFr_g0050	1e-04	bowtie2	bcftools	128.17
+am_BaFr_g0050	1e-04	minimap2	bcftools (total)	147.17
+am_BaFr_g0050	1e-04	minimap2	bcftools	116.04
+am_BaFr_g0050	1e-04	bwa	bcftools (total)	139.47
+am_BaFr_g0050	1e-04	bwa	bcftools	114.83
+bj_EsCo_g0001	1e-04	bowtie2	VARIANTS (total)	13.82
+bj_EsCo_g0001	1e-04	bowtie2	VARIANTS	11.72
+bj_EsCo_g0001	1e-04	minimap2	VARIANTS (total)	13.58
+bj_EsCo_g0001	1e-04	minimap2	VARIANTS	11.46
+bj_EsCo_g0001	1e-04	bwa	VARIANTS (total)	13.14
+bj_EsCo_g0001	1e-04	bwa	VARIANTS	11.36
+bj_EsCo_g0001	1e-04	bowtie2	bcftools (total)	24.04
+bj_EsCo_g0001	1e-04	bowtie2	bcftools	22.79
+bj_EsCo_g0001	1e-04	minimap2	bcftools (total)	21.36
+bj_EsCo_g0001	1e-04	minimap2	bcftools	19.89
+bj_EsCo_g0001	1e-04	bwa	bcftools (total)	20.19
+bj_EsCo_g0001	1e-04	bwa	bcftools	18.98
+am_BA_g0003	1e-06	bowtie2	VARIANTS (total)	41.03
+am_BA_g0003	1e-06	bowtie2	VARIANTS	22.08
+am_BA_g0003	1e-06	minimap2	VARIANTS (total)	40.52
+am_BA_g0003	1e-06	minimap2	VARIANTS	20.72
+am_BA_g0003	1e-06	bwa	VARIANTS (total)	40.54
+am_BA_g0003	1e-06	bwa	VARIANTS	21.81
+am_BA_g0003	1e-06	bowtie2	bcftools (total)	77.62
+am_BA_g0003	1e-06	bowtie2	bcftools	63.79
+am_BA_g0003	1e-06	minimap2	bcftools (total)	70.48
+am_BA_g0003	1e-06	minimap2	bcftools	55.51
+am_BA_g0003	1e-06	bwa	bcftools (total)	69.03
+am_BA_g0003	1e-06	bwa	bcftools	54.75
+am_BaVu_g0002	4e-02	bowtie2	VARIANTS (total)	24.97
+am_BaVu_g0002	4e-02	bowtie2	VARIANTS	13.98
+am_BaVu_g0002	4e-02	minimap2	VARIANTS (total)	24.18
+am_BaVu_g0002	4e-02	minimap2	VARIANTS	13.67
+am_BaVu_g0002	4e-02	bwa	VARIANTS (total)	23.89
+am_BaVu_g0002	4e-02	bwa	VARIANTS	13.52
+am_BaVu_g0002	4e-02	bowtie2	bcftools (total)	32.73
+am_BaVu_g0002	4e-02	bowtie2	bcftools	25.28
+am_BaVu_g0002	4e-02	minimap2	bcftools (total)	29.65
+am_BaVu_g0002	4e-02	minimap2	bcftools	21.82
+am_BaVu_g0002	4e-02	bwa	bcftools (total)	29.54
+am_BaVu_g0002	4e-02	bwa	bcftools	22.02
+am_AkMu_g0002	5e-02	bowtie2	VARIANTS (total)	56.88
+am_AkMu_g0002	5e-02	bowtie2	VARIANTS	28.64
+am_AkMu_g0002	5e-02	minimap2	VARIANTS (total)	59.22
+am_AkMu_g0002	5e-02	minimap2	VARIANTS	30.16
+am_AkMu_g0002	5e-02	bwa	VARIANTS (total)	59.06
+am_AkMu_g0002	5e-02	bwa	VARIANTS	30.97
+am_AkMu_g0002	5e-02	bowtie2	bcftools (total)	92.00
+am_AkMu_g0002	5e-02	bowtie2	bcftools	73.10
+am_AkMu_g0002	5e-02	minimap2	bcftools (total)	94.94
+am_AkMu_g0002	5e-02	minimap2	bcftools	74.79
+am_AkMu_g0002	5e-02	bwa	bcftools (total)	94.01
+am_AkMu_g0002	5e-02	bwa	bcftools	75.15
+cx_BaXy_g0001	3e-02	bowtie2	VARIANTS (total)	31.25
+cx_BaXy_g0001	3e-02	bowtie2	VARIANTS	19.99
+cx_BaXy_g0001	3e-02	minimap2	VARIANTS (total)	31.27
+cx_BaXy_g0001	3e-02	minimap2	VARIANTS	19.65
+cx_BaXy_g0001	3e-02	bwa	VARIANTS (total)	30.55
+cx_BaXy_g0001	3e-02	bwa	VARIANTS	19.79
+cx_BaXy_g0001	3e-02	bowtie2	bcftools (total)	34.30
+cx_BaXy_g0001	3e-02	bowtie2	bcftools	26.89
+cx_BaXy_g0001	3e-02	minimap2	bcftools (total)	34.16
+cx_BaXy_g0001	3e-02	minimap2	bcftools	26.17
+cx_BaXy_g0001	3e-02	bwa	bcftools (total)	34.83
+cx_BaXy_g0001	3e-02	bwa	bcftools	27.38
+am_AkMu_g0002	2e-05	bowtie2	VARIANTS (total)	51.72
+am_AkMu_g0002	2e-05	bowtie2	VARIANTS	24.27
+am_AkMu_g0002	2e-05	minimap2	VARIANTS (total)	53.19
+am_AkMu_g0002	2e-05	minimap2	VARIANTS	25.13
+am_AkMu_g0002	2e-05	bwa	VARIANTS (total)	45.11
+am_AkMu_g0002	2e-05	bwa	VARIANTS	24.86
+am_AkMu_g0002	2e-05	bowtie2	bcftools (total)	93.71
+am_AkMu_g0002	2e-05	bowtie2	bcftools	75.71
+am_AkMu_g0002	2e-05	minimap2	bcftools (total)	91.03
+am_AkMu_g0002	2e-05	minimap2	bcftools	71.52
+am_AkMu_g0002	2e-05	bwa	bcftools (total)	84.36
+am_AkMu_g0002	2e-05	bwa	bcftools	70.89
+bj_EsCo_g0001	5e-04	bowtie2	VARIANTS (total)	14.48
+bj_EsCo_g0001	5e-04	bowtie2	VARIANTS	11.91
+bj_EsCo_g0001	5e-04	minimap2	VARIANTS (total)	13.57
+bj_EsCo_g0001	5e-04	minimap2	VARIANTS	11.39
+bj_EsCo_g0001	5e-04	bwa	VARIANTS (total)	13.55
+bj_EsCo_g0001	5e-04	bwa	VARIANTS	11.33
+bj_EsCo_g0001	5e-04	bowtie2	bcftools (total)	24.30
+bj_EsCo_g0001	5e-04	bowtie2	bcftools	22.98
+bj_EsCo_g0001	5e-04	minimap2	bcftools (total)	20.63
+bj_EsCo_g0001	5e-04	minimap2	bcftools	19.16
+bj_EsCo_g0001	5e-04	bwa	bcftools (total)	20.61
+bj_EsCo_g0001	5e-04	bwa	bcftools	19.46
+am_PaDi_g0001	3e-05	bowtie2	VARIANTS (total)	41.01
+am_PaDi_g0001	3e-05	bowtie2	VARIANTS	22.03
+am_PaDi_g0001	3e-05	minimap2	VARIANTS (total)	40.87
+am_PaDi_g0001	3e-05	minimap2	VARIANTS	20.95
+am_PaDi_g0001	3e-05	bwa	VARIANTS (total)	40.79
+am_PaDi_g0001	3e-05	bwa	VARIANTS	21.37
+am_PaDi_g0001	3e-05	bowtie2	bcftools (total)	68.39
+am_PaDi_g0001	3e-05	bowtie2	bcftools	55.59
+am_PaDi_g0001	3e-05	minimap2	bcftools (total)	59.16
+am_PaDi_g0001	3e-05	minimap2	bcftools	45.30
+am_PaDi_g0001	3e-05	bwa	bcftools (total)	57.07
+am_PaDi_g0001	3e-05	bwa	bcftools	44.03
+bf_BaFa_g0001	4e-02	bowtie2	VARIANTS (total)	49.11
+bf_BaFa_g0001	4e-02	bowtie2	VARIANTS	30.21
+bf_BaFa_g0001	4e-02	minimap2	VARIANTS (total)	49.94
+bf_BaFa_g0001	4e-02	minimap2	VARIANTS	29.60
+bf_BaFa_g0001	4e-02	bwa	VARIANTS (total)	50.14
+bf_BaFa_g0001	4e-02	bwa	VARIANTS	31.01
+bf_BaFa_g0001	4e-02	bowtie2	bcftools (total)	66.38
+bf_BaFa_g0001	4e-02	bowtie2	bcftools	52.94
+bf_BaFa_g0001	4e-02	minimap2	bcftools (total)	67.18
+bf_BaFa_g0001	4e-02	minimap2	bcftools	52.40
+bf_BaFa_g0001	4e-02	bwa	bcftools (total)	63.49
+bf_BaFa_g0001	4e-02	bwa	bcftools	49.90
+am_BA_g0003	4e-06	bowtie2	VARIANTS (total)	41.44
+am_BA_g0003	4e-06	bowtie2	VARIANTS	21.83
+am_BA_g0003	4e-06	minimap2	VARIANTS (total)	40.99
+am_BA_g0003	4e-06	minimap2	VARIANTS	21.09
+am_BA_g0003	4e-06	bwa	VARIANTS (total)	41.12
+am_BA_g0003	4e-06	bwa	VARIANTS	21.66
+am_BA_g0003	4e-06	bowtie2	bcftools (total)	77.60
+am_BA_g0003	4e-06	bowtie2	bcftools	63.75
+am_BA_g0003	4e-06	minimap2	bcftools (total)	70.07
+am_BA_g0003	4e-06	minimap2	bcftools	55.21
+am_BA_g0003	4e-06	bwa	bcftools (total)	68.92
+am_BA_g0003	4e-06	bwa	bcftools	54.73
+am_BaFr_g0050	2e-02	bowtie2	VARIANTS (total)	90.92
+am_BaFr_g0050	2e-02	bowtie2	VARIANTS	45.06
+am_BaFr_g0050	2e-02	minimap2	VARIANTS (total)	91.02
+am_BaFr_g0050	2e-02	minimap2	VARIANTS	45.38
+am_BaFr_g0050	2e-02	bwa	VARIANTS (total)	84.85
+am_BaFr_g0050	2e-02	bwa	VARIANTS	46.75
+am_BaFr_g0050	2e-02	bowtie2	bcftools (total)	174.57
+am_BaFr_g0050	2e-02	bowtie2	bcftools	144.51
+am_BaFr_g0050	2e-02	minimap2	bcftools (total)	164.04
+am_BaFr_g0050	2e-02	minimap2	bcftools	132.02
+am_BaFr_g0050	2e-02	bwa	bcftools (total)	141.30
+am_BaFr_g0050	2e-02	bwa	bcftools	116.13
+bf_BaFa_g0001	5e-06	bowtie2	VARIANTS (total)	45.74
+bf_BaFa_g0001	5e-06	bowtie2	VARIANTS	26.55
+bf_BaFa_g0001	5e-06	minimap2	VARIANTS (total)	44.75
+bf_BaFa_g0001	5e-06	minimap2	VARIANTS	24.70
+bf_BaFa_g0001	5e-06	bwa	VARIANTS (total)	43.06
+bf_BaFa_g0001	5e-06	bwa	VARIANTS	24.65
+bf_BaFa_g0001	5e-06	bowtie2	bcftools (total)	68.46
+bf_BaFa_g0001	5e-06	bowtie2	bcftools	55.67
+bf_BaFa_g0001	5e-06	minimap2	bcftools (total)	63.48
+bf_BaFa_g0001	5e-06	minimap2	bcftools	49.05
+bf_BaFa_g0001	5e-06	bwa	bcftools (total)	61.21
+bf_BaFa_g0001	5e-06	bwa	bcftools	47.86
+am_BaOv_g0001	4e-02	bowtie2	VARIANTS (total)	46.44
+am_BaOv_g0001	4e-02	bowtie2	VARIANTS	26.50
+am_BaOv_g0001	4e-02	minimap2	VARIANTS (total)	46.36
+am_BaOv_g0001	4e-02	minimap2	VARIANTS	26.71
+am_BaOv_g0001	4e-02	bwa	VARIANTS (total)	46.99
+am_BaOv_g0001	4e-02	bwa	VARIANTS	27.39
+am_BaOv_g0001	4e-02	bowtie2	bcftools (total)	69.46
+am_BaOv_g0001	4e-02	bowtie2	bcftools	56.20
+am_BaOv_g0001	4e-02	minimap2	bcftools (total)	68.39
+am_BaOv_g0001	4e-02	minimap2	bcftools	54.39
+am_BaOv_g0001	4e-02	bwa	bcftools (total)	69.44
+am_BaOv_g0001	4e-02	bwa	bcftools	56.15
+am_BaFr_g0050	5e-02	bowtie2	VARIANTS (total)	92.31
+am_BaFr_g0050	5e-02	bowtie2	VARIANTS	46.32
+am_BaFr_g0050	5e-02	minimap2	VARIANTS (total)	89.74
+am_BaFr_g0050	5e-02	minimap2	VARIANTS	49.78
+am_BaFr_g0050	5e-02	bwa	VARIANTS (total)	96.13
+am_BaFr_g0050	5e-02	bwa	VARIANTS	50.20
+am_BaFr_g0050	5e-02	bowtie2	bcftools (total)	150.17
+am_BaFr_g0050	5e-02	bowtie2	bcftools	119.58
+am_BaFr_g0050	5e-02	minimap2	bcftools (total)	147.65
+am_BaFr_g0050	5e-02	minimap2	bcftools	120.45
+am_BaFr_g0050	5e-02	bwa	bcftools (total)	149.89
+am_BaFr_g0050	5e-02	bwa	bcftools	119.49
+bf_BaFa_g0001	1e-06	bowtie2	VARIANTS (total)	44.74
+bf_BaFa_g0001	1e-06	bowtie2	VARIANTS	25.89
+bf_BaFa_g0001	1e-06	minimap2	VARIANTS (total)	45.04
+bf_BaFa_g0001	1e-06	minimap2	VARIANTS	25.09
+bf_BaFa_g0001	1e-06	bwa	VARIANTS (total)	44.11
+bf_BaFa_g0001	1e-06	bwa	VARIANTS	25.49
+bf_BaFa_g0001	1e-06	bowtie2	bcftools (total)	68.98
+bf_BaFa_g0001	1e-06	bowtie2	bcftools	56.03
+bf_BaFa_g0001	1e-06	minimap2	bcftools (total)	63.51
+bf_BaFa_g0001	1e-06	minimap2	bcftools	49.12
+bf_BaFa_g0001	1e-06	bwa	bcftools (total)	61.17
+bf_BaFa_g0001	1e-06	bwa	bcftools	47.88
+am_BaFr_g0050	1e-05	bowtie2	VARIANTS (total)	78.39
+am_BaFr_g0050	1e-05	bowtie2	VARIANTS	41.70
+am_BaFr_g0050	1e-05	minimap2	VARIANTS (total)	84.20
+am_BaFr_g0050	1e-05	minimap2	VARIANTS	39.32
+am_BaFr_g0050	1e-05	bwa	VARIANTS (total)	76.45
+am_BaFr_g0050	1e-05	bwa	VARIANTS	39.48
+am_BaFr_g0050	1e-05	bowtie2	bcftools (total)	153.46
+am_BaFr_g0050	1e-05	bowtie2	bcftools	129.15
+am_BaFr_g0050	1e-05	minimap2	bcftools (total)	148.05
+am_BaFr_g0050	1e-05	minimap2	bcftools	117.16
+am_BaFr_g0050	1e-05	bwa	bcftools (total)	143.22
+am_BaFr_g0050	1e-05	bwa	bcftools	118.71
+am_BaFr_g0050	1e-06	bowtie2	VARIANTS (total)	79.16
+am_BaFr_g0050	1e-06	bowtie2	VARIANTS	41.86
+am_BaFr_g0050	1e-06	minimap2	VARIANTS (total)	84.62
+am_BaFr_g0050	1e-06	minimap2	VARIANTS	40.08
+am_BaFr_g0050	1e-06	bwa	VARIANTS (total)	76.79
+am_BaFr_g0050	1e-06	bwa	VARIANTS	39.57
+am_BaFr_g0050	1e-06	bowtie2	bcftools (total)	175.04
+am_BaFr_g0050	1e-06	bowtie2	bcftools	150.78
+am_BaFr_g0050	1e-06	minimap2	bcftools (total)	158.27
+am_BaFr_g0050	1e-06	minimap2	bcftools	126.85
+am_BaFr_g0050	1e-06	bwa	bcftools (total)	148.52
+am_BaFr_g0050	1e-06	bwa	bcftools	123.95
+am_AkMu_g0002	5e-03	bowtie2	VARIANTS (total)	53.76
+am_AkMu_g0002	5e-03	bowtie2	VARIANTS	25.84
+am_AkMu_g0002	5e-03	minimap2	VARIANTS (total)	53.91
+am_AkMu_g0002	5e-03	minimap2	VARIANTS	25.41
+am_AkMu_g0002	5e-03	bwa	VARIANTS (total)	45.96
+am_AkMu_g0002	5e-03	bwa	VARIANTS	25.77
+am_AkMu_g0002	5e-03	bowtie2	bcftools (total)	95.37
+am_AkMu_g0002	5e-03	bowtie2	bcftools	77.05
+am_AkMu_g0002	5e-03	minimap2	bcftools (total)	91.62
+am_AkMu_g0002	5e-03	minimap2	bcftools	71.74
+am_AkMu_g0002	5e-03	bwa	bcftools (total)	84.80
+am_AkMu_g0002	5e-03	bwa	bcftools	71.18
+am_BaFr_g0050	4e-02	bowtie2	VARIANTS (total)	93.10
+am_BaFr_g0050	4e-02	bowtie2	VARIANTS	46.53
+am_BaFr_g0050	4e-02	minimap2	VARIANTS (total)	89.68
+am_BaFr_g0050	4e-02	minimap2	VARIANTS	49.91
+am_BaFr_g0050	4e-02	bwa	VARIANTS (total)	86.93
+am_BaFr_g0050	4e-02	bwa	VARIANTS	47.74
+am_BaFr_g0050	4e-02	bowtie2	bcftools (total)	155.23
+am_BaFr_g0050	4e-02	bowtie2	bcftools	124.97
+am_BaFr_g0050	4e-02	minimap2	bcftools (total)	147.04
+am_BaFr_g0050	4e-02	minimap2	bcftools	119.81
+am_BaFr_g0050	4e-02	bwa	bcftools (total)	143.29
+am_BaFr_g0050	4e-02	bwa	bcftools	118.12
+am_PaDi_g0001	4e-02	bowtie2	VARIANTS (total)	44.98
+am_PaDi_g0001	4e-02	bowtie2	VARIANTS	24.77
+am_PaDi_g0001	4e-02	minimap2	VARIANTS (total)	45.69
+am_PaDi_g0001	4e-02	minimap2	VARIANTS	25.60
+am_PaDi_g0001	4e-02	bwa	VARIANTS (total)	44.44
+am_PaDi_g0001	4e-02	bwa	VARIANTS	24.99
+am_PaDi_g0001	4e-02	bowtie2	bcftools (total)	64.55
+am_PaDi_g0001	4e-02	bowtie2	bcftools	51.19
+am_PaDi_g0001	4e-02	minimap2	bcftools (total)	61.10
+am_PaDi_g0001	4e-02	minimap2	bcftools	46.84
+am_PaDi_g0001	4e-02	bwa	bcftools (total)	59.48
+am_PaDi_g0001	4e-02	bwa	bcftools	46.05
+am_BaFr_g0050	5e-06	bowtie2	VARIANTS (total)	76.78
+am_BaFr_g0050	5e-06	bowtie2	VARIANTS	40.04
+am_BaFr_g0050	5e-06	minimap2	VARIANTS (total)	83.42
+am_BaFr_g0050	5e-06	minimap2	VARIANTS	39.60
+am_BaFr_g0050	5e-06	bwa	VARIANTS (total)	77.08
+am_BaFr_g0050	5e-06	bwa	VARIANTS	40.00
+am_BaFr_g0050	5e-06	bowtie2	bcftools (total)	151.55
+am_BaFr_g0050	5e-06	bowtie2	bcftools	127.10
+am_BaFr_g0050	5e-06	minimap2	bcftools (total)	164.17
+am_BaFr_g0050	5e-06	minimap2	bcftools	133.22
+am_BaFr_g0050	5e-06	bwa	bcftools (total)	139.25
+am_BaFr_g0050	5e-06	bwa	bcftools	114.68
+am_BaFr_g0050	2e-06	bowtie2	VARIANTS (total)	77.12
+am_BaFr_g0050	2e-06	bowtie2	VARIANTS	39.29
+am_BaFr_g0050	2e-06	minimap2	VARIANTS (total)	84.48
+am_BaFr_g0050	2e-06	minimap2	VARIANTS	39.39
+am_BaFr_g0050	2e-06	bwa	VARIANTS (total)	76.91
+am_BaFr_g0050	2e-06	bwa	VARIANTS	39.76
+am_BaFr_g0050	2e-06	bowtie2	bcftools (total)	152.23
+am_BaFr_g0050	2e-06	bowtie2	bcftools	127.82
+am_BaFr_g0050	2e-06	minimap2	bcftools (total)	146.93
+am_BaFr_g0050	2e-06	minimap2	bcftools	116.05
+am_BaFr_g0050	2e-06	bwa	bcftools (total)	139.27
+am_BaFr_g0050	2e-06	bwa	bcftools	114.92
+am_BaVu_g0002	1e-03	bowtie2	VARIANTS (total)	22.72
+am_BaVu_g0002	1e-03	bowtie2	VARIANTS	12.54
+am_BaVu_g0002	1e-03	minimap2	VARIANTS (total)	21.85
+am_BaVu_g0002	1e-03	minimap2	VARIANTS	11.68
+am_BaVu_g0002	1e-03	bwa	VARIANTS (total)	22.25
+am_BaVu_g0002	1e-03	bwa	VARIANTS	11.86
+am_BaVu_g0002	1e-03	bowtie2	bcftools (total)	33.96
+am_BaVu_g0002	1e-03	bowtie2	bcftools	26.63
+am_BaVu_g0002	1e-03	minimap2	bcftools (total)	29.19
+am_BaVu_g0002	1e-03	minimap2	bcftools	21.53
+am_BaVu_g0002	1e-03	bwa	bcftools (total)	28.91
+am_BaVu_g0002	1e-03	bwa	bcftools	21.55
+am_BA_g0003	4e-05	bowtie2	VARIANTS (total)	42.28
+am_BA_g0003	4e-05	bowtie2	VARIANTS	22.71
+am_BA_g0003	4e-05	minimap2	VARIANTS (total)	41.59
+am_BA_g0003	4e-05	minimap2	VARIANTS	21.46
+am_BA_g0003	4e-05	bwa	VARIANTS (total)	40.74
+am_BA_g0003	4e-05	bwa	VARIANTS	22.08
+am_BA_g0003	4e-05	bowtie2	bcftools (total)	78.32
+am_BA_g0003	4e-05	bowtie2	bcftools	64.50
+am_BA_g0003	4e-05	minimap2	bcftools (total)	70.88
+am_BA_g0003	4e-05	minimap2	bcftools	55.83
+am_BA_g0003	4e-05	bwa	bcftools (total)	69.09
+am_BA_g0003	4e-05	bwa	bcftools	54.69
+bj_EsCo_g0001	2e-06	bowtie2	VARIANTS (total)	13.91
+bj_EsCo_g0001	2e-06	bowtie2	VARIANTS	11.75
+bj_EsCo_g0001	2e-06	minimap2	VARIANTS (total)	13.31
+bj_EsCo_g0001	2e-06	minimap2	VARIANTS	11.19
+bj_EsCo_g0001	2e-06	bwa	VARIANTS (total)	13.46
+bj_EsCo_g0001	2e-06	bwa	VARIANTS	11.56
+bj_EsCo_g0001	2e-06	bowtie2	bcftools (total)	24.31
+bj_EsCo_g0001	2e-06	bowtie2	bcftools	23.02
+bj_EsCo_g0001	2e-06	minimap2	bcftools (total)	20.63
+bj_EsCo_g0001	2e-06	minimap2	bcftools	19.19
+bj_EsCo_g0001	2e-06	bwa	bcftools (total)	20.34
+bj_EsCo_g0001	2e-06	bwa	bcftools	19.14
+bj_EsCo_g0001	1e-06	bowtie2	VARIANTS (total)	14.15
+bj_EsCo_g0001	1e-06	bowtie2	VARIANTS	11.86
+bj_EsCo_g0001	1e-06	minimap2	VARIANTS (total)	13.91
+bj_EsCo_g0001	1e-06	minimap2	VARIANTS	11.32
+bj_EsCo_g0001	1e-06	bwa	VARIANTS (total)	13.30
+bj_EsCo_g0001	1e-06	bwa	VARIANTS	11.20
+bj_EsCo_g0001	1e-06	bowtie2	bcftools (total)	24.39
+bj_EsCo_g0001	1e-06	bowtie2	bcftools	23.18
+bj_EsCo_g0001	1e-06	minimap2	bcftools (total)	20.52
+bj_EsCo_g0001	1e-06	minimap2	bcftools	19.04
+bj_EsCo_g0001	1e-06	bwa	bcftools (total)	20.26
+bj_EsCo_g0001	1e-06	bwa	bcftools	19.03
+am_PaDi_g0001	5e-06	bowtie2	VARIANTS (total)	41.56
+am_PaDi_g0001	5e-06	bowtie2	VARIANTS	22.23
+am_PaDi_g0001	5e-06	minimap2	VARIANTS (total)	40.49
+am_PaDi_g0001	5e-06	minimap2	VARIANTS	20.91
+am_PaDi_g0001	5e-06	bwa	VARIANTS (total)	39.50
+am_PaDi_g0001	5e-06	bwa	VARIANTS	20.57
+am_PaDi_g0001	5e-06	bowtie2	bcftools (total)	68.59
+am_PaDi_g0001	5e-06	bowtie2	bcftools	55.69
+am_PaDi_g0001	5e-06	minimap2	bcftools (total)	59.12
+am_PaDi_g0001	5e-06	minimap2	bcftools	45.21
+am_PaDi_g0001	5e-06	bwa	bcftools (total)	57.33
+am_PaDi_g0001	5e-06	bwa	bcftools	44.20
+am_BA_g0003	5e-05	bowtie2	VARIANTS (total)	41.83
+am_BA_g0003	5e-05	bowtie2	VARIANTS	22.04
+am_BA_g0003	5e-05	minimap2	VARIANTS (total)	41.82
+am_BA_g0003	5e-05	minimap2	VARIANTS	21.71
+am_BA_g0003	5e-05	bwa	VARIANTS (total)	41.46
+am_BA_g0003	5e-05	bwa	VARIANTS	21.72
+am_BA_g0003	5e-05	bowtie2	bcftools (total)	77.77
+am_BA_g0003	5e-05	bowtie2	bcftools	63.91
+am_BA_g0003	5e-05	minimap2	bcftools (total)	70.19
+am_BA_g0003	5e-05	minimap2	bcftools	55.28
+am_BA_g0003	5e-05	bwa	bcftools (total)	69.60
+am_BA_g0003	5e-05	bwa	bcftools	55.32
+am_AkMu_g0002	3e-02	bowtie2	VARIANTS (total)	56.56
+am_AkMu_g0002	3e-02	bowtie2	VARIANTS	28.11
+am_AkMu_g0002	3e-02	minimap2	VARIANTS (total)	58.00
+am_AkMu_g0002	3e-02	minimap2	VARIANTS	28.67
+am_AkMu_g0002	3e-02	bwa	VARIANTS (total)	55.96
+am_AkMu_g0002	3e-02	bwa	VARIANTS	28.73
+am_AkMu_g0002	3e-02	bowtie2	bcftools (total)	96.10
+am_AkMu_g0002	3e-02	bowtie2	bcftools	77.41
+am_AkMu_g0002	3e-02	minimap2	bcftools (total)	92.94
+am_AkMu_g0002	3e-02	minimap2	bcftools	72.95
+am_AkMu_g0002	3e-02	bwa	bcftools (total)	91.68
+am_AkMu_g0002	3e-02	bwa	bcftools	72.96
+am_BaVu_g0002	4e-05	bowtie2	VARIANTS (total)	23.04
+am_BaVu_g0002	4e-05	bowtie2	VARIANTS	12.33
+am_BaVu_g0002	4e-05	minimap2	VARIANTS (total)	22.50
+am_BaVu_g0002	4e-05	minimap2	VARIANTS	12.09
+am_BaVu_g0002	4e-05	bwa	VARIANTS (total)	22.60
+am_BaVu_g0002	4e-05	bwa	VARIANTS	12.14
+am_BaVu_g0002	4e-05	bowtie2	bcftools (total)	33.72
+am_BaVu_g0002	4e-05	bowtie2	bcftools	26.47
+am_BaVu_g0002	4e-05	minimap2	bcftools (total)	29.00
+am_BaVu_g0002	4e-05	minimap2	bcftools	21.39
+am_BaVu_g0002	4e-05	bwa	bcftools (total)	28.61
+am_BaVu_g0002	4e-05	bwa	bcftools	21.23
+am_BaVu_g0002	1e-02	bowtie2	VARIANTS (total)	23.75
+am_BaVu_g0002	1e-02	bowtie2	VARIANTS	12.71
+am_BaVu_g0002	1e-02	minimap2	VARIANTS (total)	23.76
+am_BaVu_g0002	1e-02	minimap2	VARIANTS	12.84
+am_BaVu_g0002	1e-02	bwa	VARIANTS (total)	23.01
+am_BaVu_g0002	1e-02	bwa	VARIANTS	12.45
+am_BaVu_g0002	1e-02	bowtie2	bcftools (total)	33.18
+am_BaVu_g0002	1e-02	bowtie2	bcftools	25.83
+am_BaVu_g0002	1e-02	minimap2	bcftools (total)	29.27
+am_BaVu_g0002	1e-02	minimap2	bcftools	21.58
+am_BaVu_g0002	1e-02	bwa	bcftools (total)	28.86
+am_BaVu_g0002	1e-02	bwa	bcftools	21.50
+cx_BaXy_g0001	5e-06	bowtie2	VARIANTS (total)	29.44
+cx_BaXy_g0001	5e-06	bowtie2	VARIANTS	18.20
+cx_BaXy_g0001	5e-06	minimap2	VARIANTS (total)	29.28
+cx_BaXy_g0001	5e-06	minimap2	VARIANTS	17.92
+cx_BaXy_g0001	5e-06	bwa	VARIANTS (total)	27.80
+cx_BaXy_g0001	5e-06	bwa	VARIANTS	17.21
+cx_BaXy_g0001	5e-06	bowtie2	bcftools (total)	34.85
+cx_BaXy_g0001	5e-06	bowtie2	bcftools	27.58
+cx_BaXy_g0001	5e-06	minimap2	bcftools (total)	33.72
+cx_BaXy_g0001	5e-06	minimap2	bcftools	25.75
+cx_BaXy_g0001	5e-06	bwa	bcftools (total)	33.04
+cx_BaXy_g0001	5e-06	bwa	bcftools	25.73
+am_PaDi_g0001	3e-06	bowtie2	VARIANTS (total)	41.53
+am_PaDi_g0001	3e-06	bowtie2	VARIANTS	22.25
+am_PaDi_g0001	3e-06	minimap2	VARIANTS (total)	40.29
+am_PaDi_g0001	3e-06	minimap2	VARIANTS	20.61
+am_PaDi_g0001	3e-06	bwa	VARIANTS (total)	39.60
+am_PaDi_g0001	3e-06	bwa	VARIANTS	20.18
+am_PaDi_g0001	3e-06	bowtie2	bcftools (total)	68.39
+am_PaDi_g0001	3e-06	bowtie2	bcftools	55.53
+am_PaDi_g0001	3e-06	minimap2	bcftools (total)	58.61
+am_PaDi_g0001	3e-06	minimap2	bcftools	44.74
+am_PaDi_g0001	3e-06	bwa	bcftools (total)	57.45
+am_PaDi_g0001	3e-06	bwa	bcftools	44.31
+am_PaDi_g0001	2e-05	bowtie2	VARIANTS (total)	41.68
+am_PaDi_g0001	2e-05	bowtie2	VARIANTS	22.63
+am_PaDi_g0001	2e-05	minimap2	VARIANTS (total)	40.28
+am_PaDi_g0001	2e-05	minimap2	VARIANTS	20.96
+am_PaDi_g0001	2e-05	bwa	VARIANTS (total)	39.87
+am_PaDi_g0001	2e-05	bwa	VARIANTS	20.49
+am_PaDi_g0001	2e-05	bowtie2	bcftools (total)	68.51
+am_PaDi_g0001	2e-05	bowtie2	bcftools	55.73
+am_PaDi_g0001	2e-05	minimap2	bcftools (total)	58.98
+am_PaDi_g0001	2e-05	minimap2	bcftools	45.18
+am_PaDi_g0001	2e-05	bwa	bcftools (total)	57.57
+am_PaDi_g0001	2e-05	bwa	bcftools	44.55
+bj_EsCo_g0001	5e-03	bowtie2	VARIANTS (total)	14.50
+bj_EsCo_g0001	5e-03	bowtie2	VARIANTS	11.94
+bj_EsCo_g0001	5e-03	minimap2	VARIANTS (total)	13.72
+bj_EsCo_g0001	5e-03	minimap2	VARIANTS	11.30
+bj_EsCo_g0001	5e-03	bwa	VARIANTS (total)	13.27
+bj_EsCo_g0001	5e-03	bwa	VARIANTS	11.36
+bj_EsCo_g0001	5e-03	bowtie2	bcftools (total)	24.27
+bj_EsCo_g0001	5e-03	bowtie2	bcftools	22.96
+bj_EsCo_g0001	5e-03	minimap2	bcftools (total)	21.26
+bj_EsCo_g0001	5e-03	minimap2	bcftools	19.75
+bj_EsCo_g0001	5e-03	bwa	bcftools (total)	20.36
+bj_EsCo_g0001	5e-03	bwa	bcftools	19.18
+am_AkMu_g0002	4e-06	bowtie2	VARIANTS (total)	51.51
+am_AkMu_g0002	4e-06	bowtie2	VARIANTS	24.19
+am_AkMu_g0002	4e-06	minimap2	VARIANTS (total)	52.43
+am_AkMu_g0002	4e-06	minimap2	VARIANTS	24.29
+am_AkMu_g0002	4e-06	bwa	VARIANTS (total)	45.21
+am_AkMu_g0002	4e-06	bwa	VARIANTS	24.45
+am_AkMu_g0002	4e-06	bowtie2	bcftools (total)	93.77
+am_AkMu_g0002	4e-06	bowtie2	bcftools	75.67
+am_AkMu_g0002	4e-06	minimap2	bcftools (total)	92.14
+am_AkMu_g0002	4e-06	minimap2	bcftools	72.66
+am_AkMu_g0002	4e-06	bwa	bcftools (total)	84.71
+am_AkMu_g0002	4e-06	bwa	bcftools	71.24
+am_AkMu_g0002	4e-02	bowtie2	VARIANTS (total)	56.27
+am_AkMu_g0002	4e-02	bowtie2	VARIANTS	29.15
+am_AkMu_g0002	4e-02	minimap2	VARIANTS (total)	57.50
+am_AkMu_g0002	4e-02	minimap2	VARIANTS	28.91
+am_AkMu_g0002	4e-02	bwa	VARIANTS (total)	57.51
+am_AkMu_g0002	4e-02	bwa	VARIANTS	29.41
+am_AkMu_g0002	4e-02	bowtie2	bcftools (total)	93.68
+am_AkMu_g0002	4e-02	bowtie2	bcftools	74.92
+am_AkMu_g0002	4e-02	minimap2	bcftools (total)	92.93
+am_AkMu_g0002	4e-02	minimap2	bcftools	72.88
+am_AkMu_g0002	4e-02	bwa	bcftools (total)	91.42
+am_AkMu_g0002	4e-02	bwa	bcftools	72.74
+am_PaDi_g0001	5e-05	bowtie2	VARIANTS (total)	40.21
+am_PaDi_g0001	5e-05	bowtie2	VARIANTS	21.33
+am_PaDi_g0001	5e-05	minimap2	VARIANTS (total)	40.36
+am_PaDi_g0001	5e-05	minimap2	VARIANTS	20.91
+am_PaDi_g0001	5e-05	bwa	VARIANTS (total)	39.84
+am_PaDi_g0001	5e-05	bwa	VARIANTS	20.87
+am_PaDi_g0001	5e-05	bowtie2	bcftools (total)	75.10
+am_PaDi_g0001	5e-05	bowtie2	bcftools	62.27
+am_PaDi_g0001	5e-05	minimap2	bcftools (total)	63.95
+am_PaDi_g0001	5e-05	minimap2	bcftools	50.06
+am_PaDi_g0001	5e-05	bwa	bcftools (total)	57.76
+am_PaDi_g0001	5e-05	bwa	bcftools	44.68
+am_BA_g0003	5e-03	bowtie2	VARIANTS (total)	42.66
+am_BA_g0003	5e-03	bowtie2	VARIANTS	22.74
+am_BA_g0003	5e-03	minimap2	VARIANTS (total)	42.94
+am_BA_g0003	5e-03	minimap2	VARIANTS	22.45
+am_BA_g0003	5e-03	bwa	VARIANTS (total)	41.41
+am_BA_g0003	5e-03	bwa	VARIANTS	22.25
+am_BA_g0003	5e-03	bowtie2	bcftools (total)	77.49
+am_BA_g0003	5e-03	bowtie2	bcftools	63.52
+am_BA_g0003	5e-03	minimap2	bcftools (total)	70.92
+am_BA_g0003	5e-03	minimap2	bcftools	55.84
+am_BA_g0003	5e-03	bwa	bcftools (total)	69.59
+am_BA_g0003	5e-03	bwa	bcftools	55.20
+am_PaDi_g0001	1e-04	bowtie2	VARIANTS (total)	39.81
+am_PaDi_g0001	1e-04	bowtie2	VARIANTS	20.80
+am_PaDi_g0001	1e-04	minimap2	VARIANTS (total)	40.32
+am_PaDi_g0001	1e-04	minimap2	VARIANTS	20.96
+am_PaDi_g0001	1e-04	bwa	VARIANTS (total)	39.51
+am_PaDi_g0001	1e-04	bwa	VARIANTS	20.96
+am_PaDi_g0001	1e-04	bowtie2	bcftools (total)	68.62
+am_PaDi_g0001	1e-04	bowtie2	bcftools	55.83
+am_PaDi_g0001	1e-04	minimap2	bcftools (total)	58.68
+am_PaDi_g0001	1e-04	minimap2	bcftools	44.80
+am_PaDi_g0001	1e-04	bwa	bcftools (total)	57.63
+am_PaDi_g0001	1e-04	bwa	bcftools	44.59
+am_BA_g0003	1e-03	bowtie2	VARIANTS (total)	42.12
+am_BA_g0003	1e-03	bowtie2	VARIANTS	22.69
+am_BA_g0003	1e-03	minimap2	VARIANTS (total)	42.54
+am_BA_g0003	1e-03	minimap2	VARIANTS	22.29
+am_BA_g0003	1e-03	bwa	VARIANTS (total)	41.31
+am_BA_g0003	1e-03	bwa	VARIANTS	21.96
+am_BA_g0003	1e-03	bowtie2	bcftools (total)	77.46
+am_BA_g0003	1e-03	bowtie2	bcftools	63.52
+am_BA_g0003	1e-03	minimap2	bcftools (total)	70.54
+am_BA_g0003	1e-03	minimap2	bcftools	55.33
+am_BA_g0003	1e-03	bwa	bcftools (total)	69.11
+am_BA_g0003	1e-03	bwa	bcftools	54.82
+cx_BaXy_g0001	2e-02	bowtie2	VARIANTS (total)	29.87
+cx_BaXy_g0001	2e-02	bowtie2	VARIANTS	18.85
+cx_BaXy_g0001	2e-02	minimap2	VARIANTS (total)	29.14
+cx_BaXy_g0001	2e-02	minimap2	VARIANTS	18.40
+cx_BaXy_g0001	2e-02	bwa	VARIANTS (total)	29.92
+cx_BaXy_g0001	2e-02	bwa	VARIANTS	19.34
+cx_BaXy_g0001	2e-02	bowtie2	bcftools (total)	34.91
+cx_BaXy_g0001	2e-02	bowtie2	bcftools	27.40
+cx_BaXy_g0001	2e-02	minimap2	bcftools (total)	34.16
+cx_BaXy_g0001	2e-02	minimap2	bcftools	25.98
+cx_BaXy_g0001	2e-02	bwa	bcftools (total)	33.44
+cx_BaXy_g0001	2e-02	bwa	bcftools	26.06
+am_BaOv_g0001	5e-04	bowtie2	VARIANTS (total)	42.51
+am_BaOv_g0001	5e-04	bowtie2	VARIANTS	23.92
+am_BaOv_g0001	5e-04	minimap2	VARIANTS (total)	42.17
+am_BaOv_g0001	5e-04	minimap2	VARIANTS	22.67
+am_BaOv_g0001	5e-04	bwa	VARIANTS (total)	41.36
+am_BaOv_g0001	5e-04	bwa	VARIANTS	23.11
+am_BaOv_g0001	5e-04	bowtie2	bcftools (total)	71.88
+am_BaOv_g0001	5e-04	bowtie2	bcftools	59.16
+am_BaOv_g0001	5e-04	minimap2	bcftools (total)	67.24
+am_BaOv_g0001	5e-04	minimap2	bcftools	53.45
+am_BaOv_g0001	5e-04	bwa	bcftools (total)	65.16
+am_BaOv_g0001	5e-04	bwa	bcftools	52.34
+cx_BaXy_g0001	4e-06	bowtie2	VARIANTS (total)	28.55
+cx_BaXy_g0001	4e-06	bowtie2	VARIANTS	17.93
+cx_BaXy_g0001	4e-06	minimap2	VARIANTS (total)	28.59
+cx_BaXy_g0001	4e-06	minimap2	VARIANTS	17.74
+cx_BaXy_g0001	4e-06	bwa	VARIANTS (total)	29.21
+cx_BaXy_g0001	4e-06	bwa	VARIANTS	18.42
+cx_BaXy_g0001	4e-06	bowtie2	bcftools (total)	34.67
+cx_BaXy_g0001	4e-06	bowtie2	bcftools	27.56
+cx_BaXy_g0001	4e-06	minimap2	bcftools (total)	33.67
+cx_BaXy_g0001	4e-06	minimap2	bcftools	25.85
+cx_BaXy_g0001	4e-06	bwa	bcftools (total)	32.64
+cx_BaXy_g0001	4e-06	bwa	bcftools	25.30
+am_BaOv_g0001	3e-02	bowtie2	VARIANTS (total)	47.84
+am_BaOv_g0001	3e-02	bowtie2	VARIANTS	27.54
+am_BaOv_g0001	3e-02	minimap2	VARIANTS (total)	45.85
+am_BaOv_g0001	3e-02	minimap2	VARIANTS	25.73
+am_BaOv_g0001	3e-02	bwa	VARIANTS (total)	44.87
+am_BaOv_g0001	3e-02	bwa	VARIANTS	25.86
+am_BaOv_g0001	3e-02	bowtie2	bcftools (total)	70.04
+am_BaOv_g0001	3e-02	bowtie2	bcftools	56.91
+am_BaOv_g0001	3e-02	minimap2	bcftools (total)	67.52
+am_BaOv_g0001	3e-02	minimap2	bcftools	53.55
+am_BaOv_g0001	3e-02	bwa	bcftools (total)	66.76
+am_BaOv_g0001	3e-02	bwa	bcftools	53.57
+am_BaFr_g0050	4e-05	bowtie2	VARIANTS (total)	76.59
+am_BaFr_g0050	4e-05	bowtie2	VARIANTS	40.32
+am_BaFr_g0050	4e-05	minimap2	VARIANTS (total)	84.90
+am_BaFr_g0050	4e-05	minimap2	VARIANTS	41.16
+am_BaFr_g0050	4e-05	bwa	VARIANTS (total)	74.31
+am_BaFr_g0050	4e-05	bwa	VARIANTS	38.58
+am_BaFr_g0050	4e-05	bowtie2	bcftools (total)	151.22
+am_BaFr_g0050	4e-05	bowtie2	bcftools	127.07
+am_BaFr_g0050	4e-05	minimap2	bcftools (total)	166.01
+am_BaFr_g0050	4e-05	minimap2	bcftools	135.05
+am_BaFr_g0050	4e-05	bwa	bcftools (total)	140.25
+am_BaFr_g0050	4e-05	bwa	bcftools	115.80
+am_BaVu_g0002	3e-06	bowtie2	VARIANTS (total)	22.70
+am_BaVu_g0002	3e-06	bowtie2	VARIANTS	12.23
+am_BaVu_g0002	3e-06	minimap2	VARIANTS (total)	22.51
+am_BaVu_g0002	3e-06	minimap2	VARIANTS	11.88
+am_BaVu_g0002	3e-06	bwa	VARIANTS (total)	22.39
+am_BaVu_g0002	3e-06	bwa	VARIANTS	12.00
+am_BaVu_g0002	3e-06	bowtie2	bcftools (total)	33.69
+am_BaVu_g0002	3e-06	bowtie2	bcftools	26.38
+am_BaVu_g0002	3e-06	minimap2	bcftools (total)	28.90
+am_BaVu_g0002	3e-06	minimap2	bcftools	21.36
+am_BaVu_g0002	3e-06	bwa	bcftools (total)	28.70
+am_BaVu_g0002	3e-06	bwa	bcftools	21.43
+am_BaOv_g0001	1e-02	bowtie2	VARIANTS (total)	43.92
+am_BaOv_g0001	1e-02	bowtie2	VARIANTS	24.76
+am_BaOv_g0001	1e-02	minimap2	VARIANTS (total)	42.59
+am_BaOv_g0001	1e-02	minimap2	VARIANTS	23.39
+am_BaOv_g0001	1e-02	bwa	VARIANTS (total)	42.77
+am_BaOv_g0001	1e-02	bwa	VARIANTS	23.44
+am_BaOv_g0001	1e-02	bowtie2	bcftools (total)	71.44
+am_BaOv_g0001	1e-02	bowtie2	bcftools	58.45
+am_BaOv_g0001	1e-02	minimap2	bcftools (total)	66.31
+am_BaOv_g0001	1e-02	minimap2	bcftools	52.45
+am_BaOv_g0001	1e-02	bwa	bcftools (total)	65.25
+am_BaOv_g0001	1e-02	bwa	bcftools	52.19
+am_BaOv_g0001	2e-02	bowtie2	VARIANTS (total)	44.46
+am_BaOv_g0001	2e-02	bowtie2	VARIANTS	24.92
+am_BaOv_g0001	2e-02	minimap2	VARIANTS (total)	44.30
+am_BaOv_g0001	2e-02	minimap2	VARIANTS	25.08
+am_BaOv_g0001	2e-02	bwa	VARIANTS (total)	44.80
+am_BaOv_g0001	2e-02	bwa	VARIANTS	25.08
+am_BaOv_g0001	2e-02	bowtie2	bcftools (total)	70.58
+am_BaOv_g0001	2e-02	bowtie2	bcftools	57.45
+am_BaOv_g0001	2e-02	minimap2	bcftools (total)	67.15
+am_BaOv_g0001	2e-02	minimap2	bcftools	53.18
+am_BaOv_g0001	2e-02	bwa	bcftools (total)	65.16
+am_BaOv_g0001	2e-02	bwa	bcftools	51.92
+am_BaOv_g0001	5e-05	bowtie2	VARIANTS (total)	42.88
+am_BaOv_g0001	5e-05	bowtie2	VARIANTS	23.77
+am_BaOv_g0001	5e-05	minimap2	VARIANTS (total)	42.96
+am_BaOv_g0001	5e-05	minimap2	VARIANTS	23.34
+am_BaOv_g0001	5e-05	bwa	VARIANTS (total)	41.65
+am_BaOv_g0001	5e-05	bwa	VARIANTS	22.68
+am_BaOv_g0001	5e-05	bowtie2	bcftools (total)	70.79
+am_BaOv_g0001	5e-05	bowtie2	bcftools	58.11
+am_BaOv_g0001	5e-05	minimap2	bcftools (total)	65.45
+am_BaOv_g0001	5e-05	minimap2	bcftools	51.87
+am_BaOv_g0001	5e-05	bwa	bcftools (total)	64.48
+am_BaOv_g0001	5e-05	bwa	bcftools	51.68
+am_BaFr_g0050	1e-03	bowtie2	VARIANTS (total)	78.70
+am_BaFr_g0050	1e-03	bowtie2	VARIANTS	41.29
+am_BaFr_g0050	1e-03	minimap2	VARIANTS (total)	86.00
+am_BaFr_g0050	1e-03	minimap2	VARIANTS	40.73
+am_BaFr_g0050	1e-03	bwa	VARIANTS (total)	76.91
+am_BaFr_g0050	1e-03	bwa	VARIANTS	39.87
+am_BaFr_g0050	1e-03	bowtie2	bcftools (total)	151.93
+am_BaFr_g0050	1e-03	bowtie2	bcftools	127.32
+am_BaFr_g0050	1e-03	minimap2	bcftools (total)	146.71
+am_BaFr_g0050	1e-03	minimap2	bcftools	115.73
+am_BaFr_g0050	1e-03	bwa	bcftools (total)	138.62
+am_BaFr_g0050	1e-03	bwa	bcftools	113.98
+am_BaOv_g0001	4e-06	bowtie2	VARIANTS (total)	42.43
+am_BaOv_g0001	4e-06	bowtie2	VARIANTS	23.65
+am_BaOv_g0001	4e-06	minimap2	VARIANTS (total)	41.50
+am_BaOv_g0001	4e-06	minimap2	VARIANTS	22.24
+am_BaOv_g0001	4e-06	bwa	VARIANTS (total)	41.03
+am_BaOv_g0001	4e-06	bwa	VARIANTS	22.66
+am_BaOv_g0001	4e-06	bowtie2	bcftools (total)	70.52
+am_BaOv_g0001	4e-06	bowtie2	bcftools	57.86
+am_BaOv_g0001	4e-06	minimap2	bcftools (total)	66.78
+am_BaOv_g0001	4e-06	minimap2	bcftools	53.20
+am_BaOv_g0001	4e-06	bwa	bcftools (total)	64.33
+am_BaOv_g0001	4e-06	bwa	bcftools	51.44
+am_BaOv_g0001	5e-03	bowtie2	VARIANTS (total)	43.02
+am_BaOv_g0001	5e-03	bowtie2	VARIANTS	23.61
+am_BaOv_g0001	5e-03	minimap2	VARIANTS (total)	43.51
+am_BaOv_g0001	5e-03	minimap2	VARIANTS	23.59
+am_BaOv_g0001	5e-03	bwa	VARIANTS (total)	42.79
+am_BaOv_g0001	5e-03	bwa	VARIANTS	23.50
+am_BaOv_g0001	5e-03	bowtie2	bcftools (total)	73.54
+am_BaOv_g0001	5e-03	bowtie2	bcftools	60.64
+am_BaOv_g0001	5e-03	minimap2	bcftools (total)	65.81
+am_BaOv_g0001	5e-03	minimap2	bcftools	52.00
+am_BaOv_g0001	5e-03	bwa	bcftools (total)	65.00
+am_BaOv_g0001	5e-03	bwa	bcftools	51.99
+bf_BaFa_g0001	2e-05	bowtie2	VARIANTS (total)	44.59
+bf_BaFa_g0001	2e-05	bowtie2	VARIANTS	25.58
+bf_BaFa_g0001	2e-05	minimap2	VARIANTS (total)	44.93
+bf_BaFa_g0001	2e-05	minimap2	VARIANTS	25.80
+bf_BaFa_g0001	2e-05	bwa	VARIANTS (total)	43.04
+bf_BaFa_g0001	2e-05	bwa	VARIANTS	24.95
+bf_BaFa_g0001	2e-05	bowtie2	bcftools (total)	68.47
+bf_BaFa_g0001	2e-05	bowtie2	bcftools	55.64
+bf_BaFa_g0001	2e-05	minimap2	bcftools (total)	64.27
+bf_BaFa_g0001	2e-05	minimap2	bcftools	49.75
+bf_BaFa_g0001	2e-05	bwa	bcftools (total)	62.40
+bf_BaFa_g0001	2e-05	bwa	bcftools	48.97
+am_BaFr_g0050	4e-06	bowtie2	VARIANTS (total)	78.41
+am_BaFr_g0050	4e-06	bowtie2	VARIANTS	41.36
+am_BaFr_g0050	4e-06	minimap2	VARIANTS (total)	83.39
+am_BaFr_g0050	4e-06	minimap2	VARIANTS	39.37
+am_BaFr_g0050	4e-06	bwa	VARIANTS (total)	76.80
+am_BaFr_g0050	4e-06	bwa	VARIANTS	40.49
+am_BaFr_g0050	4e-06	bowtie2	bcftools (total)	165.48
+am_BaFr_g0050	4e-06	bowtie2	bcftools	141.17
+am_BaFr_g0050	4e-06	minimap2	bcftools (total)	165.56
+am_BaFr_g0050	4e-06	minimap2	bcftools	134.72
+am_BaFr_g0050	4e-06	bwa	bcftools (total)	139.25
+am_BaFr_g0050	4e-06	bwa	bcftools	114.89
+am_BaFr_g0050	5e-03	bowtie2	VARIANTS (total)	88.49
+am_BaFr_g0050	5e-03	bowtie2	VARIANTS	43.58
+am_BaFr_g0050	5e-03	minimap2	VARIANTS (total)	85.58
+am_BaFr_g0050	5e-03	minimap2	VARIANTS	40.43
+am_BaFr_g0050	5e-03	bwa	VARIANTS (total)	77.79
+am_BaFr_g0050	5e-03	bwa	VARIANTS	40.95
+am_BaFr_g0050	5e-03	bowtie2	bcftools (total)	157.47
+am_BaFr_g0050	5e-03	bowtie2	bcftools	127.86
+am_BaFr_g0050	5e-03	minimap2	bcftools (total)	147.26
+am_BaFr_g0050	5e-03	minimap2	bcftools	115.85
+am_BaFr_g0050	5e-03	bwa	bcftools (total)	139.75
+am_BaFr_g0050	5e-03	bwa	bcftools	115.06
+bj_EsCo_g0001	4e-06	bowtie2	VARIANTS (total)	13.95
+bj_EsCo_g0001	4e-06	bowtie2	VARIANTS	11.31
+bj_EsCo_g0001	4e-06	minimap2	VARIANTS (total)	13.50
+bj_EsCo_g0001	4e-06	minimap2	VARIANTS	10.99
+bj_EsCo_g0001	4e-06	bwa	VARIANTS (total)	13.28
+bj_EsCo_g0001	4e-06	bwa	VARIANTS	11.19
+bj_EsCo_g0001	4e-06	bowtie2	bcftools (total)	24.52
+bj_EsCo_g0001	4e-06	bowtie2	bcftools	23.17
+bj_EsCo_g0001	4e-06	minimap2	bcftools (total)	20.71
+bj_EsCo_g0001	4e-06	minimap2	bcftools	19.20
+bj_EsCo_g0001	4e-06	bwa	bcftools (total)	20.18
+bj_EsCo_g0001	4e-06	bwa	bcftools	18.95
+am_BaVu_g0002	3e-02	bowtie2	VARIANTS (total)	23.99
+am_BaVu_g0002	3e-02	bowtie2	VARIANTS	13.56
+am_BaVu_g0002	3e-02	minimap2	VARIANTS (total)	24.04
+am_BaVu_g0002	3e-02	minimap2	VARIANTS	13.48
+am_BaVu_g0002	3e-02	bwa	VARIANTS (total)	24.16
+am_BaVu_g0002	3e-02	bwa	VARIANTS	13.51
+am_BaVu_g0002	3e-02	bowtie2	bcftools (total)	32.64
+am_BaVu_g0002	3e-02	bowtie2	bcftools	25.22
+am_BaVu_g0002	3e-02	minimap2	bcftools (total)	29.74
+am_BaVu_g0002	3e-02	minimap2	bcftools	21.98
+am_BaVu_g0002	3e-02	bwa	bcftools (total)	29.09
+am_BaVu_g0002	3e-02	bwa	bcftools	21.63
+am_BaVu_g0002	1e-04	bowtie2	VARIANTS (total)	23.24
+am_BaVu_g0002	1e-04	bowtie2	VARIANTS	12.32
+am_BaVu_g0002	1e-04	minimap2	VARIANTS (total)	22.89
+am_BaVu_g0002	1e-04	minimap2	VARIANTS	12.06
+am_BaVu_g0002	1e-04	bwa	VARIANTS (total)	22.04
+am_BaVu_g0002	1e-04	bwa	VARIANTS	12.00
+am_BaVu_g0002	1e-04	bowtie2	bcftools (total)	33.66
+am_BaVu_g0002	1e-04	bowtie2	bcftools	26.39
+am_BaVu_g0002	1e-04	minimap2	bcftools (total)	28.84
+am_BaVu_g0002	1e-04	minimap2	bcftools	21.23
+am_BaVu_g0002	1e-04	bwa	bcftools (total)	28.48
+am_BaVu_g0002	1e-04	bwa	bcftools	21.15
+bj_EsCo_g0001	2e-02	bowtie2	VARIANTS (total)	15.39
+bj_EsCo_g0001	2e-02	bowtie2	VARIANTS	12.98
+bj_EsCo_g0001	2e-02	minimap2	VARIANTS (total)	15.01
+bj_EsCo_g0001	2e-02	minimap2	VARIANTS	12.76
+bj_EsCo_g0001	2e-02	bwa	VARIANTS (total)	13.97
+bj_EsCo_g0001	2e-02	bwa	VARIANTS	12.15
+bj_EsCo_g0001	2e-02	bowtie2	bcftools (total)	24.03
+bj_EsCo_g0001	2e-02	bowtie2	bcftools	22.71
+bj_EsCo_g0001	2e-02	minimap2	bcftools (total)	21.65
+bj_EsCo_g0001	2e-02	minimap2	bcftools	20.11
+bj_EsCo_g0001	2e-02	bwa	bcftools (total)	20.64
+bj_EsCo_g0001	2e-02	bwa	bcftools	19.42
+am_BA_g0003	2e-05	bowtie2	VARIANTS (total)	41.79
+am_BA_g0003	2e-05	bowtie2	VARIANTS	21.86
+am_BA_g0003	2e-05	minimap2	VARIANTS (total)	40.93
+am_BA_g0003	2e-05	minimap2	VARIANTS	21.27
+am_BA_g0003	2e-05	bwa	VARIANTS (total)	40.82
+am_BA_g0003	2e-05	bwa	VARIANTS	21.58
+am_BA_g0003	2e-05	bowtie2	bcftools (total)	77.51
+am_BA_g0003	2e-05	bowtie2	bcftools	63.59
+am_BA_g0003	2e-05	minimap2	bcftools (total)	70.20
+am_BA_g0003	2e-05	minimap2	bcftools	55.24
+am_BA_g0003	2e-05	bwa	bcftools (total)	69.09
+am_BA_g0003	2e-05	bwa	bcftools	54.85
+am_BaFr_g0050	1e-02	bowtie2	VARIANTS (total)	88.96
+am_BaFr_g0050	1e-02	bowtie2	VARIANTS	43.39
+am_BaFr_g0050	1e-02	minimap2	VARIANTS (total)	91.39
+am_BaFr_g0050	1e-02	minimap2	VARIANTS	44.80
+am_BaFr_g0050	1e-02	bwa	VARIANTS (total)	80.55
+am_BaFr_g0050	1e-02	bwa	VARIANTS	42.21
+am_BaFr_g0050	1e-02	bowtie2	bcftools (total)	158.04
+am_BaFr_g0050	1e-02	bowtie2	bcftools	128.17
+am_BaFr_g0050	1e-02	minimap2	bcftools (total)	148.04
+am_BaFr_g0050	1e-02	minimap2	bcftools	116.44
+am_BaFr_g0050	1e-02	bwa	bcftools (total)	141.19
+am_BaFr_g0050	1e-02	bwa	bcftools	116.29
+am_AkMu_g0002	4e-05	bowtie2	VARIANTS (total)	51.57
+am_AkMu_g0002	4e-05	bowtie2	VARIANTS	25.33
+am_AkMu_g0002	4e-05	minimap2	VARIANTS (total)	52.98
+am_AkMu_g0002	4e-05	minimap2	VARIANTS	25.48
+am_AkMu_g0002	4e-05	bwa	VARIANTS (total)	44.44
+am_AkMu_g0002	4e-05	bwa	VARIANTS	24.71
+am_AkMu_g0002	4e-05	bowtie2	bcftools (total)	94.22
+am_AkMu_g0002	4e-05	bowtie2	bcftools	76.14
+am_AkMu_g0002	4e-05	minimap2	bcftools (total)	90.95
+am_AkMu_g0002	4e-05	minimap2	bcftools	71.50
+am_AkMu_g0002	4e-05	bwa	bcftools (total)	84.44
+am_AkMu_g0002	4e-05	bwa	bcftools	70.91
+am_BA_g0003	3e-05	bowtie2	VARIANTS (total)	41.44
+am_BA_g0003	3e-05	bowtie2	VARIANTS	21.81
+am_BA_g0003	3e-05	minimap2	VARIANTS (total)	41.64
+am_BA_g0003	3e-05	minimap2	VARIANTS	22.00
+am_BA_g0003	3e-05	bwa	VARIANTS (total)	41.33
+am_BA_g0003	3e-05	bwa	VARIANTS	22.12
+am_BA_g0003	3e-05	bowtie2	bcftools (total)	77.46
+am_BA_g0003	3e-05	bowtie2	bcftools	63.57
+am_BA_g0003	3e-05	minimap2	bcftools (total)	70.89
+am_BA_g0003	3e-05	minimap2	bcftools	55.75
+am_BA_g0003	3e-05	bwa	bcftools (total)	69.74
+am_BA_g0003	3e-05	bwa	bcftools	55.48
+bf_BaFa_g0001	4e-05	bowtie2	VARIANTS (total)	44.69
+bf_BaFa_g0001	4e-05	bowtie2	VARIANTS	25.66
+bf_BaFa_g0001	4e-05	minimap2	VARIANTS (total)	45.33
+bf_BaFa_g0001	4e-05	minimap2	VARIANTS	25.94
+bf_BaFa_g0001	4e-05	bwa	VARIANTS (total)	43.75
+bf_BaFa_g0001	4e-05	bwa	VARIANTS	24.89
+bf_BaFa_g0001	4e-05	bowtie2	bcftools (total)	68.67
+bf_BaFa_g0001	4e-05	bowtie2	bcftools	55.73
+bf_BaFa_g0001	4e-05	minimap2	bcftools (total)	63.69
+bf_BaFa_g0001	4e-05	minimap2	bcftools	49.32
+bf_BaFa_g0001	4e-05	bwa	bcftools (total)	61.85
+bf_BaFa_g0001	4e-05	bwa	bcftools	48.60
+bf_BaFa_g0001	4e-06	bowtie2	VARIANTS (total)	45.52
+bf_BaFa_g0001	4e-06	bowtie2	VARIANTS	26.46
+bf_BaFa_g0001	4e-06	minimap2	VARIANTS (total)	45.16
+bf_BaFa_g0001	4e-06	minimap2	VARIANTS	25.57
+bf_BaFa_g0001	4e-06	bwa	VARIANTS (total)	43.20
+bf_BaFa_g0001	4e-06	bwa	VARIANTS	24.44
+bf_BaFa_g0001	4e-06	bowtie2	bcftools (total)	68.48
+bf_BaFa_g0001	4e-06	bowtie2	bcftools	55.54
+bf_BaFa_g0001	4e-06	minimap2	bcftools (total)	63.37
+bf_BaFa_g0001	4e-06	minimap2	bcftools	48.97
+bf_BaFa_g0001	4e-06	bwa	bcftools (total)	61.60
+bf_BaFa_g0001	4e-06	bwa	bcftools	48.27

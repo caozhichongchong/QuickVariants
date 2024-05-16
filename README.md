@@ -8,12 +8,14 @@ QuickVariants is a fast and accurate variant identification tool, designed to su
 Requirement: [Java](https://www.java.com/en/download/help/download_options.html) \
 Please download the latest QuickVariants [here](https://github.com/caozhichongchong/QuickVariants/releases)
 
+You may install java by `conda install conda-forge::openjdk`\
+You may install java and QuickVariants by `conda install caozhichongchong::quick-variants`\
+QuickVariants can be found at `$Conda_env_location/bin/quick-variants-VERSION.jar`
 ### Usage
 
 ```
 java -Xms10g -Xmx10g -jar quick-variants-VERSION.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input.sam> --num-threads num_threads [options]
 ```
-
 This command converts a SAM file to other formats, most notably .vcf.
 
 **Input**
@@ -114,7 +116,7 @@ The `benchmark_scripts` folder contains code used to construct the benchmark dat
 
 **Analyzing benchmark datasets used in this study**\
 Please download benchmark datasets [here](https://doi.org/10.6084/m9.figshare.25437217)\
-Requirements: [bowtie2](https://anaconda.org/bioconda/bowtie2), [bwa](https://anaconda.org/bioconda/bwa), [minimap2](https://anaconda.org/bioconda/minimap2), 
+Requirements: [bowtie2](https://anaconda.org/bioconda/bowtie2), [bwa](https://anaconda.org/bioconda/bwa), [minimap2](https://anaconda.org/bioconda/minimap2),
 [samtools](https://www.htslib.org/download/), [bcftools](https://samtools.github.io/bcftools/howtos/install.html), [python3](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html), [jupyter notebook](https://jupyter.org/install)\
 -Gut microbiome WGS data with in silico mutations
 ```
