@@ -35,8 +35,9 @@ public class SamReader implements SamProvider {
   }
 
   private void done() {
-    if (this.numWarnings > 0) {
-      System.out.println("" + this.numWarnings + " warnings reading " + path);
+    int numWarnings = numSkippedSupplementalAlignments + numAlignmentsMissingQueryText;
+    if (numWarnings > 0) {
+      System.out.println("" + numWarnings + " warnings reading " + path);
     }
   }
 
@@ -65,9 +66,9 @@ public class SamReader implements SamProvider {
     boolean isSupplementaryAlignment = (samFlags & 2048) != 0;
     // skipping supplementary alignments for now
     if (isSupplementaryAlignment) {
-      if (numWarnings < 1)
+      if (numSkippedSupplementalAlignments < 1)
         System.out.println("Warning: skipping supplemental alignments, including " + line);
-      numWarnings++;
+      numSkippedSupplementalAlignments++;
       return null;
     }
 
@@ -86,6 +87,13 @@ public class SamReader implements SamProvider {
     sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, expectsMateAlignment);
 
     String queryText = fields[9];
+    if (queryText.equals("*")) {
+      if (numAlignmentsMissingQueryText < 1)
+        System.out.println("Warning: skipping alignments having query text '" + queryText + "', including " + line);
+      numAlignmentsMissingQueryText++;
+      return null;
+    }
+
     sequenceBuilder.add(queryText);
 
     return sequenceBuilder;
@@ -98,5 +106,7 @@ public class SamReader implements SamProvider {
 
   BufferedReader reader;
   String path;
-  int numWarnings;
+
+  int numSkippedSupplementalAlignments;
+  int numAlignmentsMissingQueryText;
 }
