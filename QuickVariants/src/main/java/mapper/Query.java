@@ -67,6 +67,18 @@ public class Query {
     return builder.toString();
   }
 
+  public boolean sameSequenceNames(Query other) {
+    if (other.sequences.size() != this.sequences.size()) {
+      return false;
+    }
+    for (int i = 0; i < this.sequences.size(); i++) {
+      if (!this.sequences.get(i).getName().equals(other.sequences.get(i).getName())) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();

@@ -503,11 +503,7 @@ public class Main {
       // Do we have to read more queries?
       if (!doneReadingQueries && (pendingQueries.size() < 1 || (workers.size() >= numThreads && pendingQueries.size() < numThreads * 10))) {
         long readStart = System.currentTimeMillis();
-        // If most workers are idle, then give each worker just a few queries so they can more quickly have something to do
-        int targetNumBases = Math.min(maxNumBasesPerJob, Math.max(maxNumBasesPerJob * (pendingQueries.size() + 1) / numThreads, 1));
-        // If we haven't yet spawned all of the initial workers, then just give one query to each worker so that this worker will help to hash the reference
-        if (!everSaturatedWorkers)
-          targetNumBases = 1;
+        int targetNumBases = maxNumBasesPerJob;
         List<QueryBuilder> batch = new ArrayList<QueryBuilder>();
         int totalLengthOfPendingQueries = 0;
         while (true) {
@@ -599,15 +595,6 @@ public class Main {
         // remove this worker
         workers.remove(worker);
         pendingWorkers.add(worker);
-        long workerSlowestAlignmentMillis = worker.getSlowestAlignmentMillis();
-        if (workerSlowestAlignmentMillis > slowestAlignmentMillis) {
-          slowestAlignmentMillis = workerSlowestAlignmentMillis;
-          slowestQuery = worker.getSlowestQuery();
-          slowestAlignment = worker.getSlowestAlignment();
-        }
-        millisSpentOnUnalignedQueries += worker.getMillisSpentOnUnalignedQueries();
-        numCacheHits += worker.getNumCacheHits();
-        numCasesImmediatelyAcceptingFirstAlignment += worker.getNumCasesImmediatelyAcceptingFirstAlignment();
         progressed = true;
       }
       long waitEnd = System.currentTimeMillis();
@@ -622,11 +609,6 @@ public class Main {
     result.millisLaunchingWorkers = launchingMillis;
     result.millisWaitingForWorkers = waitingMillis;
     result.cpuMillisSpentOnUnalignedQueries = millisSpentOnUnalignedQueries;
-    if (slowestQuery != null) {
-      result.slowestQuery = slowestQuery;
-      result.slowestQueryNumAlignments = slowestAlignment.size();
-      result.slowestQueryMillis = slowestAlignmentMillis;
-    }
     result.numCasesImmediatelyAcceptingFirstAlignment = numCasesImmediatelyAcceptingFirstAlignment;
     result.numQueriesLoaded = numQueriesLoaded;
 
