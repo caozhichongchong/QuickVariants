@@ -56,9 +56,7 @@ public class SequenceAlignment {
   }
 
   private void fail(String message) {
-    String n = null;
-    System.out.println(message);
-    System.out.println(n.toString());
+    throw new IllegalArgumentException(message);
   }
 
   public List<AlignedBlock> getSections() {

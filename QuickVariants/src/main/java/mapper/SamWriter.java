@@ -125,6 +125,9 @@ public class SamWriter implements AlignmentListener {
        int queryLengthConsumed = 0;
        for (AlignedBlock block : alignment.getSections()) {
          if (block.getStartIndexA() != queryLengthConsumed) {
+           if (queryLengthConsumed != 0) {
+             throw new IllegalArgumentException("Failed to write alignment for " + query.getName() + " with text " + query.getText() + ": previous block ended at query index " + queryLengthConsumed + " and next block starts at " + block.getStartIndexA());
+           }
            // left side of the query fell off the reference
            builder.append("" + block.getStartIndexA() + "S");
            queryLengthConsumed = block.getStartIndexA();
