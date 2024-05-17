@@ -20,8 +20,9 @@ public class SamAlignment extends Sequence {
     int referenceStartIndex = this.referencePosition - 1;
     Sequence query = this;
     Sequence reference = sequenceDatabase.getSequence(this.referenceName);
-    if (reference == null)
-      return null;
+    if (reference == null) {
+      throw new IllegalArgumentException("Reference contig named '" + this.referenceName + "' not found");
+    }
     for (String component: cigarComponents) {
       if (component.equals("=")) {
         component = "" + this.getLength() + "M";
