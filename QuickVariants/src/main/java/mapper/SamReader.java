@@ -35,7 +35,7 @@ public class SamReader implements SamProvider {
   }
 
   private void done() {
-    int numWarnings = numSkippedSupplementalAlignments + numAlignmentsMissingQueryText;
+    int numWarnings = numSkippedSupplementalAlignments + numAlignmentsMissingQueryText + numAlignmentsWithoutIndelInformation;
     if (numWarnings > 0) {
       System.out.println("" + numWarnings + " warnings reading " + path);
     }
@@ -83,6 +83,13 @@ public class SamReader implements SamProvider {
       referenceContigName = referenceContigName.substring(0, spaceIndex);
     int startPosition = Integer.parseInt(fields[3]);
     String cigarString = fields[5];
+    if ("*".equals(cigarString)) {
+      // Alignment doesn't tell where the indels are
+      if (numAlignmentsWithoutIndelInformation < 1)
+        System.out.println("Warning: skipping alignment where CIGAR string (indel information) is '" + cigarString + "', including " + line);
+      numAlignmentsWithoutIndelInformation++;
+      return null;
+    }
 
     String mateContigName = fields[6];
     boolean hasMate = !mateContigName.equals("*");
@@ -114,4 +121,5 @@ public class SamReader implements SamProvider {
 
   int numSkippedSupplementalAlignments;
   int numAlignmentsMissingQueryText;
+  int numAlignmentsWithoutIndelInformation;
 }
