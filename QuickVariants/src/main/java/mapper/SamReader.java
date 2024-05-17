@@ -73,6 +73,11 @@ public class SamReader implements SamProvider {
     }
 
     String referenceContigName = fields[2];
+    if ("*".equals(referenceContigName)) {
+      // This indicates an unalighed query
+      // We're not interested in them at the moment
+      return null;
+    }
     int spaceIndex = referenceContigName.indexOf(' ');
     if (spaceIndex != -1)
       referenceContigName = referenceContigName.substring(0, spaceIndex);
@@ -87,7 +92,7 @@ public class SamReader implements SamProvider {
     sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, expectsMateAlignment);
 
     String queryText = fields[9];
-    if (queryText.equals("*")) {
+    if ("*".equals(queryText)) {
       if (numAlignmentsMissingQueryText < 1)
         System.out.println("Warning: skipping alignments having query text '" + queryText + "', including " + line);
       numAlignmentsMissingQueryText++;

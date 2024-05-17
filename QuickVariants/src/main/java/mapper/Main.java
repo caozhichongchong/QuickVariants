@@ -93,11 +93,6 @@ public class Main {
         i++;
         continue;
       }
-      if ("--out-unaligned".equals(arg)) {
-        outUnalignedPath = args[i + 1];
-        i++;
-        continue;
-      }
       if ("--out-refs-map-count".equals(arg)) {
         outRefsMapCountPath = args[i + 1];
         i++;
@@ -237,7 +232,7 @@ public class Main {
     System.err.println(
 "\n" +
 "Usage:\n"+
-"  java -jar quick-variants.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] [--out-sam <out.sam>] [--out-refs-map-count <counts.txt>] [--out-unaligned <unaligned.fastq>] --reference <ref.fasta> --in-sam <input.sam> [options]\n" +
+"  java -jar quick-variants.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] [--out-sam <out.sam>] [--out-refs-map-count <counts.txt>] --reference <ref.fasta> --in-sam <input.sam> [options]\n" +
 "\n" +
 "    Converts a sam file to other formats, most notably .vcf\n" +
 "\n" +
@@ -283,8 +278,6 @@ public class Main {
 "\n" +
 "      --out-sam <file> the output file in SAM format\n" +
 "\n" +
-"      --out-unaligned <file> output file containing unaligned reads. Must have a .fasta or .fastq extension\n" +
-"\n" +
 "    --no-output if no output is requested, skip writing output rather than throwing an error\n" +
 "\n" +
 "    Debugging\n" +
@@ -297,7 +290,7 @@ public class Main {
 "\n" +
 "  Multiple output formats may be specified during a single run; for example:\n" +
 "\n" +
-"    --out-sam out.sam --out-unaligned out.fastq\n" +
+"    --out-sam out.sam --out-vcf out.vcf\n" +
 "\n" +
 "  OTHER:\n" +
 "\n" +
