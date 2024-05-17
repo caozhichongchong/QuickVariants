@@ -61,7 +61,16 @@ public class Alignments {
 
   private void process(List<WeightedAlignment> jobs) {
     for (WeightedAlignment weightedAlignment : jobs) {
-      this.addAlignment(weightedAlignment);
+      try {
+        this.addAlignment(weightedAlignment);
+      } catch (Exception e) {
+        String queryText = null;
+        try {
+          queryText = weightedAlignment.getAlignment().getSequenceA().getText();
+        } catch (Exception e2) {
+        }
+        throw new IllegalArgumentException("Could not process " + weightedAlignment.getAlignment().getSequenceA().getName() + " with text " + queryText, e);
+      }
     }
   }
 

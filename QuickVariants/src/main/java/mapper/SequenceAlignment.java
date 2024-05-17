@@ -31,6 +31,15 @@ public class SequenceAlignment {
         }
       }
     }
+    for (int i = 0; i < this.sections.size(); i++) {
+      AlignedBlock block = this.sections.get(i);
+      if (block.getStartIndexA() < 0) {
+        fail("block start index " + block.getStartIndexA() + " < 0");
+      }
+      if (block.getEndIndexA() > block.getSequenceA().getLength()) {
+        fail("block end index " + block.getEndIndexA() + " > sequence length " + block.getSequenceA().getLength() + " with text " + block.getSequenceA().getText());
+      }
+    }
   }
 
   private void fail(String message) {
