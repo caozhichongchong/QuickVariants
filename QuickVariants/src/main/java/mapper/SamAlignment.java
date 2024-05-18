@@ -42,16 +42,16 @@ public class SamAlignment extends Sequence {
       if (alignmentTypeChar == 'M') {
         alignedBlock = new AlignedBlock(query, reference, queryStartIndex, referenceStartIndex, alignmentLength, alignmentLength);
       } else {
+        if (alignmentTypeChar == 'S' || (alignmentTypeChar == 'I' && queryStartIndex <= 0)) {
+          queryStartIndex += alignmentLength;
+          continue;
+        }
         if (alignmentTypeChar == 'I') {
           alignedBlock = new AlignedBlock(query, reference, queryStartIndex, referenceStartIndex, alignmentLength, 0);
         } else {
           if (alignmentTypeChar == 'D') {
             alignedBlock = new AlignedBlock(query, reference, queryStartIndex, referenceStartIndex, 0, alignmentLength);
           } else {
-            if (alignmentTypeChar == 'S') {
-              queryStartIndex += alignmentLength;
-              continue;
-            }
             if (alignmentTypeChar == 'H') {
               continue;
             }
