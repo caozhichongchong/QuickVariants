@@ -16,38 +16,54 @@ public class DataLoader {
   public static SequenceProvider LoadFrom(List<String> paths, boolean keepQualityData) throws IllegalArgumentException, IOException, FileNotFoundException {
     List<SequenceProvider> providers = new ArrayList<SequenceProvider>();
     for (String path : paths) {
-      providers.add(readSequencesFrom(path, keepQualityData, false));
+      providers.add(readSequencesFrom(path, keepQualityData, false, null));
     }
     return new SequencesIterator(providers);
   }
 
   public static SequenceProvider LoadFrom(String path, boolean keepQualityData) throws IllegalArgumentException, IOException, FileNotFoundException {
-    return readSequencesFrom(path, keepQualityData, false);
+    return readSequencesFrom(path, keepQualityData, false, null);
   }
 
   public static SequenceProvider LoadFrom(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
-    return readSequencesFrom(path, keepQualityData, groupLinesInSamFiles);
+    return readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, null);
   }
 
-  private static SequenceProvider readSequencesFrom(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
+  public static SequenceProvider LoadSam(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
+    return readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, ".sam");
+  }
+
+  private static SequenceProvider readSequencesFrom(String path, boolean keepQualityData, boolean groupLinesInSamFiles, String overrideFileType) throws IllegalArgumentException, IOException, FileNotFoundException {
     String effectivePath = path;
 
-    InputStream inputStream = new FileInputStream(path);
-    String gzipSuffix = ".gz";
-    if (path.endsWith(gzipSuffix)) {
-      inputStream = new GZIPInputStream(inputStream);
-      effectivePath = effectivePath.substring(0, effectivePath.length() - gzipSuffix.length());
+    InputStream inputStream;
+    if ("-".equals(path)) {
+      inputStream = System.in;
+      path = "stdin";
+      effectivePath = path;
+    } else {
+      inputStream = new FileInputStream(path);
+      String gzipSuffix = ".gz";
+      if (path.endsWith(gzipSuffix)) {
+        inputStream = new GZIPInputStream(inputStream);
+        effectivePath = effectivePath.substring(0, effectivePath.length() - gzipSuffix.length());
+      }
     }
-    
+
     BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
-    if (effectivePath.endsWith(".fasta") || effectivePath.endsWith(".fa") || effectivePath.endsWith(".fna")) {
+    String fileType = effectivePath;
+    if (overrideFileType != null) {
+      fileType = overrideFileType;
+    }
+
+    if (fileType.endsWith(".fasta") || fileType.endsWith(".fa") || fileType.endsWith(".fna")) {
       return new FastaParser(reader, path);
     }
-    if (effectivePath.endsWith(".fastq") || effectivePath.endsWith(".fq") || effectivePath.endsWith(".ca")) {
+    if (fileType.endsWith(".fastq") || fileType.endsWith(".fq") || fileType.endsWith(".ca")) {
       return new FastqParser(reader, path, keepQualityData);
     }
-    if (effectivePath.endsWith(".sam")) {
+    if (fileType.endsWith(".sam")) {
       SamProvider samProvider = new SamReader(reader, path);
       if (groupLinesInSamFiles)
         samProvider = new SamGrouper(samProvider);
