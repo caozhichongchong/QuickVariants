@@ -18,9 +18,12 @@ public class SamWriter implements AlignmentListener {
     this.fileStream = new FileOutputStream(file);
     this.bufferedStream = new BufferedOutputStream(fileStream);
     // write header
-    this.writeComment("SAM Alignment Map");
+    this.writeComment("Sequence Alignment Map");
     this.writeComment("Format version, sort order");
     this.write("@HD\tVN:1.6\tGO:query\n");
+    this.writeComment("");
+    this.writeComment("Invocation details (approximate)");
+    this.writeInvocationDetails();
     this.writeComment("");
     // write reference sequence names
     this.writeReferenceSequenceNames(sequenceDatabase);
@@ -28,6 +31,12 @@ public class SamWriter implements AlignmentListener {
     this.writeComment("");
     this.explainAlignmentFormat(explainPairedEndReads);
     this.flush();
+  }
+
+  private void writeInvocationDetails() {
+    String version = MapperMetadata.getVersion();
+    String invocation = MapperMetadata.guessCommandLine();
+    this.write("@PG\tID:QuickVariants\tPN:QuickVariants\tVN:" + version + "\tCL:\"" + invocation + "\"\n");
   }
 
   private void writeReferenceSequenceNames(SequenceDatabase sequenceDatabase) {
