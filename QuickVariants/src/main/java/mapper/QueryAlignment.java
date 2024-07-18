@@ -55,14 +55,38 @@ public class QueryAlignment {
     return totalDistance;
   }
 
+  // Returns the number of alignment ends (from paired-end alignments) that cover a specific index, assuming that at least one covers it
   public int getNumAlignmentsCoveringIndexB(int referenceIndex) {
-    if (this.minOverlap < 0)
-      this.computeOverlap();
-    if (referenceIndex < this.minOverlap)
-      return 1;
-    if (referenceIndex >= this.maxOverlap)
-      return 1;
-    return this.alignments.size();
+    // If we don't have a paired-end read, then just one read covers the position
+    if (this.alignments.size() < 2)
+      return this.alignments.size();
+
+    // check whether each of our alignments uses a contiguous section of the reference, and if they do, we can make an optimization
+    if (this.isReferenceContiguous()) {
+      if (this.minOverlap < 0)
+        this.computeOverlap();
+      if (referenceIndex < this.minOverlap)
+        return 1;
+      if (referenceIndex >= this.maxOverlap)
+        return 1;
+      return this.alignments.size();
+    }
+    // if our alignments use a noncontiguous section of reference, we do a slower, more careful calculation
+    int count = 0;
+    for (SequenceAlignment alignment: this.alignments) {
+      if (alignment.coversIndexB(referenceIndex)) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  private boolean isReferenceContiguous() {
+    for (SequenceAlignment alignment: this.alignments) {
+      if (!alignment.isReferenceContiguous())
+        return false;
+    }
+    return true;
   }
 
   private void computeOverlap() {

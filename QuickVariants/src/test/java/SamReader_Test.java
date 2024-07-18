@@ -26,16 +26,40 @@ public class SamReader_Test {
     }
   }
 
-  private List<Sequence> parse(String text) throws IOException {
-    SamReader reader = buildReader(text);
-    List<Sequence> sequences = new ArrayList<Sequence>();
-    while (true) {
-      SequenceBuilder builder = reader.getNextSequence();
-      if (builder == null)
-        break;
-      sequences.add(builder.build());
+  @Test
+  public void testCigarN() {
+    String inputText = "Read1\t0\tcontig1\t0\t255\t3M4N3M\t*\t*\t*\tACGCCT";
+    List<Sequence> sequences = parse(inputText);
+    if (sequences.size() != 1) {
+      Assert.fail("Expected 1 sequence, not " + sequences.size());
     }
-    return sequences;
+    Sequence sequence = sequences.get(0);
+    SamAlignment samAlignment = (SamAlignment)sequence;
+
+    Sequence referenceContig = new SequenceBuilder().setName("contig1").add("ACGTTTTCCCT").build();
+    SequenceDatabase reference = new SequenceDatabase(referenceContig);
+
+    SequenceAlignment sequenceAlignment = samAlignment.toSequenceAlignment(reference);
+    int numSections = sequenceAlignment.getNumSections();
+    if (numSections != 2) {
+      Assert.fail("Expected 2 sections, not " + numSections);
+    }
+  }
+
+  private List<Sequence> parse(String text) {
+    try {
+      SamReader reader = buildReader(text);
+      List<Sequence> sequences = new ArrayList<Sequence>();
+      while (true) {
+        SequenceBuilder builder = reader.getNextSequence();
+        if (builder == null)
+          break;
+        sequences.add(builder.build());
+      }
+      return sequences;
+    } catch (IOException e) {
+      throw new RuntimeException("Failed to read from string", e);
+    }
   }
 
   private SamReader buildReader(String text) {

@@ -10,14 +10,27 @@ public class SequenceAlignment {
     this.sections = new ArrayList<AlignedBlock>(1);
     this.sections.add(block);
     this.referenceReversed = referenceReversed;
+    this.referenceContiguous = true;
   }
 
   public SequenceAlignment(List<AlignedBlock> sections, boolean referenceReversed) {
     this.sections = sections;
     this.referenceReversed = referenceReversed;
+    this.computeContiguous();
   }
 
-  public void check() {
+  private void computeContiguous() {
+    this.referenceContiguous = true;
+    for (int i = 0; i < sections.size() - 1; i++) {
+      if (this.sections.get(i).getEndIndexB() != this.sections.get(i + 1).getStartIndexB()) {
+        this.referenceContiguous = false;
+        return;
+      }
+    }
+  }
+
+  // Note that if the sam file cigar string contained an 'N' then these blocks might not be referenceContiguous
+  public void checkContiguous() {
     for (int i = 0; i < this.sections.size() - 1; i++) {
       AlignedBlock prev = this.sections.get(i);
       AlignedBlock next = this.sections.get(i + 1);
@@ -50,6 +63,10 @@ public class SequenceAlignment {
 
   public List<AlignedBlock> getSections() {
     return this.sections;
+  }
+
+  public int getNumSections() {
+    return this.sections.size();
   }
 
   public AlignedBlock getSection(int index) {
@@ -161,6 +178,12 @@ public class SequenceAlignment {
     }
   }
 
+  // Whether the sections of the reference described by this alignment are contiguous
+  // This can be true even if there are indels, but not if there is a sam cigar alignment 'N' character
+  public boolean isReferenceContiguous() {
+    return this.referenceContiguous;
+  }
+
   public boolean coversIndexB(int index) {
     for (AlignedBlock block: this.sections) {
       if (block.getStartIndexB() <= index && block.getEndIndexB() > index) {
@@ -195,4 +218,5 @@ public class SequenceAlignment {
   public double weight = 1;
   private List<AlignedBlock> sections;
   private boolean referenceReversed;
+  private boolean referenceContiguous;
 }

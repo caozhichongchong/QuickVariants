@@ -55,6 +55,11 @@ public class SamAlignment extends Sequence {
             if (alignmentTypeChar == 'H') {
               continue;
             }
+            if (alignmentTypeChar == 'N') {
+              // The aligner specifies that this section of the reference should be ignored
+              referenceStartIndex += alignmentLength;
+              continue;
+            }
             throw new IllegalArgumentException("Unrecognized cigar character '" + alignmentTypeChar + "' from cigar component '" + component + "' from full cigar string '" + cigarString + "'");
           }
         }

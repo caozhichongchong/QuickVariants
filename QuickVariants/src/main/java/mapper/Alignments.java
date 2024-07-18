@@ -76,6 +76,7 @@ public class Alignments {
 
   private void addAlignment(WeightedAlignment weightedAlignment) {
     for (AlignedBlock block : weightedAlignment.getAlignment().getSections()) {
+      // We only visit parts of the sequence where we reported an alignment to the reference
       this.addMatchOnSequence(block, weightedAlignment);
     }
   }
