@@ -40,6 +40,24 @@ public class QueryBuilder {
     return total;
   }
 
+  public boolean sameSequenceNames(QueryBuilder other) {
+    if (other.sequenceProviders.size() != this.sequenceProviders.size())
+      return false;
+    for (int i = 0; i < this.sequenceProviders.size(); i++) {
+      if (!this.sequenceProviders.get(i).getName().equals(other.sequenceProviders.get(i).getName()))
+        return false;
+    }
+    return true;
+  }
+
+  public boolean hasSequenceName(String name) {
+    for (SequenceBuilder sequenceProvider: this.sequenceProviders) {
+      if (name.equals(sequenceProvider.getName()))
+        return true;
+    }
+    return false;
+  }
+
   private List<SequenceBuilder> sequenceProviders;
   private int maxOffset;
   private int id;

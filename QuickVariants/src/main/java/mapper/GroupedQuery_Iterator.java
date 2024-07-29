@@ -2,15 +2,15 @@ package mapper;
 
 import java.util.List;
 
-// A QueriesIterator provides a list of queries
-public class QueriesIterator implements QueryProvider {
-  public QueriesIterator(List<QueryProvider> providers) {
+// A GroupedQuery_Iterator provides a list of groups of queries
+public class GroupedQuery_Iterator {
+  public GroupedQuery_Iterator(List<GroupedQuery_Provider> providers) {
     this.providers = providers;
   }
 
-  public QueryBuilder getNextQueryBuilder() {
+  public List<QueryBuilder> getNextGroup() {
     while (this.nextIndex < this.providers.size()) {
-      QueryBuilder next = this.providers.get(this.nextIndex).getNextQueryBuilder();
+      List<QueryBuilder> next = this.providers.get(this.nextIndex).getNextGroup();
       if (next != null) {
         return next;
       }
@@ -20,7 +20,7 @@ public class QueriesIterator implements QueryProvider {
   }
 
   public boolean get_allReadsContainQualityInformation() {
-    for (QueryProvider provider : this.providers) {
+    for (GroupedQuery_Provider provider : this.providers) {
       if (!provider.get_allReadsContainQualityInformation()) {
         return false;
       }
@@ -30,12 +30,12 @@ public class QueriesIterator implements QueryProvider {
 
   public int getNumErrors() {
     int total = 0;
-    for (QueryProvider provider: this.providers) {
+    for (GroupedQuery_Provider provider: this.providers) {
       total += provider.getNumErrors();
     }
     return total;
   }
 
   int nextIndex;
-  List<QueryProvider> providers;
+  List<GroupedQuery_Provider> providers;
 }

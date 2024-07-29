@@ -36,7 +36,7 @@ public class Main {
 
     // parse arguments
     List<String> referencePaths = new ArrayList<String>();
-    List<QueryProvider> queries = new ArrayList<QueryProvider>();
+    List<GroupedQuery_Provider> queries = new ArrayList<GroupedQuery_Provider>();
     String outVcfPath = null;
     String outSamPath = null;
     String outUnalignedPath = null;
@@ -72,7 +72,8 @@ public class Main {
         i++;
         SequenceProvider sequenceProvider = DataLoader.LoadSam(queryPath, false, false);
         QueryProvider queryBuilder = new SimpleQueryProvider(sequenceProvider);
-        queries.add(queryBuilder);
+        GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
+        queries.add(groupProvider);
         continue;
       }
       if ("--in-sam".equals(arg) || "--in-unordered-sam".equals(arg)) {
@@ -80,7 +81,8 @@ public class Main {
         i++;
         SequenceProvider sequenceProvider = DataLoader.LoadSam(queryPath, false, true);
         QueryProvider queryBuilder = new SimpleQueryProvider(sequenceProvider);
-        queries.add(queryBuilder);
+        GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
+        queries.add(groupProvider);
         continue; 
       }
       if ("--out-vcf".equals(arg)) {
@@ -219,8 +221,8 @@ public class Main {
       System.out.println("Reference path = " + referencePath);
     }
     System.out.println("" + queries.size() + " sets of queries: ");
-    for (QueryProvider queryBuilder : queries) {
-      System.out.println(queryBuilder.toString());
+    for (GroupedQuery_Provider groupBuilder : queries) {
+      System.out.println(groupBuilder.toString());
     }
     boolean successful = run(referencePaths, queries, outVcfPath, vcfIncludeNonMutations, outSamPath, outRefsMapCountPath, outMutationsPath, mutationDetectionParameters, outUnalignedPath, numThreads, queryEndFraction, autoVerbose, outAncestorPath, startMillis);
     if (!successful) {
@@ -302,7 +304,7 @@ public class Main {
   }
 
   // performs alignment and outputs results
-  public static boolean run(List<String> referencePaths, List<QueryProvider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationDetectionParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
+  public static boolean run(List<String> referencePaths, List<GroupedQuery_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationDetectionParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
     VcfWriter vcfWriter = null;
     if (outVcfPath != null)
       vcfWriter = new VcfWriter(outVcfPath, vcfIncludeNonMutations);
@@ -319,7 +321,7 @@ public class Main {
     long now = System.currentTimeMillis();
     long elapsed = (now - startMillis) / 1000;
 
-    QueryProvider queries = new QueriesIterator(queriesList);
+    GroupedQuery_Iterator queries = new GroupedQuery_Iterator(queriesList);
 
     List<AlignmentListener> listeners = new ArrayList<AlignmentListener>();
     MatchDatabase matchDatabase = new MatchDatabase(queryEndFraction);
@@ -462,7 +464,7 @@ public class Main {
     System.out.println("dumped heap to " + outputPath);
   }
 
-  public static AlignmentStatistics compare(SequenceDatabase reference, QueryProvider queries, long startMillis, int numThreads, double queryEndFraction, List<AlignmentListener> alignmentListeners, boolean autoVerbose) throws InterruptedException, IOException {
+  public static AlignmentStatistics compare(SequenceDatabase reference, GroupedQuery_Iterator queries, long startMillis, int numThreads, double queryEndFraction, List<AlignmentListener> alignmentListeners, boolean autoVerbose) throws InterruptedException, IOException {
     long readingMillis = 0;
     long launchingMillis = 0;
     long waitingMillis = 0;
@@ -477,7 +479,8 @@ public class Main {
     int maxNumBasesPerJob = 500000;
     int workerIndex = 0;
     boolean doneReadingQueries = false;
-    List<List<QueryBuilder>> pendingQueries = new ArrayList<List<QueryBuilder>>();
+    // pendingQueries[jobIndex][groupNumber][alignmentIndex] = the corresponding query builder
+    List<List<List<QueryBuilder>>> pendingQueries = new ArrayList<List<List<QueryBuilder>>>();
     long lastPrintTime = 0;
     long nextCountToPrint = 0;
     long slowestAlignmentMillis = -1;
@@ -497,21 +500,23 @@ public class Main {
       if (!doneReadingQueries && (pendingQueries.size() < 1 || (workers.size() >= numThreads && pendingQueries.size() < numThreads * 10))) {
         long readStart = System.currentTimeMillis();
         int targetNumBases = maxNumBasesPerJob;
-        List<QueryBuilder> batch = new ArrayList<QueryBuilder>();
+        List<List<QueryBuilder>> batch = new ArrayList<List<QueryBuilder>>();
         int totalLengthOfPendingQueries = 0;
         while (true) {
           if (totalLengthOfPendingQueries >= targetNumBases) {
             break;
           }
-          QueryBuilder queryBuilder = queries.getNextQueryBuilder();
-          if (queryBuilder == null) {
+          List<QueryBuilder> group = queries.getNextGroup();
+          if (group == null) {
             doneReadingQueries = true;
             break;
           }
-          numQueriesLoaded++;
-          queryBuilder.setId(numQueriesLoaded);
-          batch.add(queryBuilder);
-          totalLengthOfPendingQueries += queryBuilder.getLength();
+          for (QueryBuilder queryBuilder: group) {
+            numQueriesLoaded++;
+            queryBuilder.setId(numQueriesLoaded);
+            totalLengthOfPendingQueries += queryBuilder.getLength();
+          }
+          batch.add(group);
         }
         pendingQueries.add(batch);
         progressed = true;
@@ -523,7 +528,7 @@ public class Main {
       if (workers.size() < numThreads) {
         long launchStart = System.currentTimeMillis();
 
-        List<QueryBuilder> queriesToProcess;
+        List<List<QueryBuilder>> queriesToProcess;
         // we have enough idle threads to spawn another worker
         if (pendingQueries.size() > 0) {
           // we have queries that haven't been assigned

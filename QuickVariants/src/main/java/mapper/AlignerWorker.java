@@ -28,7 +28,7 @@ public class AlignerWorker extends Thread {
     this.completionListener = completionListener;
   }
 
-  public void requestProcess(List<QueryBuilder> queries, long startMillis, Logger alignmentLogger, Logger referenceLogger) {
+  public void requestProcess(List<List<QueryBuilder>> queryGroups, long startMillis, Logger alignmentLogger, Logger referenceLogger) {
     this.resetStatistics();
 
     this.startMillis = startMillis;
@@ -38,7 +38,7 @@ public class AlignerWorker extends Thread {
     if (this.logger.getEnabled()) {
       log("\nOutput from worker " + this.workerId + ":");
     }
-    this.queries = queries;
+    this.groupedQueries = queryGroups;
 
     try {
       this.workQueue.put(true);
@@ -92,10 +92,7 @@ public class AlignerWorker extends Thread {
   }
 
   private void process() {
-    // make sure we've hashed the reference before we start running queries, so that running the queries probably won't require hashing the reference and our timing measurements can be approximately accurate
-    // now that we've hashed the reference, we can run queries
-    // TODO: make sure groups can't get split across workers
-    List<List<Query>> groupedQueries = this.groupQueries(queries);
+    List<List<Query>> groupedQueries = this.buildQueries(this.groupedQueries);
     // List that for each query says where it aligns
     List<List<QueryAlignment>> alignments = new ArrayList<List<QueryAlignment>>(groupedQueries.size());
     List<Query> unalignedQueries = new ArrayList<Query>();
@@ -145,26 +142,16 @@ public class AlignerWorker extends Thread {
     this.logger.log(message);
   }
 
-  private List<List<Query>> groupQueries(List<QueryBuilder> queries) {
+  private List<List<Query>> buildQueries(List<List<QueryBuilder>> queries) {
     List<List<Query>> groups = new ArrayList<List<Query>>();
     List<Query> currentGroup = null;
-    for (QueryBuilder builder: queries) {
-      Query query = builder.build();
-      if (currentGroup == null) {
-        currentGroup = new ArrayList<Query>();
-        currentGroup.add(query);
-      } else {
-        if (currentGroup.get(0).sameSequenceNames(query)) {
-          currentGroup.add(query);
-        } else {
-          groups.add(currentGroup);
-          currentGroup = new ArrayList<Query>();
-          currentGroup.add(query);
-        }
+    for (List<QueryBuilder> builderGroup: queries) {
+      List<Query> group = new ArrayList<Query>(builderGroup.size());
+      for (QueryBuilder builder: builderGroup) {
+        group.add(builder.build());
       }
+      groups.add(group);
     }
-    if (currentGroup != null)
-      groups.add(currentGroup);
     return groups;
   }
 
@@ -282,7 +269,7 @@ public class AlignerWorker extends Thread {
   long millisSpentOnUnalignedQueries;
   int numCasesImmediatelyAcceptingFirstAlignment;
   Queue<AlignerWorker> completionListener;
-  List<QueryBuilder> queries;
+  List<List<QueryBuilder>> groupedQueries;
 
   BlockingQueue<Boolean> workQueue = new ArrayBlockingQueue<Boolean>(1);
 }
