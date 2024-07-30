@@ -16,31 +16,29 @@ public class DataLoader {
   public static SequenceProvider LoadFrom(List<String> paths, boolean keepQualityData) throws IllegalArgumentException, IOException, FileNotFoundException {
     List<SequenceProvider> providers = new ArrayList<SequenceProvider>();
     for (String path : paths) {
-      providers.add(readSequencesFrom(path, keepQualityData, false, null));
+      providers.add(readSequencesFrom(path, keepQualityData, null));
     }
     return new SequencesIterator(providers);
   }
 
   public static SequenceProvider LoadFrom(String path, boolean keepQualityData) throws IllegalArgumentException, IOException, FileNotFoundException {
-    return readSequencesFrom(path, keepQualityData, false, null);
+    return readSequencesFrom(path, keepQualityData, null);
   }
 
-  public static SequenceProvider LoadFrom(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
-    return readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, null);
-  }
-
-  public static SequenceProvider LoadSam(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
-    return readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, ".sam");
+  public static SequenceProvider LoadSam(String path, boolean keepQualityData) throws IllegalArgumentException, IOException, FileNotFoundException {
+    return readSequencesFrom(path, keepQualityData, ".sam");
   }
 
   public static GroupedQuery_Provider ParseSamAlignments(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
-    SequenceProvider sequenceProvider = readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, ".sam");
-    QueryProvider queryBuilder = new SimpleQueryProvider(sequenceProvider);
+    SequenceProvider sequenceProvider = readSequencesFrom(path, keepQualityData, ".sam");
+    if (groupLinesInSamFiles)
+      sequenceProvider = new SamGrouper(sequenceProvider);
+    QueryProvider queryBuilder = new SimpleQueryProvider(new SamParser(sequenceProvider, path, groupLinesInSamFiles));
     GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
     return groupProvider;
   }
 
-  private static SequenceProvider readSequencesFrom(String path, boolean keepQualityData, boolean groupLinesInSamFiles, String overrideFileType) throws IllegalArgumentException, IOException, FileNotFoundException {
+  private static SequenceProvider readSequencesFrom(String path, boolean keepQualityData, String overrideFileType) throws IllegalArgumentException, IOException, FileNotFoundException {
     String effectivePath = path;
 
     InputStream inputStream;
@@ -71,10 +69,7 @@ public class DataLoader {
       return new FastqParser(reader, path, keepQualityData);
     }
     if (fileType.endsWith(".sam")) {
-      SamProvider samProvider = new SamReader(reader, path);
-      if (groupLinesInSamFiles)
-        samProvider = new SamGrouper(samProvider);
-      return new SamParser(samProvider, path);
+      return new SamReader(reader, path);
     }
 
     throw new IllegalArgumentException("Unrecognized file extension: " + effectivePath + ", not .sam or .fasta/.fa or .fastq/.fq/.ca");

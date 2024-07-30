@@ -7,9 +7,10 @@ import java.util.List;
 
 // A SamParser processes a .sam file: groups lines together, assigns weights, and reports errors
 public class SamParser implements SequenceProvider {
-  public SamParser(SamProvider reader, String path) {
+  public SamParser(SequenceProvider reader, String path, boolean readerReordered) {
     this.reader = reader;
     this.path = path;
+    this.readerReordered = readerReordered;
   }
 
   public SequenceBuilder getNextSequence() {
@@ -68,7 +69,7 @@ public class SamParser implements SequenceProvider {
           if (this.numErrors < 1) {
             StringBuilder errorBuilder = new StringBuilder();
             errorBuilder.append("\n");
-            if (this.reader.isReordered()) {
+            if (this.readerReordered) {
               errorBuilder.append("Error reading " + this.path + ": sequences specify mates, but no mates were found in the file for sequence:\n");
               errorBuilder.append(" " + mate1.getName() + "\n");
             } else {
@@ -138,13 +139,14 @@ public class SamParser implements SequenceProvider {
 
   @Override
   public String toString() {
-    if (this.reader.isReordered()) {
+    if (this.readerReordered) {
       return "reorder(" + this.path + ")";
     }
     return this.path;
   }
 
-  SamProvider reader;
+  SequenceProvider reader;
+  boolean readerReordered = false;
   String path;
   boolean hasReadASequence = false;
   private List<SequenceBuilder> group = new ArrayList<SequenceBuilder>();

@@ -6,15 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 // A SamReader reads .sam files and parses individual lines but doesn't associate related lines
-public class SamReader implements SamProvider {
+public class SamReader implements SequenceProvider {
   public SamReader(BufferedReader reader, String path) {
     this.reader = reader;
     this.path = path;
   }
 
-  public SequenceBuilder getNextSequence() throws IOException {
+  public SequenceBuilder getNextSequence() {
     while (true) {
-      String line = this.getNextNonCommentLine();
+      String line = null;
+      try {
+        line = this.getNextNonCommentLine();
+      } catch (IOException e) {
+        throw new RuntimeException("Error reading " + path + ",", e);
+      }
       if (line == null) {
         this.done();
         return null;
@@ -23,7 +28,7 @@ public class SamReader implements SamProvider {
       try {
         sequenceBuilder = this.parseLine(line);
       } catch (Exception e) {
-        throw new IllegalArgumentException("Failed to parse sam line '" + line + "'");
+        throw new RuntimeException("Failed to parse sam line '" + line + "'", e);
       }
       if (sequenceBuilder != null)
         return sequenceBuilder;
@@ -116,10 +121,19 @@ public class SamReader implements SamProvider {
     return this.path;
   }
 
+  public int getNumErrors() {
+    return 0;
+  }
+
+  public boolean get_allReadsContainQualityInformation() {
+    return false;
+  }
+
   BufferedReader reader;
   String path;
 
   int numSkippedSupplementalAlignments;
   int numAlignmentsMissingQueryText;
   int numAlignmentsWithoutIndelInformation;
+  int numErrors;
 }

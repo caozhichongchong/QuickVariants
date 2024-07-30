@@ -9,12 +9,12 @@ import java.util.Map;
 import java.util.Queue;
 
 // A SamGrouper groups SequenceBuilders by their names
-public class SamGrouper implements SamProvider {
-  public SamGrouper(SamProvider reader) {
+public class SamGrouper implements SequenceProvider {
+  public SamGrouper(SequenceProvider reader) {
     this.reader = reader;
   }
 
-  public SequenceBuilder getNextSequence() throws IOException {
+  public SequenceBuilder getNextSequence() {
     while (true) {
       // check for a pending group
       if (this.readGroup != null) {
@@ -67,6 +67,14 @@ public class SamGrouper implements SamProvider {
     return true;
   }
 
+  public int getNumErrors() {
+    return 0;
+  }
+
+  public boolean get_allReadsContainQualityInformation() {
+    return false;
+  }
+
   private void printMetrics() {
     if (this.maxNumPendingGroups > 1)
       System.out.println("Maximum number of sequences waiting for a mate at once: " + this.maxNumPendingGroups);
@@ -80,7 +88,7 @@ public class SamGrouper implements SamProvider {
     return result;
   }
 
-  SamProvider reader;
+  SequenceProvider reader;
   Map<String, SequenceBuilder> partiallyReadGroups = new HashMap<String, SequenceBuilder>();
   Queue<SequenceBuilder> readGroup = new ArrayDeque<SequenceBuilder>();
   int maxNumPendingGroups;
