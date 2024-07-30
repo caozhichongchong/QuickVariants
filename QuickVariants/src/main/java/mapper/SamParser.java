@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// A SamParser parses .sam files
+// A SamParser processes a .sam file: groups lines together, assigns weights, and reports errors
 public class SamParser implements SequenceProvider {
   public SamParser(SamProvider reader, String path) {
     this.reader = reader;

@@ -70,19 +70,15 @@ public class Main {
       if ("--in-ordered-sam".equals(arg)) {
         String queryPath = args[i + 1];
         i++;
-        SequenceProvider sequenceProvider = DataLoader.LoadSam(queryPath, false, false);
-        QueryProvider queryBuilder = new SimpleQueryProvider(sequenceProvider);
-        GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
-        queries.add(groupProvider);
+        GroupedQuery_Provider samParser = DataLoader.ParseSamAlignments(queryPath, false, false);
+        queries.add(samParser);
         continue;
       }
       if ("--in-sam".equals(arg) || "--in-unordered-sam".equals(arg)) {
         String queryPath = args[i + 1];
         i++;
-        SequenceProvider sequenceProvider = DataLoader.LoadSam(queryPath, false, true);
-        QueryProvider queryBuilder = new SimpleQueryProvider(sequenceProvider);
-        GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
-        queries.add(groupProvider);
+        GroupedQuery_Provider samParser = DataLoader.ParseSamAlignments(queryPath, false, true);
+        queries.add(samParser);
         continue; 
       }
       if ("--out-vcf".equals(arg)) {

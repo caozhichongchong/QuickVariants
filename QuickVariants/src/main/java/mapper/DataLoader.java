@@ -33,6 +33,13 @@ public class DataLoader {
     return readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, ".sam");
   }
 
+  public static GroupedQuery_Provider ParseSamAlignments(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
+    SequenceProvider sequenceProvider = readSequencesFrom(path, keepQualityData, groupLinesInSamFiles, ".sam");
+    QueryProvider queryBuilder = new SimpleQueryProvider(sequenceProvider);
+    GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
+    return groupProvider;
+  }
+
   private static SequenceProvider readSequencesFrom(String path, boolean keepQualityData, boolean groupLinesInSamFiles, String overrideFileType) throws IllegalArgumentException, IOException, FileNotFoundException {
     String effectivePath = path;
 
