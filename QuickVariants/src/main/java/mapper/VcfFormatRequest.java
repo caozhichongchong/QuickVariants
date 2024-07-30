@@ -14,4 +14,9 @@ class VcfFormatRequest {
   public int length;
   public Alignments alignments;
   public int jobIndex;
+
+  @Override
+  public String toString() {
+    return "VcfFormatRequest " + jobIndex + " on " + sequence.getName() + " at " + startIndex + " length " + length;
+  }
 }

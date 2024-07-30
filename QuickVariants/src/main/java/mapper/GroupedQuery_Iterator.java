@@ -1,9 +1,15 @@
 package mapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // A GroupedQuery_Iterator provides a list of groups of queries
 public class GroupedQuery_Iterator {
+  public GroupedQuery_Iterator(GroupedQuery_Provider provider) {
+    this.providers = new ArrayList<GroupedQuery_Provider>(1);
+    this.providers.add(provider);
+  }
+
   public GroupedQuery_Iterator(List<GroupedQuery_Provider> providers) {
     this.providers = providers;
   }

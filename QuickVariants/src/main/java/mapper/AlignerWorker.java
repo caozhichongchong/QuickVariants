@@ -28,6 +28,7 @@ public class AlignerWorker extends Thread {
     this.completionListener = completionListener;
   }
 
+  // queues the given work to execute later
   public void requestProcess(List<List<QueryBuilder>> queryGroups, long startMillis, Logger alignmentLogger, Logger referenceLogger) {
     this.resetStatistics();
 
@@ -45,6 +46,12 @@ public class AlignerWorker extends Thread {
     } catch (InterruptedException e) {
       throw new IllegalArgumentException("Worker "  + this.workerId + " has no capacity for more work");
     }
+  }
+
+  // runs the given work in the current thread
+  public void process(List<List<QueryBuilder>> queryGroups, Logger logger) {
+    requestProcess(queryGroups, 0, logger, logger);
+    process();
   }
 
   private void resetStatistics() {

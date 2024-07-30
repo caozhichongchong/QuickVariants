@@ -47,19 +47,15 @@ public class SamReader_Test {
   }
 
   private List<Sequence> parse(String text) {
-    try {
-      SamReader reader = buildReader(text);
-      List<Sequence> sequences = new ArrayList<Sequence>();
-      while (true) {
-        SequenceBuilder builder = reader.getNextSequence();
-        if (builder == null)
-          break;
-        sequences.add(builder.build());
-      }
-      return sequences;
-    } catch (IOException e) {
-      throw new RuntimeException("Failed to read from string", e);
+    SamReader reader = buildReader(text);
+    List<Sequence> sequences = new ArrayList<Sequence>();
+    while (true) {
+      SequenceBuilder builder = reader.getNextSequence();
+      if (builder == null)
+        break;
+      sequences.add(builder.build());
     }
+    return sequences;
   }
 
   private SamReader buildReader(String text) {
@@ -68,7 +64,6 @@ public class SamReader_Test {
     String path = "test";
     return new SamReader(bufferedReader, path);
   }
-
 
   private void fail(String message) {
     Assert.fail(message);

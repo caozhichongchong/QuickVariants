@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.List;
@@ -13,11 +14,20 @@ import java.util.TreeMap;
 // A VcfWriter writes .vcf files
 public class VcfWriter {
   public VcfWriter(String path, boolean includeNonMutations) throws FileNotFoundException, IOException {
-    File file = new File(path);
-    this.fileStream = new FileOutputStream(file);
-    this.bufferedStream = new BufferedOutputStream(fileStream);
+    this.initialize(new FileOutputStream(new File(path)));
     this.includeNonMutations = includeNonMutations;
   }
+
+  public VcfWriter(OutputStream destination, boolean includeNonMutations) {
+    this.initialize(destination);
+    this.includeNonMutations = includeNonMutations;
+  }
+
+  private void initialize(OutputStream destination) {
+    this.fileStream = destination;
+    this.bufferedStream = new BufferedOutputStream(destination);
+  }
+
   public void write(Map<Sequence, Alignments> alignments, int numParallelJobs) throws IOException {
     this.writeText("CHR\tPOS\tREF\tALT\tDP\tDETAILS-MIDDLE\tDETAILS-ENDS\tSUPPORT\n");
 
@@ -96,7 +106,7 @@ public class VcfWriter {
     bufferedStream.write(text.getBytes());
   }
   BufferedOutputStream bufferedStream;
-  FileOutputStream fileStream;
+  OutputStream fileStream;
 
   long numReferencePositionsMatched;
   long numReferencePositions;
