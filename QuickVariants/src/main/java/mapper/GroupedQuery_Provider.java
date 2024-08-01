@@ -3,6 +3,7 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
+// A GroupedQuery_Provider combines adjacent queries with the same name into groups
 public class GroupedQuery_Provider {
   public GroupedQuery_Provider(QueryProvider queryProvider) {
     this.queryProvider = queryProvider;

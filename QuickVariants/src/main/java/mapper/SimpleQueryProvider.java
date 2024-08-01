@@ -3,7 +3,7 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-// a SimpleQueryProvider just reads sequences and treats each one as a query
+// A SimpleQueryProvider reads sequences and treats each one as a query
 public class SimpleQueryProvider implements QueryProvider {
   public SimpleQueryProvider(SequenceProvider sequenceProvider) {
     this.sequenceProvider = sequenceProvider;

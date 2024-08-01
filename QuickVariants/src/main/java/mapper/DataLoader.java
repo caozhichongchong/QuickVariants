@@ -30,11 +30,18 @@ public class DataLoader {
   }
 
   public static GroupedQuery_Provider ParseSamAlignments(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
+    // read .sam file
     SequenceProvider sequenceProvider = readSequencesFrom(path, keepQualityData, ".sam");
+    // consider reordering so mates are next to each other
     if (groupLinesInSamFiles)
       sequenceProvider = new SamGrouper(sequenceProvider);
-    QueryProvider queryBuilder = new SimpleQueryProvider(new SamParser(sequenceProvider, path, groupLinesInSamFiles));
+    // compute weights
+    SamParser samParser = new SamParser(sequenceProvider, path, groupLinesInSamFiles);
+    // generate a query for each sequence
+    QueryProvider queryBuilder = new SimpleQueryProvider(samParser);
+    // combine adjacent queries with the same name into groups
     GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
+    // done
     return groupProvider;
   }
 
