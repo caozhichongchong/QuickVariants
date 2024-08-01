@@ -125,9 +125,9 @@ public class SamParser implements SequenceProvider {
   private void setAlignmentWeight(List<SequenceBuilder> alignments, boolean hasMate) {
     double weight;
     if (hasMate)
-      weight = alignments.size() / 2;
+      weight = (float)2.0 / alignments.size();
     else
-      weight = alignments.size();
+      weight = (float)1.0 / alignments.size();
     for (SequenceBuilder sequenceBuilder: alignments) {
       sequenceBuilder.setAlignmentWeight(weight);
     }

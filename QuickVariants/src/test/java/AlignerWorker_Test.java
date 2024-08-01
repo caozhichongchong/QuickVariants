@@ -75,14 +75,14 @@ public class AlignerWorker_Test {
     String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
 
     String expectedVcf = "CHR	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
-        "contig1	1	A		0.25	0.25,0	0,0	\n" +
-        "contig1	2	C		0.25	0.25,0	0,0	\n" +
-        "contig1	3	G		0.25	0.25,0	0,0	\n" +
-        "contig1	4	T		0.25	0.25,0	0,0	\n" +
-        "contig1	9	A		0.25	0.25,0	0,0	\n" +
-        "contig1	10	C		0.25	0.25,0	0,0	\n" +
-        "contig1	11	G		0.25	0.25,0	0,0	\n" +
-        "contig1	12	T		0.25	0.25,0	0,0	\n" +
+        "contig1	1	A		0.5	0.5,0	0,0	\n" +
+        "contig1	2	C		0.5	0.5,0	0,0	\n" +
+        "contig1	3	G		0.5	0.5,0	0,0	\n" +
+        "contig1	4	T		0.5	0.5,0	0,0	\n" +
+        "contig1	9	A		0.5	0.5,0	0,0	\n" +
+        "contig1	10	C		0.5	0.5,0	0,0	\n" +
+        "contig1	11	G		0.5	0.5,0	0,0	\n" +
+        "contig1	12	T		0.5	0.5,0	0,0	\n" +
         "";
 
     checkVcf(vcf, expectedVcf);
@@ -100,22 +100,22 @@ public class AlignerWorker_Test {
     String vcf = buildVcf(samA1 + "\n" + samA2 + "\n" + samB1 + "\n" + samB2, ">contig1\n" + ref);
 
     String expectedVcf = "CHR	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
-        "contig1	1	A		0.25	0.25,0	0,0	\n" +
-        "contig1	2	C		0.25	0.25,0	0,0	\n" +
-        "contig1	3	G		0.25	0.25,0	0,0	\n" +
-        "contig1	4	T		0.25	0.25,0	0,0	\n" +
-        "contig1	9	C		0.25	0,0.25	0,0	\n" +
-        "contig1	10	C		0.25	0,0.25	0,0	\n" +
-        "contig1	11	C		0.25	0,0.25	0,0	\n" +
-        "contig1	12	C		0.25	0,0.25	0,0	\n" +
-        "contig1	17	A		0.25	0.25,0	0,0	\n" +
-        "contig1	18	C		0.25	0.25,0	0,0	\n" +
-        "contig1	19	G		0.25	0.25,0	0,0	\n" +
-        "contig1	20	T		0.25	0.25,0	0,0	\n" +
-        "contig1	25	C		0.25	0,0.25	0,0	\n" +
-        "contig1	26	C		0.25	0,0.25	0,0	\n" +
-        "contig1	27	C		0.25	0,0.25	0,0	\n" +
-        "contig1	28	C		0.25	0,0.25	0,0	\n" +
+        "contig1	1	A		0.5	0.5,0	0,0	\n" +
+        "contig1	2	C		0.5	0.5,0	0,0	\n" +
+        "contig1	3	G		0.5	0.5,0	0,0	\n" +
+        "contig1	4	T		0.5	0.5,0	0,0	\n" +
+        "contig1	9	C		0.5	0,0.5	0,0	\n" +
+        "contig1	10	C		0.5	0,0.5	0,0	\n" +
+        "contig1	11	C		0.5	0,0.5	0,0	\n" +
+        "contig1	12	C		0.5	0,0.5	0,0	\n" +
+        "contig1	17	A		0.5	0.5,0	0,0	\n" +
+        "contig1	18	C		0.5	0.5,0	0,0	\n" +
+        "contig1	19	G		0.5	0.5,0	0,0	\n" +
+        "contig1	20	T		0.5	0.5,0	0,0	\n" +
+        "contig1	25	C		0.5	0,0.5	0,0	\n" +
+        "contig1	26	C		0.5	0,0.5	0,0	\n" +
+        "contig1	27	C		0.5	0,0.5	0,0	\n" +
+        "contig1	28	C		0.5	0,0.5	0,0	\n" +
         "";
 
     checkVcf(vcf, expectedVcf);

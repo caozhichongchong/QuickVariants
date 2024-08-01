@@ -32,10 +32,9 @@ public class MatchDatabase implements AlignmentListener {
     Map<Sequence, List<WeightedAlignment>> alignmentsByReference = new HashMap<Sequence, List<WeightedAlignment>>();
 
     for (List<QueryAlignment> queryAlignments: alignments) {
-      float topWeight = (float)1.0 / (float)queryAlignments.size();
       for (QueryAlignment queryAlignment: queryAlignments) {
         for (SequenceAlignment alignment: queryAlignment.getComponents()) {
-          float weight = topWeight / (float)alignment.weight;
+          float weight = (float)alignment.weight;
           List<AlignedBlock> blocks = alignment.getSections();
           if (blocks.size() > 0) {
             Sequence reference = blocks.get(0).getSequenceB();
