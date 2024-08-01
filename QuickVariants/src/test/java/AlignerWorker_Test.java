@@ -22,7 +22,7 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(sam1, ">contig1\n" + ref);
 
-    String expectedVcf = "CHR	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
+    String expectedVcf = "#CHROM	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
        "contig1	1	A		1	1,0	0,0	\n" +
        "contig1	2	C		1	1,0	0,0	\n" +
        "contig1	3	G		1	1,0	0,0	\n" +
@@ -40,7 +40,7 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
 
-    String expectedVcf = "CHR	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
+    String expectedVcf = "#CHROM	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
         "contig1	1	A		1	1,0	0,0	\n" +
         "contig1	2	A		1	1,0	0,0	\n" +
         "contig1	3	C		1	1,0	0,0	\n" +
@@ -74,7 +74,7 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
 
-    String expectedVcf = "CHR	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
+    String expectedVcf = "#CHROM	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
         "contig1	1	A		0.5	0.5,0	0,0	\n" +
         "contig1	2	C		0.5	0.5,0	0,0	\n" +
         "contig1	3	G		0.5	0.5,0	0,0	\n" +
@@ -99,7 +99,7 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(samA1 + "\n" + samA2 + "\n" + samB1 + "\n" + samB2, ">contig1\n" + ref);
 
-    String expectedVcf = "CHR	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
+    String expectedVcf = "#CHROM	POS	REF	ALT	DP	DETAILS-MIDDLE	DETAILS-ENDS	SUPPORT\n" +
         "contig1	1	A		0.5	0.5,0	0,0	\n" +
         "contig1	2	C		0.5	0.5,0	0,0	\n" +
         "contig1	3	G		0.5	0.5,0	0,0	\n" +
