@@ -26,6 +26,7 @@ public class Main {
   static Logger silentLogger = Logger.NoOpLogger;
 
   public static void main(String[] args) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
+    MapperMetadata.setMainArguments(args);
     // load properties
     long startMillis = System.currentTimeMillis();
     Properties properties = new Properties();

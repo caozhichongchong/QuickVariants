@@ -122,10 +122,23 @@ public class AlignerWorker_Test {
   }
 
   private void checkVcf(String actual, String expected) {
+    actual = withoutVcfMetadataLines(actual);
     if (!(expected.equals(actual))) {
       String actualAsCode = "\"" + actual.replace("\n", "\\n\" +\n        \"") + "\";";
       fail("Difference in generated .vcf file.\nactual vcf:\n" + actual + "\nexpected vcf:\n" + expected + "\n code for actual vcf:\n" + actualAsCode);
     }
+  }
+
+  private String withoutVcfMetadataLines(String vcf) {
+    String[] lines = vcf.split("\n");
+    StringBuilder resultBuilder = new StringBuilder();
+    for (String line: lines) {
+      if (!line.startsWith("##")) {
+        resultBuilder.append(line);
+        resultBuilder.append("\n");
+      }
+    }
+    return resultBuilder.toString();
   }
 
   private String buildVcf(String samAlignments, String referenceGenome) {
