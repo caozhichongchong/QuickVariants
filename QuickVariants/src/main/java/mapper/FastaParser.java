@@ -30,7 +30,7 @@ public class FastaParser implements SequenceProvider {
         return null;
       char firstChar = (char)first;
       if (firstChar != '>') {
-        throw new IllegalArgumentException("Not in .fasta format: expected '>', not '" + firstChar + "'");
+        throw new IllegalArgumentException("Not in .fasta format: expected first character to be '>', not '" + firstChar + "'");
       }
       hasReadASequence = true;
     }
