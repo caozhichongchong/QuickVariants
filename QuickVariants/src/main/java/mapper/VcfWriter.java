@@ -30,7 +30,9 @@ public class VcfWriter {
 
   public void write(Map<Sequence, Alignments> alignments, int numParallelJobs) throws IOException {
     this.writeText("##fileType=\"Vcf summary of variants\"\n");
+    this.writeText("\n");
     this.writeText("##commandLine=\"" + MapperMetadata.guessCommandLine() + "\"\n");
+    this.writeText("\n");
     this.writeText("#CHROM\tPOS\tREF\tALT\tDP\tDETAILS-MIDDLE\tDETAILS-ENDS\tSUPPORT\n");
 
     List<VcfFormatRequest> jobs = this.splitJobs(alignments, numParallelJobs);

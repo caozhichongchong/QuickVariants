@@ -129,7 +129,7 @@ public class AlignerWorker_Test {
     String[] lines = vcf.split("\n");
     StringBuilder resultBuilder = new StringBuilder();
     for (String line: lines) {
-      if (!line.startsWith("#")) {
+      if (!line.startsWith("#") && line.length() > 0) {
         resultBuilder.append(line);
         resultBuilder.append("\n");
       }
