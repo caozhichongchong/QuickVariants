@@ -27,4 +27,57 @@ public class MutationDetectionParameters {
 
   public float minIndelContinuationTotalDepth;
   public float minIndelContinuationDepthFraction;
+
+  public boolean supportsSNP(float mutationDepth, float totalDepth) {
+    if (totalDepth < this.minSNPTotalDepth)
+      return false;
+    if (mutationDepth <= 0)
+      return false;
+    float mutationFraction = mutationDepth / totalDepth;
+    if (mutationFraction < this.minSNPDepthFraction)
+      return false;
+    return true;
+  }
+
+  public boolean supportsIndelStart(AlignmentPosition frequencies) {
+    float totalDepth = frequencies.getMiddleCount();
+    if (totalDepth < this.minIndelTotalStartDepth) {
+      return false;
+    }
+    float indelDepth;
+    if (frequencies.getReference() == '-') {
+      indelDepth = totalDepth - frequencies.getMiddleReferenceCount();
+    } else {
+      indelDepth = frequencies.getMiddleAlternateCount('-');
+    }
+    if (indelDepth <= 0)
+      return false;
+    float indelFraction = indelDepth / totalDepth;
+    if (indelFraction < this.minIndelStartDepthFraction) {
+      return false;
+    }
+    return true;
+  }
+
+  public boolean supportsIndelContinuation(AlignmentPosition frequencies) {
+    float totalDepth = frequencies.getMiddleCount();
+    if (totalDepth < this.minIndelContinuationTotalDepth)
+      return false;
+
+    float indelDepth;
+    if (frequencies.getReference() == '-') {
+      indelDepth = totalDepth;
+    } else {
+      indelDepth = frequencies.getMiddleAlternateCount('-');
+    }
+    if (indelDepth <= 0)
+      return false;
+
+    float indelFraction = indelDepth / totalDepth;
+    if (indelFraction < this.minIndelContinuationDepthFraction)
+      return false;
+    return true;
+  }
+
+
 }

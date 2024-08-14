@@ -50,9 +50,9 @@ public class MutationsFormatterWorker extends Thread {
       }
       boolean supportsDeletion;
       if (deletions.size() > 0) {
-        supportsDeletion = supportsIndelContinuation(frequencies);
+        supportsDeletion = this.parameters.supportsIndelContinuation(frequencies);
       } else {
-        supportsDeletion = supportsIndelStart(frequencies);
+        supportsDeletion = this.parameters.supportsIndelStart(frequencies);
       }
       if (supportsDeletion) {
         deletions.add(frequencies);
@@ -88,7 +88,7 @@ public class MutationsFormatterWorker extends Thread {
       if (alternate != '-') {
         float mutationDepth = frequencies.getAlternateCount(alternate);
         float totalDepth = frequencies.getCount();
-        if (supportsSNP(mutationDepth, totalDepth))
+        if (this.parameters.supportsSNP(mutationDepth, totalDepth))
           writeMutation(sequenceName, rowNumber, refString, "" + alternate, mutationDepth, totalDepth, stringBuilder);
       }
     }
@@ -113,57 +113,6 @@ public class MutationsFormatterWorker extends Thread {
     stringBuilder.append('\n');
   }
 
-  private boolean supportsSNP(float mutationDepth, float totalDepth) {
-    if (totalDepth < this.parameters.minSNPTotalDepth)
-      return false;
-    if (mutationDepth <= 0)
-      return false;
-    float mutationFraction = mutationDepth / totalDepth;
-    if (mutationFraction < this.parameters.minSNPDepthFraction)
-      return false;
-    return true;
-  }
-
-  private boolean supportsIndelStart(AlignmentPosition frequencies) {
-    float totalDepth = frequencies.getMiddleCount();
-    if (totalDepth < this.parameters.minIndelTotalStartDepth) {
-      return false;
-    }
-    float indelDepth;
-    if (frequencies.getReference() == '-') {
-      indelDepth = totalDepth - frequencies.getMiddleReferenceCount();
-    } else {
-      indelDepth = frequencies.getMiddleAlternateCount('-');
-    }
-    if (indelDepth <= 0)
-      return false;
-    float indelFraction = indelDepth / totalDepth;
-    if (indelFraction < this.parameters.minIndelStartDepthFraction) {
-      return false;
-    }
-    return true;
-  }
-
-  private boolean supportsIndelContinuation(AlignmentPosition frequencies) {
-    float totalDepth = frequencies.getMiddleCount();
-    if (totalDepth < this.parameters.minIndelContinuationTotalDepth)
-      return false;
-
-    float indelDepth;
-    if (frequencies.getReference() == '-') {
-      indelDepth = totalDepth;
-    } else {
-      indelDepth = frequencies.getMiddleAlternateCount('-');
-    }
-    if (indelDepth <= 0)
-      return false;
-
-    float indelFraction = indelDepth / totalDepth;
-    if (indelFraction < this.parameters.minIndelContinuationDepthFraction)
-      return false;
-    return true; 
-  }
-
   private void writeInsertions(String sequenceName, int rowNumber, AlignmentPosition frequencies, List<AlignmentPosition> insertions, StringBuilder stringBuilder) {
     StringBuilder reference = new StringBuilder();
     StringBuilder mutated = new StringBuilder();
@@ -174,11 +123,11 @@ public class MutationsFormatterWorker extends Thread {
       AlignmentPosition insertion = insertions.get(i);
       boolean insert = false;
       if (insertionStarted) {
-        insert = supportsIndelContinuation(insertion);
+        insert = this.parameters.supportsIndelContinuation(insertion);
         if (!insert)
           break;
       } else {
-        insert = supportsIndelStart(insertion);
+        insert = this.parameters.supportsIndelStart(insertion);
         insertionStarted = insert;
       }
       if (insert) {
