@@ -45,7 +45,7 @@ public class Main {
     boolean vcfIncludeNonMutations = true;
     String outRefsMapCountPath = null;
     String outMutationsPath = null;
-    MutationDetectionParameters mutationDetectionParameters = new MutationDetectionParameters();
+    MutationDetectionParameters mutationDetectionParameters = MutationDetectionParameters.defaultFilter();
     int alignmentVerbosity = 0;
     int referenceVerbosity = 0;
     boolean allowNoOutput = false;
