@@ -1,8 +1,9 @@
 package mapper;
 
 public class VcfFormatterWorker extends Thread {
-  public VcfFormatterWorker(boolean includeNonMutations) {
+  public VcfFormatterWorker(boolean includeNonMutations, MutationDetectionParameters mutationsFilter) {
     this.includeNonMutations = includeNonMutations;
+    this.mutationsFilter = mutationsFilter;
   }
 
   public void request(VcfFormatRequest formatRequest) {
@@ -119,4 +120,5 @@ public class VcfFormatterWorker extends Thread {
   String results;
   int numReferencePositionsMatched;
   boolean includeNonMutations;
+  MutationDetectionParameters mutationsFilter;
 }

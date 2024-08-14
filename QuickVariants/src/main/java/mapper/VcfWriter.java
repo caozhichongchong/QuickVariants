@@ -13,9 +13,10 @@ import java.util.TreeMap;
 
 // A VcfWriter writes .vcf files
 public class VcfWriter {
-  public VcfWriter(String path, boolean includeNonMutations) throws FileNotFoundException, IOException {
+  public VcfWriter(String path, boolean includeNonMutations, MutationDetectionParameters mutationsFilter) throws FileNotFoundException, IOException {
     this.initialize(new FileOutputStream(new File(path)));
     this.includeNonMutations = includeNonMutations;
+    this.mutationsFilter = mutationsFilter;
   }
 
   public VcfWriter(OutputStream destination, boolean includeNonMutations) {
@@ -93,7 +94,7 @@ public class VcfWriter {
   }
 
   private VcfFormatterWorker requestFormat(VcfFormatRequest formatRequest) {
-    VcfFormatterWorker worker = new VcfFormatterWorker(this.includeNonMutations);
+    VcfFormatterWorker worker = new VcfFormatterWorker(this.includeNonMutations, this.mutationsFilter);
     worker.request(formatRequest);
     worker.start();
     return worker;
@@ -115,4 +116,5 @@ public class VcfWriter {
   long numReferencePositionsMatched;
   long numReferencePositions;
   boolean includeNonMutations;
+  MutationDetectionParameters mutationsFilter;
 }

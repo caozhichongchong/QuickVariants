@@ -45,7 +45,8 @@ public class Main {
     boolean vcfIncludeNonMutations = true;
     String outRefsMapCountPath = null;
     String outMutationsPath = null;
-    MutationDetectionParameters mutationDetectionParameters = MutationDetectionParameters.defaultFilter();
+    MutationDetectionParameters mutationFilterParameters = MutationDetectionParameters.defaultFilter();
+    MutationDetectionParameters vcfFilterParameters = MutationDetectionParameters.emptyFilter();
     int alignmentVerbosity = 0;
     int referenceVerbosity = 0;
     boolean allowNoOutput = false;
@@ -84,7 +85,41 @@ public class Main {
       }
       if ("--out-vcf".equals(arg)) {
         outVcfPath = args[i + 1];
-        i++;
+        i += 2;
+        while (i < args.length) {
+          arg = args[i];
+          if ("--snp-threshold".equals(arg)) {
+            vcfFilterParameters.minSNPTotalDepth = (float)Double.parseDouble(args[i + 1]);
+            vcfFilterParameters.minSNPDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            i += 3;
+            continue;
+          }
+          if ("--indel-start-threshold".equals(arg)) {
+            vcfFilterParameters.minIndelTotalStartDepth = (float)Double.parseDouble(args[i + 1]);
+            vcfFilterParameters.minIndelStartDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            i += 3;
+            continue;
+          }
+          if ("--indel-continue-threshold".equals(arg)) {
+            vcfFilterParameters.minIndelContinuationTotalDepth = (float)Double.parseDouble(args[i + 1]);
+            vcfFilterParameters.minIndelContinuationDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            i += 3;
+            continue;
+          }
+          if ("--indel-threshold".equals(arg)) {
+            vcfFilterParameters.minIndelTotalStartDepth = (float)Double.parseDouble(args[i + 1]);
+            vcfFilterParameters.minIndelContinuationTotalDepth = (float)Double.parseDouble(args[i + 1]);
+
+            vcfFilterParameters.minIndelStartDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            vcfFilterParameters.minIndelContinuationDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            i += 3;
+            continue;
+          }
+          i--;
+          // maybe this argument is a top-level argument
+          break;
+        }
+
         continue;
       }
       if ("--out-sam".equals(arg)) {
@@ -103,29 +138,29 @@ public class Main {
         while (i < args.length) {
           arg = args[i];
           if ("--snp-threshold".equals(arg)) {
-            mutationDetectionParameters.minSNPTotalDepth = (float)Double.parseDouble(args[i + 1]);
-            mutationDetectionParameters.minSNPDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            mutationFilterParameters.minSNPTotalDepth = (float)Double.parseDouble(args[i + 1]);
+            mutationFilterParameters.minSNPDepthFraction = (float)Double.parseDouble(args[i + 2]);
             i += 3;
             continue;
           }
           if ("--indel-start-threshold".equals(arg)) {
-            mutationDetectionParameters.minIndelTotalStartDepth = (float)Double.parseDouble(args[i + 1]);
-            mutationDetectionParameters.minIndelStartDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            mutationFilterParameters.minIndelTotalStartDepth = (float)Double.parseDouble(args[i + 1]);
+            mutationFilterParameters.minIndelStartDepthFraction = (float)Double.parseDouble(args[i + 2]);
             i += 3;
             continue;
           }
           if ("--indel-continue-threshold".equals(arg)) {
-            mutationDetectionParameters.minIndelContinuationTotalDepth = (float)Double.parseDouble(args[i + 1]);
-            mutationDetectionParameters.minIndelContinuationDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            mutationFilterParameters.minIndelContinuationTotalDepth = (float)Double.parseDouble(args[i + 1]);
+            mutationFilterParameters.minIndelContinuationDepthFraction = (float)Double.parseDouble(args[i + 2]);
             i += 3;
             continue;
           }
           if ("--indel-threshold".equals(arg)) {
-            mutationDetectionParameters.minIndelTotalStartDepth = (float)Double.parseDouble(args[i + 1]);
-            mutationDetectionParameters.minIndelContinuationTotalDepth = (float)Double.parseDouble(args[i + 1]);
+            mutationFilterParameters.minIndelTotalStartDepth = (float)Double.parseDouble(args[i + 1]);
+            mutationFilterParameters.minIndelContinuationTotalDepth = (float)Double.parseDouble(args[i + 1]);
 
-            mutationDetectionParameters.minIndelStartDepthFraction = (float)Double.parseDouble(args[i + 2]);
-            mutationDetectionParameters.minIndelContinuationDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            mutationFilterParameters.minIndelStartDepthFraction = (float)Double.parseDouble(args[i + 2]);
+            mutationFilterParameters.minIndelContinuationDepthFraction = (float)Double.parseDouble(args[i + 2]);
             i += 3;
             continue;
           }
@@ -221,7 +256,7 @@ public class Main {
     for (GroupedQuery_Provider groupBuilder : queries) {
       System.out.println(groupBuilder.toString());
     }
-    boolean successful = run(referencePaths, queries, outVcfPath, vcfIncludeNonMutations, outSamPath, outRefsMapCountPath, outMutationsPath, mutationDetectionParameters, outUnalignedPath, numThreads, queryEndFraction, autoVerbose, outAncestorPath, startMillis);
+    boolean successful = run(referencePaths, queries, outVcfPath, vcfIncludeNonMutations, outSamPath, outRefsMapCountPath, outMutationsPath, mutationFilterParameters, vcfFilterParameters, outUnalignedPath, numThreads, queryEndFraction, autoVerbose, outAncestorPath, startMillis);
     if (!successful) {
       System.exit(1);
     }
@@ -251,6 +286,17 @@ public class Main {
 "      --out-vcf <file> output file to generate containing a description of mutation counts by position\n" +
 "      --vcf-exclude-non-mutations if set, the output vcf file will exclude positions where no mutations were detected\n" +
 "      --distinguish-query-ends <fraction> (default 0.1) In the output vcf file, we separately display which queries aligned at each position with <fraction> of the end of the query and which didn't.\n" +
+"\n" +
+"      --snp-threshold <min total depth> <min supporting depth fraction> (default 0, 0)\n" +
+"        The minimum total depth and minimum supporting depth fraction required at a position to report the support for the mutation\n" +
+"\n" +
+"      --indel-start-threshold <min total depth> <min supporting depth fraction> (default 0, 0)\n" +
+"        The minimum total (middle) depth and minimum supporting depth fraction required at a position to report support for the start of an insertion or deletion\n" +
+"\n" +
+"      --indel-continue-threshold <min total depth> <min supporting depth fraction> (default 0, 0)\n" +
+"        The minimum total (middle) depth and minimum supporting depth fraction required at a position to report support for a continuation of an insertion or deletion\n" +
+"      --indel-threshold <min total depth> <min supporting depth fraction>\n" +
+"        Alias for --indel-start-threshold <min total depth> <min supporting depth frequency> and --indel-continue-threshold <min total depth> <min supporting depth frequency>\n" +
 "\n" +
 "    Summary by mutation\n" +
 "\n" +
@@ -301,14 +347,14 @@ public class Main {
   }
 
   // performs alignment and outputs results
-  public static boolean run(List<String> referencePaths, List<GroupedQuery_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationDetectionParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
+  public static boolean run(List<String> referencePaths, List<GroupedQuery_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationFilterParameters, MutationDetectionParameters vcfFilterParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
     VcfWriter vcfWriter = null;
     if (outVcfPath != null)
-      vcfWriter = new VcfWriter(outVcfPath, vcfIncludeNonMutations);
+      vcfWriter = new VcfWriter(outVcfPath, vcfIncludeNonMutations, vcfFilterParameters);
 
     MutationsWriter mutationsWriter = null;
     if (outMutationsPath != null)
-      mutationsWriter = new MutationsWriter(outMutationsPath, mutationDetectionParameters);
+      mutationsWriter = new MutationsWriter(outMutationsPath, mutationFilterParameters);
 
     System.out.println("Loading reference");
     boolean keepQualityData = (outUnalignedPath != null);
