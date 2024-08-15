@@ -11,6 +11,13 @@ public class AlignmentPosition {
     this.referenceBase = referenceBase;
   }
 
+  public void putScaled(char value, int scaledWeight) {
+    this.putScaled(value, scaledWeight, false, false);
+    this.putScaled(value, scaledWeight, false, true);
+    this.putScaled(value, scaledWeight, true, false);
+    this.putScaled(value, scaledWeight, true, true);
+  }
+
   public void putScaled(char value, int scaledWeight, boolean forward, boolean nearQueryEnd) {
     AlignmentPosition_DirectionCounts container;
     if (forward) {

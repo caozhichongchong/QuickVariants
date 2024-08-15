@@ -63,6 +63,7 @@ public class MutationsWriter {
     for (Map.Entry<String, Sequence> entry : sortedSequences.entrySet()) {
       Sequence sequence = entry.getValue();
       Alignments alignmentsHere = alignments.get(sequence);
+      FilteredAlignments filteredAlignments = new FilteredAlignments(alignmentsHere, this.parameters);
       int startIndex = 0;
       while (startIndex < sequence.getLength()) {
         int jobSize = Math.min(maxJobSize, Math.max(1, (jobs.size() + 1) / numParallelJobs * maxJobSize));
@@ -70,7 +71,7 @@ public class MutationsWriter {
         int endIndex = Math.min(sequence.getLength(), startIndex + jobSize);
         int length = endIndex - startIndex;
         int jobId = jobs.size();
-        jobs.add(new MutationsFormatRequest(sequence, startIndex, length, alignmentsHere, jobId));
+        jobs.add(new MutationsFormatRequest(sequence, startIndex, length, filteredAlignments, jobId));
         startIndex = endIndex;
       }
     }

@@ -25,7 +25,7 @@ public class MutationsFormatterWorker extends Thread {
     StringBuilder stringBuilder = new StringBuilder();
 
     String sequenceName = formatRequest.sequence.getName();
-    Alignments bases = formatRequest.alignments;
+    FilteredAlignments bases = formatRequest.alignments;
     int endIndex = formatRequest.startIndex + formatRequest.length;
     List<AlignmentPosition> deletions = new ArrayList<AlignmentPosition>();
     int displayIndex = 1;

@@ -1,7 +1,7 @@
 package mapper;
 
 class MutationsFormatRequest {
-  public MutationsFormatRequest(Sequence sequence, int startIndex, int length, Alignments alignments, int jobIndex) {
+  public MutationsFormatRequest(Sequence sequence, int startIndex, int length, FilteredAlignments alignments, int jobIndex) {
     this.sequence = sequence;
     this.startIndex = startIndex;
     this.length = length;
@@ -12,6 +12,6 @@ class MutationsFormatRequest {
   public Sequence sequence;
   public int startIndex;
   public int length;
-  public Alignments alignments;
+  public FilteredAlignments alignments;
   public int jobIndex;
 }
