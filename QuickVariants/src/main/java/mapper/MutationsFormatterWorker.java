@@ -88,8 +88,7 @@ public class MutationsFormatterWorker extends Thread {
       if (alternate != '-') {
         float mutationDepth = frequencies.getAlternateCount(alternate);
         float totalDepth = frequencies.getCount();
-        if (this.parameters.supportsSNP(mutationDepth, totalDepth))
-          writeMutation(sequenceName, rowNumber, refString, "" + alternate, mutationDepth, totalDepth, stringBuilder);
+        writeMutation(sequenceName, rowNumber, refString, "" + alternate, mutationDepth, totalDepth, stringBuilder);
       }
     }
   }
