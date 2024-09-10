@@ -48,13 +48,8 @@ public class MutationsFormatterWorker extends Thread {
         if (candidateInsertions.size() > 0)
           writeInsertions(sequenceName, displayIndex, frequencies, candidateInsertions, stringBuilder);
       }
-      boolean supportsDeletion;
-      if (deletions.size() > 0) {
-        supportsDeletion = this.parameters.supportsIndelContinuation(frequencies);
-      } else {
-        supportsDeletion = this.parameters.supportsIndelStart(frequencies);
-      }
-      if (supportsDeletion) {
+      boolean hasDeletion = frequencies.getAlternateCount('-') > 0;
+      if (hasDeletion) {
         deletions.add(frequencies);
       } else {
         if (deletions.size() > 0) {
@@ -63,8 +58,6 @@ public class MutationsFormatterWorker extends Thread {
           deletions.clear();
         }
       }
-
-
     }
     // TODO: correctly handle deletions extending past the end of a block
     if (deletions.size() > 0) {
