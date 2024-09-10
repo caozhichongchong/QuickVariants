@@ -40,40 +40,45 @@ public class MutationDetectionParameters {
   }
 
   public boolean supportsIndelStart(AlignmentPosition frequencies) {
-    float totalDepth = frequencies.getMiddleCount();
-    if (totalDepth < this.minIndelTotalStartDepth) {
+    float middleDepth = frequencies.getMiddleCount();
+    if (middleDepth < this.minIndelTotalStartDepth)
       return false;
-    }
-    float indelDepth;
+    float middleIndelDepth;
+    float endIndelDepth;
     if (frequencies.getReference() == '-') {
-      indelDepth = totalDepth - frequencies.getMiddleReferenceCount();
+      middleIndelDepth = middleDepth - frequencies.getMiddleReferenceCount();
+      endIndelDepth = frequencies.getEndCount() - frequencies.getEndReferenceCount();
     } else {
-      indelDepth = frequencies.getMiddleAlternateCount('-');
+      middleIndelDepth = frequencies.getMiddleAlternateCount('-');
+      endIndelDepth = frequencies.getEndAlternateCount('-');
     }
-    if (indelDepth <= 0)
+    if (middleIndelDepth <= 0 && endIndelDepth <= 0)
       return false;
-    float indelFraction = indelDepth / totalDepth;
-    if (indelFraction < this.minIndelStartDepthFraction) {
+    float indelFraction = middleIndelDepth / middleDepth;
+    if (indelFraction < this.minIndelStartDepthFraction)
       return false;
-    }
     return true;
   }
 
   public boolean supportsIndelContinuation(AlignmentPosition frequencies) {
-    float totalDepth = frequencies.getMiddleCount();
-    if (totalDepth < this.minIndelContinuationTotalDepth)
+    float middleDepth = frequencies.getMiddleCount();
+    if (middleDepth < this.minIndelContinuationTotalDepth)
       return false;
 
-    float indelDepth;
+    float middleIndelDepth;
+    float endIndelDepth;
     if (frequencies.getReference() == '-') {
-      indelDepth = totalDepth;
+      middleIndelDepth = middleDepth - frequencies.getMiddleReferenceCount();
+      endIndelDepth = frequencies.getEndCount() - frequencies.getEndReferenceCount();
     } else {
-      indelDepth = frequencies.getMiddleAlternateCount('-');
+      middleIndelDepth = frequencies.getMiddleAlternateCount('-');
+      endIndelDepth = frequencies.getEndAlternateCount('-');
     }
-    if (indelDepth <= 0)
+
+    if (middleIndelDepth <= 0 && endIndelDepth <= 0)
       return false;
 
-    float indelFraction = indelDepth / totalDepth;
+    float indelFraction = middleIndelDepth / middleDepth;
     if (indelFraction < this.minIndelContinuationDepthFraction)
       return false;
     return true;

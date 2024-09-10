@@ -167,6 +167,10 @@ public class AlignmentPosition {
     return this.forwardMiddleCounts.getReferenceCount() + this.reverseMiddleCounts.getReferenceCount();
   }
 
+  public float getEndReferenceCount() {
+    return this.forwardEndCounts.getReferenceCount() + this.reverseEndCounts.getReferenceCount();
+  }
+
   public static String formatNumber(float number) {
     int rounded = (int)number;
     if (rounded == number) {
@@ -203,6 +207,16 @@ public class AlignmentPosition {
     return total;
   }
 
+  public float getEndCount() {
+    float total = this.getEndReferenceCount();
+    if (this.hasAlternates()) {
+      for (int i = 0; i < this.getAllKeys().length; i++) {
+        total += this.getEndAlternateCount(i);
+      }
+    }
+    return total;
+  }
+
   public String formatAlternateCount(char c) {
     return formatNumber(getAlternateCount(c));
   }
@@ -221,6 +235,14 @@ public class AlignmentPosition {
 
   public float getMiddleAlternateCount(int index) {
     return this.forwardMiddleCounts.getAlternateCount(index) + this.reverseMiddleCounts.getAlternateCount(index);
+  }
+
+  public float getEndAlternateCount(char c) {
+    return getEndAlternateCount(indexForKey(c));
+  }
+
+  public float getEndAlternateCount(int index) {
+    return this.forwardEndCounts.getAlternateCount(index) + this.reverseEndCounts.getAlternateCount(index);
   }
 
   public boolean hasAlternates() {
