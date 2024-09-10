@@ -19,8 +19,22 @@ public class FilteredAlignments {
   public AlignmentPosition getPosition(int referenceIndex) {
     AlignmentPosition result = this.alignments.getPosition(referenceIndex);
     result = filterSNPs(result, referenceIndex);
-    //result = filterDeletions(result, referenceIndex);
+    result = filterDeletions(result, referenceIndex);
     return result;
+  }
+
+  // TODO: make this more efficient rather than calling it separately for each position in the deletion
+  private boolean couldBeDeletion(int referenceIndex) {
+    int index = referenceIndex;
+    while (index >= 0) {
+      AlignmentPosition position = this.alignments.getPosition(index);
+      if (this.filter.supportsIndelStart(position))
+        return true;
+      if (!this.filter.supportsIndelContinuation(position))
+        return false;
+      index--;
+    }
+    return true;
   }
 
   public AlignmentPosition getInsertion(int referenceIndex, int insertionIndex) {
@@ -44,7 +58,12 @@ public class FilteredAlignments {
   }
 
   private AlignmentPosition filterDeletions(AlignmentPosition position, int referenceIndex) {
-    // TODO: implement this
+    if (!position.hasAlternates())
+      return position;
+    if (couldBeDeletion(referenceIndex))
+      return position;
+    // filter out deletions
+    position.replaceAlternateWithReference('-');
     return position;
   }
 
