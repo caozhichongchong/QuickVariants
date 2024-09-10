@@ -191,6 +191,10 @@ public class Alignments {
     return section.getInsertion(index, insertionIndex);
   }
 
+  public Sequence getSequence() {
+    return this.sequence;
+  }
+
   private AlignmentsSection getSection(int referencePosition) {
     return this.sections[referencePosition / positionsPerSection];
   }

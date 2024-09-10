@@ -11,28 +11,35 @@ public class AlignmentPosition {
     this.referenceBase = referenceBase;
   }
 
-  public void putScaled(char value, int scaledWeight) {
-    this.putScaled(value, scaledWeight, false, false);
-    this.putScaled(value, scaledWeight, false, true);
-    this.putScaled(value, scaledWeight, true, false);
-    this.putScaled(value, scaledWeight, true, true);
+  public void replaceAlternateWithReference(char value) {
+    if (value != this.referenceBase) {
+      this.replaceAlternateWithReference(value, false, false);
+      this.replaceAlternateWithReference(value, false, true);
+      this.replaceAlternateWithReference(value, true, false);
+      this.replaceAlternateWithReference(value, true, true);
+    }
+  }
+
+  private void replaceAlternateWithReference(char value, boolean forward, boolean nearQueryEnd) {
+    // clear the alternate count
+    int alternate = getScaled(value, forward, nearQueryEnd);
+    this.putScaled(value, 0, forward, nearQueryEnd);
+    // add the old count to the reference count
+    int reference = this.getScaled(this.referenceBase, forward, nearQueryEnd);
+    this.putScaled(this.referenceBase, alternate + reference, forward, nearQueryEnd);
+  }
+
+  private int getScaled(char value, boolean forward, boolean nearQueryEnd) {
+    AlignmentPosition_DirectionCounts container = getContainer(forward, nearQueryEnd);
+    if (this.referenceBase == value) {
+      return container.getScaledReference();
+    } else {
+      return container.getScaledAlternate(value);
+    }
   }
 
   public void putScaled(char value, int scaledWeight, boolean forward, boolean nearQueryEnd) {
-    AlignmentPosition_DirectionCounts container;
-    if (forward) {
-      if (nearQueryEnd) {
-        container = this.forwardEndCounts;
-      } else {
-        container = this.forwardMiddleCounts;
-      }
-    } else {
-     if (nearQueryEnd) {
-        container = this.reverseEndCounts;
-      } else {
-        container = this.reverseMiddleCounts;
-      }
-    }
+    AlignmentPosition_DirectionCounts container = getContainer(forward, nearQueryEnd);
 
     if (this.referenceBase == value) {
       container.putScaledReference(scaledWeight);
@@ -40,6 +47,25 @@ public class AlignmentPosition {
       container.putScaledAlternate(value, scaledWeight);
     }
   }
+
+  private AlignmentPosition_DirectionCounts getContainer(boolean forward, boolean nearQueryEnd) {
+    AlignmentPosition_DirectionCounts container;
+    if (forward) {
+      if (nearQueryEnd) {
+        return this.forwardEndCounts;
+      } else {
+        return this.forwardMiddleCounts;
+      }
+    } else {
+     if (nearQueryEnd) {
+        return this.reverseEndCounts;
+      } else {
+        return this.reverseMiddleCounts;
+      }
+    }
+  }
+
+
 
   public void putSampleAlternateSequence(Sequence querySequence, int index, boolean isDeletion) {
     char alternate;
@@ -121,6 +147,20 @@ public class AlignmentPosition {
       builder.append(formatNumber(reverseMiddleCount));
     }
     return builder.toString();
+  }
+
+  private float getReferenceCount(boolean forward, boolean nearQueryEnd) {
+    if (forward) {
+      if (nearQueryEnd)
+        return this.forwardEndCounts.getReferenceCount();
+      else
+        return this.reverseEndCounts.getReferenceCount();
+    } else {
+      if (nearQueryEnd)
+        return this.forwardMiddleCounts.getReferenceCount();
+      else
+        return this.reverseMiddleCounts.getReferenceCount();
+    }
   }
 
   public float getMiddleReferenceCount() {

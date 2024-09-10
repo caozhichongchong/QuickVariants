@@ -78,6 +78,7 @@ public class VcfWriter {
     for (Map.Entry<String, Sequence> entry : sortedSequences.entrySet()) {
       Sequence sequence = entry.getValue();
       Alignments alignmentsHere = alignments.get(sequence);
+      FilteredAlignments filteredAlignments = new FilteredAlignments(alignmentsHere, this.mutationsFilter);
       int startIndex = 0;
       while (startIndex < sequence.getLength()) {
         int jobSize = Math.min(maxJobSize, Math.max(1, (jobs.size() + 1) / numParallelJobs * maxJobSize));
@@ -85,7 +86,7 @@ public class VcfWriter {
         int endIndex = Math.min(sequence.getLength(), startIndex + jobSize);
         int length = endIndex - startIndex;
         int jobId = jobs.size();
-        jobs.add(new VcfFormatRequest(sequence, startIndex, length, alignmentsHere, jobId));
+        jobs.add(new VcfFormatRequest(sequence, startIndex, length, filteredAlignments, jobId));
         startIndex = endIndex;
       }
       this.numReferencePositions += sequence.getLength();

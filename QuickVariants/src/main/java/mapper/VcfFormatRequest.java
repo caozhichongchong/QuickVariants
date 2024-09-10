@@ -1,7 +1,7 @@
 package mapper;
 
 class VcfFormatRequest {
-  public VcfFormatRequest(Sequence sequence, int startIndex, int length, Alignments alignments, int jobIndex) {
+  public VcfFormatRequest(Sequence sequence, int startIndex, int length, FilteredAlignments alignments, int jobIndex) {
     this.sequence = sequence;
     this.startIndex = startIndex;
     this.length = length;
@@ -12,7 +12,7 @@ class VcfFormatRequest {
   public Sequence sequence;
   public int startIndex;
   public int length;
-  public Alignments alignments;
+  public FilteredAlignments alignments;
   public int jobIndex;
 
   @Override

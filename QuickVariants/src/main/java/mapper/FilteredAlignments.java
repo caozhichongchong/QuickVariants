@@ -18,26 +18,26 @@ public class FilteredAlignments {
 
   public AlignmentPosition getPosition(int referenceIndex) {
     AlignmentPosition result = this.alignments.getPosition(referenceIndex);
-    result = filterSNPs(result);
-    result = filterDeletions(result, referenceIndex);
+    //result = filterSNPs(result, referenceIndex);
+    //result = filterDeletions(result, referenceIndex);
     return result;
   }
 
   public AlignmentPosition getInsertion(int referenceIndex, int insertionIndex) {
     AlignmentPosition result = this.alignments.getInsertion(referenceIndex, insertionIndex);
-    result = filterSNPs(result);
-    result = filterInsertions(result, referenceIndex, insertionIndex);
+    //result = filterSNPs(result, referenceIndex);
+    //result = filterInsertions(result, referenceIndex, insertionIndex);
     return result;
   }
 
-  private AlignmentPosition filterSNPs(AlignmentPosition position) {
+  private AlignmentPosition filterSNPs(AlignmentPosition position, int referenceIndex) {
     float totalCount = position.getCount();
     char[] nonzeroAlternates = position.getNonzeroAlternates();
     for (char alternate: nonzeroAlternates) {
       if (alternate != '-') {
         float alternateCount = position.getAlternateCount(alternate);
         if (!filter.supportsSNP(alternateCount, totalCount)) {
-          position.putScaled(alternate, 0);
+          position.replaceAlternateWithReference(alternate);
         }
       }
     }
