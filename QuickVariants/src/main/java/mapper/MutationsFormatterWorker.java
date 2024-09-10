@@ -110,25 +110,17 @@ public class MutationsFormatterWorker extends Thread {
     StringBuilder mutated = new StringBuilder();
     float totalDepth = frequencies.getMiddleCount();
     float insertionDepth = totalDepth;
-    boolean insertionStarted = false;
+    boolean hasInsertion = false;
     for (int i = 0; i < insertions.size(); i++) {
       AlignmentPosition insertion = insertions.get(i);
-      boolean insert = false;
-      if (insertionStarted) {
-        insert = this.parameters.supportsIndelContinuation(insertion);
-        if (!insert)
-          break;
-      } else {
-        insert = this.parameters.supportsIndelStart(insertion);
-        insertionStarted = insert;
-      }
-      if (insert) {
+      if (insertion.hasAlternates()) {
+        hasInsertion = true;
         reference.append('-');
         mutated.append(insertion.getMostPopularAlternate());
         insertionDepth = insertion.getMiddleCount() - insertion.getMiddleReferenceCount();
       }
     }
-    if (insertionStarted) {
+    if (hasInsertion) {
       writeMutation(sequenceName, rowNumber, reference.toString(), mutated.toString(), insertionDepth, totalDepth, stringBuilder);
     }
   }
