@@ -39,7 +39,7 @@ public class FilteredAlignments {
 
   public AlignmentPosition getInsertion(int referenceIndex, int insertionIndex) {
     AlignmentPosition result = this.alignments.getInsertion(referenceIndex, insertionIndex);
-    //result = filterInsertions(result, referenceIndex, insertionIndex);
+    result = filterInsertions(result, referenceIndex, insertionIndex);
     return result;
   }
 
@@ -58,8 +58,10 @@ public class FilteredAlignments {
   }
 
   private AlignmentPosition filterDeletions(AlignmentPosition position, int referenceIndex) {
+    // fast path for positions without alternates
     if (!position.hasAlternates())
       return position;
+    // check whether this position satisfies the filter
     if (couldBeDeletion(referenceIndex))
       return position;
     // filter out deletions
@@ -68,7 +70,21 @@ public class FilteredAlignments {
   }
 
   private AlignmentPosition filterInsertions(AlignmentPosition position, int referenceIndex, int insertionIndex) {
-    // TODO: implement this
+    // fast path for most positions without alternates
+    if (!position.hasAlternates())
+      return position;
+    // check whether this position satisfies the filter
+    boolean keepInsertions = false;
+    if (insertionIndex == 0)
+      keepInsertions = this.filter.supportsIndelStart(position);
+    else
+      keepInsertions = this.filter.supportsIndelContinuation(position);
+    if (!keepInsertions) {
+      char[] nonzeroAlternates = position.getNonzeroAlternates();
+      for (char alternate: nonzeroAlternates) {
+        position.replaceAlternateWithReference(alternate);
+      }
+    }
     return position;
   }
 
