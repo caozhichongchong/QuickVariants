@@ -18,14 +18,13 @@ public class FilteredAlignments {
 
   public AlignmentPosition getPosition(int referenceIndex) {
     AlignmentPosition result = this.alignments.getPosition(referenceIndex);
-    //result = filterSNPs(result, referenceIndex);
+    result = filterSNPs(result, referenceIndex);
     //result = filterDeletions(result, referenceIndex);
     return result;
   }
 
   public AlignmentPosition getInsertion(int referenceIndex, int insertionIndex) {
     AlignmentPosition result = this.alignments.getInsertion(referenceIndex, insertionIndex);
-    //result = filterSNPs(result, referenceIndex);
     //result = filterInsertions(result, referenceIndex, insertionIndex);
     return result;
   }
