@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MutationsFormatterWorker extends Thread {
-  public MutationsFormatterWorker(MutationDetectionParameters parameters) {
-    this.parameters = parameters;
+  public MutationsFormatterWorker() {
   }
 
   public void request(MutationsFormatRequest formatRequest) {
@@ -147,5 +146,4 @@ public class MutationsFormatterWorker extends Thread {
   MutationsFormatRequest formatRequest;
   String results;
   boolean includeNonMutations;
-  MutationDetectionParameters parameters;
 }

@@ -95,7 +95,7 @@ public class VcfWriter {
   }
 
   private VcfFormatterWorker requestFormat(VcfFormatRequest formatRequest) {
-    VcfFormatterWorker worker = new VcfFormatterWorker(this.includeNonMutations, this.mutationsFilter);
+    VcfFormatterWorker worker = new VcfFormatterWorker(this.includeNonMutations);
     worker.request(formatRequest);
     worker.start();
     return worker;

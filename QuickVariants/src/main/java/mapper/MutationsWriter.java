@@ -79,7 +79,7 @@ public class MutationsWriter {
   }
 
   private MutationsFormatterWorker requestFormat(MutationsFormatRequest formatRequest) {
-    MutationsFormatterWorker worker = new MutationsFormatterWorker(this.parameters);
+    MutationsFormatterWorker worker = new MutationsFormatterWorker();
     worker.request(formatRequest);
     worker.start();
     return worker;
