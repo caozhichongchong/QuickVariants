@@ -79,15 +79,15 @@ Multiple output formats may be specified during a single run; for example:
 
 ### Test
 ```
-java -jar quick-variants-1.0.14.jar --out-vcf Fig4Example1.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig4/Example1/90.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig4Example2.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig4/Example2/86.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example1.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example1/99.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example2.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example2/102.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example3.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example3/9.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig5Example4.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example4/47.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example1.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example1/88.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example2.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example2/90.sam
-java -jar quick-variants-1.0.14.jar --out-vcf Fig6Example3.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example3/9.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig4Example1.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig4/Example1/90.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig4Example2.vcf --reference examples/Fig4/reference.fasta --in-sam examples/Fig4/Example2/86.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig5Example1.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example1/99.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig5Example2.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example2/102.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig5Example3.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example3/9.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig5Example4.vcf --reference examples/Fig5/reference.fasta --in-sam examples/Fig5/Example4/47.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig6Example1.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example1/88.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig6Example2.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example2/90.sam
+java -jar quick-variants-1.1.0.jar --out-vcf Fig6Example3.vcf --reference examples/Fig6/reference.fasta --in-sam examples/Fig6/Example3/9.sam
 ```
 - You can compare your results to pre-generated VCF files located in example/test_results/.
 ### filtering point mutations and indels
