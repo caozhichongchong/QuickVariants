@@ -11,31 +11,18 @@ public class AlignmentPosition {
     this.referenceBase = referenceBase;
   }
 
-  public void replaceAlternateWithReference(char value) {
+  public void ignoreAlternate(char value) {
     if (value != this.referenceBase) {
-      this.replaceAlternateWithReference(value, false, false);
-      this.replaceAlternateWithReference(value, false, true);
-      this.replaceAlternateWithReference(value, true, false);
-      this.replaceAlternateWithReference(value, true, true);
+      this.ignoreAlternate(value, false, false);
+      this.ignoreAlternate(value, false, true);
+      this.ignoreAlternate(value, true, false);
+      this.ignoreAlternate(value, true, true);
     }
   }
 
-  private void replaceAlternateWithReference(char value, boolean forward, boolean nearQueryEnd) {
-    // clear the alternate count
-    int alternate = getScaled(value, forward, nearQueryEnd);
-    this.putScaled(value, 0, forward, nearQueryEnd);
-    // add the old count to the reference count
-    int reference = this.getScaled(this.referenceBase, forward, nearQueryEnd);
-    this.putScaled(this.referenceBase, alternate + reference, forward, nearQueryEnd);
-  }
-
-  private int getScaled(char value, boolean forward, boolean nearQueryEnd) {
+  private void ignoreAlternate(char value, boolean forward, boolean nearQueryEnd) {
     AlignmentPosition_DirectionCounts container = getContainer(forward, nearQueryEnd);
-    if (this.referenceBase == value) {
-      return container.getScaledReference();
-    } else {
-      return container.getScaledAlternate(value);
-    }
+    container.ignoreAlternate(value);
   }
 
   public void putScaled(char value, int scaledWeight, boolean forward, boolean nearQueryEnd) {
@@ -181,6 +168,7 @@ public class AlignmentPosition {
 
   public float getCount() {
     float total = this.getReferenceCount();
+    total += this.getIgnoredAlternateCount();
     if (this.hasAlternates()) {
       for (int i = 0; i < this.getAllKeys().length; i++) {
         total += this.getAlternateCount(i);
@@ -197,14 +185,23 @@ public class AlignmentPosition {
     return this.forwardMiddleCounts.getReferenceCount() + this.forwardEndCounts.getReferenceCount() + this.reverseMiddleCounts.getReferenceCount() + this.reverseEndCounts.getReferenceCount();
   }
 
+  private float getIgnoredAlternateCount() {
+    return this.forwardMiddleCounts.getIgnoredAlternateCount() + this.forwardEndCounts.getIgnoredAlternateCount() + this.reverseMiddleCounts.getIgnoredAlternateCount() + this.reverseEndCounts.getIgnoredAlternateCount();
+  }
+
   public float getMiddleCount() {
     float total = this.getMiddleReferenceCount();
+    total += getMiddleIgnoredAlternateCount();
     if (this.hasAlternates()) {
       for (int i = 0; i < this.getAllKeys().length; i++) {
         total += this.getMiddleAlternateCount(i);
       }
     }
     return total;
+  }
+
+  private float getMiddleIgnoredAlternateCount() {
+    return this.forwardMiddleCounts.getIgnoredAlternateCount() + this.reverseMiddleCounts.getIgnoredAlternateCount();
   }
 
   public float getEndCount() {

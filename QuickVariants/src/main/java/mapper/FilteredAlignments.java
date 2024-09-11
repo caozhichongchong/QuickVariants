@@ -50,7 +50,7 @@ public class FilteredAlignments {
       if (alternate != '-') {
         float alternateCount = position.getAlternateCount(alternate);
         if (!filter.supportsSNP(alternateCount, totalCount)) {
-          position.replaceAlternateWithReference(alternate);
+          position.ignoreAlternate(alternate);
         }
       }
     }
@@ -65,7 +65,7 @@ public class FilteredAlignments {
     if (couldBeDeletion(referenceIndex))
       return position;
     // filter out deletions
-    position.replaceAlternateWithReference('-');
+    position.ignoreAlternate('-');
     return position;
   }
 
@@ -82,7 +82,7 @@ public class FilteredAlignments {
     if (!keepInsertions) {
       char[] nonzeroAlternates = position.getNonzeroAlternates();
       for (char alternate: nonzeroAlternates) {
-        position.replaceAlternateWithReference(alternate);
+        position.ignoreAlternate(alternate);
       }
     }
     return position;

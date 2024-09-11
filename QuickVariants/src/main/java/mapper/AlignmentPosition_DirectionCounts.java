@@ -38,6 +38,12 @@ public class AlignmentPosition_DirectionCounts {
     return this.counts[index];
   }
 
+  public void ignoreAlternate(char value) {
+    int alternateCount = this.getScaledAlternate(value);
+    putScaledAlternate(value, 0);
+    this.ignoredAlternateCount += alternateCount;
+  }
+
   public boolean hasAlternates() {
     if (this.counts == null)
       return false;
@@ -62,6 +68,10 @@ public class AlignmentPosition_DirectionCounts {
 
   public float getReferenceCount() {
     return (float)(this.referenceCount) / listScale;
+  }
+
+  public float getIgnoredAlternateCount() {
+    return (float)(this.ignoredAlternateCount) / listScale;
   }
 
   public static char[] getAllKeys() {
@@ -103,6 +113,8 @@ public class AlignmentPosition_DirectionCounts {
 
   // The number of items we have that match the reference
   private int referenceCount;
+  // The number of items we have that don't match the reference but we've been asked to ignore
+  private int ignoredAlternateCount;
 
   // Lists of items that don't match the reference
   // List indices match this.makeKeys()
