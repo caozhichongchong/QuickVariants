@@ -1,8 +1,12 @@
 package mapper;
 
 import com.sun.management.HotSpotDiagnosticMXBean;
+import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.lang.management.ManagementFactory;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -414,8 +418,17 @@ public class Main {
       listeners.add(matchDatabase);
     }
     SamWriter samWriter = null;
+    OutputStream samStreamToClose = null;
     if (outSamPath != null) {
-      samWriter = new SamWriter(sequenceDatabase, outSamPath, queries.get_containsPairedEndReads());
+      OutputStream samOutputStream = null;
+      if ("-".equals(outSamPath)) {
+        samOutputStream = System.out;
+      } else {
+        samOutputStream = new BufferedOutputStream(new FileOutputStream(new File(outSamPath)));
+        samStreamToClose = samOutputStream;
+      }
+
+      samWriter = new SamWriter(sequenceDatabase, samOutputStream, queries.get_containsPairedEndReads());
       listeners.add(samWriter);
     }
     UnalignedQuery_Writer unalignedWriter = null;
@@ -512,8 +525,8 @@ public class Main {
         fullySuccessful = false;
       }
     }
-    if (samWriter != null)
-      samWriter.close();
+    if (samStreamToClose != null)
+      samStreamToClose.close();
     if (unalignedWriter != null)
       unalignedWriter.close();
     long end = System.currentTimeMillis();

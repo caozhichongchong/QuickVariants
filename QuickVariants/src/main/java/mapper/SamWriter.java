@@ -1,10 +1,8 @@
 package mapper;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.ArrayDeque;
 import java.util.List;
@@ -14,10 +12,8 @@ import java.util.Queue;
 // A SamWriter writes .sam files
 // See https://samtools.github.io/hts-specs/SAMv1.pdf for more information
 public class SamWriter implements AlignmentListener {
-  public SamWriter(SequenceDatabase sequenceDatabase, String path, boolean explainPairedEndReads) throws FileNotFoundException {
-    File file = new File(path);
-    this.fileStream = new FileOutputStream(file);
-    this.bufferedStream = new BufferedOutputStream(fileStream);
+  public SamWriter(SequenceDatabase sequenceDatabase, OutputStream outputStream, boolean explainPairedEndReads) {
+    this.outputStream = outputStream;
     // write header
     this.writeComment("Sequence Alignment Map");
     this.writeComment("Format version, group order");
@@ -100,14 +96,6 @@ public class SamWriter implements AlignmentListener {
   }
 
   public void close() {
-    try {
-      this.bufferedStream.close();
-    } catch (IOException e) {
-    }
-    try {
-      this.fileStream.close();
-    } catch (IOException e) {
-    }
   }
 
   private String format(List<QueryAlignments> alignments) {
@@ -361,14 +349,13 @@ public class SamWriter implements AlignmentListener {
 
   private void sendToStream(byte[] block) {
     try {
-      this.bufferedStream.write(block);
+      this.outputStream.write(block);
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
   }
 
-  FileOutputStream fileStream;
-  BufferedOutputStream bufferedStream;
+  OutputStream outputStream;
   Queue<byte[]> pendingWrites = new ArrayDeque<byte[]>();
   boolean activelyWriting = false;
 }
