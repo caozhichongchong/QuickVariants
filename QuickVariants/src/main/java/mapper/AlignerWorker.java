@@ -32,7 +32,6 @@ public class AlignerWorker extends Thread {
   public void requestProcess(List<List<SamAlignment_Builder>> queryGroups, long startMillis, Logger alignmentLogger, Logger referenceLogger) {
     this.resetStatistics();
 
-    this.startMillis = startMillis;
     this.logger = alignmentLogger;
     this.referenceLogger = referenceLogger;
     this.detailedAlignmentLogger = alignmentLogger.incrementScope();
@@ -58,9 +57,6 @@ public class AlignerWorker extends Thread {
     numCacheHits = 0;
     numCacheMisses = 0;
 
-    slowestAlignment = null;
-    slowestAlignmentMillis = -1;
-    millisSpentOnUnalignedQueries = 0;
     numCasesImmediatelyAcceptingFirstAlignment = 0;
   }
 
@@ -101,34 +97,27 @@ public class AlignerWorker extends Thread {
   private void process() {
     List<List<SamAlignment>> groupedQueries = this.buildQueries(this.groupedQueries);
     // List that for each query says where it aligns
-    List<List<QueryAlignment>> alignments = new ArrayList<List<QueryAlignment>>(groupedQueries.size());
-    List<SamAlignment> unalignedQueries = new ArrayList<SamAlignment>();
+    List<QueryAlignments> alignments = new ArrayList<QueryAlignments>();
     for (List<SamAlignment> queryAlignments: groupedQueries) {
-      long start = System.currentTimeMillis();
-      List<QueryAlignment> alignmentsHere;
+      QueryAlignments alignmentsHere;
       try {
         alignmentsHere = this.align(queryAlignments);
       } catch (Exception e) {
         throw new RuntimeException("Failed to process " + queryAlignments, e);
       }
       // update some timing information
-      long end = System.currentTimeMillis();
-      long elapsed = end - start;
-      if (elapsed > this.slowestAlignmentMillis) {
-        this.slowestAlignmentMillis = (int)elapsed;
-        this.slowestAlignment = alignmentsHere;
-      }
       // collect results
-      if (alignmentsHere.size() > 0) {
-        alignments.add(alignmentsHere);
+      alignments.add(alignmentsHere);
+      if (alignmentsHere.getNumComponents() > 0) {
         if (this.logger.getEnabled()) {
-          this.printAlignment(queryAlignments.get(0), alignmentsHere);
+          for (List<QueryAlignment> component: alignmentsHere.getAlignments()) {
+            this.printAlignment(component);
+          }
         }
       } else {
-        unalignedQueries.addAll(queryAlignments);
         if (this.logger.getEnabled()) {
-          for (SamAlignment query: queryAlignments) {
-            log("Unaligned    : " + query.format());
+          for (Sequence querySequence: alignmentsHere.getSequences()) {
+            log("Unaligned    : " + querySequence.format());
           }
         }
       }
@@ -136,7 +125,7 @@ public class AlignerWorker extends Thread {
         log(" ");
       }
     }
-    this.sendResults(alignments, unalignedQueries);
+    this.sendResults(alignments);
   }
 
   public boolean tryComplete() throws InterruptedException {
@@ -163,15 +152,28 @@ public class AlignerWorker extends Thread {
   }
 
   // aligns to the unmodified reference we've been given
-  public List<QueryAlignment> align(List<SamAlignment> queries) {
+  public QueryAlignments align(List<SamAlignment> queries) {
+    List<Sequence> queryComponents = new ArrayList<Sequence>();
     List<QueryAlignment> results = new ArrayList<QueryAlignment>(queries.size());
     for (SamAlignment query: queries) {
       QueryAlignment converted = tryConvertSamAlignment(query);
       if (converted == null)
         throw new IllegalArgumentException("Not a sam query: " + query);
-      results.add(converted);
+      // If we have multiple alignments for the same query, and some alignments split the query into more pieces than others, we only keep the alignments using the most sequences
+      boolean keep = converted.getComponents().size() >= queryComponents.size();
+      boolean clear = converted.getComponents().size() != queryComponents.size();
+      if (clear) {
+        results.clear();
+        queryComponents.clear();
+        for (SequenceAlignment sequenceAlignment: converted.getComponents()) {
+          queryComponents.add(sequenceAlignment.getSequenceA());
+        }
+      }
+      if (keep) {
+        results.add(converted);
+      }
     }
-    return results;
+    return QueryAlignments.singleComponent(queryComponents, results);
   }
 
   private QueryAlignment tryConvertSamAlignment(SamAlignment query) {
@@ -190,7 +192,7 @@ public class AlignerWorker extends Thread {
     return new QueryAlignment(sequenceAlignments, 0, 0, 0, 0, 0);
   }
 
-  void printAlignment(SamAlignment query, List<QueryAlignment> alignments) {
+  void printAlignment(List<QueryAlignment> alignments) {
     for (QueryAlignment alignment: alignments) {
       for (SequenceAlignment component : alignment.getComponents()) {
         this.printAlignment(component);
@@ -251,10 +253,9 @@ public class AlignerWorker extends Thread {
     }
   }
 
-  private void sendResults(List<List<QueryAlignment>> results, List<SamAlignment> unalignedQueries) {
+  private void sendResults(List<QueryAlignments> results) {
     for (AlignmentListener listener : this.resultsListeners) {
       listener.addAlignments(results);
-      listener.addUnaligned(unalignedQueries);
     }
   }
 
@@ -264,15 +265,11 @@ public class AlignerWorker extends Thread {
   Logger detailedAlignmentLogger;
   Logger referenceLogger;
   String workerId;
-  long startMillis;
   boolean failed = false;
   List<SequenceMatch> emptyMatchList = new ArrayList<SequenceMatch>(0);
   int numCacheHits;
   int numCacheMisses;
 
-  List<QueryAlignment> slowestAlignment;
-  int slowestAlignmentMillis = -1;
-  long millisSpentOnUnalignedQueries;
   int numCasesImmediatelyAcceptingFirstAlignment;
   Queue<AlignerWorker> completionListener;
   List<List<SamAlignment_Builder>> groupedQueries;

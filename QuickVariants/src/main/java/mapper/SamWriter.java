@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.ArrayDeque;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 
 // A SamWriter writes .sam files
@@ -76,11 +77,8 @@ public class SamWriter implements AlignmentListener {
     this.writeComment("");
   }
 
-  public void addAlignments(List<List<QueryAlignment>> alignments) {
+  public void addAlignments(List<QueryAlignments> alignments) {
     this.writeAndFlush(this.format(alignments));
-  }
-
-  public void addUnaligned(List<SamAlignment> unalignedQueries) {
   }
 
   public void close() {
@@ -94,36 +92,42 @@ public class SamWriter implements AlignmentListener {
     }
   }
 
-  private String format(List<List<QueryAlignment>> alignments) {
+  private String format(List<QueryAlignments> alignments) {
     StringBuilder builder = new StringBuilder();
-    for (List<QueryAlignment> queryAlignments: alignments) {
+    for (QueryAlignments queryAlignments: alignments) {
       formatQueryAlignments(queryAlignments, builder);
     }
     return builder.toString();
   }
 
   // Given a list of alignments for a single query, adds them to the given StringBuilder
-  private void formatQueryAlignments(List<QueryAlignment> candidateAlignments, StringBuilder builder) {
+  private void formatQueryAlignments(QueryAlignments candidateAlignments, StringBuilder builder) {
+    for (List<QueryAlignment> subqueryAlignments: candidateAlignments.getAlignments()) {
+      formatQueryAlignments(subqueryAlignments, candidateAlignments, builder);
+    }
+  }
+
+  private void formatQueryAlignments(List<QueryAlignment> subqueryAlignments, QueryAlignments queryAlignments, StringBuilder builder) {
     double minPenalty = Integer.MAX_VALUE;
-    for (QueryAlignment alignment: candidateAlignments) {
+    for (QueryAlignment alignment: subqueryAlignments) {
       minPenalty = Math.min(minPenalty, alignment.getPenalty());
     }
-    for (QueryAlignment queryAlignment: candidateAlignments) {
+    for (QueryAlignment queryAlignment: subqueryAlignments) {
       boolean hasMinimumPenalty = queryAlignment.getPenalty() == minPenalty;
       try {
-        formatQueryAlignment(queryAlignment, hasMinimumPenalty, builder);
+        formatQueryAlignment(queryAlignment, queryAlignments, hasMinimumPenalty, builder);
       } catch (Exception e) {
         throw new RuntimeException("Failed to write alignment for " + queryAlignment.formatQuery(), e);
       }
     }
   }
 
-  private void formatQueryAlignment(QueryAlignment queryAlignment, boolean hasMinimumPenalty, StringBuilder builder) {
-     String queryPenaltyFormatted = null;
-     if (queryAlignment.getNumSequences() > 1) {
-       queryPenaltyFormatted = formatQueryPenalty(queryAlignment);
+  private void formatQueryAlignment(QueryAlignment subqueryAlignment, QueryAlignments queryAlignments, boolean hasMinimumPenalty, StringBuilder builder) {
+     String subqueryPenaltyFormatted = null;
+     if (subqueryAlignment.getNumSequences() > 1) {
+       subqueryPenaltyFormatted = formatQueryPenalty(subqueryAlignment);
      }
-     for (SequenceAlignment alignment: queryAlignment.getComponents()) {
+     for (SequenceAlignment alignment: subqueryAlignment.getComponents()) {
        Sequence query = alignment.getSequenceA();
        Sequence ref = alignment.getSequenceB();
        // QNAME
@@ -167,7 +171,7 @@ public class SamWriter implements AlignmentListener {
          builder.append("" + (query.getLength() - queryLengthConsumed) + "S");
        }
        builder.append('\t');
-       SequenceAlignment pairedSequenceAlignment = getPaired(queryAlignment, alignment);
+       SequenceAlignment pairedSequenceAlignment = getPaired(subqueryAlignment, alignment);
        if (pairedSequenceAlignment != null) {
          // RNEXT:
          builder.append(pairedSequenceAlignment.getSequenceB().getName());
@@ -190,8 +194,8 @@ public class SamWriter implements AlignmentListener {
        // QUAL
        builder.append("*\t");
        // alignment score
-       if (queryPenaltyFormatted != null) {
-         builder.append(queryPenaltyFormatted);
+       if (subqueryPenaltyFormatted != null) {
+         builder.append(subqueryPenaltyFormatted);
          builder.append("\t");
        }
        builder.append(formatSequencePenalty(alignment));

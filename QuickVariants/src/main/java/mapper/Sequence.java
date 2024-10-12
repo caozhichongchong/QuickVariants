@@ -97,6 +97,13 @@ public class Sequence {
     return Long.compare(this.identifier, other.identifier);
   }
 
+  public String format() {
+    if (this.getLength() > 1000) {
+      return "sequence of length " + this.getLength();
+    }
+    return this.getText();
+  }
+
   private String name;
   private String packedContents;
   private long identifier;

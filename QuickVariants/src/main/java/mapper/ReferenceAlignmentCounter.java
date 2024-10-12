@@ -16,15 +16,15 @@ public class ReferenceAlignmentCounter implements AlignmentListener {
   public ReferenceAlignmentCounter() {
   }
 
-  public void addAlignments(List<List<QueryAlignment>> alignments) {
+  public void addAlignments(List<QueryAlignments> alignments) {
     synchronized (this) {
-      for (List<QueryAlignment> alignment: alignments) {
-        this.addAlignmentsForQuery(alignment);
+      for (QueryAlignments queryAlignments: alignments) {
+        for (List<QueryAlignment> choices: queryAlignments.getAlignments()) {
+          if (choices.size() > 0)
+            this.addAlignmentsForQuery(choices);
+        }
       }
     }
-  }
-
-  public void addUnaligned(List<SamAlignment> unalignedQueries) {
   }
 
   // Get reference path/filename of each reference sequence that mapped to this query

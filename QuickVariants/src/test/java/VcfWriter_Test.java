@@ -176,6 +176,32 @@ public class VcfWriter_Test {
   }
 
   @Test
+  public void readWithThreeAlignments() {
+    String samA1 = "name1\t0\tcontig1\t1\t255\t4M\t*\t*\t4\tACGT\t*";
+    String samB1 = "name1\t0\tcontig1\t9\t255\t4M\t*\t*\t4\tACGT\t*";
+    String samC1 = "name1\t0\tcontig1\t17\t255\t4M\t*\t*\t4\tACGT\t*";
+
+    String ref  = "ACGTAAAAACGTCCCCACGT";
+
+    String vcf = buildVcf(samA1 + "\n" + samB1 + "\n" + samC1 + "\n", ">contig1\n" + ref);
+
+    String expectedVcf = "contig1	1	A	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	2	C	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	3	G	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	4	T	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	9	A	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	10	C	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	11	G	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	12	T	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	17	A	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	18	C	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	19	G	.	0.33	0.33,0	0,0	.\n" +
+        "contig1	20	T	.	0.33	0.33,0	0,0	.\n" +
+        "";
+    checkVcf(vcf, expectedVcf);
+  }
+
+  @Test
   public void testMissingMate() {
     String samA1 = "name1\t32\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
     String samA2 = "name1\t16\tcontig1\t9\t255\t4M\tcontig1\t1\t4\tCCCC\t*";

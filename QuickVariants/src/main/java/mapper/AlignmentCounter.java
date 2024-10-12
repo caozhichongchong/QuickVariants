@@ -1,67 +1,70 @@
 package mapper;
 
 import java.util.List;
+import java.util.Map;
 
 public class AlignmentCounter implements AlignmentListener {
-  public void addAlignments(List<List<QueryAlignment>> alignments) {
-    int newNumMatchingSequences = 0;
-    int newNumMatchingQueries = 0;
+  public void addAlignments(List<QueryAlignments> alignments) {
+    double newTotalAlignedPenalty = 0;
     long newTotalAlignedQueryLength = 0;
+    int numNewAlignedQueries = 0;
+    int numNewUnalignedQueries = 0;
     Distribution newTotalDistanceBetweenComponents = new Distribution();
-    for (List<QueryAlignment> alignment : alignments) {
-      if (alignment.size() > 0) {
-        newNumMatchingQueries++;
-        newNumMatchingSequences += alignment.get(0).getNumSequences();
+    for (QueryAlignments queryAlignments : alignments) {
+      for (List<QueryAlignment> choices: queryAlignments.getAlignments()) {
+        if (choices.size() > 0) {
+          numNewAlignedQueries++;
 
-        newTotalAlignedQueryLength += alignment.get(0).getALength();
+          newTotalAlignedPenalty += choices.get(0).getPenalty();
+          newTotalAlignedQueryLength += choices.get(0).getALength();
 
-        double currentTotalDistanceBetweenComponents = 0;
-        for (QueryAlignment choice: alignment) {
-          newTotalDistanceBetweenComponents.add(choice.getTotalDistanceBetweenComponents(), (double)1.0 / (double)alignment.size());
+          double currentTotalDistanceBetweenComponents = 0;
+          for (QueryAlignment choice: choices) {
+            if (choice.getNumSequences() > 1)
+              newTotalDistanceBetweenComponents.add(choice.getTotalDistanceBetweenComponents(), (double)1.0 / (double)choices.size());
+          }
+        } else {
+          if (queryAlignments.getNumComponents() == 1) {
+            numNewUnalignedQueries += 1;
+          } else {
+            // we have a partially aligned query, which we don't count
+          }
         }
+
       }
     }
     synchronized (this) {
-      this.numMatchingSequences += newNumMatchingSequences;
-      this.numMatchingQueries += newNumMatchingQueries;
+      this.numAlignedQueries += numNewAlignedQueries;
+      this.numUnalignedQueries += numNewUnalignedQueries;
+      this.totalAlignedPenalty += newTotalAlignedPenalty;
       this.totalAlignedQueryLength += newTotalAlignedQueryLength;
       this.distanceBetweenQueryComponents = this.distanceBetweenQueryComponents.plus(newTotalDistanceBetweenComponents);
     }
   }
 
-  public void addUnaligned(List<SamAlignment> unalignedQueries) {
-    int numNewUnalignedQueries = 0;
-    for (SamAlignment query: unalignedQueries) {
-      numNewUnalignedQueries += query.getNumSequences();
-    }
-    synchronized (this) {
-      this.numUnmatchedSequences += numNewUnalignedQueries;
-    }
-  }
-
-  public long getNumMatchingSequences() {
-    return numMatchingSequences;
-  }
-
-  public long getNumSequences() {
-    return numUnmatchedSequences + numMatchingSequences;
+  public long getNumQueries() {
+    return numUnalignedQueries + numAlignedQueries;
   }
 
   public long getTotalAlignedQueryLength() {
     return this.totalAlignedQueryLength;
   }
 
+  public double getTotalAlignedPenalty() {
+    return this.totalAlignedPenalty;
+  }
+
   public long getNumAlignedQueries() {
-    return numMatchingQueries;
+    return numAlignedQueries;
   }
 
   public Distribution getDistanceBetweenQueryComponents() {
     return distanceBetweenQueryComponents;
   }
 
-  long numMatchingSequences = 0;
-  long numMatchingQueries = 0;
-  long numUnmatchedSequences = 0;
+  long numAlignedQueries = 0;
+  long numUnalignedQueries = 0;
+  double totalAlignedPenalty;
   long totalAlignedQueryLength;
   Distribution distanceBetweenQueryComponents = new Distribution();
 }

@@ -12,7 +12,8 @@ public class MatchDatabase implements AlignmentListener {
     this.alignmentsBySequence = new HashMap<Sequence, Alignments>();
   }
 
-  public void addAlignments(List<List<QueryAlignment>> alignments) {
+  // Adds the given QueryAlignment's to this
+  public void addAlignments(List<QueryAlignments> alignments) {
     Map<Sequence, List<WeightedAlignment>> alignmentsByReference = this.groupByReference(alignments);
 
     for (Map.Entry<Sequence, List<WeightedAlignment>> job : alignmentsByReference.entrySet()) {
@@ -25,32 +26,32 @@ public class MatchDatabase implements AlignmentListener {
     }
   }
 
-  public void addUnaligned(List<SamAlignment> unalignedQueries) {
-  }
-
-  private Map<Sequence, List<WeightedAlignment>> groupByReference(List<List<QueryAlignment>> alignments) {
+  private Map<Sequence, List<WeightedAlignment>> groupByReference(List<QueryAlignments> allAlignments) {
     Map<Sequence, List<WeightedAlignment>> alignmentsByReference = new HashMap<Sequence, List<WeightedAlignment>>();
 
-    for (List<QueryAlignment> queryAlignments: alignments) {
-      for (QueryAlignment queryAlignment: queryAlignments) {
-        for (SequenceAlignment alignment: queryAlignment.getComponents()) {
-          float weight = (float)alignment.weight;
-          List<AlignedBlock> blocks = alignment.getSections();
-          if (blocks.size() > 0) {
-            Sequence reference = blocks.get(0).getSequenceB();
-            List<WeightedAlignment> alignmentsOnThisRef = alignmentsByReference.get(reference);
-            if (alignmentsOnThisRef == null) {
-              alignmentsOnThisRef = new ArrayList<WeightedAlignment>();
-              alignmentsByReference.put(reference, alignmentsOnThisRef);
+    for (QueryAlignments alignments: allAlignments) {
+      for (List<QueryAlignment> choices: alignments.getAlignments()) {
+        if (choices.size() > 0) {
+          float weight = (float)1.0 / (float)choices.size();
+          for (QueryAlignment queryAlignment: choices) {
+            for (SequenceAlignment alignment: queryAlignment.getComponents()) {
+              List<AlignedBlock> blocks = alignment.getSections();
+              if (blocks.size() > 0) {
+                Sequence reference = blocks.get(0).getSequenceB();
+                List<WeightedAlignment> alignmentsOnThisRef = alignmentsByReference.get(reference);
+                if (alignmentsOnThisRef == null) {
+                  alignmentsOnThisRef = new ArrayList<WeightedAlignment>();
+                  alignmentsByReference.put(reference, alignmentsOnThisRef);
+                }
+                alignmentsOnThisRef.add(new WeightedAlignment(alignment, queryAlignment, weight));
+              }
             }
-            alignmentsOnThisRef.add(new WeightedAlignment(alignment, queryAlignment, weight));
           }
         }
       }
     }
     return alignmentsByReference;
   }
-
 
   // Map from name of sequence to Alignments on that sequence
   public Map<Sequence, Alignments> groupByPosition() {

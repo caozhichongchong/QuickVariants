@@ -32,6 +32,11 @@ public class QueryAlignment {
     return alignments.get(index);
   }
 
+  public Sequence getSequenceA() {
+    SequenceAlignment firstComponent = this.getComponent(0);
+    return firstComponent.getSection(0).getSequenceA();
+  }
+ 
   public Sequence getSequenceB() {
     return this.alignments.get(0).getSection(0).getSequenceB();
   }

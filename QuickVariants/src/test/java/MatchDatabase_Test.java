@@ -21,8 +21,11 @@ public class MatchDatabase_Test {
     MatchDatabase database = new MatchDatabase(0);
     List<QueryAlignment> alignmentList = new ArrayList<QueryAlignment>();
     alignmentList.add(alignment);
-    List<List<QueryAlignment>> alignmentListList = new ArrayList<List<QueryAlignment>>();
-    alignmentListList.add(alignmentList);
+    List<QueryAlignments> alignmentListList = new ArrayList<QueryAlignments>();
+    List<Sequence> querySequences = new ArrayList<Sequence>();
+    querySequences.add(a);
+    querySequences.add(b);
+    alignmentListList.add(QueryAlignments.singleComponent(querySequences, alignmentList));
     database.addAlignments(alignmentListList);
     Alignments alignments = database.groupByPosition().get(b);
     for (int i = 0; i < refText.length(); i++) {
@@ -58,8 +61,11 @@ public class MatchDatabase_Test {
     MatchDatabase database = new MatchDatabase(0);
     List<QueryAlignment> alignmentList = new ArrayList<QueryAlignment>();
     alignmentList.add(alignment);
-    List<List<QueryAlignment>> alignmentListList = new ArrayList<List<QueryAlignment>>();
-    alignmentListList.add(alignmentList);
+    List<QueryAlignments> alignmentListList = new ArrayList<QueryAlignments>();
+    List<Sequence> querySequences = new ArrayList<Sequence>();
+    querySequences.add(a);
+    querySequences.add(b);
+    alignmentListList.add(QueryAlignments.singleComponent(querySequences, alignmentList));
     database.addAlignments(alignmentListList);
     Alignments alignments = database.groupByPosition().get(b);
     for (int i = 0; i < refText.length(); i++) {
@@ -107,8 +113,11 @@ public class MatchDatabase_Test {
     MatchDatabase database = new MatchDatabase(0);
     List<QueryAlignment> alignmentList = new ArrayList<QueryAlignment>();
     alignmentList.add(alignment);
-    List<List<QueryAlignment>> alignmentListList = new ArrayList<List<QueryAlignment>>();
-    alignmentListList.add(alignmentList);
+    List<QueryAlignments> alignmentListList = new ArrayList<QueryAlignments>();
+    List<Sequence> querySequences = new ArrayList<Sequence>();
+    querySequences.add(forward);
+    querySequences.add(reverse);
+    alignmentListList.add(QueryAlignments.singleComponent(querySequences, alignmentList));
     database.addAlignments(alignmentListList);
     Alignments alignments = database.groupByPosition().get(reference);
     for (int i = 0; i < referenceText.length(); i++) {

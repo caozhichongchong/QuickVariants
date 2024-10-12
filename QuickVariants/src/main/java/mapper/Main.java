@@ -429,11 +429,11 @@ public class Main {
     listeners.add(matchCounter);
     AlignmentStatistics statistics = compare(sequenceDatabase, queries, startMillis, numThreads, queryEndFraction, listeners, autoVerbose);
 
-    long numMatchingQuerySequences = matchCounter.getNumMatchingSequences();
-    long numQuerySequences = matchCounter.getNumSequences();
+    long numQueries = matchCounter.getNumQueries();
+    long numAlignedQueries = matchCounter.getNumAlignedQueries();
     long matchPercent;
-    if (numQuerySequences > 0)
-      matchPercent = numMatchingQuerySequences * 100 / numQuerySequences;
+    if (numQueries > 0)
+      matchPercent = numAlignedQueries * 100 / numQueries;
     else
       matchPercent = 0;
     long totalAlignedQueryLength = matchCounter.getTotalAlignedQueryLength();
@@ -479,12 +479,12 @@ public class Main {
     // show statistics
     System.out.println("");
     System.out.println("Statistics: ");
-    if (matchCounter.getNumMatchingSequences() != matchCounter.getNumAlignedQueries()) {
+    Distribution pairedEndDistance = matchCounter.getDistanceBetweenQueryComponents();
+    if (pairedEndDistance.getWeight() > 0) {
       // paired-end reads
-      Distribution distance = matchCounter.getDistanceBetweenQueryComponents();
-      System.out.println(" Query pair separation distance: avg: " + (float)distance.getMean() + " stddev: " + (float)distance.getStdDev());
+      System.out.println(" Query pair separation distance: avg: " + (float)pairedEndDistance.getMean() + " stddev: " + (float)pairedEndDistance.getStdDev() + " (adjust via --spacing)");
     }
-    System.out.println(" Alignment rate                : " + matchPercent + "% of query sequences (" + numMatchingQuerySequences + "/" + numQuerySequences + ")");
+    System.out.println(" Alignment rate                : " + matchPercent + "% of queries (" + numAlignedQueries + "/" + numQueries + ")");
     if (displayCoverage != null) {
       System.out.println(displayCoverage);
     }
