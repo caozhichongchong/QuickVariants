@@ -53,7 +53,7 @@ public class SamWriter implements AlignmentListener {
   private void explainAlignmentFormat(boolean explainPairedEndReads) {
     this.writeComment("Format of a query alignment (one line per sequence):");
     StringBuilder formatCommentBuilder = new StringBuilder();
-    formatCommentBuilder.append(" Query name, flags (direction), reference contig, position, mapping quality (unused), CIGAR (indels), ");
+    formatCommentBuilder.append(" Query name, SAM flags, reference contig, position, mapping quality (unused), CIGAR (indels), ");
     if (explainPairedEndReads) {
       formatCommentBuilder.append("mate reference name, mate reference position, ");
     } else {
@@ -67,13 +67,31 @@ public class SamWriter implements AlignmentListener {
     }
     this.writeComment(formatCommentBuilder.toString());
     this.writeComment("");
-    this.writeComment("Alignment score format:");
     if (explainPairedEndReads) {
-      this.writeComment(" CAS:f:<float>   combined alignment score of this query and its mate = <float>");
-      this.writeComment("  Combined alignment score (CAS) = (mate1.score + mate2.score - overlap.score) * (mate1.length + mate2.length) / (unique length) + spacing.score . See --verbose output for more details.");
+      this.writeComment("  SAM Flags is a bitwise-or of these values:");
+    } else {
+      this.writeComment("  SAM Flags:");
+    }
+    if (explainPairedEndReads) {
+      this.writeComment("   1: This alignment comes from a paired-end read");
+      this.writeComment("   2: This alignment involves a read and its mate aligned near each other");
+      this.writeComment("   8: No alignment was found for this read mate's mate");
+    }
+    this.writeComment("   16: This read sequence is reverse-complemented relative to the reference");
+    if (explainPairedEndReads) {
+      this.writeComment("   32: This read's mate is reverse-complemented relative to the reference");
+      this.writeComment("   64: This read mate is mate #1");
+      this.writeComment("   128: This read mate is the last mate");
+      this.writeComment("   256: A better alignment was found for this query");
+    }
+    this.writeComment("");
+    this.writeComment("  Alignment score format:");
+    if (explainPairedEndReads) {
+      this.writeComment("   CAS:f:<float>   combined alignment score of this query and its mate = <float>");
+      this.writeComment("    Combined alignment score (CAS) = (mate1.score + mate2.score - overlap.score) * (mate1.length + mate2.length) / (unique length) + spacing.score . See --verbose output for more details.");
       this.writeComment("");
     }
-    this.writeComment(" AS:f:<float>    score of alignment = <float>");
+    this.writeComment("   AS:f:<float>    score of alignment = <float>");
     this.writeComment("");
   }
 
@@ -134,7 +152,7 @@ public class SamWriter implements AlignmentListener {
        builder.append(query.getSourceName());
        builder.append('\t');
        // FLAG
-       builder.append("" + getSamFlags(alignment, hasMinimumPenalty));
+       builder.append("" + getSamFlags(alignment, subqueryAlignment, queryAlignments, hasMinimumPenalty));
        builder.append('\t');
        // RNAME
        builder.append(ref.getName());
@@ -220,11 +238,58 @@ public class SamWriter implements AlignmentListener {
   }
 
   // hasMinimumPenalty indicates whether the corresponding QueryAlignment has the minimum penalty among all discovered alignments for this query
-  private int getSamFlags(SequenceAlignment alignment, boolean hasMinimumPenalty) {
+  private int getSamFlags(SequenceAlignment sequenceAlignment, QueryAlignment subqueryAlignment, QueryAlignments alignments, boolean hasMinimumPenalty) {
     int flags = 0;
-    if (alignment.isReferenceReversed()) {
+
+    // direction of alignment
+    boolean reverseComplemented = sequenceAlignment.isReferenceReversed();
+    if (reverseComplemented) {
       flags += 16;
     }
+
+    // paired-end read information
+    int thisAlignmentNumSequences = subqueryAlignment.getNumSequences();
+    int numSubqueries = alignments.getNumQueries();
+    boolean queryHasMultipleSequences = (thisAlignmentNumSequences > 1) || (numSubqueries > 1);
+    if (queryHasMultipleSequences) {
+      // query has a mate
+      flags += 1;
+
+      boolean matesAlignedTogether = (subqueryAlignment.getNumSequences() > 1);
+      if (matesAlignedTogether) {
+        // mates appear to be have taken from nearby locations on the same contig
+        flags += 2;
+
+        SequenceAlignment pairedAlignment = getPaired(subqueryAlignment, sequenceAlignment);
+        boolean mateReverseComplemented = (pairedAlignment != null && pairedAlignment.isReferenceReversed());
+        if (mateReverseComplemented) {
+          flags += 32;
+        }
+      }
+
+      boolean mateAligned = (matesAlignedTogether || alignments.getNumQueriesHavingAlignments() > 1);
+      if (!mateAligned) {
+        flags += 8;
+      }
+
+      // first or second mate
+      Sequence firstQuerySequence = alignments.getFirstSequence();
+      if (firstQuerySequence.getComplementedFrom() != null)
+        firstQuerySequence = firstQuerySequence.getComplementedFrom();
+      Sequence thisQuerySequence = sequenceAlignment.getSequenceA();
+      if (thisQuerySequence.getComplementedFrom() != null)
+        thisQuerySequence = thisQuerySequence.getComplementedFrom();
+      boolean isFirstMate = (firstQuerySequence == thisQuerySequence);
+      if (isFirstMate) {
+        flags += 64;
+      }
+      boolean isLastMate = !isFirstMate;
+      if (isLastMate) {
+        flags += 128;
+      }
+    }
+
+    // priority of alignment
     if (!hasMinimumPenalty) {
       flags += 256;
     }
