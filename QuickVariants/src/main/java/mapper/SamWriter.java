@@ -19,8 +19,8 @@ public class SamWriter implements AlignmentListener {
     this.bufferedStream = new BufferedOutputStream(fileStream);
     // write header
     this.writeComment("Sequence Alignment Map");
-    this.writeComment("Format version, sort order");
-    this.write("@HD\tVN:1.6\tGO:query\n");
+    this.writeComment("Format version, group order");
+    this.writeLine("@HD\tVN:1.6\tGO:query");
     this.writeComment("");
     this.writeComment("Invocation details (approximate)");
     this.writeInvocationDetails();
@@ -36,7 +36,7 @@ public class SamWriter implements AlignmentListener {
   private void writeInvocationDetails() {
     String version = MapperMetadata.getVersion();
     String invocation = MapperMetadata.guessCommandLine();
-    this.write("@PG\tID:QuickVariants\tPN:QuickVariants\tVN:" + version + "\tCL:\"" + invocation + "\"\n");
+    this.writeLine("@PG\tID:QuickVariants\tPN:QuickVariants\tVN:" + version + "\tCL:\"" + invocation + "\"");
   }
 
   private void writeReferenceSequenceNames(SequenceDatabase sequenceDatabase) {
@@ -45,7 +45,7 @@ public class SamWriter implements AlignmentListener {
     for (int i = 0; i < count; i++) {
       Sequence contig = sequenceDatabase.getSequence(i);
       if (contig.getComplementedFrom() == null)
-        this.write("@SQ\tSN:" + contig.getName() + "\tLN:" + contig.getLength() + "\n");
+        this.writeLine("@SQ\tSN:" + contig.getName() + "\tLN:" + contig.getLength());
     }
   }
 
@@ -248,6 +248,10 @@ public class SamWriter implements AlignmentListener {
     }
   }
 
+  private void writeLine(String text) {
+    this.write(text + "\n");
+  }
+
   private void writeAndFlush(String text) {
     byte[] bytes = text.getBytes();
     synchronized(this.pendingWrites) {
@@ -260,7 +264,7 @@ public class SamWriter implements AlignmentListener {
   }
 
   private void writeComment(String comment) {
-    this.write("@CO " + comment + "\n");
+    this.writeLine("@CO " + comment);
   }
 
   private void flush() {
