@@ -87,8 +87,8 @@ public class SamWriter implements AlignmentListener {
     this.writeComment("");
     this.writeComment("  Alignment score format:");
     if (explainPairedEndReads) {
-      this.writeComment("   CAS:f:<float>   combined alignment score of this query and its mate = <float>");
-      this.writeComment("    Combined alignment score (CAS) = (mate1.score + mate2.score - overlap.score) * (mate1.length + mate2.length) / (unique length) + spacing.score . See --verbose output for more details.");
+      this.writeComment("   cs:f:<float>   combined alignment score of this query and its mate = <float>");
+      this.writeComment("    Combined alignment score (cs) = (mate1.score + mate2.score - overlap.score) * (mate1.length + mate2.length) / (unique length) + spacing.score . See --verbose output for more details.");
       this.writeComment("");
     }
     this.writeComment("   AS:f:<float>    score of alignment = <float>");
@@ -228,7 +228,7 @@ public class SamWriter implements AlignmentListener {
 
   private String formatQueryPenalty(QueryAlignment alignment) {
     float score = (float)(-1 * alignment.getPenalty());
-    return "CAS:" + formatNumber(score);
+    return "cs:" + formatNumber(score);
   }
 
   private String formatNumber(double number) {
