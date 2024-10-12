@@ -333,7 +333,7 @@ public class SamWriter implements AlignmentListener {
   }
 
   private void writeComment(String comment) {
-    this.writeLine("@CO " + comment);
+    this.writeLine("@CO\t" + comment);
   }
 
   private void flush() {
