@@ -97,18 +97,28 @@ public class SamWriter implements AlignmentListener {
   private String format(List<List<QueryAlignment>> alignments) {
     StringBuilder builder = new StringBuilder();
     for (List<QueryAlignment> queryAlignments: alignments) {
-      for (QueryAlignment queryAlignment: queryAlignments) {
-        try {
-          formatQueryAlignment(queryAlignment, builder);
-        } catch (Exception e) {
-          throw new RuntimeException("Failed to write alignment for " + queryAlignment.formatQuery(), e);
-        }
-      }
+      formatQueryAlignments(queryAlignments, builder);
     }
     return builder.toString();
   }
 
-  private void formatQueryAlignment(QueryAlignment queryAlignment, StringBuilder builder) {
+  // Given a list of alignments for a single query, adds them to the given StringBuilder
+  private void formatQueryAlignments(List<QueryAlignment> candidateAlignments, StringBuilder builder) {
+    double minPenalty = Integer.MAX_VALUE;
+    for (QueryAlignment alignment: candidateAlignments) {
+      minPenalty = Math.min(minPenalty, alignment.getPenalty());
+    }
+    for (QueryAlignment queryAlignment: candidateAlignments) {
+      boolean hasMinimumPenalty = queryAlignment.getPenalty() == minPenalty;
+      try {
+        formatQueryAlignment(queryAlignment, hasMinimumPenalty, builder);
+      } catch (Exception e) {
+        throw new RuntimeException("Failed to write alignment for " + queryAlignment.formatQuery(), e);
+      }
+    }
+  }
+
+  private void formatQueryAlignment(QueryAlignment queryAlignment, boolean hasMinimumPenalty, StringBuilder builder) {
      String queryPenaltyFormatted = null;
      if (queryAlignment.getNumSequences() > 1) {
        queryPenaltyFormatted = formatQueryPenalty(queryAlignment);
@@ -120,7 +130,7 @@ public class SamWriter implements AlignmentListener {
        builder.append(query.getSourceName());
        builder.append('\t');
        // FLAG
-       builder.append("" + getSamFlags(alignment));
+       builder.append("" + getSamFlags(alignment, hasMinimumPenalty));
        builder.append('\t');
        // RNAME
        builder.append(ref.getName());
@@ -205,10 +215,14 @@ public class SamWriter implements AlignmentListener {
     return "f:" + roundedNumber;
   }
 
-  private int getSamFlags(SequenceAlignment alignment) {
+  // hasMinimumPenalty indicates whether the corresponding QueryAlignment has the minimum penalty among all discovered alignments for this query
+  private int getSamFlags(SequenceAlignment alignment, boolean hasMinimumPenalty) {
     int flags = 0;
     if (alignment.isReferenceReversed()) {
       flags += 16;
+    }
+    if (!hasMinimumPenalty) {
+      flags += 256;
     }
     return flags;
   }
