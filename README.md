@@ -1,10 +1,12 @@
 # QuickVariants
 
-### Code for paper "Fast and Accurate Variant Identification Tool for Sequencing-Based Studies"
+Fast and accurate genetic variant identification
 
-QuickVariants is a fast and accurate variant identification tool, designed to summarize allele information from read alignments without discarding or filtering the data.
+* QuickVariants summarizes allele information from read alignments without discarding or filtering the data.
 
-If you're interested in a tool that can first align reads before also identifying variants, you might be interested in [Mapper](https://github.com/mathjeff/mapper)
+If you're also interested in sequence alignment, you might be interested in [Mapper](https://github.com/mathjeff/mapper), which first aligns sequences and then identifies variants.
+
+Read more about QuickVariants in [the paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-024-01891-4).
 
 ### Install
 Requirement: [Java](https://www.java.com/en/download/help/download_options.html) \
@@ -170,3 +172,5 @@ python SNPfilter.py -i COVID_MGSW/
 python Indelfilter.py -i COVID_MGSW/
 python SNP_model_compare.py -i COVID_MGSW/
 ```
+
+## If you're working on a bioinformatics project and would be interested in some consulting help, check out our website at https://omicode.info !

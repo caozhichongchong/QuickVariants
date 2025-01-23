@@ -67,5 +67,3 @@ Usage:
   Multiple output formats may be specified during a single run; for example:
 
     --out-sam out.sam --out-unaligned out.fastq
-
-## If you're working on a bioinformatics project and would be interested in some consulting help check out our website at https://omicode.info !
