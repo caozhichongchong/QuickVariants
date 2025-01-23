@@ -1,8 +1,8 @@
 # QuickVariants
 
-Fast and accurate genetic variant identification
+##Fast and accurate genetic variant identification
 
-* QuickVariants summarizes allele information from read alignments without discarding or filtering the data.
+QuickVariants summarizes allele information from read alignments without discarding or filtering the data.
 
 If you're also interested in sequence alignment, you might be interested in [Mapper](https://github.com/mathjeff/mapper), which first aligns sequences and then identifies variants.
 
