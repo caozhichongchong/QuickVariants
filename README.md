@@ -1,6 +1,6 @@
 # QuickVariants
 
-##Fast and accurate genetic variant identification
+## Fast and accurate genetic variant identification
 
 QuickVariants summarizes allele information from read alignments without discarding or filtering the data.
 
