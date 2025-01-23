@@ -6,7 +6,7 @@ QuickVariants is a fast and accurate variant identification tool, designed to su
 
 ### Install
 Requirement: [Java](https://www.java.com/en/download/help/download_options.html) \
-Please download the latest QuickVariants [here](https://github.com/caozhichongchong/QuickVariants/releases)
+Please download the latest QuickVariants here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.1.0/quick-variants-1.1.0.jar
 
 You may install java by `conda install conda-forge::openjdk`\
 You may install java and QuickVariants by `conda install caozhichongchong::quick-variants`\
