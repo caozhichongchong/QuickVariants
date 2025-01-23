@@ -4,6 +4,8 @@
 
 QuickVariants is a fast and accurate variant identification tool, designed to summarize allele information from read alignments without discarding or filtering the data.
 
+If you're interested in a tool that can first align reads before also identifying variants, you might be interested in [Mapper](https://github.com/mathjeff/mapper)
+
 ### Install
 Requirement: [Java](https://www.java.com/en/download/help/download_options.html) \
 Please download the latest QuickVariants here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.1.0/quick-variants-1.1.0.jar
