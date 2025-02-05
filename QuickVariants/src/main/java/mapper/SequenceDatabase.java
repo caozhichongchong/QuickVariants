@@ -1,10 +1,12 @@
 package mapper;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class SequenceDatabase {
@@ -124,6 +126,59 @@ public class SequenceDatabase {
     return totalForwardAndReverseSize;
   }
 
+  public Sequence getReverseComplement(Sequence sequence) {
+    Sequence reverseComplement = sequence.getComplementedFrom();
+    if (reverseComplement != null)
+      return reverseComplement;
+    int sequenceId = (int)sequence.getId();
+    int complementId = sequenceId + 1 - (sequenceId % 2) * 2;
+    reverseComplement = getSequence(complementId);
+    if (reverseComplement.getComplementedFrom() != sequence) {
+      throw new IllegalArgumentException("Reverse complement of " + sequence + " is unknown to this SequenceDatabase");
+    }
+    return reverseComplement;
+  }
+
+  public Map<String, String> getCacheKeys() {
+    Map<String, String> keys = new HashMap<String, String>();
+    keys.put("numSequences", "" + this.sequences.size());
+    keys.put("totalSize", "" + totalForwardSize);
+    keys.put("firstSequenceName", this.sequences.get(0).getName());
+    keys.put("paths", this.getPathsString());
+    if (this.ancestral)
+      keys.put("ancestral", "true");
+    return keys;
+  }
+
+  public void setAncestral() {
+    this.ancestral = true;
+  }
+
+  private String getPathsString() {
+    TreeSet<String> paths = new TreeSet<String>();
+    for (Sequence sequence: sequences) {
+      String path = sequence.getPath();
+      if (path != null) {
+        paths.add(path);
+      }
+    }
+    StringBuilder builder = new StringBuilder();
+    builder.append("{");
+    boolean first = true;
+    for (String path: paths) {
+      if (first) {
+        first = false;
+      } else {
+        builder.append(",");
+      }
+      File file = new File(path);
+      String name = file.getName();
+      builder.append(file.getName() + ":" + file.lastModified());
+    }
+    builder.append("}");
+    return builder.toString();
+  }
+
   private List<Sequence> sequences = new ArrayList<Sequence>();
   private long totalForwardSize;
   private long totalForwardAndReverseSize;
@@ -133,4 +188,5 @@ public class SequenceDatabase {
   long maxEncodableOffset;
   long maxEncodableValue;
   Map<String, Sequence> sequencesByName = new ConcurrentHashMap<String, Sequence>();
+  private boolean ancestral;
 }
