@@ -13,16 +13,18 @@ import java.util.TreeMap;
 
 // A VcfWriter writes .vcf files
 public class VcfWriter {
-  public VcfWriter(String path, boolean includeNonMutations, MutationDetectionParameters mutationsFilter) throws FileNotFoundException, IOException {
+  public VcfWriter(String path, boolean includeNonMutations, MutationDetectionParameters mutationsFilter, boolean showSupportRead) throws FileNotFoundException, IOException {
     this.initialize(new FileOutputStream(new File(path)));
     this.includeNonMutations = includeNonMutations;
     this.mutationsFilter = mutationsFilter;
+    this.showSupportRead = showSupportRead;
   }
 
-  public VcfWriter(OutputStream destination, boolean includeNonMutations) {
+  public VcfWriter(OutputStream destination, boolean includeNonMutations, boolean showSupportRead) {
     this.initialize(destination);
     this.includeNonMutations = includeNonMutations;
     this.mutationsFilter = MutationDetectionParameters.emptyFilter();
+    this.showSupportRead = showSupportRead;
   }
 
   private void initialize(OutputStream destination) {
@@ -35,7 +37,10 @@ public class VcfWriter {
     this.writeText("\n");
     this.writeText("##commandLine=\"" + MapperMetadata.guessCommandLine() + "\"\n");
     this.writeText("\n");
-    this.writeText("#CHROM\tPOS\tREF\tALT\tDP\tDETAILS-MIDDLE\tDETAILS-ENDS\tSUPPORT\n");
+    if (this.showSupportRead) {
+      this.writeText("#CHROM\tPOS\tREF\tALT\tDP\tDETAILS-MIDDLE\tDETAILS-ENDS\tSUPPORT\n");
+    }
+    this.writeText("#CHROM\tPOS\tREF\tALT\tDP\tDETAILS-MIDDLE\tDETAILS-ENDS\n");
 
     List<VcfFormatRequest> jobs = this.splitJobs(alignments, numParallelJobs);
     int waitIndex = 0; // index of next worker to wait for
@@ -96,7 +101,7 @@ public class VcfWriter {
   }
 
   private VcfFormatterWorker requestFormat(VcfFormatRequest formatRequest) {
-    VcfFormatterWorker worker = new VcfFormatterWorker(this.includeNonMutations);
+    VcfFormatterWorker worker = new VcfFormatterWorker(this.includeNonMutations, this.showSupportRead);
     worker.request(formatRequest);
     worker.start();
     return worker;
@@ -119,4 +124,5 @@ public class VcfWriter {
   long numReferencePositions;
   boolean includeNonMutations;
   MutationDetectionParameters mutationsFilter;
+  boolean showSupportRead;
 }

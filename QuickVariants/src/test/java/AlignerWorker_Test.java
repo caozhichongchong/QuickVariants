@@ -267,7 +267,7 @@ public class AlignerWorker_Test {
 
     // format vcf
     ByteArrayOutputStream vcfStream = new ByteArrayOutputStream();
-    VcfWriter vcfWriter = new VcfWriter(vcfStream, true);
+    VcfWriter vcfWriter = new VcfWriter(vcfStream, true, true);
     try {
       vcfWriter.write(matchDatabase.groupByPosition(), 1);
     } catch (IOException e) {

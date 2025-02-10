@@ -1,8 +1,9 @@
 package mapper;
 
 public class VcfFormatterWorker extends Thread {
-  public VcfFormatterWorker(boolean includeNonMutations) {
+  public VcfFormatterWorker(boolean includeNonMutations, boolean showSupportRead) {
     this.includeNonMutations = includeNonMutations;
+    this.showSupportRead = showSupportRead;
   }
 
   public void request(VcfFormatRequest formatRequest) {
@@ -24,7 +25,7 @@ public class VcfFormatterWorker extends Thread {
 
   private String format(VcfFormatRequest formatRequest) {
     StringBuilder stringBuilder = new StringBuilder();
-
+    boolean showSupportRead = this.showSupportRead;
     String sequenceName = formatRequest.sequence.getName();
     FilteredAlignments bases = formatRequest.alignments;
     int endIndex = formatRequest.startIndex + formatRequest.length;
@@ -33,7 +34,7 @@ public class VcfFormatterWorker extends Thread {
       int displayIndex = i + 1;
       if (frequencies.getCount() > 0) {
         if (this.includeNonMutations || frequencies.hasAlternates())
-          writePosition(sequenceName, displayIndex, frequencies, stringBuilder);
+          writePosition(sequenceName, displayIndex, frequencies, stringBuilder, showSupportRead);
         this.numReferencePositionsMatched++;
       }
       int insertionIndex = 0;
@@ -41,14 +42,14 @@ public class VcfFormatterWorker extends Thread {
         AlignmentPosition insertion = bases.getInsertion(i, insertionIndex);
         if (!insertion.hasAlternates())
           break;
-        writePosition(sequenceName, -1 * displayIndex, insertion, stringBuilder);
+        writePosition(sequenceName, -1 * displayIndex, insertion, stringBuilder, showSupportRead);
         insertionIndex++;
       }
     }
     return stringBuilder.toString();
   }
 
-  private void writePosition(String sequenceName, int rowNumber, AlignmentPosition frequencies, StringBuilder stringBuilder) {
+  private void writePosition(String sequenceName, int rowNumber, AlignmentPosition frequencies, StringBuilder stringBuilder, boolean showSupportRead) {
     stringBuilder.append(sequenceName);
     stringBuilder.append('\t');
     stringBuilder.append(Integer.toString(rowNumber));
@@ -64,29 +65,33 @@ public class VcfFormatterWorker extends Thread {
     stringBuilder.append('\t');
 
     writeDepths(frequencies, reference, alternates, false, stringBuilder);
+    stringBuilder.append('\t');
     writeDepths(frequencies, reference, alternates, true, stringBuilder);
 
-    boolean isFirst = true;
-    for (char alternate : alternates) {
-      // we found a mutation; let's show one sample read that mapped to this position
-      Sequence sampleQuery = frequencies.getSampleAlternateSequence(alternate);
-      if (isFirst) {
-        isFirst = false;
-      } else {
-        stringBuilder.append(",");
-      }
-      if (sampleQuery != null) {
-        int index = frequencies.getSampleAlternateIndex(alternate);
-        if (frequencies.isSampleAlternateDeletion(alternate)) {
-          stringBuilder.append(sampleQuery.getRange(0, index));
-          stringBuilder.append("[-]");
-          stringBuilder.append(sampleQuery.getRange(index, sampleQuery.getLength() - index));
+    if (showSupportRead) {
+      stringBuilder.append('\t');
+      boolean isFirst = true;
+      for (char alternate : alternates) {
+        // we found a mutation; let's show one sample read that mapped to this position
+        Sequence sampleQuery = frequencies.getSampleAlternateSequence(alternate);
+        if (isFirst) {
+          isFirst = false;
         } else {
-          stringBuilder.append(sampleQuery.getRange(0, index));
-          stringBuilder.append('[');
-          stringBuilder.append(sampleQuery.charAt(index));
-          stringBuilder.append(']');
-          stringBuilder.append(sampleQuery.getRange(index + 1, sampleQuery.getLength() - 1 - index));
+          stringBuilder.append(",");
+        }
+        if (sampleQuery != null) {
+          int index = frequencies.getSampleAlternateIndex(alternate);
+          if (frequencies.isSampleAlternateDeletion(alternate)) {
+            stringBuilder.append(sampleQuery.getRange(0, index));
+            stringBuilder.append("[-]");
+            stringBuilder.append(sampleQuery.getRange(index, sampleQuery.getLength() - index));
+          } else {
+            stringBuilder.append(sampleQuery.getRange(0, index));
+            stringBuilder.append('[');
+            stringBuilder.append(sampleQuery.charAt(index));
+            stringBuilder.append(']');
+            stringBuilder.append(sampleQuery.getRange(index + 1, sampleQuery.getLength() - 1 - index));
+          }
         }
       }
     }
@@ -99,7 +104,6 @@ public class VcfFormatterWorker extends Thread {
       stringBuilder.append(';');
       stringBuilder.append(frequencies.getCounts(alternate, isQueryEnd));
     }
-    stringBuilder.append('\t'); 
   }
 
   private void appendJoined(StringBuilder builder, char separator, char[] components) {
@@ -119,4 +123,5 @@ public class VcfFormatterWorker extends Thread {
   String results;
   int numReferencePositionsMatched;
   boolean includeNonMutations;
+  boolean showSupportRead;
 }

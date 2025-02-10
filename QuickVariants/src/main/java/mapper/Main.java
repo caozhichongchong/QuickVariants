@@ -43,6 +43,7 @@ public class Main {
     String outUnalignedPath = null;
     String outAncestorPath = null;
     boolean vcfIncludeNonMutations = true;
+    boolean vcfShowSupportRead = true;
     String outRefsMapCountPath = null;
     String outMutationsPath = null;
     MutationDetectionParameters mutationFilterParameters = MutationDetectionParameters.defaultFilter();
@@ -217,6 +218,11 @@ public class Main {
         continue;
       }
 
+      if ("--vcf-omit-support-reads".equals(arg)) {
+        vcfShowSupportRead = false;
+        continue;
+      }
+
       if ("--snp-threshold".equals(arg) || "--indel-start-threshold".equals(arg) || "--indel-continue-threshold".equals(arg) || "--indel-threshold".equals(arg)) {
         usageError("" + arg + " is not a top-level argument: try --out-mutations <mutations.txt> " + arg + " <min total depth> <min supporting depth fraction>");
       }
@@ -256,7 +262,7 @@ public class Main {
     for (GroupedAlignment_Provider groupBuilder : queries) {
       System.out.println(groupBuilder.toString());
     }
-    boolean successful = run(referencePaths, queries, outVcfPath, vcfIncludeNonMutations, outSamPath, outRefsMapCountPath, outMutationsPath, mutationFilterParameters, vcfFilterParameters, outUnalignedPath, numThreads, queryEndFraction, autoVerbose, outAncestorPath, startMillis);
+    boolean successful = run(referencePaths, queries, outVcfPath, vcfIncludeNonMutations, vcfShowSupportRead, outSamPath, outRefsMapCountPath, outMutationsPath, mutationFilterParameters, vcfFilterParameters, outUnalignedPath, numThreads, queryEndFraction, autoVerbose, outAncestorPath, startMillis);
     if (!successful) {
       System.exit(1);
     }
@@ -347,10 +353,10 @@ public class Main {
   }
 
   // performs alignment and outputs results
-  public static boolean run(List<String> referencePaths, List<GroupedAlignment_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationFilterParameters, MutationDetectionParameters vcfFilterParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
+  public static boolean run(List<String> referencePaths, List<GroupedAlignment_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, boolean vcfShowSupportRead, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationFilterParameters, MutationDetectionParameters vcfFilterParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
     VcfWriter vcfWriter = null;
     if (outVcfPath != null)
-      vcfWriter = new VcfWriter(outVcfPath, vcfIncludeNonMutations, vcfFilterParameters);
+      vcfWriter = new VcfWriter(outVcfPath, vcfIncludeNonMutations, vcfFilterParameters, vcfShowSupportRead);
 
     MutationsWriter mutationsWriter = null;
     if (outMutationsPath != null)
