@@ -263,8 +263,8 @@ public class Main {
     if (outVcfPath == null && outSamPath == null && outRefsMapCountPath == null && outUnalignedPath == null && outMutationsPath == null && !allowNoOutput) {
       usageError("No output specified. Try --out-vcf <output path>, or if you really don't want to generate an output file, --no-output");
     }
-    alignmentLogger = new Logger(new PrintWriter(), 1, alignmentVerbosity);
-    referenceLogger = new Logger(new PrintWriter(), 1, referenceVerbosity);
+    alignmentLogger = new Logger(new StdoutWriter(), 1, alignmentVerbosity);
+    referenceLogger = new Logger(new StdoutWriter(), 1, referenceVerbosity);
 
     if (numThreads < 1) {
       usageError("--num-threads must be >= 1");
