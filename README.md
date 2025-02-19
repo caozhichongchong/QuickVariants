@@ -18,9 +18,9 @@ QuickVariants can be found at `$Conda_env_location/bin/quick-variants-VERSION.ja
 ### Usage
 
 ```
-java -Xms10g -Xmx10g -jar quick-variants-VERSION.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input.sam> --num-threads num_threads [options]
+java -Xms10g -Xmx10g -jar quick-variants-VERSION.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input1.sam> [--in-sam <input2.sam> ...] --num-threads num_threads [options]
 ```
-This command converts a SAM file to other formats, most notably .vcf.
+This command converts one or more SAM files to other formats, most notably .vcf.
 
 **Input**
 - `--reference <file>`: The reference to use. Should be in .fasta/.fa/.fna or .fastq/.fq format or a .gz of one of those formats.
