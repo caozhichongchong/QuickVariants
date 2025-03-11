@@ -624,10 +624,11 @@ public class Main {
           long elapsed = (now - startMillis) / 1000;
 
           // give these queries to this worker
-          Logger workerAlignmentLogger = alignmentLogger.withWriter(new BufferedWriter(outputWriter));
-          Logger workerReferenceLogger = referenceLogger.withWriter(new BufferedWriter(outputWriter));
+          BufferedWriter loggerWriter = new BufferedWriter(outputWriter, "\nOutput from worker " + workerIndex + ":", 100000);
+          Logger workerAlignmentLogger = alignmentLogger.withWriter(loggerWriter);
+          Logger workerReferenceLogger = referenceLogger.withWriter(loggerWriter);
           if (autoVerbose && workerIndex == 0) {
-            workerAlignmentLogger = new Logger(new BufferedWriter(outputWriter), 1, Integer.MAX_VALUE);
+            workerAlignmentLogger = new Logger(loggerWriter, 1, Integer.MAX_VALUE);
           }
           AlignerWorker worker;
           boolean workerAlreadyRunning;
