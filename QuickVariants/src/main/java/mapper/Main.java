@@ -28,6 +28,7 @@ public class Main {
   static Logger alignmentLogger;
   static Logger referenceLogger;
   static Logger silentLogger = Logger.NoOpLogger;
+  static TextWriter outputWriter = new StdoutWriter();
 
   public static void main(String[] args) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
     MapperMetadata.setMainArguments(args);
@@ -624,10 +625,10 @@ public class Main {
           long elapsed = (now - startMillis) / 1000;
 
           // give these queries to this worker
-          Logger workerAlignmentLogger = alignmentLogger.withWriter(new BufferedWriter());
-          Logger workerReferenceLogger = referenceLogger.withWriter(new BufferedWriter());
+          Logger workerAlignmentLogger = alignmentLogger.withWriter(new BufferedWriter(outputWriter));
+          Logger workerReferenceLogger = referenceLogger.withWriter(new BufferedWriter(outputWriter));
           if (autoVerbose && workerIndex == 0) {
-            workerAlignmentLogger = new Logger(new BufferedWriter(), 1, Integer.MAX_VALUE);
+            workerAlignmentLogger = new Logger(new BufferedWriter(outputWriter), 1, Integer.MAX_VALUE);
           }
           AlignerWorker worker;
           boolean workerAlreadyRunning;
