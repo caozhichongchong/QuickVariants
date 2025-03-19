@@ -38,7 +38,7 @@ public class DataLoader {
     // compute weights
     SamParser samParser = new SamParser(sequenceProvider, path, groupLinesInSamFiles);
     // generate a query for each sequence
-    QueryProvider queryBuilder = new SimpleQueryProvider(samParser);
+    QueryProvider queryBuilder = new QueryProvider(samParser);
     // combine adjacent queries with the same name into groups
     GroupedQuery_Provider groupProvider = new Simple_GroupedQuery_Provider(queryBuilder);
     // done
