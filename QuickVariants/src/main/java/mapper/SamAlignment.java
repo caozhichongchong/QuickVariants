@@ -10,14 +10,10 @@ public class SamAlignment {
   public SamAlignment(Sequence sequence) {
     this.sequences = new ArrayList<Sequence>(1);
     this.sequences.add(sequence);
-    this.spacingDeviationPerUnitPenalty = 1;
   }
 
-  public SamAlignment(List<Sequence> sequences, double expectedInnerDistance, double spacingDeviationPerUnitPenalty) {
+  public SamAlignment(List<Sequence> sequences) {
     this.sequences = sequences;
-    this.maxOffset = maxOffset;
-    this.expectedInnerDistance = expectedInnerDistance;
-    this.spacingDeviationPerUnitPenalty = spacingDeviationPerUnitPenalty;
   }
 
   public List<Sequence> getSequences() {
@@ -26,14 +22,6 @@ public class SamAlignment {
 
   public int getNumSequences() {
     return this.sequences.size();
-  }
-
-  public double getExpectedInnerDistance() {
-    return this.expectedInnerDistance;
-  }
-
-  public double getSpacingDeviationPerUnitPenalty() {
-    return this.spacingDeviationPerUnitPenalty;
   }
 
   public long getId() {
@@ -90,7 +78,4 @@ public class SamAlignment {
   }
 
   private List<Sequence> sequences;
-  private int maxOffset; // max distance betweeen where the sequences can be aligned
-  private double expectedInnerDistance;
-  private double spacingDeviationPerUnitPenalty;
 }

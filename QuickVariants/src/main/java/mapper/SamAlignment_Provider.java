@@ -21,7 +21,7 @@ public class SamAlignment_Provider {
         List<SequenceBuilder> sequenceBuilders = new ArrayList<SequenceBuilder>();
         sequenceBuilders.add(builder);
         sequenceBuilders.add(builder2);
-        return new SamAlignment_Builder(sequenceBuilders, 1, 1);
+        return new SamAlignment_Builder(sequenceBuilders);
       }
     }
 

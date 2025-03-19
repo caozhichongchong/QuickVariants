@@ -11,11 +11,8 @@ public class SamAlignment_Builder {
     this.sequenceProviders.add(sequenceProvider);
   }
 
-  public SamAlignment_Builder(List<SequenceBuilder> sequenceProviders, double expectedInnerDistance, double spacingDeviationPerUnitPenalty) {
+  public SamAlignment_Builder(List<SequenceBuilder> sequenceProviders) {
     this.sequenceProviders = sequenceProviders;
-    this.maxOffset = maxOffset;
-    this.expectedInnerDistance = expectedInnerDistance;
-    this.spacingDeviationPerUnitPenalty = spacingDeviationPerUnitPenalty;
   }
 
   public SamAlignment build() {
@@ -24,7 +21,7 @@ public class SamAlignment_Builder {
     for (SequenceBuilder sequenceProvider : this.sequenceProviders) {
       sequences.add(sequenceProvider.build());
     }
-    return new SamAlignment(sequences, this.expectedInnerDistance, this.spacingDeviationPerUnitPenalty);
+    return new SamAlignment(sequences);
   }
 
   public void setId(long id) {
@@ -60,8 +57,5 @@ public class SamAlignment_Builder {
   }
 
   private List<SequenceBuilder> sequenceProviders;
-  private int maxOffset;
   private int id;
-  private double expectedInnerDistance;
-  private double spacingDeviationPerUnitPenalty;
 }
