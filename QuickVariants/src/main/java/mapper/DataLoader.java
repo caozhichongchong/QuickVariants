@@ -35,10 +35,8 @@ public class DataLoader {
     // consider reordering so mates are next to each other
     if (groupLinesInSamFiles)
       sequenceProvider = new SamGroupOrderer(sequenceProvider);
-    // compute weights
-    SamParser samParser = new SamParser(sequenceProvider, path, groupLinesInSamFiles);
     // generate a query for each sequence
-    SamAlignment_Provider queryBuilder = new SamAlignment_Provider(samParser);
+    SamAlignment_Provider queryBuilder = new SamAlignment_Provider(sequenceProvider, path, groupLinesInSamFiles);
     // combine adjacent queries with the same name into groups
     GroupedAlignment_Provider groupProvider = new Simple_GroupedAlignment_Provider(queryBuilder);
     // done

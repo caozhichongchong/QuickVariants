@@ -86,6 +86,11 @@ public class SamGroupOrderer implements SequenceProvider {
     return false;
   }
 
+  @Override
+  public String toString() {
+    return "reorder(" + this.reader.toString() + ")";
+  }
+
   private void printMetrics() {
     if (this.maxNumPendingGroups > 1)
       System.out.println("Maximum number of sequences waiting for a mate at once: " + this.maxNumPendingGroups);

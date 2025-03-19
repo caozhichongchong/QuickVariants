@@ -88,6 +88,12 @@ public class SamAlignment_Builder {
     return this.sequenceProviders;
   }
 
+  public SequenceBuilder getLastComponent() {
+    if (this.sequenceProviders.size() > 0)
+      return this.sequenceProviders.get(this.sequenceProviders.size() - 1);
+    return null;
+  }
+
   public void setWeight(double weight) {
     for (SequenceBuilder component: this.sequenceProviders) {
       component.setAlignmentWeight(weight);
