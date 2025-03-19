@@ -117,6 +117,32 @@ public class AlignerWorker_Test {
     checkVcf(vcf, expectedVcf);
   }
 
+  @Test
+  public void testMissingMate() {
+    String samA1 = "name1\t0\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
+    String samA2 = "name1\t16\tcontig1\t9\t255\t4M\tcontig1\t1\t4\tCCCC\t*";
+    String samB1 = "name2\t0\tcontig1\t17\t255\t4M\tcontig1\t25\t4\tACGT\t*";
+    String goodSam = samA1 + "\n" + samA2;
+    String badSam = samA1 + "\n" + samB1;
+    int goodSamNumErrors = getNumErrors(goodSam);
+    if (goodSamNumErrors != 0) {
+      fail("Found " + goodSamNumErrors + " errors parsing '" + goodSam + "'");
+    }
+    int badSamNumErrors = getNumErrors(badSam);
+    int badSamExpectedNumErrors = 1;
+    if (badSamNumErrors != badSamExpectedNumErrors) {
+      fail("Found " + badSamNumErrors + " errors instead of " + badSamExpectedNumErrors + " parsing:\n'" + badSam + "'");
+    }
+  }
+
+
+  private int getNumErrors(String samLines) {
+    GroupedAlignment_Provider samParser = newSamParser(samLines);
+    while (samParser.getNextGroup() != null) {
+    }
+    return samParser.getNumErrors();
+  }
+
   private void checkVcf(String actual, String expected) {
     actual = withoutVcfMetadataLines(actual);
     if (!(expected.equals(actual))) {
@@ -137,6 +163,15 @@ public class AlignerWorker_Test {
     return resultBuilder.toString();
   }
 
+  private GroupedAlignment_Provider newSamParser(String samRecords) {
+    // parse alignments
+    StringReader alignmentStringReader = new StringReader(samRecords);
+    SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
+    SamAlignment_Provider queryBuilder = new SamAlignment_Provider(new SamParser(alignmentReader, "alignments.sam", false));
+    GroupedAlignment_Provider samParser = new Simple_GroupedAlignment_Provider(queryBuilder);
+    return samParser;
+  }
+
   private String buildVcf(String samRecords, String referenceGenome) {
     // make alignment listener
     MatchDatabase matchDatabase = new MatchDatabase(0);
@@ -144,11 +179,9 @@ public class AlignerWorker_Test {
     listeners.add(matchDatabase);
 
     // parse alignments
-    StringReader alignmentStringReader = new StringReader(samRecords);
-    SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
-    SamAlignment_Provider queryBuilder = new SamAlignment_Provider(new SamParser(alignmentReader, "alignments.sam", false));
-    GroupedAlignment_Provider samParser = new Simple_GroupedAlignment_Provider(queryBuilder);
+    GroupedAlignment_Provider samParser = newSamParser(samRecords);
     List<List<SamAlignment_Builder>> alignments = getQueries(samParser);
+
     // parse reference
     BufferedReader referenceReader = new BufferedReader(new StringReader(referenceGenome));
     SequenceProvider referenceParser = new FastaParser(referenceReader, "reference.fasta");
