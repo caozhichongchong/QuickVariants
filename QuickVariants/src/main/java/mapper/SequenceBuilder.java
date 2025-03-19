@@ -56,7 +56,7 @@ public class SequenceBuilder {
   public Sequence build() {
     String compressed = this.compress(this.stringBuilder.toString().toUpperCase());
     if (this.buildSam) {
-      SamAlignment result = new SamAlignment(name, compressed, length, path);
+      SamRecord result = new SamRecord(name, compressed, length, path);
       result.referenceName = this.referenceName;
       result.referencePosition = this.referencePosition;
       result.setCigarString(this.cigarString);

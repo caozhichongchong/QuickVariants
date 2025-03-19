@@ -29,7 +29,7 @@ public class DataLoader {
     return readSequencesFrom(path, keepQualityData, ".sam");
   }
 
-  public static GroupedQuery_Provider ParseSamAlignments(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
+  public static GroupedQuery_Provider ParseSamRecords(String path, boolean keepQualityData, boolean groupLinesInSamFiles) throws IllegalArgumentException, IOException, FileNotFoundException {
     // read .sam file
     SequenceProvider sequenceProvider = readSequencesFrom(path, keepQualityData, ".sam");
     // consider reordering so mates are next to each other

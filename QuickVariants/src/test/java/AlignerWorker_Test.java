@@ -137,14 +137,14 @@ public class AlignerWorker_Test {
     return resultBuilder.toString();
   }
 
-  private String buildVcf(String samAlignments, String referenceGenome) {
+  private String buildVcf(String samRecords, String referenceGenome) {
     // make alignment listener
     MatchDatabase matchDatabase = new MatchDatabase(0);
     List<AlignmentListener> listeners = new ArrayList<AlignmentListener>();
     listeners.add(matchDatabase);
 
     // parse alignments
-    StringReader alignmentStringReader = new StringReader(samAlignments);
+    StringReader alignmentStringReader = new StringReader(samRecords);
     SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
     QueryProvider queryBuilder = new QueryProvider(new SamParser(alignmentReader, "alignments.sam", false));
     GroupedQuery_Provider samParser = new Simple_GroupedQuery_Provider(queryBuilder);

@@ -34,12 +34,12 @@ public class SamReader_Test {
       Assert.fail("Expected 1 sequence, not " + sequences.size());
     }
     Sequence sequence = sequences.get(0);
-    SamAlignment samAlignment = (SamAlignment)sequence;
+    SamRecord samRecord = (SamRecord)sequence;
 
     Sequence referenceContig = new SequenceBuilder().setName("contig1").add("ACGTTTTCCCT").build();
     SequenceDatabase reference = new SequenceDatabase(referenceContig);
 
-    SequenceAlignment sequenceAlignment = samAlignment.toSequenceAlignment(reference);
+    SequenceAlignment sequenceAlignment = samRecord.toSequenceAlignment(reference);
     int numSections = sequenceAlignment.getNumSections();
     if (numSections != 2) {
       Assert.fail("Expected 2 sections, not " + numSections);

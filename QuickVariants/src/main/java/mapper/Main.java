@@ -72,14 +72,14 @@ public class Main {
       if ("--in-ordered-sam".equals(arg)) {
         String queryPath = args[i + 1];
         i++;
-        GroupedQuery_Provider samParser = DataLoader.ParseSamAlignments(queryPath, false, false);
+        GroupedQuery_Provider samParser = DataLoader.ParseSamRecords(queryPath, false, false);
         queries.add(samParser);
         continue;
       }
       if ("--in-sam".equals(arg) || "--in-unordered-sam".equals(arg)) {
         String queryPath = args[i + 1];
         i++;
-        GroupedQuery_Provider samParser = DataLoader.ParseSamAlignments(queryPath, false, true);
+        GroupedQuery_Provider samParser = DataLoader.ParseSamRecords(queryPath, false, true);
         queries.add(samParser);
         continue; 
       }

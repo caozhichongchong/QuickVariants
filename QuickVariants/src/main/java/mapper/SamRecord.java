@@ -3,9 +3,9 @@ package mapper;
 import java.util.List;
 import java.util.ArrayList;
 
-// A SamAlignment is an alignment from a .sam file
-public class SamAlignment extends Sequence {
-  public SamAlignment(String name, String packedContents, int length, String path) {
+// A SamRecord is an alignment from a .sam file
+public class SamRecord extends Sequence {
+  public SamRecord(String name, String packedContents, int length, String path) {
     super(name, packedContents, length, path);
   }
 

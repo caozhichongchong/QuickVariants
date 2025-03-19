@@ -177,9 +177,9 @@ public class AlignerWorker extends Thread {
   private QueryAlignment tryConvertSamAlignment(Query query) {
     List<SequenceAlignment> sequenceAlignments = new ArrayList<SequenceAlignment>(query.getNumSequences());
     for (Sequence sequence: query.getSequences()) {
-      if (sequence instanceof SamAlignment) {
-        SamAlignment samAlignment = (SamAlignment)sequence;
-        SequenceAlignment sequenceAlignment = samAlignment.toSequenceAlignment(this.sequenceDatabase);
+      if (sequence instanceof SamRecord) {
+        SamRecord samRecord = (SamRecord)sequence;
+        SequenceAlignment sequenceAlignment = samRecord.toSequenceAlignment(this.sequenceDatabase);
         if (sequenceAlignment == null)
           return null;
         sequenceAlignments.add(sequenceAlignment);
