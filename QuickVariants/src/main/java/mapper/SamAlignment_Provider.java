@@ -11,14 +11,21 @@ public class SamAlignment_Provider {
   }
 
   public SamAlignment_Builder getNextSamAlignment_Builder() {
-    SamAlignment_Builder alignmentBuilder = new SamAlignment_Builder();
-    while (!alignmentBuilder.isComplete()) {
+    while (true) {
       SequenceBuilder sequenceBuilder = this.sequenceProvider.getNextSequence();
-      if (sequenceBuilder == null)
-        return null;
-      alignmentBuilder.add(sequenceBuilder);
+      if (sequenceBuilder == null) {
+        SamAlignment_Builder result = this.pendingAlignment;
+        this.pendingAlignment = null;
+        return result;
+      }
+      if (!this.pendingAlignment.accepts(sequenceBuilder)) {
+        SamAlignment_Builder result = this.pendingAlignment;
+        this.pendingAlignment = new SamAlignment_Builder();
+        this.pendingAlignment.add(sequenceBuilder);
+        return result;
+      }
+      this.pendingAlignment.add(sequenceBuilder);
     }
-    return alignmentBuilder;
   }
 
   public boolean get_allReadsContainQualityInformation() {
@@ -35,4 +42,5 @@ public class SamAlignment_Provider {
   }
   
   private SequenceProvider sequenceProvider;
+  private SamAlignment_Builder pendingAlignment = new SamAlignment_Builder();
 }

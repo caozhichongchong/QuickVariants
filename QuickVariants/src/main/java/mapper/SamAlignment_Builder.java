@@ -33,6 +33,16 @@ public class SamAlignment_Builder {
     return true;
   }
 
+  public boolean accepts(SequenceBuilder component) {
+    if (this.sequenceProviders.size() < 1)
+      return true;
+    if (this.isComplete())
+      return false;
+    if (this.sequenceProviders.get(0).getName().equals(component.getName()))
+      return true;
+    return false;
+  }
+
   public SamAlignment build() {
     List<Sequence> sequences = new ArrayList<Sequence>(this.sequenceProviders.size());
     boolean odd = false;
@@ -82,6 +92,10 @@ public class SamAlignment_Builder {
     for (SequenceBuilder component: this.sequenceProviders) {
       component.setAlignmentWeight(weight);
     }
+  }
+
+  public boolean isNonempty() {
+    return this.sequenceProviders.size() > 0;
   }
 
   private List<SequenceBuilder> sequenceProviders;

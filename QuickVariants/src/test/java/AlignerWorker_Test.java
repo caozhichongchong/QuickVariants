@@ -122,8 +122,13 @@ public class AlignerWorker_Test {
     String samA1 = "name1\t0\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
     String samA2 = "name1\t16\tcontig1\t9\t255\t4M\tcontig1\t1\t4\tCCCC\t*";
     String samB1 = "name2\t0\tcontig1\t17\t255\t4M\tcontig1\t25\t4\tACGT\t*";
+    String samB2 = "name2\t16\tcontig1\t25\t255\t4M\tcontig1\t17\t4\tCCCC\t*";
+    String samC1 = "name3\t0\tcontig1\t33\t255\t4M\tcontig1\t41\t4\tACGT\t*";
+    String samC2 = "name3\t16\tcontig1\t41\t255\t4M\tcontig1\t33\t4\tCCCC\t*";
     String goodSam = samA1 + "\n" + samA2;
-    String badSam = samA1 + "\n" + samB1;
+    String badSam = samA1 + "\n" + samB1 + "\n" + samB2 + "\n" + samC1 + "\n" + samC2;
+    String ref = "ACGTAAAACCCCTTTTACGTAAAACCCCTTTTACGTAAAACCCCTTTTACGTAAAACCCCTTTT";
+
     int goodSamNumErrors = getNumErrors(goodSam);
     if (goodSamNumErrors != 0) {
       fail("Found " + goodSamNumErrors + " errors parsing '" + goodSam + "'");
@@ -133,6 +138,31 @@ public class AlignerWorker_Test {
     if (badSamNumErrors != badSamExpectedNumErrors) {
       fail("Found " + badSamNumErrors + " errors instead of " + badSamExpectedNumErrors + " parsing:\n'" + badSam + "'");
     }
+    String vcfFromBadSam = buildVcf(badSam, ">contig1\n" + ref);
+    String expectedVcf =
+        "contig1	1	A		1	1,0	0,0	\n" +
+        "contig1	2	C		1	1,0	0,0	\n" +
+        "contig1	3	G		1	1,0	0,0	\n" +
+        "contig1	4	T		1	1,0	0,0	\n" +
+        "contig1	17	A		1	1,0	0,0	\n" +
+        "contig1	18	C		1	1,0	0,0	\n" +
+        "contig1	19	G		1	1,0	0,0	\n" +
+        "contig1	20	T		1	1,0	0,0	\n" +
+        "contig1	25	C		1	0,1	0,0	\n" +
+        "contig1	26	C		1	0,1	0,0	\n" +
+        "contig1	27	C		1	0,1	0,0	\n" +
+        "contig1	28	C		1	0,1	0,0	\n" +
+        "contig1	33	A		1	1,0	0,0	\n" +
+        "contig1	34	C		1	1,0	0,0	\n" +
+        "contig1	35	G		1	1,0	0,0	\n" +
+        "contig1	36	T		1	1,0	0,0	\n" +
+        "contig1	41	C		1	0,1	0,0	\n" +
+        "contig1	42	C		1	0,1	0,0	\n" +
+        "contig1	43	C		1	0,1	0,0	\n" +
+        "contig1	44	C		1	0,1	0,0	\n" +
+        "";
+
+    checkVcf(vcfFromBadSam, expectedVcf);
   }
 
 
