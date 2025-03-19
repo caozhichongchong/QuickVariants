@@ -34,7 +34,7 @@ public class DataLoader {
     SequenceProvider sequenceProvider = readSequencesFrom(path, keepQualityData, ".sam");
     // consider reordering so mates are next to each other
     if (groupLinesInSamFiles)
-      sequenceProvider = new SamGrouper(sequenceProvider);
+      sequenceProvider = new SamGroupOrderer(sequenceProvider);
     // compute weights
     SamParser samParser = new SamParser(sequenceProvider, path, groupLinesInSamFiles);
     // generate a query for each sequence
