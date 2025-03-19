@@ -22,6 +22,7 @@ public class VcfWriter {
   public VcfWriter(OutputStream destination, boolean includeNonMutations) {
     this.initialize(destination);
     this.includeNonMutations = includeNonMutations;
+    this.mutationsFilter = MutationDetectionParameters.emptyFilter();
   }
 
   private void initialize(OutputStream destination) {
