@@ -40,7 +40,7 @@ public class DataLoader {
     // generate a query for each sequence
     QueryProvider queryBuilder = new SimpleQueryProvider(samParser);
     // combine adjacent queries with the same name into groups
-    GroupedQuery_Provider groupProvider = new GroupedQuery_Provider(queryBuilder);
+    GroupedQuery_Provider groupProvider = new Simple_GroupedQuery_Provider(queryBuilder);
     // done
     return groupProvider;
   }

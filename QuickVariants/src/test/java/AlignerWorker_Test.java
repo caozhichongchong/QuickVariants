@@ -147,7 +147,7 @@ public class AlignerWorker_Test {
     StringReader alignmentStringReader = new StringReader(samAlignments);
     SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
     QueryProvider queryBuilder = new SimpleQueryProvider(new SamParser(alignmentReader, "alignments.sam", false));
-    GroupedQuery_Provider samParser = new GroupedQuery_Provider(queryBuilder);
+    GroupedQuery_Provider samParser = new Simple_GroupedQuery_Provider(queryBuilder);
     List<List<QueryBuilder>> alignments = getQueries(samParser);
     // parse reference
     BufferedReader referenceReader = new BufferedReader(new StringReader(referenceGenome));

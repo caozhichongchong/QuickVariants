@@ -364,7 +364,7 @@ public class Main {
     long now = System.currentTimeMillis();
     long elapsed = (now - startMillis) / 1000;
 
-    GroupedQuery_Iterator queries = new GroupedQuery_Iterator(queriesList);
+    GroupedQuery_Provider queries = new Composite_GroupedQuery_Provider(queriesList);
 
     List<AlignmentListener> listeners = new ArrayList<AlignmentListener>();
     MatchDatabase matchDatabase = new MatchDatabase(queryEndFraction);
@@ -507,7 +507,7 @@ public class Main {
     System.out.println("dumped heap to " + outputPath);
   }
 
-  public static AlignmentStatistics compare(SequenceDatabase reference, GroupedQuery_Iterator queries, long startMillis, int numThreads, double queryEndFraction, List<AlignmentListener> alignmentListeners, boolean autoVerbose) throws InterruptedException, IOException {
+  public static AlignmentStatistics compare(SequenceDatabase reference, GroupedQuery_Provider queries, long startMillis, int numThreads, double queryEndFraction, List<AlignmentListener> alignmentListeners, boolean autoVerbose) throws InterruptedException, IOException {
     long readingMillis = 0;
     long launchingMillis = 0;
     long waitingMillis = 0;
