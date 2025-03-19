@@ -146,7 +146,7 @@ public class AlignerWorker_Test {
     // parse alignments
     StringReader alignmentStringReader = new StringReader(samRecords);
     SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
-    QueryProvider queryBuilder = new QueryProvider(new SamParser(alignmentReader, "alignments.sam", false));
+    SamAlignment_Provider queryBuilder = new SamAlignment_Provider(new SamParser(alignmentReader, "alignments.sam", false));
     GroupedQuery_Provider samParser = new Simple_GroupedQuery_Provider(queryBuilder);
     List<List<SamAlignment_Builder>> alignments = getQueries(samParser);
     // parse reference

@@ -3,10 +3,10 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-// A QueryProvider converts from SequenceBuilder to SamAlignment_Builder
+// A SamAlignment_Provider converts from SequenceBuilder to SamAlignment_Builder
 // It reads sequences, matches adjacent paired-end reads, and treats each result as a query
-public class QueryProvider {
-  public QueryProvider(SequenceProvider sequenceProvider) {
+public class SamAlignment_Provider {
+  public SamAlignment_Provider(SequenceProvider sequenceProvider) {
     this.sequenceProvider = sequenceProvider;
   }
 

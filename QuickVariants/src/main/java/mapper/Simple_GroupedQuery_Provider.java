@@ -5,7 +5,7 @@ import java.util.List;
 
 // A Simple_GroupedQuery_Provider combines adjacent queries with the same name into groups
 public class Simple_GroupedQuery_Provider implements GroupedQuery_Provider {
-  public Simple_GroupedQuery_Provider(QueryProvider queryProvider) {
+  public Simple_GroupedQuery_Provider(SamAlignment_Provider queryProvider) {
     this.queryProvider = queryProvider;
   }
 
@@ -50,6 +50,6 @@ public class Simple_GroupedQuery_Provider implements GroupedQuery_Provider {
     this.pendingQuery = null;
   }
 
-  private QueryProvider queryProvider;
+  private SamAlignment_Provider queryProvider;
   private SamAlignment_Builder pendingQuery;
 }
