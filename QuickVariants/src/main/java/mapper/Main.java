@@ -453,19 +453,6 @@ public class Main {
       System.out.println("");
       System.out.println("Timing:");
 
-      Query slowestQuery = statistics.slowestQuery;
-
-      if (slowestQuery != null) {
-        String queryDisplayText = slowestQuery.format();
-        String numAlignmentsText;
-        int numAlignments = statistics.slowestQueryNumAlignments;
-        if (numAlignments == 1)
-          numAlignmentsText = "1 time";
-        else
-          numAlignmentsText = "" + numAlignments + " times";
-        System.out.println(" Slowest query: #" + slowestQuery.getId() + " (" + statistics.slowestQueryMillis + "ms) : " + queryDisplayText + " aligned " + numAlignmentsText);
-      }
-
       //int millisOnUnalignedQueries = (int)(statistics.cpuMillisSpentOnUnalignedQueries / 1000 / numThreads);
       //System.out.println(" Unaligned queries took        : " + statistics.cpuMillisSpentOnUnalignedQueries + " cpu-ms (" + millisOnUnalignedQueries + "s)");
 
@@ -523,12 +510,10 @@ public class Main {
     int workerIndex = 0;
     boolean doneReadingQueries = false;
     // pendingQueries[jobIndex][groupNumber][alignmentIndex] = the corresponding query builder
-    List<List<List<QueryBuilder>>> pendingQueries = new ArrayList<List<List<QueryBuilder>>>();
+    List<List<List<SamAlignment_Builder>>> pendingQueries = new ArrayList<List<List<SamAlignment_Builder>>>();
     long lastPrintTime = 0;
     long nextCountToPrint = 0;
     long slowestAlignmentMillis = -1;
-    Query slowestQuery = null;
-    List<QueryAlignment> slowestAlignment = null;
     long millisSpentOnUnalignedQueries = 0;
     int numCacheHits = 0;
     int numCasesImmediatelyAcceptingFirstAlignment = 0;
@@ -543,18 +528,18 @@ public class Main {
       if (!doneReadingQueries && (pendingQueries.size() < 1 || (workers.size() >= numThreads && pendingQueries.size() < numThreads * 10))) {
         long readStart = System.currentTimeMillis();
         int targetNumBases = maxNumBasesPerJob;
-        List<List<QueryBuilder>> batch = new ArrayList<List<QueryBuilder>>();
+        List<List<SamAlignment_Builder>> batch = new ArrayList<List<SamAlignment_Builder>>();
         int totalLengthOfPendingQueries = 0;
         while (true) {
           if (totalLengthOfPendingQueries >= targetNumBases) {
             break;
           }
-          List<QueryBuilder> group = queries.getNextGroup();
+          List<SamAlignment_Builder> group = queries.getNextGroup();
           if (group == null) {
             doneReadingQueries = true;
             break;
           }
-          for (QueryBuilder queryBuilder: group) {
+          for (SamAlignment_Builder queryBuilder: group) {
             numQueriesLoaded++;
             queryBuilder.setId(numQueriesLoaded);
             totalLengthOfPendingQueries += queryBuilder.getLength();
@@ -571,7 +556,7 @@ public class Main {
       if (workers.size() < numThreads) {
         long launchStart = System.currentTimeMillis();
 
-        List<List<QueryBuilder>> queriesToProcess;
+        List<List<SamAlignment_Builder>> queriesToProcess;
         // we have enough idle threads to spawn another worker
         if (pendingQueries.size() > 0) {
           // we have queries that haven't been assigned

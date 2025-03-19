@@ -34,7 +34,7 @@ public class SamWriter implements AlignmentListener {
     this.write(this.format(alignments));
   }
 
-  public void addUnaligned(List<Query> unalignedQueries) {
+  public void addUnaligned(List<SamAlignment> unalignedQueries) {
   }
 
   public void close() {

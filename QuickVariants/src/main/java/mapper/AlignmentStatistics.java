@@ -8,7 +8,6 @@ public class AlignmentStatistics {
 
   long cpuMillisSpentOnUnalignedQueries;
 
-  Query slowestQuery;
   int slowestQueryNumAlignments;
   long slowestQueryMillis;
 

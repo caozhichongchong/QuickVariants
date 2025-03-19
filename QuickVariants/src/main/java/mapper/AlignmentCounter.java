@@ -29,9 +29,9 @@ public class AlignmentCounter implements AlignmentListener {
     }
   }
 
-  public void addUnaligned(List<Query> unalignedQueries) {
+  public void addUnaligned(List<SamAlignment> unalignedQueries) {
     int numNewUnalignedQueries = 0;
-    for (Query query: unalignedQueries) {
+    for (SamAlignment query: unalignedQueries) {
       numNewUnalignedQueries += query.getNumSequences();
     }
     synchronized (this) {

@@ -3,27 +3,28 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QueryBuilder {
+// a SamAlignment_Builder builds a SamAlignment
+public class SamAlignment_Builder {
 
-  public QueryBuilder(SequenceBuilder sequenceProvider) {
+  public SamAlignment_Builder(SequenceBuilder sequenceProvider) {
     this.sequenceProviders = new ArrayList<SequenceBuilder>(1);
     this.sequenceProviders.add(sequenceProvider);
   }
 
-  public QueryBuilder(List<SequenceBuilder> sequenceProviders, double expectedInnerDistance, double spacingDeviationPerUnitPenalty) {
+  public SamAlignment_Builder(List<SequenceBuilder> sequenceProviders, double expectedInnerDistance, double spacingDeviationPerUnitPenalty) {
     this.sequenceProviders = sequenceProviders;
     this.maxOffset = maxOffset;
     this.expectedInnerDistance = expectedInnerDistance;
     this.spacingDeviationPerUnitPenalty = spacingDeviationPerUnitPenalty;
   }
 
-  public Query build() {
+  public SamAlignment build() {
     List<Sequence> sequences = new ArrayList<Sequence>(this.sequenceProviders.size());
     boolean odd = false;
     for (SequenceBuilder sequenceProvider : this.sequenceProviders) {
       sequences.add(sequenceProvider.build());
     }
-    return new Query(sequences, this.expectedInnerDistance, this.spacingDeviationPerUnitPenalty);
+    return new SamAlignment(sequences, this.expectedInnerDistance, this.spacingDeviationPerUnitPenalty);
   }
 
   public void setId(long id) {
@@ -40,7 +41,7 @@ public class QueryBuilder {
     return total;
   }
 
-  public boolean sameSequenceNames(QueryBuilder other) {
+  public boolean sameSequenceNames(SamAlignment_Builder other) {
     if (other.sequenceProviders.size() != this.sequenceProviders.size())
       return false;
     for (int i = 0; i < this.sequenceProviders.size(); i++) {

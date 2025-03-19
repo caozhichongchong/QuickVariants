@@ -9,14 +9,14 @@ public class Simple_GroupedQuery_Provider implements GroupedQuery_Provider {
     this.queryProvider = queryProvider;
   }
 
-  public List<QueryBuilder> getNextGroup() {
-    List<QueryBuilder> group = null;
+  public List<SamAlignment_Builder> getNextGroup() {
+    List<SamAlignment_Builder> group = null;
     while (true) {
-      QueryBuilder query = this.peekNextQuery();
+      SamAlignment_Builder query = this.peekNextQuery();
       if (query == null)
         break;
       if (group == null)
-        group = new ArrayList<QueryBuilder>();
+        group = new ArrayList<SamAlignment_Builder>();
       if (group.size() < 1 || query.sameSequenceNames(group.get(0))) {
         group.add(query);
         this.consumeQuery();
@@ -40,9 +40,9 @@ public class Simple_GroupedQuery_Provider implements GroupedQuery_Provider {
     return this.queryProvider.getNumErrors();
   }
 
-  private QueryBuilder peekNextQuery() {
+  private SamAlignment_Builder peekNextQuery() {
     if (this.pendingQuery == null)
-      this.pendingQuery = this.queryProvider.getNextQueryBuilder();
+      this.pendingQuery = this.queryProvider.getNextSamAlignment_Builder();
     return this.pendingQuery;
   }
 
@@ -51,5 +51,5 @@ public class Simple_GroupedQuery_Provider implements GroupedQuery_Provider {
   }
 
   private QueryProvider queryProvider;
-  private QueryBuilder pendingQuery;
+  private SamAlignment_Builder pendingQuery;
 }

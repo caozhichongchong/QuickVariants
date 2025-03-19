@@ -25,7 +25,7 @@ public class MatchDatabase implements AlignmentListener {
     }
   }
 
-  public void addUnaligned(List<Query> unalignedQueries) {
+  public void addUnaligned(List<SamAlignment> unalignedQueries) {
   }
 
   private Map<Sequence, List<WeightedAlignment>> groupByReference(List<List<QueryAlignment>> alignments) {

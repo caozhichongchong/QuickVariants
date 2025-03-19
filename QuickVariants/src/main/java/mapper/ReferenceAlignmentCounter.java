@@ -24,7 +24,7 @@ public class ReferenceAlignmentCounter implements AlignmentListener {
     }
   }
 
-  public void addUnaligned(List<Query> unalignedQueries) {
+  public void addUnaligned(List<SamAlignment> unalignedQueries) {
   }
 
   // Get reference path/filename of each reference sequence that mapped to this query

@@ -3,14 +3,14 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-// A QueryProvider converts from SequenceBuilder to QueryBuilder
+// A QueryProvider converts from SequenceBuilder to SamAlignment_Builder
 // It reads sequences, matches adjacent paired-end reads, and treats each result as a query
 public class QueryProvider {
   public QueryProvider(SequenceProvider sequenceProvider) {
     this.sequenceProvider = sequenceProvider;
   }
 
-  public QueryBuilder getNextQueryBuilder() {
+  public SamAlignment_Builder getNextSamAlignment_Builder() {
     SequenceBuilder builder = this.sequenceProvider.getNextSequence();
     if (builder == null) {
       return null;
@@ -21,11 +21,11 @@ public class QueryProvider {
         List<SequenceBuilder> sequenceBuilders = new ArrayList<SequenceBuilder>();
         sequenceBuilders.add(builder);
         sequenceBuilders.add(builder2);
-        return new QueryBuilder(sequenceBuilders, 1, 1);
+        return new SamAlignment_Builder(sequenceBuilders, 1, 1);
       }
     }
 
-    return new QueryBuilder(builder);
+    return new SamAlignment_Builder(builder);
   }
 
   public boolean get_allReadsContainQualityInformation() {

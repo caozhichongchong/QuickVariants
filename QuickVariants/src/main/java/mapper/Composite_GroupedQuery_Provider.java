@@ -14,9 +14,9 @@ public class Composite_GroupedQuery_Provider implements GroupedQuery_Provider {
     this.providers = providers;
   }
 
-  public List<QueryBuilder> getNextGroup() {
+  public List<SamAlignment_Builder> getNextGroup() {
     while (this.nextIndex < this.providers.size()) {
-      List<QueryBuilder> next = this.providers.get(this.nextIndex).getNextGroup();
+      List<SamAlignment_Builder> next = this.providers.get(this.nextIndex).getNextGroup();
       if (next != null) {
         return next;
       }

@@ -3,16 +3,17 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-// A Query is a question that can be asked about where some sequences align
+// A SamAlignment represents a specific way in which a specific query can align to the reference genome
 // It can model a single sequence or can model Illumina-style paired-end reads
-public class Query {
-  public Query(Sequence sequence) {
+// If there are multiple alternate ways that the query could align to the reference genome, each should be represented by its own SamAlignment
+public class SamAlignment {
+  public SamAlignment(Sequence sequence) {
     this.sequences = new ArrayList<Sequence>(1);
     this.sequences.add(sequence);
     this.spacingDeviationPerUnitPenalty = 1;
   }
 
-  public Query(List<Sequence> sequences, double expectedInnerDistance, double spacingDeviationPerUnitPenalty) {
+  public SamAlignment(List<Sequence> sequences, double expectedInnerDistance, double spacingDeviationPerUnitPenalty) {
     this.sequences = sequences;
     this.maxOffset = maxOffset;
     this.expectedInnerDistance = expectedInnerDistance;
@@ -67,7 +68,7 @@ public class Query {
     return builder.toString();
   }
 
-  public boolean sameSequenceNames(Query other) {
+  public boolean sameSequenceNames(SamAlignment other) {
     if (other.sequences.size() != this.sequences.size()) {
       return false;
     }

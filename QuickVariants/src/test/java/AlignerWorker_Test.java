@@ -148,7 +148,7 @@ public class AlignerWorker_Test {
     SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
     QueryProvider queryBuilder = new QueryProvider(new SamParser(alignmentReader, "alignments.sam", false));
     GroupedQuery_Provider samParser = new Simple_GroupedQuery_Provider(queryBuilder);
-    List<List<QueryBuilder>> alignments = getQueries(samParser);
+    List<List<SamAlignment_Builder>> alignments = getQueries(samParser);
     // parse reference
     BufferedReader referenceReader = new BufferedReader(new StringReader(referenceGenome));
     SequenceProvider referenceParser = new FastaParser(referenceReader, "reference.fasta");
@@ -175,10 +175,10 @@ public class AlignerWorker_Test {
     return vcfStream.toString();
   }
 
-  private List<List<QueryBuilder>> getQueries(GroupedQuery_Provider queryProvider) {
-    List<List<QueryBuilder>> queries = new ArrayList<List<QueryBuilder>>();
+  private List<List<SamAlignment_Builder>> getQueries(GroupedQuery_Provider queryProvider) {
+    List<List<SamAlignment_Builder>> queries = new ArrayList<List<SamAlignment_Builder>>();
     while (true) {
-      List<QueryBuilder> newQuery = queryProvider.getNextGroup();
+      List<SamAlignment_Builder> newQuery = queryProvider.getNextGroup();
       if (newQuery == null)
         return queries;
       queries.add(newQuery);

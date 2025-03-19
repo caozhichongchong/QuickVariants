@@ -32,9 +32,9 @@ public class UnalignedQuery_Writer implements AlignmentListener {
   public void addAlignments(List<List<QueryAlignment>> alignments) {
   }
 
-  public void addUnaligned(List<Query> unalignedQueries) {
+  public void addUnaligned(List<SamAlignment> unalignedQueries) {
     synchronized(this) {
-      for (Query query: unalignedQueries) {
+      for (SamAlignment query: unalignedQueries) {
         for (Sequence sequence: query.getSequences()) {
           this.writer.write(sequence);
         }
