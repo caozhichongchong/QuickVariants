@@ -74,6 +74,10 @@ public class SamAlignment_Builder {
     return false;
   }
 
+  public List<SequenceBuilder> getComponents() {
+    return this.sequenceProviders;
+  }
+
   private List<SequenceBuilder> sequenceProviders;
   private int id;
 }

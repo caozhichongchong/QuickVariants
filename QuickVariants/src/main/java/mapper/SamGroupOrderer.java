@@ -44,20 +44,31 @@ public class SamGroupOrderer implements SequenceProvider {
 
       // if we found a read that expects a mate, we might need to wait for its mate
       String sequenceName = sequence.getName();
-      SequenceBuilder mate = this.partiallyReadGroups.remove(sequenceName);
-      if (mate != null) {
-        // we completed a group so we can emit it now
-        this.readGroup.add(mate);
-        this.readGroup.add(sequence);
+      SamAlignment_Builder group = this.partiallyReadGroups.remove(sequenceName);
+      boolean groupAlreadyExisted;
+      if (group == null) {
+        groupAlreadyExisted = false;
+        group = new SamAlignment_Builder();
       } else {
-        this.partiallyReadGroups.put(sequenceName, sequence);
-        int numPendingGroups = this.partiallyReadGroups.size();
-        if (this.maxNumPendingGroups < numPendingGroups) {
-          this.maxNumPendingGroups = numPendingGroups;
-        }
-        if (numPendingGroups >= this.numPendingGroups_warningThreshold) {
-          System.out.println("Many (>=" + numPendingGroups + ") reads not adjacent to their mates - this can reduce performance");
-          this.numPendingGroups_warningThreshold = numPendingGroups * 4;
+        groupAlreadyExisted = true;
+      }
+      group.add(sequence);
+      if (group.isComplete()) {
+        // we completed a group so we can emit it now
+        this.readGroup.addAll(group.getComponents());
+        if (groupAlreadyExisted)
+          this.readGroup.remove(sequenceName);
+      } else {
+        if (!groupAlreadyExisted) {
+          this.partiallyReadGroups.put(sequenceName, group);
+          int numPendingGroups = this.partiallyReadGroups.size();
+          if (this.maxNumPendingGroups < numPendingGroups) {
+            this.maxNumPendingGroups = numPendingGroups;
+          }
+          if (numPendingGroups >= this.numPendingGroups_warningThreshold) {
+            System.out.println("Many (>=" + numPendingGroups + ") reads not adjacent to their mates - this can reduce performance");
+            this.numPendingGroups_warningThreshold = numPendingGroups * 4;
+          }
         }
       }
     }
@@ -80,16 +91,16 @@ public class SamGroupOrderer implements SequenceProvider {
       System.out.println("Maximum number of sequences waiting for a mate at once: " + this.maxNumPendingGroups);
   }
 
-  private Queue<SequenceBuilder> flattenGroups(Map<String, SequenceBuilder> groups) {
+  private Queue<SequenceBuilder> flattenGroups(Map<String, SamAlignment_Builder> groups) {
     Queue<SequenceBuilder> result = new ArrayDeque<SequenceBuilder>();
-    for (SequenceBuilder sequence: groups.values()) {
-      result.add(sequence);
+    for (SamAlignment_Builder alignmentBuilder: groups.values()) {
+      result.addAll(alignmentBuilder.getComponents());
     }
     return result;
   }
 
   SequenceProvider reader;
-  Map<String, SequenceBuilder> partiallyReadGroups = new HashMap<String, SequenceBuilder>();
+  Map<String, SamAlignment_Builder> partiallyReadGroups = new HashMap<String, SamAlignment_Builder>();
   Queue<SequenceBuilder> readGroup = new ArrayDeque<SequenceBuilder>();
   int maxNumPendingGroups;
   int numPendingGroups_warningThreshold = 20000;
