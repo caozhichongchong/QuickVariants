@@ -37,7 +37,7 @@ public class Main {
 
     // parse arguments
     List<String> referencePaths = new ArrayList<String>();
-    List<GroupedQuery_Provider> queries = new ArrayList<GroupedQuery_Provider>();
+    List<GroupedAlignment_Provider> queries = new ArrayList<GroupedAlignment_Provider>();
     String outVcfPath = null;
     String outSamPath = null;
     String outUnalignedPath = null;
@@ -72,14 +72,14 @@ public class Main {
       if ("--in-ordered-sam".equals(arg)) {
         String queryPath = args[i + 1];
         i++;
-        GroupedQuery_Provider samParser = DataLoader.ParseSamRecords(queryPath, false, false);
+        GroupedAlignment_Provider samParser = DataLoader.ParseSamRecords(queryPath, false, false);
         queries.add(samParser);
         continue;
       }
       if ("--in-sam".equals(arg) || "--in-unordered-sam".equals(arg)) {
         String queryPath = args[i + 1];
         i++;
-        GroupedQuery_Provider samParser = DataLoader.ParseSamRecords(queryPath, false, true);
+        GroupedAlignment_Provider samParser = DataLoader.ParseSamRecords(queryPath, false, true);
         queries.add(samParser);
         continue; 
       }
@@ -253,7 +253,7 @@ public class Main {
       System.out.println("Reference path = " + referencePath);
     }
     System.out.println("" + queries.size() + " sets of queries: ");
-    for (GroupedQuery_Provider groupBuilder : queries) {
+    for (GroupedAlignment_Provider groupBuilder : queries) {
       System.out.println(groupBuilder.toString());
     }
     boolean successful = run(referencePaths, queries, outVcfPath, vcfIncludeNonMutations, outSamPath, outRefsMapCountPath, outMutationsPath, mutationFilterParameters, vcfFilterParameters, outUnalignedPath, numThreads, queryEndFraction, autoVerbose, outAncestorPath, startMillis);
@@ -347,7 +347,7 @@ public class Main {
   }
 
   // performs alignment and outputs results
-  public static boolean run(List<String> referencePaths, List<GroupedQuery_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationFilterParameters, MutationDetectionParameters vcfFilterParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
+  public static boolean run(List<String> referencePaths, List<GroupedAlignment_Provider> queriesList, String outVcfPath, boolean vcfIncludeNonMutations, String outSamPath, String outRefsMapCountPath, String outMutationsPath, MutationDetectionParameters mutationFilterParameters, MutationDetectionParameters vcfFilterParameters, String outUnalignedPath, int numThreads, double queryEndFraction, boolean autoVerbose, String outAncestorPath, long startMillis) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
     VcfWriter vcfWriter = null;
     if (outVcfPath != null)
       vcfWriter = new VcfWriter(outVcfPath, vcfIncludeNonMutations, vcfFilterParameters);
@@ -364,7 +364,7 @@ public class Main {
     long now = System.currentTimeMillis();
     long elapsed = (now - startMillis) / 1000;
 
-    GroupedQuery_Provider queries = new Composite_GroupedQuery_Provider(queriesList);
+    GroupedAlignment_Provider queries = new Composite_GroupedAlignment_Provider(queriesList);
 
     List<AlignmentListener> listeners = new ArrayList<AlignmentListener>();
     MatchDatabase matchDatabase = new MatchDatabase(queryEndFraction);
@@ -494,7 +494,7 @@ public class Main {
     System.out.println("dumped heap to " + outputPath);
   }
 
-  public static AlignmentStatistics compare(SequenceDatabase reference, GroupedQuery_Provider queries, long startMillis, int numThreads, double queryEndFraction, List<AlignmentListener> alignmentListeners, boolean autoVerbose) throws InterruptedException, IOException {
+  public static AlignmentStatistics compare(SequenceDatabase reference, GroupedAlignment_Provider queries, long startMillis, int numThreads, double queryEndFraction, List<AlignmentListener> alignmentListeners, boolean autoVerbose) throws InterruptedException, IOException {
     long readingMillis = 0;
     long launchingMillis = 0;
     long waitingMillis = 0;

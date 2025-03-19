@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // A QueryAlignment tells where a Query aligns
-// Its like a SequenceAlignment but the query might consist of multiple sequences if it is two Illumina-style paired-end reads
+// It's like a SequenceAlignment but the query might consist of multiple sequences if it is two Illumina-style paired-end reads
 public class QueryAlignment {
 
   public QueryAlignment(SequenceAlignment sequenceAlignment) {

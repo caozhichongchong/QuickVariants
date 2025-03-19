@@ -3,14 +3,14 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-// A Composite_GroupedQuery_Provider iterates over a list of GroupedQuery_Provider
-public class Composite_GroupedQuery_Provider implements GroupedQuery_Provider {
-  public Composite_GroupedQuery_Provider(GroupedQuery_Provider provider) {
-    this.providers = new ArrayList<GroupedQuery_Provider>(1);
+// A Composite_GroupedAlignment_Provider iterates over a list of GroupedAlignment_Provider
+public class Composite_GroupedAlignment_Provider implements GroupedAlignment_Provider {
+  public Composite_GroupedAlignment_Provider(GroupedAlignment_Provider provider) {
+    this.providers = new ArrayList<GroupedAlignment_Provider>(1);
     this.providers.add(provider);
   }
 
-  public Composite_GroupedQuery_Provider(List<GroupedQuery_Provider> providers) {
+  public Composite_GroupedAlignment_Provider(List<GroupedAlignment_Provider> providers) {
     this.providers = providers;
   }
 
@@ -26,7 +26,7 @@ public class Composite_GroupedQuery_Provider implements GroupedQuery_Provider {
   }
 
   public boolean get_allReadsContainQualityInformation() {
-    for (GroupedQuery_Provider provider : this.providers) {
+    for (GroupedAlignment_Provider provider : this.providers) {
       if (!provider.get_allReadsContainQualityInformation()) {
         return false;
       }
@@ -36,12 +36,12 @@ public class Composite_GroupedQuery_Provider implements GroupedQuery_Provider {
 
   public int getNumErrors() {
     int total = 0;
-    for (GroupedQuery_Provider provider: this.providers) {
+    for (GroupedAlignment_Provider provider: this.providers) {
       total += provider.getNumErrors();
     }
     return total;
   }
 
   int nextIndex;
-  List<GroupedQuery_Provider> providers;
+  List<GroupedAlignment_Provider> providers;
 }

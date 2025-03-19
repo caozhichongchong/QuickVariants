@@ -147,7 +147,7 @@ public class AlignerWorker_Test {
     StringReader alignmentStringReader = new StringReader(samRecords);
     SamReader alignmentReader = new SamReader(new BufferedReader(alignmentStringReader), "alignments.sam");
     SamAlignment_Provider queryBuilder = new SamAlignment_Provider(new SamParser(alignmentReader, "alignments.sam", false));
-    GroupedQuery_Provider samParser = new Simple_GroupedQuery_Provider(queryBuilder);
+    GroupedAlignment_Provider samParser = new Simple_GroupedAlignment_Provider(queryBuilder);
     List<List<SamAlignment_Builder>> alignments = getQueries(samParser);
     // parse reference
     BufferedReader referenceReader = new BufferedReader(new StringReader(referenceGenome));
@@ -175,7 +175,7 @@ public class AlignerWorker_Test {
     return vcfStream.toString();
   }
 
-  private List<List<SamAlignment_Builder>> getQueries(GroupedQuery_Provider queryProvider) {
+  private List<List<SamAlignment_Builder>> getQueries(GroupedAlignment_Provider queryProvider) {
     List<List<SamAlignment_Builder>> queries = new ArrayList<List<SamAlignment_Builder>>();
     while (true) {
       List<SamAlignment_Builder> newQuery = queryProvider.getNextGroup();

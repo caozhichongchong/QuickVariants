@@ -3,9 +3,9 @@ package mapper;
 import java.util.ArrayList;
 import java.util.List;
 
-// A Simple_GroupedQuery_Provider combines adjacent queries with the same name into groups
-public class Simple_GroupedQuery_Provider implements GroupedQuery_Provider {
-  public Simple_GroupedQuery_Provider(SamAlignment_Provider queryProvider) {
+// A Simple_GroupedAlignment_Provider combines adjacent alignments of the same query into groups
+public class Simple_GroupedAlignment_Provider implements GroupedAlignment_Provider {
+  public Simple_GroupedAlignment_Provider(SamAlignment_Provider queryProvider) {
     this.queryProvider = queryProvider;
   }
 
