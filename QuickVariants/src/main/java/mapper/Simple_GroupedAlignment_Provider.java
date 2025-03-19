@@ -24,6 +24,12 @@ public class Simple_GroupedAlignment_Provider implements GroupedAlignment_Provid
         break;
       }
     }
+    if (group != null) {
+      double weight = 1.0 / group.size();
+      for (SamAlignment_Builder alignmentBuilder: group) {
+        alignmentBuilder.setWeight(weight);
+      }
+    }
     return group;
   }
 

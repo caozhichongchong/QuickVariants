@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// A SamParser processes a .sam file: groups lines together, assigns weights, and reports errors
+// A SamParser processes a .sam file: checks that query sequence mates exist, and reports errors
 public class SamParser implements SequenceProvider {
   public SamParser(SequenceProvider reader, String path, boolean readerReordered) {
     this.reader = reader;
@@ -62,7 +62,6 @@ public class SamParser implements SequenceProvider {
           if (sameGroup) {
             // If this alignment is supposed to be paired but doesn't actually have a mate, ignore it
             group.add(mate1);
-            this.setAlignmentWeight(group, false);
           } else {
             nextGroup.add(mate1);
           }
@@ -87,7 +86,6 @@ public class SamParser implements SequenceProvider {
         if (sameGroup) {
           group.add(mate1);
           group.add(mate2);
-          this.setAlignmentWeight(group, true);
         } else {
           nextGroup.add(mate1);
           nextGroup.add(mate2);
@@ -96,7 +94,6 @@ public class SamParser implements SequenceProvider {
       } else {
         if (sameGroup) {
           group.add(mate1);
-          this.setAlignmentWeight(group, false);
         } else {
           nextGroup.add(mate1);
           return;
@@ -122,17 +119,6 @@ public class SamParser implements SequenceProvider {
     return result;
   }
 
-  private void setAlignmentWeight(List<SequenceBuilder> alignments, boolean hasMate) {
-    double weight;
-    if (hasMate)
-      weight = (float)2.0 / alignments.size();
-    else
-      weight = (float)1.0 / alignments.size();
-    for (SequenceBuilder sequenceBuilder: alignments) {
-      sequenceBuilder.setAlignmentWeight(weight);
-    }
-  }
-
   public int getNumErrors() {
     return this.numErrors;
   }
@@ -148,7 +134,6 @@ public class SamParser implements SequenceProvider {
   SequenceProvider reader;
   boolean readerReordered = false;
   String path;
-  boolean hasReadASequence = false;
   private List<SequenceBuilder> group = new ArrayList<SequenceBuilder>();
   private List<SequenceBuilder> nextGroup = new ArrayList<SequenceBuilder>();
   private SequenceBuilder pendingSequence;
