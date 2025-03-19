@@ -6,13 +6,31 @@ import java.util.List;
 // a SamAlignment_Builder builds a SamAlignment
 public class SamAlignment_Builder {
 
+  public SamAlignment_Builder() {
+    this.sequenceProviders = new ArrayList<SequenceBuilder>();
+  }
+
   public SamAlignment_Builder(SequenceBuilder sequenceProvider) {
-    this.sequenceProviders = new ArrayList<SequenceBuilder>(1);
-    this.sequenceProviders.add(sequenceProvider);
+    this.sequenceProviders = new ArrayList<SequenceBuilder>();
+    this.add(sequenceProvider);
   }
 
   public SamAlignment_Builder(List<SequenceBuilder> sequenceProviders) {
     this.sequenceProviders = sequenceProviders;
+  }
+
+  public void add(SequenceBuilder sequenceBuilder) {
+    this.sequenceProviders.add(sequenceBuilder);
+  }
+
+  public boolean isComplete() {
+    if (this.sequenceProviders.size() < 1)
+      return false;
+    if (this.sequenceProviders.size() >= 2)
+      return true;
+    if (this.sequenceProviders.get(0).getExpectsMate())
+      return false;
+    return true;
   }
 
   public SamAlignment build() {

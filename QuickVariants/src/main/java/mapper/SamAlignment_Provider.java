@@ -11,21 +11,14 @@ public class SamAlignment_Provider {
   }
 
   public SamAlignment_Builder getNextSamAlignment_Builder() {
-    SequenceBuilder builder = this.sequenceProvider.getNextSequence();
-    if (builder == null) {
-      return null;
+    SamAlignment_Builder alignmentBuilder = new SamAlignment_Builder();
+    while (!alignmentBuilder.isComplete()) {
+      SequenceBuilder sequenceBuilder = this.sequenceProvider.getNextSequence();
+      if (sequenceBuilder == null)
+        return null;
+      alignmentBuilder.add(sequenceBuilder);
     }
-    if (builder.getHasAlignmentMate()) {
-      SequenceBuilder builder2 = this.sequenceProvider.getNextSequence();
-      if (builder2.getHasAlignmentMate()) {
-        List<SequenceBuilder> sequenceBuilders = new ArrayList<SequenceBuilder>();
-        sequenceBuilders.add(builder);
-        sequenceBuilders.add(builder2);
-        return new SamAlignment_Builder(sequenceBuilders);
-      }
-    }
-
-    return new SamAlignment_Builder(builder);
+    return alignmentBuilder;
   }
 
   public boolean get_allReadsContainQualityInformation() {
