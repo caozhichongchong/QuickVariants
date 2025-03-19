@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-// A SamGrouper groups SequenceBuilders by their names
+// A SamGrouper reorders Sam records so that related records are next to each other
 public class SamGrouper implements SequenceProvider {
   public SamGrouper(SequenceProvider reader) {
     this.reader = reader;
