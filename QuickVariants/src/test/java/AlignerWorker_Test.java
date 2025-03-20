@@ -165,6 +165,28 @@ public class AlignerWorker_Test {
     checkVcf(vcfFromBadSam, expectedVcf);
   }
 
+  @Test
+  public void testSupplementaryAlignment() {
+    String sam1 = "name1\t0\tcontig1\t1\t255\t4M\t*\t*\t*\tACGT\t*\tSA:Z:contig1,11,+,4M,AAAA,0;";
+    String sam2 = "name1\t0\tcontig1\t11\t255\t4M\t*\t*\t*\tAAAA\t*\tSA:Z:contig1,1,+,4M,ACGT,0;";
+
+    String ref  = "ACGTGGGGCCAAAACCCC";
+
+    String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
+
+    String expectedVcf =
+        "contig1	1	A		1	1,0	0,0	\n" +
+        "contig1	2	C		1	1,0	0,0	\n" +
+        "contig1	3	G		1	1,0	0,0	\n" +
+        "contig1	4	T		1	1,0	0,0	\n" +
+        "contig1	11	A		1	1,0	0,0	\n" +
+        "contig1	12	A		1	1,0	0,0	\n" +
+        "contig1	13	A		1	1,0	0,0	\n" +
+        "contig1	14	A		1	1,0	0,0	\n" +
+        "";
+
+    checkVcf(vcf, expectedVcf);
+  }
 
   private int getNumErrors(String samLines) {
     GroupedAlignment_Provider samParser = newSamParser(samLines);

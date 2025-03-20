@@ -40,7 +40,7 @@ public class SamGroupOrderer implements SequenceProvider {
 
       // if we found a read that expects a mate, we might need to wait for its mate
       String sequenceName = sequence.getName();
-      SamAlignment_Builder group = this.partiallyReadGroups.remove(sequenceName);
+      SamAlignment_Builder group = this.partiallyReadGroups.get(sequenceName);
       boolean groupAlreadyExisted;
       if (group == null) {
         groupAlreadyExisted = false;
@@ -53,7 +53,7 @@ public class SamGroupOrderer implements SequenceProvider {
         // we completed a group so we can emit it now
         this.readGroup.addAll(group.getComponents());
         if (groupAlreadyExisted)
-          this.readGroup.remove(sequenceName);
+          this.partiallyReadGroups.remove(sequenceName);
       } else {
         if (!groupAlreadyExisted) {
           this.partiallyReadGroups.put(sequenceName, group);
@@ -62,7 +62,6 @@ public class SamGroupOrderer implements SequenceProvider {
             this.maxNumPendingGroups = numPendingGroups;
           }
           if (numPendingGroups >= this.numPendingGroups_warningThreshold) {
-            System.out.println("Many (>=" + numPendingGroups + ") reads not adjacent to their mates - this can reduce performance");
             this.numPendingGroups_warningThreshold = numPendingGroups * 4;
           }
         }

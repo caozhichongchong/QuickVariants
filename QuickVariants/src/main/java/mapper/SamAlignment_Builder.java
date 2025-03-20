@@ -26,11 +26,64 @@ public class SamAlignment_Builder {
   public boolean isComplete() {
     if (this.sequenceProviders.size() < 1)
       return false;
-    if (this.sequenceProviders.size() >= 2)
-      return true;
-    if (this.sequenceProviders.get(0).getExpectsMate())
-      return false;
+    for (SequenceBuilder component: this.sequenceProviders) {
+      PositionDescriptor missing = this.getMissingPosition(component);
+      if (missing != null) {
+        return false;
+      }
+    }
     return true;
+  }
+
+  public String explainIncompleteness() {
+    for (SequenceBuilder component: this.sequenceProviders) {
+      PositionDescriptor missing = this.getMissingPosition(component);
+      if (missing != null) {
+        StringBuilder errorBuilder = new StringBuilder();
+        errorBuilder.append("\n in group of size " + this.sequenceProviders.size() + ":\n");
+        for (SequenceBuilder other: this.sequenceProviders) {
+          errorBuilder.append("  " + other.getName() + " at " + other.getPosition() + "\n");
+        }
+        errorBuilder.append(" " + component.getName() + " at " + component.getPosition() + " expects an alignment at " + missing + " but none was found.");
+        PositionDescriptor existingReverseComplement = getExistingReverseComplementPosition(missing);
+        if (existingReverseComplement != null) {
+          errorBuilder.append("\n (reverse complement: " + existingReverseComplement + " was found, however)");
+        }
+        return errorBuilder.toString();
+      }
+    }
+    return "Internal error: SamAlignment_Builder unable to explain incompleteness of group.";
+  }
+
+  // looks for an existing position that matches the reverse complement of this one, and if it exists, returns it
+  private PositionDescriptor getExistingReverseComplementPosition(PositionDescriptor position) {
+    for (SequenceBuilder sequence: this.sequenceProviders) {
+      PositionDescriptor other = sequence.getPosition();
+      PositionDescriptor complemented = new PositionDescriptor(other.getSequenceName(), other.getStartIndex(), !other.isReverseComplemented());
+      if (position.equals(complemented))
+        return complemented;
+    }
+    return null;
+  }
+
+  private PositionDescriptor getMissingPosition(SequenceBuilder component) {
+    List<PositionDescriptor> expectations = component.getOtherComponentPositions();
+    if (expectations != null) {
+      for (PositionDescriptor expected: expectations) {
+        if (!containsComponent(expected, component))
+          return expected;
+      }
+    }
+    return null;
+  }
+
+  private boolean containsComponent(PositionDescriptor expectation, SequenceBuilder exclude) {
+    for (SequenceBuilder sequence: this.sequenceProviders) {
+      if (sequence != exclude && sequence.getPosition().equals(expectation)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public boolean accepts(SequenceBuilder component) {

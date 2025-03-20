@@ -13,11 +13,15 @@ public class SamAlignment_Provider {
   }
 
   public SamAlignment_Builder getNextSamAlignment_Builder() {
+    if (this.alreadyDone)
+      return null;
     while (true) {
       SequenceBuilder sequenceBuilder = this.sequenceProvider.getNextSequence();
       if (sequenceBuilder == null) {
         SamAlignment_Builder result = this.pendingAlignment;
         this.pendingAlignment = null;
+        if (result == null)
+          this.done();
         return result;
       }
       if (!this.pendingAlignment.accepts(sequenceBuilder)) {
@@ -29,11 +33,12 @@ public class SamAlignment_Provider {
             StringBuilder errorBuilder = new StringBuilder();
             errorBuilder.append("\n");
             if (this.readerReordered) {
-              errorBuilder.append("Error reading " + this.path + ": sequences specify mates, but no mates were found in the file for sequence:\n");
-              errorBuilder.append(" " + result.getLastComponent().getName() + "\n");
+              errorBuilder.append("Error reading " + this.path + ": " + result.explainIncompleteness());
             } else {
-              errorBuilder.append("Error reading " + this.path + ": sequences specify mates, but adjacent non-exempt lines have different names:\n");
+              errorBuilder.append("Error reading " + this.path + ": " + result.explainIncompleteness());
+              errorBuilder.append("Previous alignment name:\n");
               errorBuilder.append(" " + result.getLastComponent().getName() + "\n");
+              errorBuilder.append("Next alignment name:\n");
               errorBuilder.append(" " + sequenceBuilder.getName() + "\n");
               errorBuilder.append("You can consider replacing '--in-ordered-sam' with '--in-unordered-sam'");
             }
@@ -61,6 +66,13 @@ public class SamAlignment_Provider {
     return this.sequenceProvider.toString();
   }
 
+  private void done() {
+    if (this.numIncompleteGroups > 0) {
+      System.out.println("" + this.numIncompleteGroups + " incomplete groups (missing mates or supplementary alignments)");
+    }
+    this.alreadyDone = true;
+  }
+
   private SamAlignment_Builder startNew(SequenceBuilder firstComponent) {
     SamAlignment_Builder result = this.pendingAlignment;
     this.pendingAlignment = new SamAlignment_Builder();
@@ -73,4 +85,5 @@ public class SamAlignment_Provider {
   private int numIncompleteGroups;
   private String path;
   private boolean readerReordered;
+  private boolean alreadyDone;
 }

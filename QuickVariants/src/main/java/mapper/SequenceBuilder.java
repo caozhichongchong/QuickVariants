@@ -1,6 +1,6 @@
 package mapper;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class SequenceBuilder {
   public SequenceBuilder() {
@@ -87,18 +87,22 @@ public class SequenceBuilder {
     return this;
   }
 
-  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, boolean expectsMate) {
+  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, List<PositionDescriptor> otherComponentPositions) {
     this.buildSam = true;
     this.referenceName = referenceName;
     this.referencePosition = referencePosition;
     this.cigarString = cigarString;
     this.referenceReversed = referenceReversed;
-    this.expectsMate = expectsMate;
+    this.otherComponentPositions = otherComponentPositions;
     return this;
   }
 
-  public boolean getExpectsMate() {
-    return this.expectsMate;
+  public List<PositionDescriptor> getOtherComponentPositions() {
+    return this.otherComponentPositions;
+  }
+
+  public PositionDescriptor getPosition() {
+    return new PositionDescriptor(this.referenceName, this.referencePosition, this.referenceReversed);
   }
 
   public SequenceBuilder withAlignmentMate(SequenceBuilder other) {
@@ -117,6 +121,10 @@ public class SequenceBuilder {
   public SequenceBuilder setAlignmentWeight(double weight) {
     this.alignmentWeight = weight;
     return this;
+  }
+
+  public boolean isReferenceReversed() {
+    return this.referenceReversed;
   }
 
   private char emitChar() {
@@ -144,6 +152,6 @@ public class SequenceBuilder {
   String cigarString;
   boolean referenceReversed;
   SequenceBuilder mate;
-  boolean expectsMate;
   double alignmentWeight = 1;
+  List<PositionDescriptor> otherComponentPositions;
 }

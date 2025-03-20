@@ -40,9 +40,18 @@ public class SamReader implements SequenceProvider {
   }
 
   private void done() {
-    int numWarnings = numSkippedSupplementalAlignments + numAlignmentsMissingQueryText + numAlignmentsWithoutIndelInformation;
+    int numWarnings = numAlignmentsMissingQueryText + numAlignmentsWithoutIndelInformation + numUnparseableSupplementaryAlignments;
     if (numWarnings > 0) {
-      System.out.println("" + numWarnings + " warnings reading " + path);
+      System.out.println("" + numWarnings + " warnings reading individual lines in " + path + ":");
+      if (numAlignmentsMissingQueryText > 0) {
+        System.out.println(" " + numAlignmentsMissingQueryText + " alignments missing query text");
+      }
+      if (numAlignmentsWithoutIndelInformation > 0) {
+        System.out.println(" " + numAlignmentsWithoutIndelInformation + " alignments without indel information");
+      }
+      if (numUnparseableSupplementaryAlignments > 0) {
+        System.out.println(" " + numUnparseableSupplementaryAlignments + " unparseable supplementary alignments");
+      }
     }
   }
 
@@ -68,18 +77,10 @@ public class SamReader implements SequenceProvider {
     String samFlagString = fields[1];
     int samFlags = Integer.parseInt(samFlagString);
     boolean referenceReversed = (samFlags & 16) != 0;
-    boolean isSupplementaryAlignment = (samFlags & 2048) != 0;
-    // skipping supplementary alignments for now
-    if (isSupplementaryAlignment) {
-      if (numSkippedSupplementalAlignments < 1)
-        System.out.println("Warning: skipping supplemental alignments, including " + line);
-      numSkippedSupplementalAlignments++;
-      return null;
-    }
 
     String referenceContigName = fields[2];
     if ("*".equals(referenceContigName)) {
-      // This indicates an unalighed query
+      // This indicates an unaligned query
       // We're not interested in them at the moment
       return null;
     }
@@ -97,13 +98,20 @@ public class SamReader implements SequenceProvider {
     }
 
     String mateContigName = fields[6];
+    if ("=".equals(mateContigName))
+      mateContigName = referenceContigName;
     boolean hasMate = !mateContigName.equals("*");
     boolean hasUnalignedMate = (samFlags & 8) != 0;
     boolean expectsMateAlignment = hasMate && !hasUnalignedMate;
 
-    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, expectsMateAlignment);
-
-    String queryText = fields[9];
+    List<PositionDescriptor> otherComponentPositions = new ArrayList<PositionDescriptor>();
+    if (expectsMateAlignment) {
+      int matePosition = Integer.parseInt(fields[7]);
+      otherComponentPositions.add(new PositionDescriptor(mateContigName, matePosition, !referenceReversed));
+    }
+    
+    int queryTextIndex = 9;
+    String queryText = fields[queryTextIndex];
     if ("*".equals(queryText)) {
       if (numAlignmentsMissingQueryText < 1)
         System.out.println("Warning: skipping alignments having query text '" + queryText + "', including " + line);
@@ -112,6 +120,15 @@ public class SamReader implements SequenceProvider {
     }
 
     sequenceBuilder.add(queryText);
+
+    for (int i = queryTextIndex + 1; i < fields.length; i++) {
+      String field = fields[i];
+      List<PositionDescriptor> fieldAsNextComponentStarts = tryParseSupplementaryPosition(field);
+      if (fieldAsNextComponentStarts != null)
+        otherComponentPositions.addAll(fieldAsNextComponentStarts);
+    }
+
+    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, otherComponentPositions);
 
     return sequenceBuilder;
   }
@@ -129,11 +146,35 @@ public class SamReader implements SequenceProvider {
     return false;
   }
 
+  private List<PositionDescriptor> tryParseSupplementaryPosition(String text) {
+    String prefix = "SA:Z:";
+    if (!text.startsWith(prefix)) {
+      return null;
+    }
+    String fieldValue = text.substring(prefix.length());
+    String[] entries = fieldValue.split(";");
+    List<PositionDescriptor> results = new ArrayList<PositionDescriptor>();
+    for (String entry: entries) {
+      String[] fields = entry.split(",");
+      if (fields.length != 6) {
+        if (this.numUnparseableSupplementaryAlignments < 1) {
+          System.out.println("Warning: ignoring supplementary alignment text with unexpected number of comma-separated fields (" + fields.length + "): '" + text + "'");
+        }
+        this.numUnparseableSupplementaryAlignments++;
+        return null;
+      }
+      String contigName = fields[0];
+      int position = Integer.parseInt(fields[1]);
+      boolean reversed = fields[2].equals("-");
+      results.add(new PositionDescriptor(contigName, position, reversed));
+    }
+    return results;
+  }
+  
   BufferedReader reader;
   String path;
 
-  int numSkippedSupplementalAlignments;
   int numAlignmentsMissingQueryText;
   int numAlignmentsWithoutIndelInformation;
-  int numErrors;
+  int numUnparseableSupplementaryAlignments;
 }
