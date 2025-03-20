@@ -76,15 +76,6 @@ public class SequenceDatabase {
     return (itemLength * this.numBitsPerPosition + 7) / 8;
   }
 
-  // Converts from a long to a SequencePosition
-  // Note that if encoded < 0 then it refers to a negative location on the first sequence
-  public SequencePosition decodePosition(long encoded) {
-    long offset = encoded & this.maxEncodableOffset;
-    int sequenceIndex = (int)(encoded >> this.numBitsToIdentifyPosition);
-    Sequence sequence = this.sequences.get(sequenceIndex);
-    return new SequencePosition(sequence, (int)offset);
-  }
-
   public long encodePosition(Sequence sequence, int startIndex) {
     if (startIndex < 0 || startIndex >= sequence.getLength()) {
       throw new IllegalArgumentException("Invalid position " + startIndex + " for sequence " + sequence.getName() + " of length " + sequence.getLength());
