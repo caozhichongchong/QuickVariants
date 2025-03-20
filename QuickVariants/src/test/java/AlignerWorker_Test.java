@@ -33,7 +33,7 @@ public class AlignerWorker_Test {
 
   @Test
   public void pairedEndAlignment() {
-    String sam1 = "name1\t0\tcontig1\t1\t255\t10M\tcontig1\t20\t10\tAACCGGTTAT\t*";
+    String sam1 = "name1\t32\tcontig1\t1\t255\t10M\tcontig1\t20\t10\tAACCGGTTAT\t*";
     String sam2 = "name1\t16\tcontig1\t21\t255\t10M\tcontig1\t1\t10\tACGTACGTAT\t*";
     String ref  = "AACCGGTTATAAAAAAAAAAACGTACGTATAAAAAAAAAA";
 
@@ -87,9 +87,9 @@ public class AlignerWorker_Test {
 
   @Test
   public void pairedEndReadWithMultipleAlignments() {
-    String samA1 = "name1\t0\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
+    String samA1 = "name1\t32\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
     String samA2 = "name1\t16\tcontig1\t9\t255\t4M\tcontig1\t1\t4\tCCCC\t*";
-    String samB1 = "name1\t0\tcontig1\t17\t255\t4M\tcontig1\t25\t4\tACGT\t*";
+    String samB1 = "name1\t32\tcontig1\t17\t255\t4M\tcontig1\t25\t4\tACGT\t*";
     String samB2 = "name1\t16\tcontig1\t25\t255\t4M\tcontig1\t17\t4\tCCCC\t*";
 
     String ref  = "ACGTAAAACCCCTTTTACGTAAAACCCC";
@@ -119,11 +119,11 @@ public class AlignerWorker_Test {
 
   @Test
   public void testMissingMate() {
-    String samA1 = "name1\t0\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
+    String samA1 = "name1\t32\tcontig1\t1\t255\t4M\tcontig1\t9\t4\tACGT\t*";
     String samA2 = "name1\t16\tcontig1\t9\t255\t4M\tcontig1\t1\t4\tCCCC\t*";
-    String samB1 = "name2\t0\tcontig1\t17\t255\t4M\tcontig1\t25\t4\tACGT\t*";
+    String samB1 = "name2\t32\tcontig1\t17\t255\t4M\tcontig1\t25\t4\tACGT\t*";
     String samB2 = "name2\t16\tcontig1\t25\t255\t4M\tcontig1\t17\t4\tCCCC\t*";
-    String samC1 = "name3\t0\tcontig1\t33\t255\t4M\tcontig1\t41\t4\tACGT\t*";
+    String samC1 = "name3\t32\tcontig1\t33\t255\t4M\tcontig1\t41\t4\tACGT\t*";
     String samC2 = "name3\t16\tcontig1\t41\t255\t4M\tcontig1\t33\t4\tCCCC\t*";
     String goodSam = samA1 + "\n" + samA2;
     String badSam = samA1 + "\n" + samB1 + "\n" + samB2 + "\n" + samC1 + "\n" + samC2;

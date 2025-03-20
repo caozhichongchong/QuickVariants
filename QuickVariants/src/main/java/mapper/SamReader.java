@@ -103,11 +103,12 @@ public class SamReader implements SequenceProvider {
     boolean hasMate = !mateContigName.equals("*");
     boolean hasUnalignedMate = (samFlags & 8) != 0;
     boolean expectsMateAlignment = hasMate && !hasUnalignedMate;
+    boolean mateReversed = (samFlags & 32) != 0;
 
     List<PositionDescriptor> otherComponentPositions = new ArrayList<PositionDescriptor>();
     if (expectsMateAlignment) {
       int matePosition = Integer.parseInt(fields[7]);
-      otherComponentPositions.add(new PositionDescriptor(mateContigName, matePosition, !referenceReversed));
+      otherComponentPositions.add(new PositionDescriptor(mateContigName, matePosition, mateReversed));
     }
     
     int queryTextIndex = 9;
