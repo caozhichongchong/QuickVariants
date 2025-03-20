@@ -38,10 +38,6 @@ public class SamGroupOrderer implements SequenceProvider {
         continue;
       }
 
-      // if this read doesn't expect a mate, we can just emit it now
-      if (!sequence.getExpectsMate())
-        return sequence;
-
       // if we found a read that expects a mate, we might need to wait for its mate
       String sequenceName = sequence.getName();
       SamAlignment_Builder group = this.partiallyReadGroups.remove(sequenceName);
