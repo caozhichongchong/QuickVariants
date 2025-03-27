@@ -30,6 +30,24 @@ public class AlignerWorker_Test {
     checkVcf(vcf, expectedVcf);
   }
 
+  @Test
+  public void mutationTest() {
+    String sam1 = "name1\t0\tcontig1\t1\t255\t5M\t*\t*\t5\tACGTT\t*";
+
+    String ref  = "ACGTAAAAA";
+
+    String vcf = buildVcf(sam1, ">contig1\n" + ref);
+
+    String expectedVcf =
+        "contig1	1	A		1	1,0	0,0	\n" +
+        "contig1	2	C		1	1,0	0,0	\n" +
+        "contig1	3	G		1	1,0	0,0	\n" +
+        "contig1	4	T		1	1,0	0,0	\n" +
+        "contig1	5	A	T	1	0,0;1,0	0,0;0,0	ACGT[T]\n" +
+        "";
+
+    checkVcf(vcf, expectedVcf);
+  }
 
   @Test
   public void pairedEndAlignment() {
