@@ -51,6 +51,44 @@ public class AlignerWorker_Test {
   }
 
   @Test
+  public void mutationWithoutSupportReads() {
+    String sam1 = "name1\t0\tcontig1\t1\t255\t5M\t*\t*\t5\tACGTT\t*";
+
+    String ref  = "ACGTAAAAA";
+
+    String vcf = buildVcf(sam1, ">contig1\n" + ref, false);
+
+    String expectedVcf =
+        "contig1	1	A	.	1	1,0	0,0\n" +
+        "contig1	2	C	.	1	1,0	0,0\n" +
+        "contig1	3	G	.	1	1,0	0,0\n" +
+        "contig1	4	T	.	1	1,0	0,0\n" +
+        "contig1	5	A	T	1	0,0;1,0	0,0;0,0\n" +
+        "";
+
+    checkVcf(vcf, expectedVcf);
+  }
+
+  @Test
+  public void noMutationAndNoSupportReads() {
+    String sam1 = "name1\t0\tcontig1\t1\t255\t5M\t*\t*\t5\tACGTA\t*";
+
+    String ref  = "ACGTAAAAA";
+
+    String vcf = buildVcf(sam1, ">contig1\n" + ref, false);
+
+    String expectedVcf =
+        "contig1	1	A	.	1	1,0	0,0\n" +
+        "contig1	2	C	.	1	1,0	0,0\n" +
+        "contig1	3	G	.	1	1,0	0,0\n" +
+        "contig1	4	T	.	1	1,0	0,0\n" +
+        "contig1	5	A	.	1	1,0	0,0\n" +
+        "";
+
+    checkVcf(vcf, expectedVcf);
+  }
+
+  @Test
   public void pairedEndAlignment() {
     String sam1 = "name1\t32\tcontig1\t1\t255\t10M\tcontig1\t20\t10\tAACCGGTTAT\t*";
     String sam2 = "name1\t16\tcontig1\t21\t255\t10M\tcontig1\t1\t10\tACGTACGTAT\t*";
@@ -245,6 +283,10 @@ public class AlignerWorker_Test {
   }
 
   private String buildVcf(String samRecords, String referenceGenome) {
+    return buildVcf(samRecords, referenceGenome, true);
+  }
+
+  private String buildVcf(String samRecords, String referenceGenome, boolean includeSupportReads) {
     // make alignment listener
     MatchDatabase matchDatabase = new MatchDatabase(0);
     List<AlignmentListener> listeners = new ArrayList<AlignmentListener>();
@@ -269,7 +311,7 @@ public class AlignerWorker_Test {
 
     // format vcf
     ByteArrayOutputStream vcfStream = new ByteArrayOutputStream();
-    VcfWriter vcfWriter = new VcfWriter(vcfStream, true, true);
+    VcfWriter vcfWriter = new VcfWriter(vcfStream, true, includeSupportReads);
     try {
       vcfWriter.write(matchDatabase.groupByPosition(), 1);
     } catch (IOException e) {
