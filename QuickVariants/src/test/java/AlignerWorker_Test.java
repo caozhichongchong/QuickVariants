@@ -22,10 +22,11 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(sam1, ">contig1\n" + ref);
 
-    String expectedVcf = "contig1	1	A		1	1,0	0,0	\n" +
-       "contig1	2	C		1	1,0	0,0	\n" +
-       "contig1	3	G		1	1,0	0,0	\n" +
-       "contig1	4	T		1	1,0	0,0	\n";
+    String expectedVcf = "contig1	1	A	.	1	1,0	0,0	.\n" +
+        "contig1	2	C	.	1	1,0	0,0	.\n" +
+        "contig1	3	G	.	1	1,0	0,0	.\n" +
+        "contig1	4	T	.	1	1,0	0,0	.\n" +
+        "";
 
     checkVcf(vcf, expectedVcf);
   }
@@ -39,10 +40,10 @@ public class AlignerWorker_Test {
     String vcf = buildVcf(sam1, ">contig1\n" + ref);
 
     String expectedVcf =
-        "contig1	1	A		1	1,0	0,0	\n" +
-        "contig1	2	C		1	1,0	0,0	\n" +
-        "contig1	3	G		1	1,0	0,0	\n" +
-        "contig1	4	T		1	1,0	0,0	\n" +
+        "contig1	1	A	.	1	1,0	0,0	.\n" +
+        "contig1	2	C	.	1	1,0	0,0	.\n" +
+        "contig1	3	G	.	1	1,0	0,0	.\n" +
+        "contig1	4	T	.	1	1,0	0,0	.\n" +
         "contig1	5	A	T	1	0,0;1,0	0,0;0,0	ACGT[T]\n" +
         "";
 
@@ -57,26 +58,27 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
 
-    String expectedVcf = "contig1	1	A		1	1,0	0,0	\n" +
-        "contig1	2	A		1	1,0	0,0	\n" +
-        "contig1	3	C		1	1,0	0,0	\n" +
-        "contig1	4	C		1	1,0	0,0	\n" +
-        "contig1	5	G		1	1,0	0,0	\n" +
-        "contig1	6	G		1	1,0	0,0	\n" +
-        "contig1	7	T		1	1,0	0,0	\n" +
-        "contig1	8	T		1	1,0	0,0	\n" +
-        "contig1	9	A		1	1,0	0,0	\n" +
-        "contig1	10	T		1	1,0	0,0	\n" +
-        "contig1	21	A		1	0,1	0,0	\n" +
-        "contig1	22	C		1	0,1	0,0	\n" +
-        "contig1	23	G		1	0,1	0,0	\n" +
-        "contig1	24	T		1	0,1	0,0	\n" +
-        "contig1	25	A		1	0,1	0,0	\n" +
-        "contig1	26	C		1	0,1	0,0	\n" +
-        "contig1	27	G		1	0,1	0,0	\n" +
-        "contig1	28	T		1	0,1	0,0	\n" +
-        "contig1	29	A		1	0,1	0,0	\n" +
-        "contig1	30	T		1	0,1	0,0	\n";
+    String expectedVcf = "contig1	1	A	.	1	1,0	0,0	.\n" +
+        "contig1	2	A	.	1	1,0	0,0	.\n" +
+        "contig1	3	C	.	1	1,0	0,0	.\n" +
+        "contig1	4	C	.	1	1,0	0,0	.\n" +
+        "contig1	5	G	.	1	1,0	0,0	.\n" +
+        "contig1	6	G	.	1	1,0	0,0	.\n" +
+        "contig1	7	T	.	1	1,0	0,0	.\n" +
+        "contig1	8	T	.	1	1,0	0,0	.\n" +
+        "contig1	9	A	.	1	1,0	0,0	.\n" +
+        "contig1	10	T	.	1	1,0	0,0	.\n" +
+        "contig1	21	A	.	1	0,1	0,0	.\n" +
+        "contig1	22	C	.	1	0,1	0,0	.\n" +
+        "contig1	23	G	.	1	0,1	0,0	.\n" +
+        "contig1	24	T	.	1	0,1	0,0	.\n" +
+        "contig1	25	A	.	1	0,1	0,0	.\n" +
+        "contig1	26	C	.	1	0,1	0,0	.\n" +
+        "contig1	27	G	.	1	0,1	0,0	.\n" +
+        "contig1	28	T	.	1	0,1	0,0	.\n" +
+        "contig1	29	A	.	1	0,1	0,0	.\n" +
+        "contig1	30	T	.	1	0,1	0,0	.\n" +
+        "";
 
     checkVcf(vcf, expectedVcf);
   }
@@ -90,14 +92,14 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
 
-    String expectedVcf = "contig1	1	A		0.5	0.5,0	0,0	\n" +
-        "contig1	2	C		0.5	0.5,0	0,0	\n" +
-        "contig1	3	G		0.5	0.5,0	0,0	\n" +
-        "contig1	4	T		0.5	0.5,0	0,0	\n" +
-        "contig1	9	A		0.5	0.5,0	0,0	\n" +
-        "contig1	10	C		0.5	0.5,0	0,0	\n" +
-        "contig1	11	G		0.5	0.5,0	0,0	\n" +
-        "contig1	12	T		0.5	0.5,0	0,0	\n" +
+    String expectedVcf = "contig1	1	A	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	2	C	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	3	G	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	4	T	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	9	A	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	10	C	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	11	G	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	12	T	.	0.5	0.5,0	0,0	.\n" +
         "";
 
     checkVcf(vcf, expectedVcf);
@@ -114,22 +116,22 @@ public class AlignerWorker_Test {
 
     String vcf = buildVcf(samA1 + "\n" + samA2 + "\n" + samB1 + "\n" + samB2, ">contig1\n" + ref);
 
-    String expectedVcf = "contig1	1	A		0.5	0.5,0	0,0	\n" +
-        "contig1	2	C		0.5	0.5,0	0,0	\n" +
-        "contig1	3	G		0.5	0.5,0	0,0	\n" +
-        "contig1	4	T		0.5	0.5,0	0,0	\n" +
-        "contig1	9	C		0.5	0,0.5	0,0	\n" +
-        "contig1	10	C		0.5	0,0.5	0,0	\n" +
-        "contig1	11	C		0.5	0,0.5	0,0	\n" +
-        "contig1	12	C		0.5	0,0.5	0,0	\n" +
-        "contig1	17	A		0.5	0.5,0	0,0	\n" +
-        "contig1	18	C		0.5	0.5,0	0,0	\n" +
-        "contig1	19	G		0.5	0.5,0	0,0	\n" +
-        "contig1	20	T		0.5	0.5,0	0,0	\n" +
-        "contig1	25	C		0.5	0,0.5	0,0	\n" +
-        "contig1	26	C		0.5	0,0.5	0,0	\n" +
-        "contig1	27	C		0.5	0,0.5	0,0	\n" +
-        "contig1	28	C		0.5	0,0.5	0,0	\n" +
+    String expectedVcf = "contig1	1	A	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	2	C	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	3	G	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	4	T	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	9	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	10	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	11	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	12	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	17	A	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	18	C	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	19	G	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	20	T	.	0.5	0.5,0	0,0	.\n" +
+        "contig1	25	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	26	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	27	C	.	0.5	0,0.5	0,0	.\n" +
+        "contig1	28	C	.	0.5	0,0.5	0,0	.\n" +
         "";
 
     checkVcf(vcf, expectedVcf);
@@ -158,26 +160,26 @@ public class AlignerWorker_Test {
     }
     String vcfFromBadSam = buildVcf(badSam, ">contig1\n" + ref);
     String expectedVcf =
-        "contig1	1	A		1	1,0	0,0	\n" +
-        "contig1	2	C		1	1,0	0,0	\n" +
-        "contig1	3	G		1	1,0	0,0	\n" +
-        "contig1	4	T		1	1,0	0,0	\n" +
-        "contig1	17	A		1	1,0	0,0	\n" +
-        "contig1	18	C		1	1,0	0,0	\n" +
-        "contig1	19	G		1	1,0	0,0	\n" +
-        "contig1	20	T		1	1,0	0,0	\n" +
-        "contig1	25	C		1	0,1	0,0	\n" +
-        "contig1	26	C		1	0,1	0,0	\n" +
-        "contig1	27	C		1	0,1	0,0	\n" +
-        "contig1	28	C		1	0,1	0,0	\n" +
-        "contig1	33	A		1	1,0	0,0	\n" +
-        "contig1	34	C		1	1,0	0,0	\n" +
-        "contig1	35	G		1	1,0	0,0	\n" +
-        "contig1	36	T		1	1,0	0,0	\n" +
-        "contig1	41	C		1	0,1	0,0	\n" +
-        "contig1	42	C		1	0,1	0,0	\n" +
-        "contig1	43	C		1	0,1	0,0	\n" +
-        "contig1	44	C		1	0,1	0,0	\n" +
+        "contig1	1	A	.	1	1,0	0,0	.\n" +
+        "contig1	2	C	.	1	1,0	0,0	.\n" +
+        "contig1	3	G	.	1	1,0	0,0	.\n" +
+        "contig1	4	T	.	1	1,0	0,0	.\n" +
+        "contig1	17	A	.	1	1,0	0,0	.\n" +
+        "contig1	18	C	.	1	1,0	0,0	.\n" +
+        "contig1	19	G	.	1	1,0	0,0	.\n" +
+        "contig1	20	T	.	1	1,0	0,0	.\n" +
+        "contig1	25	C	.	1	0,1	0,0	.\n" +
+        "contig1	26	C	.	1	0,1	0,0	.\n" +
+        "contig1	27	C	.	1	0,1	0,0	.\n" +
+        "contig1	28	C	.	1	0,1	0,0	.\n" +
+        "contig1	33	A	.	1	1,0	0,0	.\n" +
+        "contig1	34	C	.	1	1,0	0,0	.\n" +
+        "contig1	35	G	.	1	1,0	0,0	.\n" +
+        "contig1	36	T	.	1	1,0	0,0	.\n" +
+        "contig1	41	C	.	1	0,1	0,0	.\n" +
+        "contig1	42	C	.	1	0,1	0,0	.\n" +
+        "contig1	43	C	.	1	0,1	0,0	.\n" +
+        "contig1	44	C	.	1	0,1	0,0	.\n" +
         "";
 
     checkVcf(vcfFromBadSam, expectedVcf);
@@ -193,14 +195,14 @@ public class AlignerWorker_Test {
     String vcf = buildVcf(sam1 + "\n" + sam2, ">contig1\n" + ref);
 
     String expectedVcf =
-        "contig1	1	A		1	1,0	0,0	\n" +
-        "contig1	2	C		1	1,0	0,0	\n" +
-        "contig1	3	G		1	1,0	0,0	\n" +
-        "contig1	4	T		1	1,0	0,0	\n" +
-        "contig1	11	A		1	1,0	0,0	\n" +
-        "contig1	12	A		1	1,0	0,0	\n" +
-        "contig1	13	A		1	1,0	0,0	\n" +
-        "contig1	14	A		1	1,0	0,0	\n" +
+        "contig1	1	A	.	1	1,0	0,0	.\n" +
+        "contig1	2	C	.	1	1,0	0,0	.\n" +
+        "contig1	3	G	.	1	1,0	0,0	.\n" +
+        "contig1	4	T	.	1	1,0	0,0	.\n" +
+        "contig1	11	A	.	1	1,0	0,0	.\n" +
+        "contig1	12	A	.	1	1,0	0,0	.\n" +
+        "contig1	13	A	.	1	1,0	0,0	.\n" +
+        "contig1	14	A	.	1	1,0	0,0	.\n" +
         "";
 
     checkVcf(vcf, expectedVcf);
