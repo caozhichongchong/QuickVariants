@@ -195,6 +195,10 @@ public class Alignments {
     return this.sequence;
   }
 
+  public double getQueryEndFraction() {
+    return this.queryEndFraction;
+  }
+
   private AlignmentsSection getSection(int referencePosition) {
     return this.sections[referencePosition / positionsPerSection];
   }
