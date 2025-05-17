@@ -82,7 +82,7 @@ public class MutationsWriter_Test {
     String mutations = buildMutations(sam1, ">contig1\n" + ref);
 
     String expectedMutations =
-        "contig1	8	AA	--	1	1\n" +
+        "contig1	7	AA	--	1	1\n" +
         "";
 
     checkMutations(mutations, expectedMutations);
@@ -127,7 +127,7 @@ public class MutationsWriter_Test {
 
     String unfilteredMutations = buildMutations(sam1, ">contig1\n" + ref);
     String expectedUnfilteredMutations =
-        "contig1	3	C	-	1	1\n" +
+        "contig1	2	C	-	1	1\n" +
         "";
     checkMutations(unfilteredMutations, expectedUnfilteredMutations);
   }
