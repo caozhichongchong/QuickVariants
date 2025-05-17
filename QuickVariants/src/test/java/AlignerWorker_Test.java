@@ -246,6 +246,32 @@ public class AlignerWorker_Test {
     checkVcf(vcf, expectedVcf);
   }
 
+  @Test
+  public void testDistinguishQueryEnds() {
+    String sam1 = "name1\t0\tcontig1\t5\t255\t10M\t*\t*\t*\tACCGGGTTTT\t*";
+
+    String ref  = "ACGTACCGGGTTTTACGT";
+
+    String vcf = buildVcf(sam1, ">contig1\n" + ref, true, 0.2);
+
+    String expectedVcf = 
+        "contig1	5	A	.	1	0,0	1,0	.\n" +
+        "contig1	6	C	.	1	0,0	1,0	.\n" +
+        "contig1	7	C	.	1	1,0	0,0	.\n" +
+        "contig1	8	G	.	1	1,0	0,0	.\n" +
+        "contig1	9	G	.	1	1,0	0,0	.\n" +
+        "contig1	10	G	.	1	1,0	0,0	.\n" +
+        "contig1	11	T	.	1	1,0	0,0	.\n" +
+        "contig1	12	T	.	1	1,0	0,0	.\n" +
+        "contig1	13	T	.	1	0,0	1,0	.\n" +
+        "contig1	14	T	.	1	0,0	1,0	.\n" +
+        "";
+
+    checkVcf(vcf, expectedVcf);
+  }
+
+
+
   private int getNumErrors(String samLines) {
     GroupedAlignment_Provider samParser = newSamParser(samLines);
     while (samParser.getNextGroup() != null) {
@@ -287,8 +313,12 @@ public class AlignerWorker_Test {
   }
 
   private String buildVcf(String samRecords, String referenceGenome, boolean includeSupportReads) {
+    return buildVcf(samRecords, referenceGenome, includeSupportReads, 0);
+  }
+
+  private String buildVcf(String samRecords, String referenceGenome, boolean includeSupportReads, double distinguishQueryEnds) {
     // make alignment listener
-    MatchDatabase matchDatabase = new MatchDatabase(0);
+    MatchDatabase matchDatabase = new MatchDatabase(distinguishQueryEnds);
     List<AlignmentListener> listeners = new ArrayList<AlignmentListener>();
     listeners.add(matchDatabase);
 
