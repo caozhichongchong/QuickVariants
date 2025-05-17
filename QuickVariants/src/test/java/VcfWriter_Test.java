@@ -12,7 +12,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AlignerWorker_Test {
+public class VcfWriter_Test {
 
   @Test
   public void simpleTest() {
