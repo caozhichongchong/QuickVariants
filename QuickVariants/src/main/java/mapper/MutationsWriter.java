@@ -29,8 +29,20 @@ public class MutationsWriter {
   }
 
   public void write(Map<Sequence, Alignments> alignments, int numParallelJobs) throws IOException {
-    this.writeText("# Version 1\n");
-    this.writeText("CHROM\tPOS\tREF\tALT\tDEPTH\tTOTAL_DEPTH\n");
+    this.writeLine("# Version 1");
+    this.writeLine("");
+    this.writeLine("# Command line: \"" + MapperMetadata.guessCommandLine() + "\"");
+    this.writeLine("");
+    this.writeLine("# This file is a tab-separated table representing differences between a collection of aligned query sequences and reference sequences");
+    this.writeLine("# CHROM refers to the name of the reference sequence");
+    this.writeLine("# POS refers to the position of the mutation in the reference sequence");
+    this.writeLine("# REF specifies the allele(s) of the reference in this position");
+    this.writeLine("# ALT specifies the allele(s) of the query sequences in this position");
+    this.writeLine("# DEPTH counts the total weight of query sequences supporting this mutation");
+    this.writeLine("# TOTAL_DEPTH counts the total weight of query sequences aligned to the same position as this mutation");
+    this.writeLine("# If a query has K possible alignments, it contributes 1/K weight to each position");
+    this.writeLine("");
+    this.writeLine("CHROM\tPOS\tREF\tALT\tDEPTH\tTOTAL_DEPTH");
 
     List<MutationsFormatRequest> jobs = this.splitJobs(alignments, numParallelJobs);
     int waitIndex = 0; // index of next worker to wait for
@@ -98,6 +110,11 @@ public class MutationsWriter {
   private void writeText(String text) throws IOException {
     bufferedStream.write(text.getBytes());
   }
+  private void writeLine(String line) throws IOException {
+    this.writeText(line);
+    this.writeText("\n");
+  }
+
   BufferedOutputStream bufferedStream;
   OutputStream fileStream;
   MutationDetectionParameters parameters;
