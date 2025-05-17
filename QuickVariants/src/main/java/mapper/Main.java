@@ -290,6 +290,7 @@ public class Main {
 "    Summary by reference position\n" +
 "\n" +
 "      --out-vcf <file> output file to generate containing a description of mutation counts by position\n" +
+"        Details about the file format are included in the top of the file\n" +
 "      --vcf-exclude-non-mutations if set, the output vcf file will exclude positions where no mutations were detected\n" +
 "      --vcf-omit-support-reads By default, the vcf file has a column showing one or more supporting reads for each variant. If set, the output vcf file will hide the supporting reads for each variant.\n" +
 "      --distinguish-query-ends <fraction> (default 0.1) In the output vcf file, we separately display which queries aligned at each position with <fraction> of the end of the query and which didn't.\n" +
@@ -308,6 +309,7 @@ public class Main {
 "    Summary by mutation\n" +
 "\n" +
 "      --out-mutations <file> output file to generate listing the mutations of the queries compared to the reference genome\n" +
+"        Details about the file format are included in the top of the file\n" +
 "\n" +
 "      --distinguish-query-ends <fraction> (default 0.1) When detecting indels, only consider the middle <fraction> of each query\n" +
 "\n" +
@@ -342,7 +344,7 @@ public class Main {
 "\n" +
 "  Multiple output formats may be specified during a single run; for example:\n" +
 "\n" +
-"    --out-sam out.sam --out-vcf out.vcf\n" +
+"    --out-mutations out.mutations --out-vcf out.vcf\n" +
 "\n" +
 "  OTHER:\n" +
 "\n" +
