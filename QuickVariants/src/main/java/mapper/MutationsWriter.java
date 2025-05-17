@@ -30,7 +30,7 @@ public class MutationsWriter {
 
   public void write(Map<Sequence, Alignments> alignments, int numParallelJobs) throws IOException {
     this.writeText("# Version 1\n");
-    this.writeText("CHR\tPOS\tREF\tALT\tDEPTH\tTOTAL_DEPTH\n");
+    this.writeText("CHROM\tPOS\tREF\tALT\tDEPTH\tTOTAL_DEPTH\n");
 
     List<MutationsFormatRequest> jobs = this.splitJobs(alignments, numParallelJobs);
     int waitIndex = 0; // index of next worker to wait for
