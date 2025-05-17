@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.List;
@@ -13,11 +14,20 @@ import java.util.TreeMap;
 // A MutationsWriter writes mutations observed in the queries compared to the reference
 public class MutationsWriter {
   public MutationsWriter(String path, MutationDetectionParameters parameters) throws FileNotFoundException, IOException {
-    File file = new File(path);
-    this.fileStream = new FileOutputStream(file);
-    this.bufferedStream = new BufferedOutputStream(fileStream);
+    this.initialize(new FileOutputStream(new File(path)));
     this.parameters = parameters;
   }
+
+  public MutationsWriter(OutputStream destination, MutationDetectionParameters parameters) {
+    this.initialize(destination);
+    this.parameters = parameters;
+  }
+
+  private void initialize(OutputStream destination) {
+    this.fileStream = destination;
+    this.bufferedStream = new BufferedOutputStream(destination);
+  }
+
   public void write(Map<Sequence, Alignments> alignments, int numParallelJobs) throws IOException {
     this.writeText("# Version 1\n");
     this.writeText("CHR\tPOS\tREF\tALT\tDEPTH\tTOTAL_DEPTH\n");
@@ -89,6 +99,6 @@ public class MutationsWriter {
     bufferedStream.write(text.getBytes());
   }
   BufferedOutputStream bufferedStream;
-  FileOutputStream fileStream;
+  OutputStream fileStream;
   MutationDetectionParameters parameters;
 }
