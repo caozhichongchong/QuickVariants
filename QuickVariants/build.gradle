@@ -35,6 +35,24 @@ dependencies {
 }
 
 def projectName = project.name
+def helpOutput = new ByteArrayOutputStream()
+task updateHelp(type: Exec) {
+  dependsOn("assemble")
+  commandLine(["java", "-jar", "build/libs/quick-variants.jar", "--help"])
+  standardOutput = helpOutput
+  errorOutput = helpOutput
+  doLast {
+    project.file("build/help.txt").write(helpOutput.toString())
+  }
+}
+
+task updateReadme(type: Exec) {
+  dependsOn("updateHelp")
+  workingDir "${project.projectDir}/util"
+
+  commandLine(["bash", "-c", "./updateReadme.sh"])
+}
+
 task release(type: Copy) {
   from "build/libs"
   include "${projectName}.jar"
@@ -42,6 +60,7 @@ task release(type: Copy) {
   rename("${projectName}.jar", "quick-variants-${gitVersion}.jar")
   dependsOn("build")
 }
+tasks["build"].dependsOn("updateReadme")
 
 def expandProperties = new HashMap<String, String>()
 expandProperties["mapperVersion"] = gitVersion

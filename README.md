@@ -1,89 +1,102 @@
-# QuickVariants
-
-## Fast and accurate genetic variant identification
-
-QuickVariants summarizes allele information from read alignments without discarding or filtering the data.
+# QuickVariants: Fast and accurate genetic variant identification
 
 If you're also interested in sequence alignment, you might be interested in [Mapper](https://github.com/mathjeff/mapper), which first aligns sequences and then identifies variants.
 
 Read more about QuickVariants in [the paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-024-01891-4).
 
-### Install
-Requirement: [Java](https://www.java.com/en/download/help/download_options.html) \
-Please download the latest QuickVariants here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.1.0/quick-variants-1.1.0.jar
+Download the latest release version here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.2.3/quick-variants-1.2.3.jar
 
-You may install java by `conda install conda-forge::openjdk`\
-You may install java and QuickVariants by `conda install caozhichongchong::quick-variants`\
-QuickVariants can be found at `$Conda_env_location/bin/quick-variants-VERSION.jar`
-### Usage
+Contact:\
+ Dr. Anni Zhang, MIT, anniz44@mit.edu
 
-```
-java -Xms10g -Xmx10g -jar quick-variants-VERSION.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] --reference <ref.fasta> --in-sam <input1.sam> [--in-sam <input2.sam> ...] --num-threads num_threads [options]
-```
-This command converts one or more SAM files to other formats, most notably .vcf.
+## Usage:
+  java -jar quick-variants.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] [--out-sam <out.sam>] [--out-refs-map-count <counts.txt>] --reference <ref.fasta> --in-sam <input.sam> [options]
 
-**Input**
-- `--reference <file>`: The reference to use. Should be in .fasta/.fa/.fna or .fastq/.fq format or a .gz of one of those formats.
+    Converts a sam file to other formats, most notably .vcf
 
-**Output formats**\
-Summary by reference position, mutation, genome, and raw output are possible.
-- Options for output files, mutation counts, exclusion of non-mutations, and more.
+  INPUT:
 
-**Summary by reference position**
+    --reference <file> the reference to use. Should be in .fasta/.fa/.fna or .fastq/.fq format or a .gz of one of those formats.
 
-- `--out-vcf <file>` output file to generate containing a description of mutation counts by position
--  --vcf-omit-support-reads By default, the vcf file has a column showing one or more supporting reads for each variant. If set, the output vcf file will hide the supporting reads for each variant.
-- `--vcf-exclude-non-mutations` if set, the output vcf file will exclude positions where no mutations were detected
-- `--distinguish-query-ends <fraction>` (default 0.1) In the output vcf file, we separately display which queries aligned at each position with <fraction> of the end of the query and which didn't.
+    --in-ordered-sam <file.sam> the input alignments. If there are Illumina-style paired-end reads, alignments for each mate should be adjacent in the sam file
+    --in-unordered-sam <file.sam> same as --in-ordered-sam but doesn't require alignments for matest to be listed in adjacent lines in the file
+      This argument is slower than --in-unordered-sam and requires more memory
+    --in-sam <file.sam> alias for --in-unordered-sam <file.sam>
 
-**Summary by mutation**
+  OUTPUT FORMATS:
 
-- `--out-mutations <file>` output file to generate listing the mutations of the queries compared to the reference genome
+    Summary by reference position
 
-- `--distinguish-query-ends <fraction>` (default 0.1) When detecting indels, only consider the middle <fraction> of each query
+      --out-vcf <file> output file to generate containing a description of mutation counts by position
+        Details about the file format are included in the top of the file
+      --vcf-exclude-non-mutations if set, the output vcf file will exclude positions where no mutations were detected
+      --vcf-omit-support-reads By default, the vcf file has a column showing one or more supporting reads for each variant. If set, the output vcf file will hide the supporting reads for each variant.
+      --distinguish-query-ends <fraction> (default 0.1) In the output vcf file, we separately display which queries aligned at each position with <fraction> of the end of the query and which didn't.
 
-- `--snp-threshold <min total depth> <min supporting depth fraction>` (default 5, 0.9)
-    The minimum total depth and minimum supporting depth fraction required at a position to report it as a point mutation
+      --snp-threshold <min total depth> <min supporting depth fraction> (default 0, 0)
+        The minimum total depth and minimum supporting depth fraction required at a position to report the support for the mutation
 
-- `--indel-start-threshold <min total depth> <min supporting depth fraction>` (default 1, 0.8)
-    The minimum total (middle) depth and minimum supporting depth fraction required at a position to report it as the start of an insertion or deletion
+      --indel-start-threshold <min total depth> <min supporting depth fraction> (default 0, 0)
+        The minimum total (middle) depth and minimum supporting depth fraction required at a position to report support for the start of an insertion or deletion
 
-- `--indel-continue-threshold <min total depth> <min supporting depth fraction>` (default 1, 0.7)
-    The minimum total (middle) depth and minimum supporting depth fraction required at a position to report it as a continuation of an insertion or deletion
-- `--indel-threshold <min total depth> <min supporting depth fraction>`
-    Alias for --indel-start-threshold <min total depth> <min supporting depth frequency> and --indel-continue-threshold <min total depth> <min supporting depth frequency>
+      --indel-continue-threshold <min total depth> <min supporting depth fraction> (default 0, 0)
+        The minimum total (middle) depth and minimum supporting depth fraction required at a position to report support for a continuation of an insertion or deletion
+      --indel-threshold <min total depth> <min supporting depth fraction>
+        Alias for --indel-start-threshold <min total depth> <min supporting depth frequency> and --indel-continue-threshold <min total depth> <min supporting depth frequency>
 
-**Summary by genome**
+    Summary by mutation
 
-- `--out-refs-map-count <file>` the output file to summarize the number of reads mapped to each combination of references
+      --out-mutations <file> output file to generate listing the mutations of the queries compared to the reference genome
+        Details about the file format are included in the top of the file
 
-**Raw output**
+      --distinguish-query-ends <fraction> (default 0.1) When detecting indels, only consider the middle <fraction> of each query
 
-- `--out-sam <file>` the output file in SAM format
+      --snp-threshold <min total depth> <min supporting depth fraction> (default 5, 0.9)
+        The minimum total depth and minimum supporting depth fraction required at a position to report it as a point mutation
 
-- `--out-unaligned <file>` output file containing unaligned reads. Must have a .fasta or .fastq extension
+      --indel-start-threshold <min total depth> <min supporting depth fraction> (default 1, 0.8)
+        The minimum total (middle) depth and minimum supporting depth fraction required at a position to report it as the start of an insertion or deletion
 
-- `--no-output` if no output is requested, skip writing output rather than throwing an error
+      --indel-continue-threshold <min total depth> <min supporting depth fraction> (default 1, 0.7)
+        The minimum total (middle) depth and minimum supporting depth fraction required at a position to report it as a continuation of an insertion or deletion
+      --indel-threshold <min total depth> <min supporting depth fraction>
+        Alias for --indel-start-threshold <min total depth> <min supporting depth frequency> and --indel-continue-threshold <min total depth> <min supporting depth frequency>
 
-**Debugging**
+    Summary by genome
 
-- `-v, --verbose` output diagnostic information
+      --out-refs-map-count <file> the output file to summarize the number of reads mapped to each combination of references
 
-- `-vv` more diagnostic information
+    Raw output
 
-- `--verbosity-auto` set verbosity flags dynamically and automatically based on the data and alignment
+      --out-sam <file> the output file in SAM format
 
-Multiple output formats may be specified during a single run; for example:
+    --no-output if no output is requested, skip writing output rather than throwing an error
 
-- `--out-sam` out.sam --out-unaligned out.fastq
+    Debugging
 
-**Others**
+      -v, --verbose output diagnostic information
 
-- `--num-threads <count>` number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.
+      -vv more diagnostic information
+
+      --verbosity-auto set verbosity flags dynamically and automatically based on the data and alignment
+
+  Multiple output formats may be specified during a single run; for example:
+
+    --out-mutations out.mutations --out-vcf out.vcf
+
+  OTHER:
+
+    --num-threads <count> number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.
+
+    --help output this help message
+      If no other arguments are given, exit instead of attempting to summarize alignments
+
+    --version Output the version of QuickVariants
+      If no other arguments are given, exit instead of attempting to summarize alignments
 
 
 ### Test
 
 See [TESTING.md](TESTING.md)
 
-## If you're working on a bioinformatics project and would be interested in some consulting help, check out our website at https://omicode.info !
+## If you're working on a bioinformatics project and would be interested in some consulting help, check out our website at https://genomiverse.net/ !
