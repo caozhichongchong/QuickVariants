@@ -7,7 +7,7 @@ Read more about QuickVariants in [the paper](https://bmcbiol.biomedcentral.com/a
 Download the latest release version here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.2.3/quick-variants-1.2.3.jar
 
 Contact:\
- Dr. Anni Zhang, MIT, anniz44@mit.edu
+ Dr. Anni Zhang, caozhichongchong at gmail dot com
 
 ## Usage:
   java -jar quick-variants.jar [--out-vcf <out.vcf>] [--out-mutations <out.txt>] [--out-sam <out.sam>] [--out-refs-map-count <counts.txt>] --reference <ref.fasta> --in-sam <input.sam> [options]

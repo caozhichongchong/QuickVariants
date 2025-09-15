@@ -23,7 +23,7 @@ grep "Download the latest release version here" "$destReadme" >> "$tempReadme"
 # finish header
 echo "
 Contact:\\
- Dr. Anni Zhang, MIT, anniz44@mit.edu" >> "$tempReadme"
+ Dr. Anni Zhang, caozhichongchong at gmail dot com" >> "$tempReadme"
 
 # write usage
 # remove line feed characters
