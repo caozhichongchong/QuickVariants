@@ -70,6 +70,10 @@ public class Main {
         // We already output the version above, so there's no need to output it again here
         continue;
       }
+      if ("--help".equals(arg)) {
+        outputUsage();
+        continue;
+      }
       // If the user specifies an argument that doesn't refer to a analysis action, then the user wants us to do an analysis
       requestedAnalysis = true;
 
@@ -285,7 +289,7 @@ public class Main {
     }
   }
 
-  public static void usageError(String message) {
+  public static void outputUsage() {
     System.err.println(
 "\n" +
 "Usage:\n"+
@@ -367,11 +371,17 @@ public class Main {
 "\n" +
 "    --num-threads <count> number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.\n" +
 "\n" +
-"    --version output the version of QuickVariants\n" +
+"    --help output this help message\n" +
+"      If no other arguments are given, exit instead of attempting to summarize alignments\n" +
+"\n" +
+"    --version Output the version of QuickVariants\n" +
 "      If no other arguments are given, exit instead of attempting to summarize alignments\n" +
 ""
 );
+  }
 
+  public static void usageError(String message) {
+    outputUsage();
     System.err.println(message);
     System.exit(1);
   }
