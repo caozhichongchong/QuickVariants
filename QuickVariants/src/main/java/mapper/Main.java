@@ -62,9 +62,17 @@ public class Main {
 
     int numThreads = 1;
     double queryEndFraction = 0.1;
+    boolean requestedAnalysis = false; // whether the user requested an analysis (including implicitly requesting it)
 
     for (int i = 0; i < args.length; i++) {
       String arg = args[i];
+      if ("--version".equals(arg)) {
+        // We already output the version above, so there's no need to output it again here
+        continue;
+      }
+      // If the user specifies an argument that doesn't refer to a analysis action, then the user wants us to do an analysis
+      requestedAnalysis = true;
+
       if ("--reference".equals(arg)) {
         referencePaths.add(args[i + 1]);
         i++;
@@ -229,6 +237,15 @@ public class Main {
 
       usageError("Unrecognized argument: " + arg);
     }
+    if (args.length == 0) {
+      // If a user didn't specify an argument, they probably want to do an analysis (and probably want to see help about doing that)
+      requestedAnalysis = true;
+    }
+    if (!requestedAnalysis) {
+      // If the user doesn't want to do an analysis, we can stop now
+      return;
+    }
+
     if (referencePaths.size() < 1) {
       usageError("--reference is required");
     }
@@ -348,7 +365,11 @@ public class Main {
 "\n" +
 "  OTHER:\n" +
 "\n" +
-"    --num-threads <count> number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.\n"
+"    --num-threads <count> number of threads to use at once for processing. Higher values will run more quickly on a system that has that many CPUs available.\n" +
+"\n" +
+"    --version output the version of QuickVariants\n" +
+"      If no other arguments are given, exit instead of attempting to summarize alignments\n" +
+""
 );
 
     System.err.println(message);
