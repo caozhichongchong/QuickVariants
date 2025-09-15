@@ -4,7 +4,7 @@ If you're also interested in sequence alignment, you might be interested in [Map
 
 Read more about QuickVariants in [the paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-024-01891-4).
 
-Download the latest release version here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.2.3/quick-variants-1.2.3.jar
+Download the latest release version here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.2.4/quick-variants-1.2.4.jar
 
 Contact:\
  Dr. Anni Zhang, caozhichongchong at gmail dot com
