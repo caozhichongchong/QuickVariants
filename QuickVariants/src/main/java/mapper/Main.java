@@ -374,7 +374,7 @@ public class Main {
 "    --help output this help message\n" +
 "      If no other arguments are given, exit instead of attempting to summarize alignments\n" +
 "\n" +
-"    --version Output the version of QuickVariants\n" +
+"    --version output the version of QuickVariants\n" +
 "      If no other arguments are given, exit instead of attempting to summarize alignments\n" +
 ""
 );

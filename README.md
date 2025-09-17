@@ -91,7 +91,7 @@ Contact:\
     --help output this help message
       If no other arguments are given, exit instead of attempting to summarize alignments
 
-    --version Output the version of QuickVariants
+    --version output the version of QuickVariants
       If no other arguments are given, exit instead of attempting to summarize alignments
 
 
