@@ -21,9 +21,11 @@ Read more about QuickVariants in [the paper](https://bmcbiol.biomedcentral.com/a
 grep "Download the latest release version here" "$destReadme" >> "$tempReadme"
 
 # finish header
-echo "
-Contact:\\
- Dr. Anni Zhang, caozhichongchong at gmail dot com" >> "$tempReadme"
+echo '
+Also available as `quick-variants` in Bioconda - see https://bioconda.github.io/recipes/quick-variants/README.html
+
+Contact:\
+ Dr. Anni Zhang, caozhichongchong at gmail dot com' >> "$tempReadme"
 
 # write usage
 # remove line feed characters

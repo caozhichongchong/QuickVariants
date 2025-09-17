@@ -6,6 +6,8 @@ Read more about QuickVariants in [the paper](https://bmcbiol.biomedcentral.com/a
 
 Download the latest release version here: https://github.com/caozhichongchong/QuickVariants/releases/download/1.2.4/quick-variants-1.2.4.jar
 
+Also available as `quick-variants` in Bioconda - see https://bioconda.github.io/recipes/quick-variants/README.html
+
 Contact:\
  Dr. Anni Zhang, caozhichongchong at gmail dot com
 
