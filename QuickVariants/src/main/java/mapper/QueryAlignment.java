@@ -10,15 +10,26 @@ public class QueryAlignment {
   public QueryAlignment(SequenceAlignment sequenceAlignment) {
     this.alignments = new ArrayList<SequenceAlignment>(1);
     this.alignments.add(sequenceAlignment);
+    this.totalPenalty = sequenceAlignment.getPenalty();
   }
 
-  public QueryAlignment(List<SequenceAlignment> sequenceAlignments, double spacingPenalty, double mirrorPenalty, double totalPenalty) {
+  public QueryAlignment(List<SequenceAlignment> sequenceAlignments, double spacingPenalty, double overlapMultiplier, double duplicationBonus, double totalPenalty, int totalDistanceBetweenComponents) {
     this.alignments = sequenceAlignments;
+    this.spacingPenalty = spacingPenalty;
+    this.overlapMultiplier = overlapMultiplier;
+    this.duplicationBonus = duplicationBonus;
+    this.totalPenalty = totalPenalty;
+    this.totalDistanceBetweenComponents = totalDistanceBetweenComponents;
   }
+
 
   // list of alignments for each sequence
   public List<SequenceAlignment> getComponents() {
     return alignments;
+  }
+
+  public SequenceAlignment getComponent(int index) {
+    return alignments.get(index);
   }
 
   public Sequence getSequenceB() {
@@ -33,6 +44,10 @@ public class QueryAlignment {
 
   public int getNumSequences() {
     return this.alignments.size();
+  }
+
+  public double getPenalty() {
+    return this.totalPenalty;
   }
 
   public int getALength() {
@@ -89,15 +104,24 @@ public class QueryAlignment {
     return true;
   }
 
-  public String formatQuery() {
-    String result = "";
-    for (SequenceAlignment alignment: this.alignments) {
-      if (result.length() > 0) {
-        result += " / ";
+  public String explainPenalty() {
+    StringBuilder resultBuilder = new StringBuilder();
+    resultBuilder.append("(");
+    for (int i = 0; i < this.alignments.size(); i++) {
+      SequenceAlignment component = this.alignments.get(i);
+      resultBuilder.append("seq" + i + " penalty (" + component.getPenalty() + ")");
+      if (i != this.alignments.size() - 1) {
+        resultBuilder.append(" + ");
       }
-      result += alignment.getSequenceA().getText();
     }
-    return result;
+    resultBuilder.append(" - duplicated penalty (" + this.duplicationBonus + ")");
+    resultBuilder.append(") * (total length / unique length) (" + round(this.overlapMultiplier, 100000) + ")");
+    resultBuilder.append(" + spacing penalty (" + this.spacingPenalty + ")");
+    return resultBuilder.toString();
+  }
+
+  private double round(double value, double scale) {
+    return Math.round(value * scale) / scale;
   }
 
   public String formatQuery() {
@@ -135,9 +159,17 @@ public class QueryAlignment {
   }
 
   private List<SequenceAlignment> alignments;
+  // The penalty caused by the spacing between the sequence alignments
+  private double spacingPenalty;
 
   private int minOverlap = -1;
   private int maxOverlap = -1;
 
   // If multiple SequenceAlignments overlap, we multiply any penalties on non-overlapping portions of the alignments, so that we count them the same number of times (2) as overlapping portions of the alignments
+  // penalty due to components overlapping
+  private double overlapMultiplier;
+  // penalty that appears in each component and shouldn't be counted twice
+  private double duplicationBonus;
+  private double totalPenalty;
+  private int totalDistanceBetweenComponents;
 }

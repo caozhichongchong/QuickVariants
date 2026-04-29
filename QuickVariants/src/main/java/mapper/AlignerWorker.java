@@ -187,7 +187,7 @@ public class AlignerWorker extends Thread {
         return null;
       }
     }
-    return new QueryAlignment(sequenceAlignments, 0, 0, 0);
+    return new QueryAlignment(sequenceAlignments, 0, 0, 0, 0, 0);
   }
 
   void printAlignment(SamAlignment query, List<QueryAlignment> alignments) {

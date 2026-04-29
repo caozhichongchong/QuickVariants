@@ -101,6 +101,22 @@ public class SequenceAlignment {
     return this.sections.get(this.sections.size() - 1).getEndIndexA();
   }
 
+  public int getLengthA() {
+    return this.getEndIndexA() - this.getStartIndexA();
+  }
+
+  public int getLengthB() {
+    return this.getEndIndexB() - this.getStartIndexB();
+  }
+
+  public double getPenalty() {
+    return this.penalty;
+  }
+
+  public double getAlignedPenalty() {
+    return this.alignedPenalty;
+  }
+
   public Sequence getSequenceA() {
     return this.sections.get(0).getSequenceA();
   }
@@ -220,6 +236,8 @@ public class SequenceAlignment {
 
   public double weight = 1;
   private List<AlignedBlock> sections;
+  private double penalty;
+  private double alignedPenalty;
   private boolean referenceReversed;
   private boolean referenceContiguous;
 }

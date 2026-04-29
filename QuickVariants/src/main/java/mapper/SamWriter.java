@@ -65,6 +65,10 @@ public class SamWriter implements AlignmentListener {
   }
 
   private void formatQueryAlignment(QueryAlignment queryAlignment, StringBuilder builder) {
+     String queryPenaltyFormatted = null;
+     if (queryAlignment.getNumSequences() > 0) {
+       queryPenaltyFormatted = formatQueryPenalty(queryAlignment);
+     }
      for (SequenceAlignment alignment: queryAlignment.getComponents()) {
        Sequence query = alignment.getSequenceA();
        Sequence ref = alignment.getSequenceB();
@@ -129,20 +133,33 @@ public class SamWriter implements AlignmentListener {
        // QUAL
        builder.append("*\t");
        // alignment score
-       builder.append(formatPenalty(alignment));
+       builder.append(formatSequencePenalty(alignment));
+       if (queryPenaltyFormatted != null) {
+         builder.append("\t");
+         builder.append(queryPenaltyFormatted);
+       }
        builder.append("\n");
     }
   }
 
-  private String formatPenalty(SequenceAlignment alignment) {
-    float score = 0; // not keeping track
-    float roundedScore = Math.round(score);
-    if (Math.abs(score - roundedScore) < Math.abs(score) * 0.000001) {
-      // score is essentially an integer
-      return "AS:i:" + (int)roundedScore;
+  private String formatSequencePenalty(SequenceAlignment alignment) {
+    float score = (float)(-1 * alignment.getPenalty());
+    return "AS:" + formatNumber(score);
+  }
+
+  private String formatQueryPenalty(QueryAlignment alignment) {
+    float score = (float)(-1 * alignment.getPenalty());
+    return "CAS:" + formatNumber(score);
+  }
+
+  private String formatNumber(double number) {
+    float roundedNumber = Math.round(number);
+    if (Math.abs(number - roundedNumber) < Math.abs(number) * 0.000001) {
+      // number is essentially an integer
+      return "i:" + (int)roundedNumber;
     } else {
-      // score is a float
-      return "AS:f:" + score;
+      // number is a float
+      return "f:" + number;
     }
   }
 

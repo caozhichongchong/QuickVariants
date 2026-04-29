@@ -102,7 +102,7 @@ public class MatchDatabase_Test {
     sequenceAlignments.add(forwardAlignment);
     sequenceAlignments.add(reverseAlignment);
 
-    QueryAlignment alignment = new QueryAlignment(sequenceAlignments, 0, 0, 0);
+    QueryAlignment alignment = new QueryAlignment(sequenceAlignments, 0, 0, 0, 0, 0);
 
     MatchDatabase database = new MatchDatabase(0);
     List<QueryAlignment> alignmentList = new ArrayList<QueryAlignment>();
