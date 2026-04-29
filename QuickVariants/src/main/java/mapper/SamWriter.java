@@ -16,7 +16,7 @@ public class SamWriter implements AlignmentListener {
     this.fileStream = new FileOutputStream(file);
     this.bufferedStream = new BufferedOutputStream(fileStream);
     // write header
-    this.write("@HD\tVN:1.6\tSO:unsorted\n");
+    this.write("@HD\tVN:1.6\tGO:query\n");
     // write reference sequence names
     this.writeReferenceSequenceNames(sequenceDatabase);
   }
