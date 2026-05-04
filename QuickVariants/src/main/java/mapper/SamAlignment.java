@@ -7,30 +7,33 @@ import java.util.List;
 // It can model a single sequence or can model Illumina-style paired-end reads
 // If there are multiple alternate ways that the query could align to the reference genome, each should be represented by its own SamAlignment
 public class SamAlignment {
-  public SamAlignment(Sequence sequence) {
-    this.sequences = new ArrayList<Sequence>(1);
-    this.sequences.add(sequence);
+  public SamAlignment(SamRecord samRecord) {
+    this.samRecords = new ArrayList<SamRecord>(1);
+    this.samRecords.add((SamRecord)samRecord);
   }
 
   public SamAlignment(List<Sequence> sequences) {
-    this.sequences = sequences;
+    this.samRecords = new ArrayList<SamRecord>(sequences.size());
+    for (Sequence sequence: sequences) {
+      this.samRecords.add((SamRecord)sequence);
+    }
   }
 
-  public List<Sequence> getSequences() {
-    return this.sequences;
+  public List<SamRecord> getSamRecords() {
+    return this.samRecords;
   }
 
-  public int getNumSequences() {
-    return this.sequences.size();
+  public int getNumRecords() {
+    return this.samRecords.size();
   }
 
   public long getId() {
-    return this.sequences.get(0).getId();
+    return this.samRecords.get(0).getId();
   }
 
   public int getLength() {
     int total = 0;
-    for (Sequence sequence: this.sequences) {
+    for (Sequence sequence: this.samRecords) {
       total += sequence.getLength();
     }
     return total;
@@ -38,18 +41,18 @@ public class SamAlignment {
 
   public String format() {
     int totalSize = 0;
-    for (Sequence sequence : this.sequences) {
+    for (Sequence sequence : this.samRecords) {
        totalSize += sequence.getLength();
     }
     if (totalSize > 1000) {
-      return "[" + this.sequences.size() + " sequences totalling " + totalSize + " base pairs]";
+      return "[" + this.samRecords.size() + " sequences totalling " + totalSize + " base pairs]";
     }
 
     StringBuilder builder = new StringBuilder();
-    for (int i = 0; i < this.sequences.size(); i++) {
-      Sequence sequence = this.sequences.get(i);
+    for (int i = 0; i < this.samRecords.size(); i++) {
+      Sequence sequence = this.samRecords.get(i);
       builder.append(sequence.getText());
-      if (i < this.sequences.size() - 1) {
+      if (i < this.samRecords.size() - 1) {
         builder.append(" / ");
       }
     }
@@ -57,11 +60,11 @@ public class SamAlignment {
   }
 
   public boolean sameSequenceNames(SamAlignment other) {
-    if (other.sequences.size() != this.sequences.size()) {
+    if (other.samRecords.size() != this.samRecords.size()) {
       return false;
     }
-    for (int i = 0; i < this.sequences.size(); i++) {
-      if (!this.sequences.get(i).getName().equals(other.sequences.get(i).getName())) {
+    for (int i = 0; i < this.samRecords.size(); i++) {
+      if (!this.samRecords.get(i).getName().equals(other.samRecords.get(i).getName())) {
         return false;
       }
     }
@@ -71,11 +74,11 @@ public class SamAlignment {
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
-    for (Sequence sequence : this.sequences) {
+    for (Sequence sequence : this.samRecords) {
       builder.append(sequence.getText() + " ");
     }
     return builder.toString();
   }
 
-  private List<Sequence> sequences;
+  private List<SamRecord> samRecords;
 }

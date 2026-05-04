@@ -151,49 +151,114 @@ public class AlignerWorker extends Thread {
     return groups;
   }
 
-  // aligns to the unmodified reference we've been given
+  // converts List<SamAlignment> to QueryAlignments
   public QueryAlignments align(List<SamAlignment> queries) {
+    // Determine whether these alignments represent a paired-end read where only one sequence aligned
+    List<SamAlignment> splitAlignments = new ArrayList<SamAlignment>();
+    List<SamAlignment> unsplitAlignments = new ArrayList<SamAlignment>();
+    for (SamAlignment query: queries) {
+      boolean split = false;
+      for (SamRecord samRecord: query.getSamRecords()) {
+        if (samRecord.hadMate && query.getNumRecords() < 2) {
+          split = true;
+        }
+      }
+      if (split) {
+        splitAlignments.add(query);
+      } else {
+        unsplitAlignments.add(query);
+      }
+    }
+    if (unsplitAlignments.size() > 0) {
+      // all sequences in the read aligned together
+      return alignUnsplit(unsplitAlignments);
+    } else {
+      // not all sequences aligned together
+      return alignSplit(splitAlignments);
+    }
+  }
+
+  // Assume all query sequences aligned in all cases and convert to QueryAlignments
+  private QueryAlignments alignUnsplit(List<SamAlignment> queries) {
     List<Sequence> queryComponents = new ArrayList<Sequence>();
     List<QueryAlignment> results = new ArrayList<QueryAlignment>(queries.size());
     for (SamAlignment query: queries) {
-      QueryAlignment converted = tryConvertSamAlignment(query);
-      if (converted == null)
-        throw new IllegalArgumentException("Not a sam query: " + query);
-      // If we have multiple alignments for the same query, and some alignments split the query into more pieces than others, we only keep the alignments using the most sequences
-      boolean keep = converted.getComponents().size() >= queryComponents.size();
-      boolean clear = converted.getComponents().size() != queryComponents.size();
-      if (clear) {
-        results.clear();
-        queryComponents.clear();
-        for (SequenceAlignment sequenceAlignment: converted.getComponents()) {
-          queryComponents.add(sequenceAlignment.getSequenceA());
-        }
-      }
-      if (keep) {
-        results.add(converted);
-      }
+      // identify which sequences this alignment refers to
+      List<Sequence> sequences = getSamSequences(query);
+      // identify what the alignments are
+      QueryAlignment converted = convertSamAlignment(query);
+      queryComponents = sequences;
+      results.add(converted);
     }
     return QueryAlignments.singleComponent(queryComponents, results);
   }
 
-  private QueryAlignment tryConvertSamAlignment(SamAlignment query) {
-    List<SequenceAlignment> sequenceAlignments = new ArrayList<SequenceAlignment>(query.getNumSequences());
-    double combinedScore = 0;
-    for (Sequence sequence: query.getSequences()) {
-      if (sequence instanceof SamRecord) {
-        SamRecord samRecord = (SamRecord)sequence;
-        SequenceAlignment sequenceAlignment = samRecord.toSequenceAlignment(this.sequenceDatabase);
-        if (sequenceAlignment == null)
-          return null;
-        if (combinedScore == 0)
-          combinedScore = samRecord.combinedScore;
-        sequenceAlignments.add(sequenceAlignment);
-      } else {
-        return null;
+  // Assume different query sequences aligned in different cases and convert to QueryAlignments
+  private QueryAlignments alignSplit(List<SamAlignment> queries) {
+    Sequence firstQuery = null;
+    Sequence lastQuery = null;
+    List<QueryAlignment> firstResults = new ArrayList<QueryAlignment>();
+    List<QueryAlignment> lastResults = new ArrayList<QueryAlignment>();
+    for (SamAlignment query: queries) {
+      // identify which sequences this alignment refers to
+      for (SamRecord samRecord: query.getSamRecords()) {
+        if (samRecord.wasFirstMate) {
+          firstQuery = samRecord;
+          firstResults.add(convertSamAlignment(query));
+        } else {
+          lastQuery = samRecord;
+          lastResults.add(convertSamAlignment(query));
+        }
       }
     }
+    List<Sequence> queryComponents = new ArrayList<Sequence>();
+    queryComponents.add(firstQuery);
+    queryComponents.add(lastQuery);
+    List<List<QueryAlignment>> alignmentComponents = new ArrayList<List<QueryAlignment>>();
+    alignmentComponents.add(firstResults);
+    alignmentComponents.add(lastResults);
+    return new QueryAlignments(queryComponents, alignmentComponents);
+  }
+
+  private QueryAlignment convertSamAlignment(SamAlignment query) {
+    List<SequenceAlignment> components = new ArrayList<SequenceAlignment>(query.getNumRecords());
+    double combinedScore = 0;
+    for (SamRecord sequence: query.getSamRecords()) {
+      SamRecord samRecord = (SamRecord)sequence;
+      SequenceAlignment sequenceAlignment = samRecord.toSequenceAlignment(this.sequenceDatabase);
+      if (sequenceAlignment == null)
+        return null;
+      if (combinedScore == 0)
+        combinedScore = samRecord.combinedScore;
+      components.add(sequenceAlignment);
+    }
     double combinedPenalty = -combinedScore;
-    return new QueryAlignment(sequenceAlignments, 0, 0, 0, combinedPenalty, 0);
+    return new QueryAlignment(components, 0, 0, 0, combinedPenalty, 0);
+  }
+
+  // Gets the list of sequences represented by a SamAlignment
+  // If this alignment is for an unpaired read, this returns one sequences
+  // If this alignment is for a paired-end read, this returns two sequences
+  //   If this alignment is for a paired-end read but one sequence is unknown, the corresponding sequence will be null
+  private List<Sequence> getSamSequences(SamAlignment query) {
+    Sequence sequence1 = null;
+    Sequence sequence2 = null;
+    int numSequences = 1;
+    for (SamRecord samRecord: query.getSamRecords()) {
+      if (samRecord.hadMate) {
+        numSequences = 2;
+      }
+      if (samRecord.wasFirstMate) {
+        sequence1 = samRecord;
+      } else {
+        sequence2 = samRecord;
+      }
+    }
+    List<Sequence> results = new ArrayList<Sequence>(numSequences);
+    results.add(sequence1);
+    if (numSequences > 1)
+      results.add(sequence2);
+    return results;
   }
 
   void printAlignment(List<QueryAlignment> alignments) {

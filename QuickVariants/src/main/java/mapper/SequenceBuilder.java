@@ -64,6 +64,8 @@ public class SequenceBuilder {
       result.weight = this.alignmentWeight;
       result.score = this.alignmentScore;
       result.combinedScore = this.combinedScore;
+      result.hadMate = this.hadMate;
+      result.wasFirstMate = this.wasFirstMate;
       result.setId(this.identifier);
       return result;
     }
@@ -89,7 +91,7 @@ public class SequenceBuilder {
     return this;
   }
 
-  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, double alignmentScore, double combinedScore, List<PositionDescriptor> otherComponentPositions) {
+  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, double alignmentScore, double combinedScore, boolean hadMate, boolean wasFirstMate, List<PositionDescriptor> otherComponentPositions) {
     this.buildSam = true;
     this.referenceName = referenceName;
     this.referencePosition = referencePosition;
@@ -97,6 +99,8 @@ public class SequenceBuilder {
     this.referenceReversed = referenceReversed;
     this.alignmentScore = alignmentScore;
     this.combinedScore = combinedScore;
+    this.hadMate = hadMate;
+    this.wasFirstMate = wasFirstMate;
     this.otherComponentPositions = otherComponentPositions;
     return this;
   }
@@ -149,5 +153,7 @@ public class SequenceBuilder {
   double alignmentWeight = 1;
   double alignmentScore = 0;
   double combinedScore = 0; // combined score of this alignment and other alignments for the same query
+  boolean hadMate;          // whether the query sequence had a mate during alignment
+  boolean wasFirstMate;     // whether this query sequence was the first of its mates during alignment
   List<PositionDescriptor> otherComponentPositions;
 }

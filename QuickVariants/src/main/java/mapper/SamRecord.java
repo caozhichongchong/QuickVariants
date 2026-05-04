@@ -91,12 +91,19 @@ public class SamRecord extends Sequence {
     return parsed;
   }
 
+  @Override
+  public String toString() {
+    return "SamRecord at " + referenceName + "[" + referencePosition + "] reversed = " + referenceReversed + " weight = " + weight + " hadMate = " + hadMate + " wasFirstMate = " + wasFirstMate + " cigar string " + cigarString;
+  }
+
   public String referenceName;
   public int referencePosition;
   public boolean referenceReversed;
   public double weight;
   public double score;
   public double combinedScore; // combined score for all of the sequences in this alignment of this query
+  public boolean hadMate;      // whether the query sequence had a mate during alignment
+  public boolean wasFirstMate; // whether this query sequence was the first of its mates during alignment
   private List<String> cigarComponents;
   private String cigarString;
 }

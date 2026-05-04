@@ -115,12 +115,13 @@ public class SamWriter implements AlignmentListener {
 
   // Given a list of alignments for a single query, adds them to the given StringBuilder
   private void formatQueryAlignments(QueryAlignments candidateAlignments, StringBuilder builder) {
-    for (List<QueryAlignment> subqueryAlignments: candidateAlignments.getAlignments()) {
-      formatQueryAlignments(subqueryAlignments, candidateAlignments, builder);
+    for (int i = 0; i < candidateAlignments.getNumComponents(); i++) {
+      List<QueryAlignment> subqueryAlignments = candidateAlignments.getAlignments(i);
+      formatQueryAlignments(subqueryAlignments, i, candidateAlignments, builder);
     }
   }
 
-  private void formatQueryAlignments(List<QueryAlignment> subqueryAlignments, QueryAlignments queryAlignments, StringBuilder builder) {
+  private void formatQueryAlignments(List<QueryAlignment> subqueryAlignments, int subqueryIndex, QueryAlignments queryAlignments, StringBuilder builder) {
     double minPenalty = Integer.MAX_VALUE;
     for (QueryAlignment alignment: subqueryAlignments) {
       minPenalty = Math.min(minPenalty, alignment.getPenalty());
@@ -128,26 +129,28 @@ public class SamWriter implements AlignmentListener {
     for (QueryAlignment queryAlignment: subqueryAlignments) {
       boolean hasMinimumPenalty = queryAlignment.getPenalty() == minPenalty;
       try {
-        formatQueryAlignment(queryAlignment, queryAlignments, hasMinimumPenalty, builder);
+        formatQueryAlignment(queryAlignment, subqueryIndex, queryAlignments, hasMinimumPenalty, builder);
       } catch (Exception e) {
         throw new RuntimeException("Failed to write alignment for " + queryAlignment.formatQuery(), e);
       }
     }
   }
 
-  private void formatQueryAlignment(QueryAlignment subqueryAlignment, QueryAlignments queryAlignments, boolean hasMinimumPenalty, StringBuilder builder) {
+  private void formatQueryAlignment(QueryAlignment subqueryAlignment, int subqueryIndex, QueryAlignments queryAlignments, boolean hasMinimumPenalty, StringBuilder builder) {
      String subqueryPenaltyFormatted = null;
      if (subqueryAlignment.getNumSequences() > 1) {
        subqueryPenaltyFormatted = formatQueryPenalty(subqueryAlignment);
      }
-     for (SequenceAlignment alignment: subqueryAlignment.getComponents()) {
+     for (int i = 0; i < subqueryAlignment.getComponents().size(); i++) {
+       SequenceAlignment alignment = subqueryAlignment.getComponent(i);
        Sequence query = alignment.getSequenceA();
        Sequence ref = alignment.getSequenceB();
        // QNAME
        builder.append(query.getSourceName());
        builder.append('\t');
        // FLAG
-       builder.append("" + getSamFlags(alignment, subqueryAlignment, queryAlignments, hasMinimumPenalty));
+       int sequenceIndex = subqueryIndex + i;
+       builder.append("" + getSamFlags(alignment, subqueryAlignment, queryAlignments, sequenceIndex, hasMinimumPenalty));
        builder.append('\t');
        // RNAME
        builder.append(ref.getName());
@@ -273,7 +276,7 @@ public class SamWriter implements AlignmentListener {
   }
 
   // hasMinimumPenalty indicates whether the corresponding QueryAlignment has the minimum penalty among all discovered alignments for this query
-  private int getSamFlags(SequenceAlignment sequenceAlignment, QueryAlignment subqueryAlignment, QueryAlignments alignments, boolean hasMinimumPenalty) {
+  private int getSamFlags(SequenceAlignment sequenceAlignment, QueryAlignment subqueryAlignment, QueryAlignments alignments, int sequenceIndex, boolean hasMinimumPenalty) {
     int flags = 0;
 
     // direction of alignment
@@ -308,13 +311,10 @@ public class SamWriter implements AlignmentListener {
       }
 
       // first or second mate
-      Sequence firstQuerySequence = alignments.getFirstSequence();
-      if (firstQuerySequence.getComplementedFrom() != null)
-        firstQuerySequence = firstQuerySequence.getComplementedFrom();
-      Sequence thisQuerySequence = sequenceAlignment.getSequenceA();
-      if (thisQuerySequence.getComplementedFrom() != null)
-        thisQuerySequence = thisQuerySequence.getComplementedFrom();
-      boolean isFirstMate = (firstQuerySequence == thisQuerySequence);
+      if (sequenceIndex < 0 || sequenceIndex > 1) {
+        throw new IllegalArgumentException("Internal error: unsupport sequence index " + sequenceIndex + " from alignment " + sequenceAlignment + ", expected 0 or 1");
+      }
+      boolean isFirstMate = (sequenceIndex == 0);
       if (isFirstMate) {
         flags += 64;
       }

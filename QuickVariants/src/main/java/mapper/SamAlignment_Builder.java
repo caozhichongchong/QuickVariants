@@ -89,7 +89,8 @@ public class SamAlignment_Builder {
   public boolean accepts(SequenceBuilder component) {
     if (this.sequenceProviders.size() < 1)
       return true;
-    if (this.isComplete())
+    boolean complete = this.isComplete();
+    if (complete)
       return false;
     if (this.sequenceProviders.get(0).getName().equals(component.getName()))
       return true;

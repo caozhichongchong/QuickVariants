@@ -100,10 +100,12 @@ public class SamReader implements SequenceProvider {
     String mateContigName = fields[6];
     if ("=".equals(mateContigName))
       mateContigName = referenceContigName;
-    boolean hasMate = !mateContigName.equals("*");
+    boolean hasAlignedMate = !mateContigName.equals("*");
     boolean hasUnalignedMate = (samFlags & 8) != 0;
-    boolean expectsMateAlignment = hasMate && !hasUnalignedMate;
+    boolean expectsMateAlignment = hasAlignedMate && !hasUnalignedMate;
     boolean mateReversed = (samFlags & 32) != 0;
+    boolean hadMate = hasAlignedMate || hasUnalignedMate;
+    boolean isFirstMate = (samFlags & 64) != 0;
 
     List<PositionDescriptor> otherComponentPositions = new ArrayList<PositionDescriptor>();
     if (expectsMateAlignment) {
@@ -148,7 +150,7 @@ public class SamReader implements SequenceProvider {
       combinedScore = alignmentScore;
     }
 
-    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, alignmentScore, combinedScore, otherComponentPositions);
+    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, alignmentScore, combinedScore, hadMate, isFirstMate, otherComponentPositions);
 
     return sequenceBuilder;
   }
