@@ -109,15 +109,6 @@ public class SequenceBuilder {
     return new PositionDescriptor(this.referenceName, this.referencePosition, this.referenceReversed);
   }
 
-  public SequenceBuilder withAlignmentMate(SequenceBuilder other) {
-    this.mate = other;
-    return this;
-  }
-
-  public boolean getHasAlignmentMate() {
-    return this.mate != null;
-  }
-
   public int getLength() {
     return this.length;
   }
@@ -155,7 +146,6 @@ public class SequenceBuilder {
   int referencePosition;
   String cigarString;
   boolean referenceReversed;
-  SequenceBuilder mate;
   double alignmentWeight = 1;
   double alignmentScore = 0;
   double combinedScore = 0; // combined score of this alignment and other alignments for the same query
