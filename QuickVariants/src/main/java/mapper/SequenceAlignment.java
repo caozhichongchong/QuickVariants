@@ -29,32 +29,6 @@ public class SequenceAlignment {
     }
   }
 
-  // Note that if the sam file cigar string contained an 'N' then these blocks might not be referenceContiguous
-  public void checkContiguous() {
-    for (int i = 0; i < this.sections.size() - 1; i++) {
-      AlignedBlock prev = this.sections.get(i);
-      AlignedBlock next = this.sections.get(i + 1);
-      if ((next.getLengthA() > 0) != (next.getLengthB() > 0)) {
-        // `next` is an indel
-        if (next.getStartIndexA() != prev.getEndIndexA() && next.getEndIndexA() != prev.getStartIndexA()) {
-          fail("next start a = " + next.getStartIndexA() + ", prev end a = " + prev.getEndIndexA() + ", next end a = " + next.getEndIndexA() + " prev start a = " + prev.getStartIndexA());
-        }
-        if (next.getStartIndexB() != prev.getEndIndexB() && next.getEndIndexB() != prev.getStartIndexB()) {
-          fail("next start b = " + next.getStartIndexB() + ", prev end b = " + prev.getEndIndexB() + " next end b = " + next.getEndIndexB() + " prev start b = " + prev.getStartIndexB());
-        }
-      }
-    }
-    for (int i = 0; i < this.sections.size(); i++) {
-      AlignedBlock block = this.sections.get(i);
-      if (block.getStartIndexA() < 0) {
-        fail("block start index " + block.getStartIndexA() + " < 0");
-      }
-      if (block.getEndIndexA() > block.getSequenceA().getLength()) {
-        fail("block end index " + block.getEndIndexA() + " > sequence length " + block.getSequenceA().getLength() + " with text " + block.getSequenceA().getText());
-      }
-    }
-  }
-
   private void fail(String message) {
     throw new IllegalArgumentException(message);
   }
