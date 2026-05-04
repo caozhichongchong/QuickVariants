@@ -96,6 +96,7 @@ public class SamRecord extends Sequence {
   public boolean referenceReversed;
   public double weight;
   public double score;
+  public double combinedScore; // combined score for all of the sequences in this alignment of this query
   private List<String> cigarComponents;
   private String cigarString;
 }

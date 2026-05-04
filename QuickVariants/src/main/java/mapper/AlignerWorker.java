@@ -178,18 +178,22 @@ public class AlignerWorker extends Thread {
 
   private QueryAlignment tryConvertSamAlignment(SamAlignment query) {
     List<SequenceAlignment> sequenceAlignments = new ArrayList<SequenceAlignment>(query.getNumSequences());
+    double combinedScore = 0;
     for (Sequence sequence: query.getSequences()) {
       if (sequence instanceof SamRecord) {
         SamRecord samRecord = (SamRecord)sequence;
         SequenceAlignment sequenceAlignment = samRecord.toSequenceAlignment(this.sequenceDatabase);
         if (sequenceAlignment == null)
           return null;
+        if (combinedScore == 0)
+          combinedScore = samRecord.combinedScore;
         sequenceAlignments.add(sequenceAlignment);
       } else {
         return null;
       }
     }
-    return new QueryAlignment(sequenceAlignments, 0, 0, 0, 0, 0);
+    double combinedPenalty = -combinedScore;
+    return new QueryAlignment(sequenceAlignments, 0, 0, 0, combinedPenalty, 0);
   }
 
   void printAlignment(List<QueryAlignment> alignments) {

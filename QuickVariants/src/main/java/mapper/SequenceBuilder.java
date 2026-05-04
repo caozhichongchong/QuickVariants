@@ -63,6 +63,7 @@ public class SequenceBuilder {
       result.referenceReversed = this.referenceReversed;
       result.weight = this.alignmentWeight;
       result.score = this.alignmentScore;
+      result.combinedScore = this.combinedScore;
       result.setId(this.identifier);
       return result;
     }
@@ -88,13 +89,14 @@ public class SequenceBuilder {
     return this;
   }
 
-  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, double alignmentScore, List<PositionDescriptor> otherComponentPositions) {
+  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, double alignmentScore, double combinedScore, List<PositionDescriptor> otherComponentPositions) {
     this.buildSam = true;
     this.referenceName = referenceName;
     this.referencePosition = referencePosition;
     this.cigarString = cigarString;
     this.referenceReversed = referenceReversed;
     this.alignmentScore = alignmentScore;
+    this.combinedScore = combinedScore;
     this.otherComponentPositions = otherComponentPositions;
     return this;
   }
@@ -156,5 +158,6 @@ public class SequenceBuilder {
   SequenceBuilder mate;
   double alignmentWeight = 1;
   double alignmentScore = 0;
+  double combinedScore = 0; // combined score of this alignment and other alignments for the same query
   List<PositionDescriptor> otherComponentPositions;
 }

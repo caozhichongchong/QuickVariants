@@ -123,7 +123,9 @@ public class SamReader implements SequenceProvider {
     sequenceBuilder.add(queryText);
 
     double alignmentScore = 0;
+    double combinedScore = 0;
     String scorePrefix = "AS:";
+    String combinedScorePrefix = "cs:";
     for (int i = queryTextIndex + 1; i < fields.length; i++) {
       String field = fields[i];
       if (field.startsWith(scorePrefix)) {
@@ -131,20 +133,22 @@ public class SamReader implements SequenceProvider {
         alignmentScore = this.parseSamNumber(scoreText);
         continue;
       }
-
+      if (field.startsWith(combinedScorePrefix)) {
+        String scoreText = field.substring(scorePrefix.length());
+        combinedScore = this.parseSamNumber(scoreText);
+        continue;
+      }
       List<PositionDescriptor> fieldAsNextComponentStarts = tryParseSupplementaryPosition(field);
       if (fieldAsNextComponentStarts != null) {
         otherComponentPositions.addAll(fieldAsNextComponentStarts);
         continue;
       }
     }
-
-    // read additional fields
-    for (int fieldIndex = 11; fieldIndex < fields.length; fieldIndex++) {
-      String field = fields[fieldIndex];
+    if (alignmentScore != 0 && combinedScore == 0) {
+      combinedScore = alignmentScore;
     }
 
-    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, alignmentScore, otherComponentPositions);
+    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, alignmentScore, combinedScore, otherComponentPositions);
 
     return sequenceBuilder;
   }

@@ -43,10 +43,10 @@ public class SamAlignmentBuilder_Test {
     List<PositionDescriptor> position1s = new ArrayList<PositionDescriptor>();
     position1s.add(new PositionDescriptor("ref", 0, false));
 
-    SequenceBuilder mate1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, position2s);
-    SequenceBuilder mate2 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, true, 0, position1s);
+    SequenceBuilder mate1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, 0, position2s);
+    SequenceBuilder mate2 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, true, 0, 0, position1s);
 
-    SequenceBuilder wrongQuery = new SequenceBuilder().setName("otherQuery").asAlignment("ref", 0, null, true, 0, position1s);
+    SequenceBuilder wrongQuery = new SequenceBuilder().setName("otherQuery").asAlignment("ref", 0, null, true, 0, 0, position1s);
     
     if (!builder.accepts(mate1)) {
       fail("builder should accept mate1");
@@ -76,8 +76,8 @@ public class SamAlignmentBuilder_Test {
     List<PositionDescriptor> position1s = new ArrayList<PositionDescriptor>();
     position1s.add(new PositionDescriptor("ref", 0, false));
 
-    SequenceBuilder component1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, position2s);
-    SequenceBuilder component2 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, false, 0, position1s);
+    SequenceBuilder component1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, 0, position2s);
+    SequenceBuilder component2 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, false, 0, 0, position1s);
 
     if (!builder.accepts(component1)) {
       fail("builder should accept component1");
@@ -108,9 +108,9 @@ public class SamAlignmentBuilder_Test {
     position3Others.add(new PositionDescriptor("ref", 0, false));
     position3Others.add(new PositionDescriptor("ref", 50, false));
 
-    SequenceBuilder component1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, position1Others);
-    SequenceBuilder component2 = new SequenceBuilder().setName("query").asAlignment("ref", 50, null, false, 0, position2Others);
-    SequenceBuilder component3 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, false, 0, position3Others);
+    SequenceBuilder component1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, 0, position1Others);
+    SequenceBuilder component2 = new SequenceBuilder().setName("query").asAlignment("ref", 50, null, false, 0, 0, position2Others);
+    SequenceBuilder component3 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, false, 0, 0, position3Others);
 
     if (!builder.accepts(component1)) {
       fail("builder should accept component1");
@@ -148,9 +148,9 @@ public class SamAlignmentBuilder_Test {
     List<PositionDescriptor> mate2Component2Others = new ArrayList<PositionDescriptor>();
     mate2Component2Others.add(new PositionDescriptor("ref", 100, true));
 
-    SequenceBuilder mate1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, mate1Others);
-    SequenceBuilder mate2Component1 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, true, 0, mate2Component1Others);
-    SequenceBuilder mate2Component2 = new SequenceBuilder().setName("query").asAlignment("ref", 150, null, true, 0, mate2Component2Others);
+    SequenceBuilder mate1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, 0, mate1Others);
+    SequenceBuilder mate2Component1 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, true, 0, 0, mate2Component1Others);
+    SequenceBuilder mate2Component2 = new SequenceBuilder().setName("query").asAlignment("ref", 150, null, true, 0, 0, mate2Component2Others);
 
     if (!builder.accepts(mate1)) {
       fail("builder should accept mate1");
@@ -191,10 +191,10 @@ public class SamAlignmentBuilder_Test {
     List<PositionDescriptor> mate2Component2Others = new ArrayList<PositionDescriptor>();
     mate2Component2Others.add(new PositionDescriptor("ref", 100, true));
 
-    SequenceBuilder mate1Component1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, mate1Component1Others);
-    SequenceBuilder mate1Component2 = new SequenceBuilder().setName("query").asAlignment("ref", 150, null, false, 0, mate1Component2Others);
-    SequenceBuilder mate2Component1 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, true, 0, mate2Component1Others);
-    SequenceBuilder mate2Component2 = new SequenceBuilder().setName("query").asAlignment("ref", 150, null, true, 0, mate2Component2Others);
+    SequenceBuilder mate1Component1 = new SequenceBuilder().setName("query").asAlignment("ref", 0, null, false, 0, 0, mate1Component1Others);
+    SequenceBuilder mate1Component2 = new SequenceBuilder().setName("query").asAlignment("ref", 150, null, false, 0, 0, mate1Component2Others);
+    SequenceBuilder mate2Component1 = new SequenceBuilder().setName("query").asAlignment("ref", 100, null, true, 0, 0, mate2Component1Others);
+    SequenceBuilder mate2Component2 = new SequenceBuilder().setName("query").asAlignment("ref", 150, null, true, 0, 0, mate2Component2Others);
 
     if (!builder.accepts(mate1Component1)) {
       fail("builder should accept mate1");
