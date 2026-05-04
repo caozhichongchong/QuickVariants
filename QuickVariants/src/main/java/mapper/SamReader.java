@@ -122,14 +122,29 @@ public class SamReader implements SequenceProvider {
 
     sequenceBuilder.add(queryText);
 
+    double alignmentScore = 0;
+    String scorePrefix = "AS:";
     for (int i = queryTextIndex + 1; i < fields.length; i++) {
       String field = fields[i];
+      if (field.startsWith(scorePrefix)) {
+        String scoreText = field.substring(scorePrefix.length());
+        alignmentScore = this.parseSamNumber(scoreText);
+        continue;
+      }
+
       List<PositionDescriptor> fieldAsNextComponentStarts = tryParseSupplementaryPosition(field);
-      if (fieldAsNextComponentStarts != null)
+      if (fieldAsNextComponentStarts != null) {
         otherComponentPositions.addAll(fieldAsNextComponentStarts);
+        continue;
+      }
     }
 
-    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, otherComponentPositions);
+    // read additional fields
+    for (int fieldIndex = 11; fieldIndex < fields.length; fieldIndex++) {
+      String field = fields[fieldIndex];
+    }
+
+    sequenceBuilder.asAlignment(referenceContigName, startPosition, cigarString, referenceReversed, alignmentScore, otherComponentPositions);
 
     return sequenceBuilder;
   }
@@ -170,6 +185,23 @@ public class SamReader implements SequenceProvider {
       results.add(new PositionDescriptor(contigName, position, reversed));
     }
     return results;
+  }
+
+  // convert "f:${number}" or "i:${number}" into `number`
+  private double parseSamNumber(String text) {
+    String intPrefix = "i:";
+    String numberText = null;
+    if (text.startsWith(intPrefix)) {
+      numberText = text.substring(intPrefix.length());
+    } else {
+      String floatPrefix = "f:";
+      if (text.startsWith(floatPrefix)) {
+        numberText = text.substring(floatPrefix.length());
+      } else {
+        throw new IllegalArgumentException("Unable to parse SAM number text " + text + ", does not specify supported number prefix 'f:' or 'i:'");
+      }
+    }
+    return Double.parseDouble(numberText);
   }
   
   BufferedReader reader;

@@ -62,6 +62,7 @@ public class SequenceBuilder {
       result.setCigarString(this.cigarString);
       result.referenceReversed = this.referenceReversed;
       result.weight = this.alignmentWeight;
+      result.score = this.alignmentScore;
       result.setId(this.identifier);
       return result;
     }
@@ -87,12 +88,13 @@ public class SequenceBuilder {
     return this;
   }
 
-  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, List<PositionDescriptor> otherComponentPositions) {
+  public SequenceBuilder asAlignment(String referenceName, int referencePosition, String cigarString, boolean referenceReversed, double alignmentScore, List<PositionDescriptor> otherComponentPositions) {
     this.buildSam = true;
     this.referenceName = referenceName;
     this.referencePosition = referencePosition;
     this.cigarString = cigarString;
     this.referenceReversed = referenceReversed;
+    this.alignmentScore = alignmentScore;
     this.otherComponentPositions = otherComponentPositions;
     return this;
   }
@@ -153,5 +155,6 @@ public class SequenceBuilder {
   boolean referenceReversed;
   SequenceBuilder mate;
   double alignmentWeight = 1;
+  double alignmentScore = 0;
   List<PositionDescriptor> otherComponentPositions;
 }

@@ -68,7 +68,9 @@ public class SamRecord extends Sequence {
       referenceStartIndex += alignedBlock.getLengthB();
       sections.add(alignedBlock);
     }
-    SequenceAlignment result = new SequenceAlignment(sections, this.referenceReversed);
+    double totalPenalty = -this.score;
+    double alignedPenalty = totalPenalty;
+    SequenceAlignment result = new SequenceAlignment(sections, this.referenceReversed, totalPenalty, alignedPenalty);
     result.weight = this.weight;
     return result;
   }
@@ -93,6 +95,7 @@ public class SamRecord extends Sequence {
   public int referencePosition;
   public boolean referenceReversed;
   public double weight;
+  public double score;
   private List<String> cigarComponents;
   private String cigarString;
 }

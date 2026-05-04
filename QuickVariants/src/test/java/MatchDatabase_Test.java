@@ -16,7 +16,7 @@ public class MatchDatabase_Test {
 
     Sequence a = new SequenceBuilder().setName("a").add(queryText).build();
     Sequence b = new SequenceBuilder().setName("b").add(refText).build();
-    SequenceAlignment sequenceAlignment = new SequenceAlignment(new AlignedBlock(a, b, 0, 0, queryText.length(), refText.length()), false);
+    SequenceAlignment sequenceAlignment = newSequenceAlignment(new AlignedBlock(a, b, 0, 0, queryText.length(), refText.length()), false);
     QueryAlignment alignment = new QueryAlignment(sequenceAlignment);
     MatchDatabase database = new MatchDatabase(0);
     List<QueryAlignment> alignmentList = new ArrayList<QueryAlignment>();
@@ -56,7 +56,7 @@ public class MatchDatabase_Test {
     List<AlignedBlock> alignedBlocks = new ArrayList<AlignedBlock>();
     alignedBlocks.add(new AlignedBlock(a, b, 0, 0, queryPrefix.length(), refPrefix.length()));
     alignedBlocks.add(new AlignedBlock(a, b, queryPrefix.length(), refPrefix.length() + refMiddle.length(), querySuffix.length(), refSuffix.length()));
-    SequenceAlignment sequenceAlignment = new SequenceAlignment(alignedBlocks, false);
+    SequenceAlignment sequenceAlignment = newSequenceAlignment(alignedBlocks, false);
     QueryAlignment alignment = new QueryAlignment(sequenceAlignment);
     MatchDatabase database = new MatchDatabase(0);
     List<QueryAlignment> alignmentList = new ArrayList<QueryAlignment>();
@@ -97,12 +97,12 @@ public class MatchDatabase_Test {
     List<AlignedBlock> forwardBlocks = new ArrayList<AlignedBlock>();
     forwardBlocks.add(new AlignedBlock(forward, reference, 0, 0, 4, 4));
     forwardBlocks.add(new AlignedBlock(forward, reference, 4, 8, 4, 4));
-    SequenceAlignment forwardAlignment = new SequenceAlignment(forwardBlocks, false);
+    SequenceAlignment forwardAlignment = newSequenceAlignment(forwardBlocks, false);
 
     List<AlignedBlock> reverseBlocks = new ArrayList<AlignedBlock>();
     reverseBlocks.add(new AlignedBlock(forward, reference, 2, 2, 4, 4));
     reverseBlocks.add(new AlignedBlock(forward, reference, 6, 10, 2, 2));
-    SequenceAlignment reverseAlignment = new SequenceAlignment(reverseBlocks, false);
+    SequenceAlignment reverseAlignment = newSequenceAlignment(reverseBlocks, false);
 
     List<SequenceAlignment> sequenceAlignments = new ArrayList<SequenceAlignment>();
     sequenceAlignments.add(forwardAlignment);
@@ -136,6 +136,13 @@ public class MatchDatabase_Test {
     }
   }
 
+  private SequenceAlignment newSequenceAlignment(List<AlignedBlock> blocks, boolean isReferenceReversed) {
+    return new SequenceAlignment(blocks, isReferenceReversed, 0, 0);
+  }
+  private SequenceAlignment newSequenceAlignment(AlignedBlock block, boolean isReferenceReversed) {
+    return new SequenceAlignment(block, isReferenceReversed, 0, 0);
+  }
+ 
   private void fail(String message) {
     Assert.fail(message);
   }

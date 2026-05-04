@@ -6,17 +6,21 @@ import java.util.List;
 // A SequenceAlignment says that two sequences resemble each other
 // A SequenceAlignment models insertions and deletions
 public class SequenceAlignment {
-  public SequenceAlignment(AlignedBlock block, boolean referenceReversed) {
+  public SequenceAlignment(AlignedBlock block, boolean referenceReversed, double totalPenalty, double alignedPenalty) {
     this.sections = new ArrayList<AlignedBlock>(1);
     this.sections.add(block);
     this.referenceReversed = referenceReversed;
     this.referenceContiguous = true;
+    this.penalty = totalPenalty;
+    this.alignedPenalty = alignedPenalty;
   }
 
-  public SequenceAlignment(List<AlignedBlock> sections, boolean referenceReversed) {
+  public SequenceAlignment(List<AlignedBlock> sections, boolean referenceReversed, double totalPenalty, double alignedPenalty) {
     this.sections = sections;
     this.referenceReversed = referenceReversed;
     this.computeContiguous();
+    this.penalty = totalPenalty;
+    this.alignedPenalty = alignedPenalty;
   }
 
   private void computeContiguous() {
