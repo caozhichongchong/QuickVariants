@@ -138,7 +138,7 @@ public class SamWriter implements AlignmentListener {
 
   private void formatQueryAlignment(QueryAlignment subqueryAlignment, int subqueryIndex, QueryAlignments queryAlignments, boolean hasMinimumPenalty, StringBuilder builder) {
      String subqueryPenaltyFormatted = null;
-     if (subqueryAlignment.getNumSequences() > 1) {
+     if (queryHadMultipleSequences(subqueryAlignment, queryAlignments)) {
        subqueryPenaltyFormatted = formatQueryPenalty(subqueryAlignment);
      }
      for (int i = 0; i < subqueryAlignment.getComponents().size(); i++) {
@@ -275,6 +275,14 @@ public class SamWriter implements AlignmentListener {
     return "f:" + roundedNumber;
   }
 
+  private boolean queryHadMultipleSequences(QueryAlignment subqueryAlignment, QueryAlignments alignments) {
+    if (subqueryAlignment.getNumSequences() > 1)
+      return true; // We found an alignment involving multiple sequences
+    if (alignments.getNumQueries() > 1)
+      return true; // We split the query into multiple pieces and then found alignments
+    return false;
+  }
+
   // hasMinimumPenalty indicates whether the corresponding QueryAlignment has the minimum penalty among all discovered alignments for this query
   private int getSamFlags(SequenceAlignment sequenceAlignment, QueryAlignment subqueryAlignment, QueryAlignments alignments, int sequenceIndex, boolean hasMinimumPenalty) {
     int flags = 0;
@@ -286,10 +294,7 @@ public class SamWriter implements AlignmentListener {
     }
 
     // paired-end read information
-    int thisAlignmentNumSequences = subqueryAlignment.getNumSequences();
-    int numSubqueries = alignments.getNumQueries();
-    boolean queryHasMultipleSequences = (thisAlignmentNumSequences > 1) || (numSubqueries > 1);
-    if (queryHasMultipleSequences) {
+    if (queryHadMultipleSequences(subqueryAlignment, alignments)) {
       // query has a mate
       flags += 1;
 
