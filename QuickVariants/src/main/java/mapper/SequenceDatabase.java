@@ -47,6 +47,14 @@ public class SequenceDatabase {
   public List<Sequence> getAll() {
     return sequences;
   }
+  public List<Sequence> getForwardSequencesOnly() {
+    List<Sequence> results = new ArrayList<Sequence>();
+    for (Sequence sequence: this.sequences) {
+      if (sequence.getComplementedFrom() == null)
+        results.add(sequence);
+    }
+    return results;
+  }
   private void computeMetrics() {
     computeEncodingSize();
   }
