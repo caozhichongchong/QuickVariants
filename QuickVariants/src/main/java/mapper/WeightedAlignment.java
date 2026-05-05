@@ -12,6 +12,10 @@ class WeightedAlignment {
     return this.sequenceAlignment;
   }
 
+  public QueryAlignment getQueryAlignment() {
+    return this.queryAlignment;
+  }
+
   public float getWeight(int referenceIndex) {
     float numAlignmentsHere = queryAlignment.getNumAlignmentsCoveringIndexB(referenceIndex);
     float positionWeight;
