@@ -335,7 +335,6 @@ public class AlignerWorker extends Thread {
   Logger referenceLogger;
   String workerId;
   boolean failed = false;
-  List<SequenceMatch> emptyMatchList = new ArrayList<SequenceMatch>(0);
   int numCacheHits;
   int numCacheMisses;
 
