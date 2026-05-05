@@ -100,9 +100,9 @@ public class SamReader implements SequenceProvider {
     String mateContigName = fields[6];
     if ("=".equals(mateContigName))
       mateContigName = referenceContigName;
-    boolean hasAlignedMate = !mateContigName.equals("*");
+    boolean hasAlignedMate = (samFlags & 1) != 0;
     boolean hasUnalignedMate = (samFlags & 8) != 0;
-    boolean expectsMateAlignment = hasAlignedMate && !hasUnalignedMate;
+    boolean expectsMateAlignment = !mateContigName.equals("*");
     boolean mateReversed = (samFlags & 32) != 0;
     boolean hadMate = hasAlignedMate || hasUnalignedMate;
     boolean isFirstMate = (samFlags & 64) != 0;
