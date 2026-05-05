@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class AlignerWorker extends Thread {
   static Logger silentLogger = Logger.NoOpLogger;
 
-  public AlignerWorker(SequenceDatabase reference, int workerId, List<AlignmentListener> resultsListeners, AlignmentCache resultsCache, Queue completionListener) {
+  public AlignerWorker(SequenceDatabase reference, int workerId, List<AlignmentListener> resultsListeners, Queue completionListener) {
     this.sequenceDatabase = reference;
     this.workerId = "" + workerId;
     while (this.workerId.length() < 5) {

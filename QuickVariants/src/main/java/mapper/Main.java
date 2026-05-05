@@ -557,7 +557,6 @@ public class Main {
 
     // Create some workers and assign some queries to each
     Set<AlignerWorker> workers = new HashSet<AlignerWorker>(numThreads);
-    AlignmentCache alignmentCache = new AlignmentCache();
 
     long numQueriesLoaded = 0;
     int maxNumBasesPerJob = 500000;
@@ -636,7 +635,7 @@ public class Main {
             worker = pendingWorkers.remove(pendingWorkers.size() - 1);
             workerAlreadyRunning = true;
           } else {
-            worker = new AlignerWorker(reference, workerIndex, alignmentListeners, alignmentCache, completedWorkers);
+            worker = new AlignerWorker(reference, workerIndex, alignmentListeners, completedWorkers);
             workerAlreadyRunning = false;
           }
           workers.add(worker);
