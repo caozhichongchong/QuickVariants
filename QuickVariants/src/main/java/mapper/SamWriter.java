@@ -127,7 +127,7 @@ public class SamWriter implements AlignmentListener {
       minPenalty = Math.min(minPenalty, alignment.getPenalty());
     }
     for (QueryAlignment queryAlignment: subqueryAlignments) {
-      boolean hasMinimumPenalty = queryAlignment.getPenalty() == minPenalty;
+      boolean hasMinimumPenalty = (queryAlignment.getPenalty() - minPenalty) <= Math.abs(minPenalty) / 100000;
       try {
         formatQueryAlignment(queryAlignment, subqueryIndex, queryAlignments, hasMinimumPenalty, builder);
       } catch (Exception e) {
