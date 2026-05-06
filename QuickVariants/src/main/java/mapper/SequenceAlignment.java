@@ -23,12 +23,47 @@ public class SequenceAlignment {
     this.alignedPenalty = alignedPenalty;
   }
 
+  private SequenceAlignment() {
+  }
+
   private void computeContiguous() {
     this.referenceContiguous = true;
     for (int i = 0; i < sections.size() - 1; i++) {
       if (this.sections.get(i).getEndIndexB() != this.sections.get(i + 1).getStartIndexB()) {
         this.referenceContiguous = false;
         return;
+      }
+    }
+  }
+
+
+  public SequenceAlignment withSequenceA(Sequence sequenceA) {
+    if (sequenceA.getLength() != this.getSequenceA().getLength()) {
+      throw new IllegalArgumentException("SequenceAlignment.withSequenceA() changing length of sequence from " + this.getSequenceA().getText() + " to " + sequenceA.getText());
+    }
+    List<AlignedBlock> newSections = new ArrayList<AlignedBlock>(this.sections.size());
+    for (int i = 0; i < this.sections.size(); i++) {
+      AlignedBlock section = this.sections.get(i);
+      newSections.add(this.sections.get(i).withSequenceA(sequenceA));
+    }
+    SequenceAlignment newAlignment = new SequenceAlignment();
+    newAlignment.sections = newSections;
+    newAlignment.penalty = this.penalty;
+    newAlignment.alignedPenalty = this.alignedPenalty;
+    newAlignment.referenceReversed = this.referenceReversed;
+    return newAlignment;
+  }
+
+  public void check() {
+    for (int i = 0; i < this.sections.size() - 1; i++) {
+      AlignedBlock prev = this.sections.get(i);
+      AlignedBlock next = this.sections.get(i + 1);
+      // `next` is an indel
+      if (next.getStartIndexA() != prev.getEndIndexA() && next.getEndIndexA() != prev.getStartIndexA()) {
+        fail("next start a = " + next.getStartIndexA() + ", prev end a = " + prev.getEndIndexA() + ", next end a = " + next.getEndIndexA() + " prev start a = " + prev.getStartIndexA());
+      }
+      if (next.getStartIndexB() != prev.getEndIndexB() && next.getEndIndexB() != prev.getStartIndexB()) {
+        fail("next start b = " + next.getStartIndexB() + ", prev end b = " + prev.getEndIndexB() + " next end b = " + next.getEndIndexB() + " prev start b = " + prev.getStartIndexB());
       }
     }
   }
@@ -41,8 +76,71 @@ public class SequenceAlignment {
     return this.sections;
   }
 
+  public boolean hasIndel() {
+    return this.sections.size() > 1;
+  }
+
+  public boolean hasAmbiguousBasepairs() {
+    for (AlignedBlock section: this.sections) {
+      if (section.hasAmbiguousBasepairs())
+        return true;
+    }
+    return false;
+  }
+
+  public int getLengthABefore(int indexB) {
+    int total = 0;
+    for (AlignedBlock block : this.sections) {
+      if (indexB <= block.getStartIndexB()) {
+        break;
+      }
+      if (block.getLengthA() < 1)
+        continue;
+      if (block.getLengthA() > block.getLengthB()) {
+        total += block.getLengthA();
+      } else {
+        if (indexB < block.getEndIndexB()) {
+          total += indexB - block.getStartIndexB();
+        } else {
+          total += block.getLengthA();
+        }
+      }
+    }
+    return total;
+  }
+
+  public int getLengthAAfter(int indexB) {
+    int total = 0;
+    for (AlignedBlock block : this.sections) {
+      if (indexB >= block.getEndIndexB()) {
+        continue;
+      }
+      if (block.getLengthA() < 1)
+        continue;
+      if (block.getLengthA() > block.getLengthB()) {
+        total += block.getLengthA();
+      } else {
+        if (indexB > block.getStartIndexB()) {
+          total += block.getEndIndexB() - indexB;
+        } else {
+          total += block.getLengthA();
+        }
+      }
+    }
+    return total;
+  }
+
   public int getNumSections() {
     return this.sections.size();
+  }
+
+  public int countNumIndels() {
+    int count = 0;
+    for (AlignedBlock section: this.sections) {
+      if (section.getLengthA() != section.getLengthB())
+        count++;
+    }
+    return count;
   }
 
   public AlignedBlock getSection(int index) {
@@ -160,8 +258,68 @@ public class SequenceAlignment {
     return referenceReversed;
   }
 
+  // Just returns the aligned text of the two sequences (using "-" for indels)
   public String format() {
     return this.getAlignedTextA() + "\n" + this.getAlignedTextB();
+  }
+
+  // Returns a detailed explanation of what this alignment is
+  public String formatVerbose() {
+    StringBuilder builder = new StringBuilder();
+
+    SequenceAlignment alignment = this;
+    Sequence query = alignment.getSequenceA();
+
+    int alignmentLength = alignment.getALength();
+    double penalty = alignment.getPenalty();
+
+    String alignedQuery = alignment.getAlignedTextA();
+
+    String alignedAncestralRef = alignment.getAlignedTextBHistory();
+    String alignedUnmutatedRef = alignment.getAlignedTextB();
+
+    String queryText = query.getText();
+    String expectedAlignedText = queryText;
+    if (alignment.isReferenceReversed()) {
+      String originalQueryText = query.reverseComplement().getText();
+      builder.append("        Query: " + originalQueryText + "\n");
+      builder.append("     RC Query: " + queryText + "\n");
+    } else {
+      builder.append("        Query: " + queryText + "\n");
+    }
+
+    if (!queryText.equals(alignedQuery)) {
+      // If printing the aligned query is different from printing the query, then also print
+      // the alignment of the query
+      builder.append("Aligned query: " + alignedQuery + "\n");
+    }
+    if (!alignedQuery.equals(alignedAncestralRef)) {
+      builder.append("Difference   : ");
+      int max = Math.min(alignedQuery.length(), alignedAncestralRef.length());
+      for (int i = 0; i < max; i++) {
+        char c1 = alignedQuery.charAt(i);
+        char c2 = alignedAncestralRef.charAt(i);
+        if (c1 == c2) {
+          builder.append(" ");
+        } else {
+          if (Basepairs.canMatch(Basepairs.encode(c1), Basepairs.encode(c2))) {
+            builder.append("~");
+          } else {
+            builder.append("!");
+          }
+        }
+      }
+      builder.append("\n");
+    }
+    if (!alignedAncestralRef.equals(alignedUnmutatedRef)) {
+      // If the ancestor analysis had an effect here, explain that too
+      builder.append("Ancestral ref: " + alignedAncestralRef + "(" + alignment.getSequenceBHistory().getName() + ", offset " + alignment.getStartOffset() + ")\n");
+      builder.append("Original ref : " + alignedUnmutatedRef + "(" + alignment.getSequenceB().getName() + ", offset " + alignment.getStartOffset() + ")\n");
+    } else {
+      builder.append("Aligned ref  : " + alignedUnmutatedRef + "(" + alignment.getSequenceB().getName() + ", offset " + alignment.getStartOffset() + ")\n");
+    }
+    builder.append("Penalty      : " + penalty + " (query length: " + query.getLength() + ")\n");
+    return builder.toString();
   }
 
   public void putSequenceB(Sequence sequence) {
@@ -186,6 +344,15 @@ public class SequenceAlignment {
       }
     }
     return false;
+  }
+
+  public int getInsertAOrBLength() {
+    int total = 0;
+    for (AlignedBlock block: this.sections) {
+      if (block.getLengthA() != block.getLengthB())
+        total += block.getLengthA() + block.getLengthB();
+    }
+    return total;
   }
 
   @Override

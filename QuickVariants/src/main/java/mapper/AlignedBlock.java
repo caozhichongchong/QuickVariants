@@ -11,6 +11,14 @@ public class AlignedBlock {
     this.bStartIndex = bStartIndex;
     this.aLength = aLength;
     this.bLength = bLength;
+    if (aLength != bLength) {
+      if (aLength != 0 && bLength != 0) {
+        throw new IllegalArgumentException("Attempted to create AlignedBlock with unequal query and reference lengths when neither is 0: block query start index = " + aStartIndex + ", block query length = " + aLength + ", block ref start index " + bStartIndex + " block ref length " + bLength);
+      }
+    }
+  }
+  public AlignedBlock withSequenceA(Sequence newSequenceA) {
+    return new AlignedBlock(newSequenceA, sequenceB, aStartIndex, bStartIndex, aLength, bLength);
   }
   public String getTextA() {
     return this.sequenceA.getRange(this.aStartIndex, this.aLength);
@@ -40,13 +48,6 @@ public class AlignedBlock {
   public Sequence getSubsequenceA() {
     return this.sequenceA.getSubsequence(this.aStartIndex, this.aLength);
   }
-  public Sequence getReverseComplementSubsequenceA() {
-    Sequence reverseA = this.sequenceA.reverseComplement();
-    int forwardEnd = this.getEndIndexA();
-    int reverseStart = this.sequenceA.getLength() - forwardEnd;
-    return reverseA.getSubsequence(reverseStart, this.aLength);
-  }
-
   public Sequence getSequenceA() {
     return sequenceA;
   }
@@ -96,10 +97,37 @@ public class AlignedBlock {
     return true;
   }
 
+  public int getIndelLength() {
+    if (aLength == bLength)
+      return 0;
+    return Math.max(aLength, bLength);
+  }
+
   // Modifies this alignment to refer to a new sequence
   // This can be useful if this alignment was computed in one way and applied to another sequence, for example, computed via an ancestor and applied to a child
   public void putSequenceB(Sequence newSequenceB) {
     this.sequenceB = newSequenceB;
+  }
+
+  // tells whether the indel status of this block (insertion, deletion, or neither) is the same as the other block
+  public boolean sameIndelType(AlignedBlock other) {
+    if ((this.aLength > 0) != (other.aLength > 0))
+      return false;
+    if ((this.bLength > 0) != (other.bLength > 0))
+      return false;
+    return true;
+  }
+
+  public boolean hasAmbiguousBasepairs() {
+    for (int i = this.aStartIndex; i < this.aStartIndex + this.aLength; i++) {
+      if (Basepairs.isAmbiguous(sequenceA.encodedCharAt(i)))
+        return true;
+    }
+    for (int i = this.bStartIndex; i < this.bStartIndex + this.bLength; i++) {
+      if (Basepairs.isAmbiguous(sequenceB.encodedCharAt(i)))
+        return true;
+    }
+    return false;
   }
 
   public Sequence sequenceA;
