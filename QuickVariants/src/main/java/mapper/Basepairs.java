@@ -120,6 +120,10 @@ public class Basepairs {
     return false;
   }
 
+  public static boolean isFullyAmbiguous(byte encoded) {
+    return countNumChoices(encoded) > 3;
+  }
+
   // Returns the number of different possible specific letters this basepair could be
   private static int countNumChoices(byte encoded) {
     return (encoded & 8) / 8 + (encoded & 4) / 4 + (encoded & 2) / 2 + (encoded & 1);
