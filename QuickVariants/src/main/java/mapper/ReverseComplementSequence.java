@@ -11,7 +11,7 @@ class ReverseComplementSequence extends Sequence {
   }
 
   @Override
-  public byte encodedCharAt(int index) {
+  protected byte computeEncodedCharAt(int index) {
     byte other = complementedFrom.encodedCharAt(this.getLength() - index - 1);
     return Basepairs.complement(other);
   }
@@ -29,6 +29,16 @@ class ReverseComplementSequence extends Sequence {
   @Override
   public Sequence reverseComplement() {
     return this.getComplementedFrom();
+  }
+
+  @Override
+  public void compress() {
+    this.getComplementedFrom().compress();
+  }
+
+  @Override
+  public void decompress() {
+    this.getComplementedFrom().decompress();
   }
 
   private Sequence complementedFrom;
