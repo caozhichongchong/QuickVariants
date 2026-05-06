@@ -74,11 +74,16 @@ public class Sequence {
   }
 
   public void decompress() {
-    byte[] decompressed = new byte[this.length];
-    for (int i = 0; i < this.length; i++) {
-      decompressed[i] = this.computeEncodedCharAt(i);
+    if (this.decompressedContents == null) {
+      byte[] decompressed = new byte[this.length];
+      for (int i = 0; i < this.length; i++) {
+        decompressed[i] = this.computeEncodedCharAt(i);
+      }
+      this.decompressedContents = decompressed;
     }
-    this.decompressedContents = decompressed;
+    Sequence complementedFrom = this.getComplementedFrom();
+    if (complementedFrom != null)
+      complementedFrom.decompress();
   }
   public void compress() {
     this.decompressedContents = null;
@@ -103,7 +108,10 @@ public class Sequence {
   }
 
   public Sequence reverseComplement() {
-    return new ReverseComplementSequence(this);
+    Sequence reverseComplement = new ReverseComplementSequence(this);
+    if (this.decompressedContents != null)
+      reverseComplement.decompress();
+    return reverseComplement;
   }
 
   // returns the Sequence that this one was created as the reverseComplement of, if any
