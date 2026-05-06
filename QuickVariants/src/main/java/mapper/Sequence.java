@@ -50,23 +50,41 @@ public class Sequence {
   }
 
   public byte encodedCharAt(int index) {
-    int bitsPerBasePair = 4;
-    int bitsPerCharacter = 16;
-    int characterIndex = index * bitsPerBasePair / bitsPerCharacter;
-    int offsetInCharacter = (index * bitsPerBasePair) % bitsPerCharacter;
-
-    byte encoded = selectBits(characterIndex, offsetInCharacter, 4);
-    return encoded;
+    byte[] decompressedContents = this.decompressedContents;
+    if (decompressedContents != null)
+      return decompressedContents[index];
+    return this.computeEncodedCharAt(index);
   }
 
-  private byte selectBits(int charIndex, int index, int count) {
-    char character = this.packedContents.charAt(charIndex);
-    int maxIndex = index + count;
-    int shiftAmount = index;
-    byte shifted = (byte)(character >> shiftAmount);
-    byte inclusionBitmask = (byte)((1 << count) - 1);
-    byte result = (byte)(shifted & inclusionBitmask);
+  protected byte computeEncodedCharAt(int index) {
+    // character index (16 bits per character and 4 bits per basepair, so 4 basepairs per character)
+    int characterIndex = index >> 2;
+    if (characterIndex < 0) {
+      throw new IllegalArgumentException("computeEncodedCharAt(" + index + ") attempting to access encoded character at " + characterIndex);
+    }
+    // offset within character (4 bits per basepair and 4 basepairs per character)
+    int offsetInCharacter = (index & 3) << 2;
+
+    // the character to extract bits from
+    char character = this.packedContents.charAt(characterIndex);
+
+    // result
+    byte result = (byte)((character >> offsetInCharacter) & 15);
     return result;
+  }
+
+  public void decompress() {
+    byte[] decompressed = new byte[this.length];
+    for (int i = 0; i < this.length; i++) {
+      decompressed[i] = this.computeEncodedCharAt(i);
+    }
+    this.decompressedContents = decompressed;
+  }
+  public void compress() {
+    this.decompressedContents = null;
+    Sequence complementedFrom = this.getComplementedFrom();
+    if (complementedFrom != null)
+      complementedFrom.compress();
   }
 
   public Sequence getSubsequence(int startIndex, int count) {
@@ -104,8 +122,23 @@ public class Sequence {
     return this.getText();
   }
 
+  public int getContentHash() {
+    return this.packedContents.hashCode();
+  }
+
+  public boolean textEquals(Sequence other) {
+    if (this.getLength() != other.getLength())
+      return false;
+    for (int i = 0; i < this.getLength(); i++) {
+      if (this.encodedCharAt(i) != other.encodedCharAt(i))
+        return false;
+    }
+    return true;
+  }
+
   private String name;
   private String packedContents;
+  private byte[] decompressedContents;
   private long identifier;
   private int length;
   private String path;
