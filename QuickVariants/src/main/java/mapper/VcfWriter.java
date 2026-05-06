@@ -46,7 +46,7 @@ public class VcfWriter {
 
     this.writeLine("##fileType=\"Vcf summary of variants\"");
     this.writeLine("");
-    this.writeLine("##commandLine=\"" + MapperMetadata.guessCommandLine() + "\"");
+    this.writeLine("##commandLine=\"" + QuickVariants_Metadata.guessCommandLine() + "\"");
     this.writeLine("");
     this.writeLine("### This file is a tab-separated table representing, for each position in a reference genome, the distribution of alleles in a set of aligned query sequences");
     this.writeLine("");

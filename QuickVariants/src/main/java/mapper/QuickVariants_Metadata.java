@@ -9,17 +9,17 @@ import java.util.Properties;
 import java.lang.management.ManagementFactory;
 
 // Returns metadata about QuickVariants
-public class MapperMetadata {
+public class QuickVariants_Metadata {
 
   // The version of QuickVariants that is running
   public static String getVersion() {
     Properties properties = new Properties();
     try {
-      properties.load(MapperMetadata.class.getResourceAsStream("/mapper.properties"));
+      properties.load(QuickVariants_Metadata.class.getResourceAsStream("/quick-variants.properties"));
     } catch (IOException e) {
       throw new RuntimeException("Failed to get QuickVariants version", e);
     }
-    String version = properties.getProperty("mapper.version", "unknown");
+    String version = properties.getProperty("quick-variants.version", "unknown");
     return version;
   }
 
@@ -44,7 +44,7 @@ public class MapperMetadata {
 
   private static Path getQuickVariantsPath() {
     try {
-      File quickVariantsJar = new File(MapperMetadata.class.getProtectionDomain().getCodeSource().getLocation().toURI());
+      File quickVariantsJar = new File(QuickVariants_Metadata.class.getProtectionDomain().getCodeSource().getLocation().toURI());
       return quickVariantsJar.toPath();
     } catch (URISyntaxException e) {
       throw new RuntimeException(e);

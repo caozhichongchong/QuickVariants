@@ -31,7 +31,7 @@ public class MutationsWriter {
   public void write(Map<Sequence, Alignments> alignments, int numParallelJobs) throws IOException {
     this.writeLine("# Version 1");
     this.writeLine("");
-    this.writeLine("# Command line: \"" + MapperMetadata.guessCommandLine() + "\"");
+    this.writeLine("# Command line: \"" + QuickVariants_Metadata.guessCommandLine() + "\"");
     this.writeLine("");
     this.writeLine("# This file is a tab-separated table representing differences between a collection of aligned query sequences and reference sequences");
     this.writeLine("# CHROM refers to the name of the reference sequence");

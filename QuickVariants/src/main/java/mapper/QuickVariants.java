@@ -31,12 +31,12 @@ public class QuickVariants {
   static TextWriter outputWriter = new StdoutWriter();
 
   public static void main(String[] args) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
-    MapperMetadata.setMainArguments(args);
+    QuickVariants_Metadata.setMainArguments(args);
     // load properties
     long startMillis = System.currentTimeMillis();
     Properties properties = new Properties();
-    properties.load(QuickVariants.class.getResourceAsStream("/mapper.properties"));
-    String version = properties.getProperty("mapper.version", "unknown");
+    properties.load(QuickVariants.class.getResourceAsStream("/quick-variants.properties"));
+    String version = properties.getProperty("quick-variants.version", "unknown");
 
     System.out.println("QuickVariants version " + version);
 

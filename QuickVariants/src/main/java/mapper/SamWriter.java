@@ -31,8 +31,8 @@ public class SamWriter implements AlignmentListener {
   }
 
   private void writeInvocationDetails() {
-    String version = MapperMetadata.getVersion();
-    String invocation = MapperMetadata.guessCommandLine();
+    String version = QuickVariants_Metadata.getVersion();
+    String invocation = QuickVariants_Metadata.guessCommandLine();
     this.writeLine("@PG\tID:QuickVariants\tPN:QuickVariants\tVN:" + version + "\tCL:\"" + invocation + "\"");
   }
 

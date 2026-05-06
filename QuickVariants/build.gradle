@@ -63,7 +63,7 @@ task release(type: Copy) {
 tasks["build"].dependsOn("updateReadme")
 
 def expandProperties = new HashMap<String, String>()
-expandProperties["mapperVersion"] = gitVersion
+expandProperties["quickVariants_version"] = gitVersion
 project.tasks["processResources"].configure { processTask ->
   processTask.expand(expandProperties)
   processTask.inputs.property("properties", expandProperties)
