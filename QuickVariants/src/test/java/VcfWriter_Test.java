@@ -361,7 +361,7 @@ public class VcfWriter_Test {
     // logger
     Logger logger = new Logger(new StdoutWriter());
     // compute alignments
-    AlignerWorker worker = new AlignerWorker(reference, 0, listeners, new ArrayDeque<AlignerWorker>());
+    VariantsWorker worker = new VariantsWorker(reference, 0, listeners, new ArrayDeque<VariantsWorker>());
     worker.process(alignments, logger);
 
     // format vcf

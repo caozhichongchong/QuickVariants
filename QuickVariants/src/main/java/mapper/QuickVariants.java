@@ -23,7 +23,7 @@ import java.util.concurrent.BlockingQueue;
 
 import javax.management.MBeanServer;
 
-public class Main {
+public class QuickVariants {
 
   static Logger alignmentLogger;
   static Logger referenceLogger;
@@ -35,7 +35,7 @@ public class Main {
     // load properties
     long startMillis = System.currentTimeMillis();
     Properties properties = new Properties();
-    properties.load(Main.class.getResourceAsStream("/mapper.properties"));
+    properties.load(QuickVariants.class.getResourceAsStream("/mapper.properties"));
     String version = properties.getProperty("mapper.version", "unknown");
 
     System.out.println("QuickVariants version " + version);
@@ -556,7 +556,7 @@ public class Main {
     long previousElapsedSeconds = 0;
 
     // Create some workers and assign some queries to each
-    Set<AlignerWorker> workers = new HashSet<AlignerWorker>(numThreads);
+    Set<VariantsWorker> workers = new HashSet<VariantsWorker>(numThreads);
 
     long numQueriesLoaded = 0;
     int maxNumBasesPerJob = 500000;
@@ -570,9 +570,9 @@ public class Main {
     long millisSpentOnUnalignedQueries = 0;
     int numCacheHits = 0;
     int numCasesImmediatelyAcceptingFirstAlignment = 0;
-    BlockingQueue<AlignerWorker> completedWorkers = new ArrayBlockingQueue<AlignerWorker>(numThreads);
+    BlockingQueue<VariantsWorker> completedWorkers = new ArrayBlockingQueue<VariantsWorker>(numThreads);
     boolean everSaturatedWorkers = false;
-    List<AlignerWorker> pendingWorkers = new ArrayList<AlignerWorker>();
+    List<VariantsWorker> pendingWorkers = new ArrayList<VariantsWorker>();
     while (workers.size() > 0 || !doneReadingQueries || pendingQueries.size() > 0) {
       boolean progressed = false;
       if (workers.size() >= numThreads)
@@ -630,13 +630,13 @@ public class Main {
           if (autoVerbose && workerIndex == 0) {
             workerAlignmentLogger = new Logger(loggerWriter, 1, Integer.MAX_VALUE);
           }
-          AlignerWorker worker;
+          VariantsWorker worker;
           boolean workerAlreadyRunning;
           if (pendingWorkers.size() > 0) {
             worker = pendingWorkers.remove(pendingWorkers.size() - 1);
             workerAlreadyRunning = true;
           } else {
-            worker = new AlignerWorker(reference, workerIndex, alignmentListeners, completedWorkers);
+            worker = new VariantsWorker(reference, workerIndex, alignmentListeners, completedWorkers);
             workerAlreadyRunning = false;
           }
           workers.add(worker);
@@ -665,7 +665,7 @@ public class Main {
       long waitStart = System.currentTimeMillis();
       while (!progressed || (everSaturatedWorkers && completedWorkers.peek() != null)) {
         // process any workers that completed
-        AlignerWorker worker = completedWorkers.take();
+        VariantsWorker worker = completedWorkers.take();
         boolean succeeded = worker.tryComplete();
         if (succeeded == false) {
           System.out.println("Worker failed; aborting");
@@ -680,7 +680,7 @@ public class Main {
       long waitEnd = System.currentTimeMillis();
       waitingMillis += (waitEnd - waitStart);
     }
-    for (AlignerWorker worker: pendingWorkers) {
+    for (VariantsWorker worker: pendingWorkers) {
       worker.noMoreQueries();
     }
     long doneAligningQueriesAt = System.currentTimeMillis();

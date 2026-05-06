@@ -15,10 +15,10 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
-public class AlignerWorker extends Thread {
+public class VariantsWorker extends Thread {
   static Logger silentLogger = Logger.NoOpLogger;
 
-  public AlignerWorker(SequenceDatabase reference, int workerId, List<AlignmentListener> resultsListeners, Queue completionListener) {
+  public VariantsWorker(SequenceDatabase reference, int workerId, List<AlignmentListener> resultsListeners, Queue completionListener) {
     this.sequenceDatabase = reference;
     this.workerId = "" + workerId;
     while (this.workerId.length() < 5) {
@@ -339,7 +339,7 @@ public class AlignerWorker extends Thread {
   int numCacheMisses;
 
   int numCasesImmediatelyAcceptingFirstAlignment;
-  Queue<AlignerWorker> completionListener;
+  Queue<VariantsWorker> completionListener;
   List<List<SamAlignment_Builder>> groupedQueries;
 
   BlockingQueue<Boolean> workQueue = new ArrayBlockingQueue<Boolean>(1);
