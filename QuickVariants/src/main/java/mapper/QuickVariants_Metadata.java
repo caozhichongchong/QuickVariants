@@ -12,7 +12,7 @@ import java.lang.management.ManagementFactory;
 public class QuickVariants_Metadata {
 
   // The version of QuickVariants that is running
-  public static String getVersion() {
+  public static String get_quickVariants_version() {
     Properties properties = new Properties();
     try {
       properties.load(QuickVariants_Metadata.class.getResourceAsStream("/quick-variants.properties"));
@@ -65,13 +65,29 @@ public class QuickVariants_Metadata {
     return ManagementFactory.getRuntimeMXBean().getInputArguments();
   }
 
+  public static String getProgramName() {
+    if (programName == null) {
+      return "QuickVariants-lib";
+    }
+    return programName;
+  }
+  public static String getProgramVersion() {
+    if (programVersion == null) {
+      return get_quickVariants_version();
+    }
+    return programVersion;
+  }
   public static String[] getMainArguments() {
     return mainArguments;
   }
-  public static void setMainArguments(String[] arguments) {
+  public static void init(String name, String version, String[] arguments) {
+    programName = name;
+    programVersion = version;
     mainArguments = arguments;
   }
 
+  private static String programName;
+  private static String programVersion;
   private static String[] mainArguments;
 
 }

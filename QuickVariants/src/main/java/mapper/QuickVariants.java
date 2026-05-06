@@ -31,7 +31,7 @@ public class QuickVariants {
   static TextWriter outputWriter = new StdoutWriter();
 
   public static void main(String[] args) throws IllegalArgumentException, FileNotFoundException, IOException, InterruptedException {
-    QuickVariants_Metadata.setMainArguments(args);
+    QuickVariants_Metadata.init("QuickVariants", null, args);
     // load properties
     long startMillis = System.currentTimeMillis();
     Properties properties = new Properties();

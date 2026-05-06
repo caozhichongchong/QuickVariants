@@ -31,9 +31,10 @@ public class SamWriter implements AlignmentListener {
   }
 
   private void writeInvocationDetails() {
-    String version = QuickVariants_Metadata.getVersion();
+    String version = QuickVariants_Metadata.getProgramVersion();
     String invocation = QuickVariants_Metadata.guessCommandLine();
-    this.writeLine("@PG\tID:QuickVariants\tPN:QuickVariants\tVN:" + version + "\tCL:\"" + invocation + "\"");
+    String programName = QuickVariants_Metadata.getProgramName();
+    this.writeLine("@PG\tID:" + programName + "\tPN:" + programName + "\tVN:" + version + "\tCL:\"" + invocation + "\"");
   }
 
   private void writeReferenceSequenceNames(SequenceDatabase sequenceDatabase) {
