@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // A QueryAlignment tells where a Query aligns
-// It's like a SequenceAlignment but the query might consist of multiple sequences if it is two Illumina-style paired-end reads
+// Its like a SequenceAlignment but the query might consist of multiple sequences if it is two Illumina-style paired-end reads
 public class QueryAlignment {
 
   public QueryAlignment(SequenceAlignment sequenceAlignment) {
@@ -22,6 +22,18 @@ public class QueryAlignment {
     this.totalDistanceBetweenComponents = totalDistanceBetweenComponents;
   }
 
+  public QueryAlignment withQuery(List<Sequence> querySequences) {
+    List<SequenceAlignment> newComponents = new ArrayList<SequenceAlignment>(this.alignments.size());
+    for (int i = 0; i < this.alignments.size(); i++) {
+      Sequence newSequenceA = querySequences.get(i);
+      SequenceAlignment existingAlignment = this.alignments.get(i);
+      if (existingAlignment.isReferenceReversed()) {
+        newSequenceA = newSequenceA.reverseComplement();
+      }
+      newComponents.add(existingAlignment.withSequenceA(newSequenceA));
+    }
+    return new QueryAlignment(newComponents, this.spacingPenalty, this.overlapMultiplier, this.duplicationBonus, this.totalPenalty, this.totalDistanceBetweenComponents);
+  }
 
   // list of alignments for each sequence
   public List<SequenceAlignment> getComponents() {
@@ -36,9 +48,10 @@ public class QueryAlignment {
     SequenceAlignment firstComponent = this.getComponent(0);
     return firstComponent.getSection(0).getSequenceA();
   }
- 
+
   public Sequence getSequenceB() {
-    return this.alignments.get(0).getSection(0).getSequenceB();
+    SequenceAlignment firstComponent = this.getComponent(0);
+    return firstComponent.getSection(0).getSequenceB();
   }
 
   public void putSequenceB(Sequence sequence) {
@@ -49,6 +62,18 @@ public class QueryAlignment {
 
   public int getNumSequences() {
     return this.alignments.size();
+  }
+
+  public double getSpacingPenalty() {
+    return this.spacingPenalty;
+  }
+
+  public double getOverlapMultiplier() {
+    return this.overlapMultiplier;
+  }
+
+  public double getDuplicationBonus() {
+    return this.duplicationBonus;
   }
 
   public double getPenalty() {
@@ -65,14 +90,7 @@ public class QueryAlignment {
 
   // Returns the total inner distance between subsequent pairs of components
   public int getTotalDistanceBetweenComponents() {
-    int totalDistance = 0;
-    SequenceAlignment previousComponent = this.alignments.get(0);
-    for (int i = 1; i < this.alignments.size(); i++) {
-      SequenceAlignment currentComponent = this.alignments.get(i);
-      totalDistance += getDistance(previousComponent.getLastSection(), currentComponent.getFirstSection());
-      previousComponent = currentComponent;
-    }
-    return totalDistance;
+    return totalDistanceBetweenComponents;
   }
 
   // Returns the number of alignment ends (from paired-end alignments) that cover a specific index, assuming that at least one covers it
@@ -109,26 +127,6 @@ public class QueryAlignment {
     return true;
   }
 
-  public String explainPenalty() {
-    StringBuilder resultBuilder = new StringBuilder();
-    resultBuilder.append("(");
-    for (int i = 0; i < this.alignments.size(); i++) {
-      SequenceAlignment component = this.alignments.get(i);
-      resultBuilder.append("seq" + i + " penalty (" + component.getPenalty() + ")");
-      if (i != this.alignments.size() - 1) {
-        resultBuilder.append(" + ");
-      }
-    }
-    resultBuilder.append(" - duplicated penalty (" + this.duplicationBonus + ")");
-    resultBuilder.append(") * (total length / unique length) (" + round(this.overlapMultiplier, 100000) + ")");
-    resultBuilder.append(" + spacing penalty (" + this.spacingPenalty + ")");
-    return resultBuilder.toString();
-  }
-
-  private double round(double value, double scale) {
-    return Math.round(value * scale) / scale;
-  }
-
   public String formatQuery() {
     String result = "";
     for (SequenceAlignment alignment: this.alignments) {
@@ -138,6 +136,68 @@ public class QueryAlignment {
       result += alignment.getSequenceA().getText();
     }
     return result;
+  }
+
+  // returns a short description of what this alignment is: where it is and where any indels are
+  public String format() {
+    String result = "";
+    for (int i = 0; i < this.alignments.size(); i++) {
+      SequenceAlignment alignment = this.alignments.get(i);
+      if (this.alignments.size() > 1)
+        result += "component " + i + ":\n";
+      result += "alignment at " + alignment.getSequenceB().getName() + " offset " + alignment.getStartOffset() + ":\n";
+      result += alignment.format();
+      result += "\n";
+    }
+    return result;
+  }
+
+  // returns a detailed description of what this alignment is
+  public String formatVerbose() {
+    StringBuilder builder = new StringBuilder();
+    if (this.getNumSequences() > 1) {
+      builder.append("Total penalty: " + this.getPenalty() + ": " + this.explainPenalty() + "\n");
+    }
+    for (SequenceAlignment component: this.getComponents()) {
+      builder.append(component.formatVerbose());
+    }
+    return builder.toString();
+  }
+
+  public String explainPenalty() {
+    StringBuilder resultBuilder = new StringBuilder();
+    resultBuilder.append("(");
+    for (int i = 0; i < this.alignments.size(); i++) {
+      SequenceAlignment component = this.alignments.get(i);
+      resultBuilder.append("seq" + (i + 1) + " penalty (" + component.getPenalty() + ")");
+      if (i != this.alignments.size() - 1) {
+        resultBuilder.append(" + ");
+      }
+    }
+    resultBuilder.append(" - duplicated penalty (" + this.duplicationBonus + ")");
+    resultBuilder.append(") * (total length / unique length) (" + this.overlapMultiplier + ")");
+    resultBuilder.append(" + spacing penalty (" + this.spacingPenalty + ")");
+    return resultBuilder.toString();
+  }
+
+  public boolean hasIndel() {
+    for (SequenceAlignment component : this.alignments) {
+      if (component.hasIndel())
+        return true;
+    }
+    return false;
+  }
+
+  public boolean hasAmbiguousBasepairs() {
+    for (SequenceAlignment component: this.alignments) {
+      if (component.hasAmbiguousBasepairs())
+        return true;
+    }
+    return false;
+  }
+
+  private double round(double value, double scale) {
+    return Math.round(value * scale) / scale;
   }
 
   private void computeOverlap() {
@@ -158,9 +218,40 @@ public class QueryAlignment {
     if (a.getSequenceB() != b.getSequenceB())
       return Integer.MAX_VALUE;
     if (b.getSequenceB().getComplementedFrom() != null) {
-      throw new IllegalArgumentException("QueryAlignment.getDistnace with a reversed: " + a.getSequenceB().getName());
+      throw new IllegalArgumentException("QueryAlignment.getDistance with a reversed: " + a.getSequenceB().getName());
     }
     return b.getStartIndexB() - a.getEndIndexB();
+  }
+
+  @Override
+  public int hashCode() {
+    int hash = 0;
+    for (SequenceAlignment alignment: this.alignments) {
+      hash = hash * 1001 + alignment.hashCode();
+    }
+    return hash;
+  }
+
+  @Override
+  public boolean equals(Object otherObject) {
+    QueryAlignment other = (QueryAlignment)otherObject;
+    if (this.spacingPenalty != other.spacingPenalty)
+      return false;
+    if (this.overlapMultiplier != other.overlapMultiplier)
+      return false;
+    if (this.duplicationBonus != other.duplicationBonus)
+      return false;
+    if (this.totalPenalty != other.totalPenalty)
+      return false;
+    if (this.totalDistanceBetweenComponents != other.totalDistanceBetweenComponents)
+      return false;
+    if (other.alignments.size() != this.alignments.size())
+      return false;
+    for (int i = 0; i < this.alignments.size(); i++) {
+      if (!this.alignments.get(i).equals(other.alignments.get(i)))
+        return false;
+    }
+    return true;
   }
 
   private List<SequenceAlignment> alignments;
@@ -170,7 +261,6 @@ public class QueryAlignment {
   private int minOverlap = -1;
   private int maxOverlap = -1;
 
-  // If multiple SequenceAlignments overlap, we multiply any penalties on non-overlapping portions of the alignments, so that we count them the same number of times (2) as overlapping portions of the alignments
   // penalty due to components overlapping
   private double overlapMultiplier;
   // penalty that appears in each component and shouldn't be counted twice
