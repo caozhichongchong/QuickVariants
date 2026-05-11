@@ -101,4 +101,4 @@ Contact:\
 
 See [TESTING.md](TESTING.md)
 
-## If you're working on a bioinformatics project and would be interested in some consulting help, check out our website at https://genomiverse.net/ !
+## If you like our tools, check out our other work at [genomiverse.net](https://genomiverse.net?utm_source=quickvariants_readme)!
